@@ -1,5 +1,6 @@
 import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import { Github } from 'lucide-react';
 
 export function Navbar() {
   const location = useLocation();
@@ -69,7 +70,7 @@ export function Navbar() {
             onMouseEnter={e => { (e.currentTarget as HTMLElement).style.opacity = '0.85'; }}
             onMouseLeave={e => { (e.currentTarget as HTMLElement).style.opacity = '1'; }}
           >
-            ⭐ GitHub
+            <Github size={16} /> GitHub
           </a>
         </div>
       </div>

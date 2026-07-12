@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
+import { Search, Timer, Shuffle, BarChart, Lightbulb, Coffee } from 'lucide-react';
 import { TechnologyCard } from '../components/TechnologyCard';
 import { TECHNOLOGIES } from '../data';
 
@@ -178,14 +179,14 @@ export function HomePage() {
               <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '4px', background: 'linear-gradient(90deg, #6366f1, #06b6d4, #10b981)' }} />
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '32px' }}>
                  <div style={{ display: 'flex', gap: '16px', alignItems: 'center' }}>
-                   <div style={{ width: '48px', height: '48px', borderRadius: '12px', background: 'rgba(99,102,241,0.15)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '24px', border: '1px solid rgba(99,102,241,0.3)' }}>☕</div>
+                   <div style={{ width: '48px', height: '48px', borderRadius: '12px', background: 'rgba(99,102,241,0.15)', display: 'flex', alignItems: 'center', justifyContent: 'center', border: '1px solid rgba(99,102,241,0.3)', color: '#818cf8' }}><Coffee size={24} /></div>
                    <div>
                      <div style={{ fontSize: '16px', fontWeight: 700, color: '#f8fafc' }}>Java Basics</div>
                      <div style={{ fontSize: '13px', color: '#94a3b8', marginTop: '2px' }}>Question 4 of 10</div>
                    </div>
                  </div>
                  <div style={{ background: 'rgba(239, 68, 68, 0.15)', color: '#ef4444', padding: '8px 16px', borderRadius: '999px', fontSize: '13px', fontWeight: 700, display: 'flex', alignItems: 'center', gap: '8px', border: '1px solid rgba(239, 68, 68, 0.3)' }}>
-                   <span style={{ animation: 'pulse 2s infinite' }}>⏱️</span> 08:42
+                   <span style={{ animation: 'pulse 2s infinite', display: 'flex' }}><Timer size={14} /></span> 08:42
                  </div>
               </div>
               <h3 style={{ fontSize: '20px', fontWeight: 600, color: '#f8fafc', marginBottom: '24px', lineHeight: 1.5 }}>
@@ -242,8 +243,8 @@ export function HomePage() {
           <div style={{ maxWidth: '640px', margin: '0 auto 60px', position: 'relative' }}>
             <span style={{
               position: 'absolute', left: '24px', top: '50%', transform: 'translateY(-50%)',
-              fontSize: '22px', pointerEvents: 'none', opacity: 0.5
-            }}>🔍</span>
+              pointerEvents: 'none', opacity: 0.5, color: '#94a3b8', display: 'flex'
+            }}><Search size={22} /></span>
             <input
               id="search-topics"
               type="text"
@@ -290,7 +291,7 @@ export function HomePage() {
               animate={{ opacity: 1 }}
               style={{ textAlign: 'center', padding: '100px 20px', color: '#64748b', background: 'rgba(30,41,59,0.3)', borderRadius: '24px', border: '1px dashed rgba(148,163,184,0.2)' }}
             >
-              <div style={{ fontSize: '64px', marginBottom: '24px', opacity: 0.5 }}>🔍</div>
+              <div style={{ marginBottom: '24px', opacity: 0.5, display: 'flex', justifyContent: 'center', color: '#94a3b8' }}><Search size={64} /></div>
               <p style={{ fontSize: '20px', fontWeight: 500, color: '#94a3b8' }}>No technologies found for "<strong style={{ color: '#e2e8f0' }}>{search}</strong>"</p>
               <button 
                 onClick={() => setSearch('')}
@@ -327,10 +328,10 @@ export function HomePage() {
             gap: '24px',
           }}>
             {[
-              { icon: '⏱️', title: 'Timed Environments', desc: 'Simulate real interview pressure with our 10-minute countdown timer per quiz.', color: '#ef4444' },
-              { icon: '🔀', title: 'Dynamic Generation', desc: 'Questions and options are randomized every time you play to prevent memorization.', color: '#8b5cf6' },
-              { icon: '📊', title: 'Actionable Insights', desc: 'Get detailed feedback, score percentages, and grades immediately upon submission.', color: '#10b981' },
-              { icon: '💡', title: 'In-Depth Explanations', desc: 'Don\'t just know if you were wrong, learn exactly why with comprehensive answer explanations.', color: '#f59e0b' },
+              { icon: <Timer size={36} />, title: 'Timed Environments', desc: 'Simulate real interview pressure with our 10-minute countdown timer per quiz.', color: '#ef4444' },
+              { icon: <Shuffle size={36} />, title: 'Dynamic Generation', desc: 'Questions and options are randomized every time you play to prevent memorization.', color: '#8b5cf6' },
+              { icon: <BarChart size={36} />, title: 'Actionable Insights', desc: 'Get detailed feedback, score percentages, and grades immediately upon submission.', color: '#10b981' },
+              { icon: <Lightbulb size={36} />, title: 'In-Depth Explanations', desc: 'Don\'t just know if you were wrong, learn exactly why with comprehensive answer explanations.', color: '#f59e0b' },
             ].map((f, i) => (
               <motion.div 
                 key={f.title}

@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import type { Technology } from '../types';
+import { BookOpen, HelpCircle } from 'lucide-react';
 
 interface TechnologyCardProps {
   tech: Technology;
@@ -53,7 +54,7 @@ export function TechnologyCard({ tech, index }: TechnologyCardProps) {
             display: 'flex', alignItems: 'center', justifyContent: 'center',
             fontSize: '28px', marginBottom: '16px',
           }}>
-            {tech.icon}
+            <tech.icon size={28} />
           </div>
 
           {/* Name */}
@@ -69,13 +70,13 @@ export function TechnologyCard({ tech, index }: TechnologyCardProps) {
           {/* Stats */}
           <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-              <span style={{ fontSize: '11px', color: '#475569' }}>📚</span>
+              <span style={{ color: '#475569', display: 'flex' }}><BookOpen size={14} /></span>
               <span style={{ fontSize: '13px', fontWeight: 600, color: '#94a3b8' }}>
                 {tech.topics.length} Topics
               </span>
             </div>
             <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-              <span style={{ fontSize: '11px', color: '#475569' }}>❓</span>
+              <span style={{ color: '#475569', display: 'flex' }}><HelpCircle size={14} /></span>
               <span style={{ fontSize: '13px', fontWeight: 600, color: '#94a3b8' }}>
                 {totalQuestions} Questions
               </span>

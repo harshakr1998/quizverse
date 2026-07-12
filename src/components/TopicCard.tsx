@@ -49,7 +49,7 @@ export function TopicCard({ topic, tech, index }: TopicCardProps) {
             display: 'flex', alignItems: 'center', justifyContent: 'center',
             fontSize: '22px',
           }}>
-            {topic.icon}
+            <topic.icon size={22} />
           </div>
 
           {/* Content */}

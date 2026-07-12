@@ -1,3 +1,5 @@
+import { ElementType } from 'react';
+
 // ─── Question & Quiz Types ───────────────────────────────────────────────────
 
 export type Difficulty = 'Easy' | 'Medium' | 'Hard';
@@ -25,7 +27,7 @@ export interface Topic {
   id: string;         // e.g. "collections"
   name: string;       // e.g. "Collections"
   description: string;
-  icon: string;       // emoji or icon name
+  icon: ElementType;
   questionCount: number;
   estimatedMinutes: number;
   difficulties: {
@@ -39,7 +41,7 @@ export interface Technology {
   id: string;         // e.g. "java"
   name: string;       // e.g. "Java"
   description: string;
-  icon: string;       // emoji
+  icon: ElementType;
   color: string;      // gradient class or hex
   accentColor: string;
   topics: Topic[];
