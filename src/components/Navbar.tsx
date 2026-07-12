@@ -1,6 +1,21 @@
 import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Github } from 'lucide-react';
+const Github = ({ size = 24 }: { size?: number }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
+    <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.24c3-.34 6-1.53 6-6.76a5.2 5.2 0 0 0-1.39-3.6 4.9 4.9 0 0 0-.12-3.52s-1.13-.36-3.7 1.38a12.08 12.08 0 0 0-6.76 0c-2.57-1.74-3.7-1.38-3.7-1.38a4.9 4.9 0 0 0-.12 3.52 5.2 5.2 0 0 0-1.39 3.6c0 5.21 3 6.4 6 6.76a4.8 4.8 0 0 0-1 3.24v4" />
+    <path d="M14 19a5 5 0 0 1-4-2" />
+  </svg>
+);
 
 export function Navbar() {
   const location = useLocation();
