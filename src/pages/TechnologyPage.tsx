@@ -64,7 +64,7 @@ export function TechnologyPage() {
 
       {/* Topics */}
       <div>
-        <h2 style={{ fontSize: '18px', fontWeight: 700, color: '#94a3b8', margin: '0 0 16px', letterSpacing: '0.05em', textTransform: 'uppercase', fontSize: '13px' }}>
+        <h2 style={{ fontWeight: 700, color: '#94a3b8', margin: '0 0 16px', letterSpacing: '0.05em', textTransform: 'uppercase', fontSize: '13px' }}>
           Select a Topic
         </h2>
         <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>

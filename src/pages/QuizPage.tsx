@@ -145,7 +145,6 @@ export function QuizPage({ quizState, onSelectAnswer, onNext, onPrev, onSubmit, 
           style={{
             padding: '11px 22px',
             borderRadius: '10px',
-            border: 'none',
             background: 'rgba(239,68,68,0.15)',
             color: '#ef4444',
             cursor: 'pointer',
