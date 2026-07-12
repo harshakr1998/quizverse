@@ -77,7 +77,7 @@ export function QuizPage({ quizState, onSelectAnswer, onNext, onPrev, onSubmit, 
         marginBottom: '24px', flexWrap: 'wrap', gap: '12px',
       }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-          <span style={{ fontSize: '18px' }}>{technology?.icon}</span>
+          <span style={{ fontSize: '18px', display: 'flex' }}>{technology && <technology.icon size={18} />}</span>
           <span style={{ fontSize: '15px', fontWeight: 600, color: '#94a3b8' }}>
             {technology?.name} · {quizState.topic}
           </span>

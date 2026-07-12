@@ -67,7 +67,7 @@ export function InstructionsPage({ onStart }: InstructionsPageProps) {
           marginBottom: '24px',
         }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '16px' }}>
-            <span style={{ fontSize: '32px' }}>{topicData.icon}</span>
+            <span style={{ fontSize: '32px', display: 'flex' }}><topicData.icon size={32} /></span>
             <div>
               <p style={{ margin: '0 0 4px', fontSize: '13px', color: technology.accentColor, fontWeight: 600 }}>
                 {technology.name}

@@ -39,7 +39,7 @@ export function TechnologyPage() {
             display: 'flex', alignItems: 'center', justifyContent: 'center',
             fontSize: '32px',
           }}>
-            {technology.icon}
+            <technology.icon size={32} />
           </div>
           <div>
             <h1 style={{ fontSize: '32px', fontWeight: 900, color: '#e2e8f0', margin: '0 0 4px', letterSpacing: '-1px' }}>
