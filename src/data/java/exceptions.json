@@ -1,0 +1,1093 @@
+[
+  {
+    "id": 1,
+    "topic": "Exceptions",
+    "difficulty": "Easy",
+    "question": "Which class is the root of the Java exception hierarchy?",
+    "options": [
+      "Error",
+      "RuntimeException",
+      "Throwable",
+      "Exception"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Throwable is the root of the exception hierarchy. It has two main subclasses: Exception (recoverable) and Error (JVM-level, generally unrecoverable).",
+    "tags": [
+      "Java",
+      "Exceptions"
+    ]
+  },
+  {
+    "id": 2,
+    "topic": "Exceptions",
+    "difficulty": "Easy",
+    "question": "Which exception is thrown when dividing by zero in Java?",
+    "options": [
+      "NullPointerException",
+      "ArithmeticException",
+      "IllegalArgumentException",
+      "NumberFormatException"
+    ],
+    "correctAnswer": 1,
+    "explanation": "ArithmeticException is thrown for exceptional arithmetic conditions like integer division by zero.",
+    "tags": [
+      "Java",
+      "Exceptions",
+      "Runtime"
+    ]
+  },
+  {
+    "id": 3,
+    "topic": "Exceptions",
+    "difficulty": "Medium",
+    "question": "What is the difference between checked and unchecked exceptions?",
+    "options": [
+      "No difference",
+      "Checked exceptions extend RuntimeException; unchecked extend Exception",
+      "Checked must be declared or caught; unchecked need not",
+      "Unchecked must be declared; checked need not"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Checked exceptions (e.g., IOException) must be handled or declared with 'throws'. Unchecked exceptions (RuntimeException subclasses) don't require explicit handling.",
+    "tags": [
+      "Java",
+      "Exceptions",
+      "Checked",
+      "Unchecked"
+    ]
+  },
+  {
+    "id": 4,
+    "topic": "Exceptions",
+    "difficulty": "Medium",
+    "question": "Which block in a try-catch always executes?",
+    "options": [
+      "try",
+      "catch",
+      "finally",
+      "throws"
+    ],
+    "correctAnswer": 2,
+    "explanation": "The 'finally' block always executes whether or not an exception was thrown or caught. It's typically used for cleanup (closing resources).",
+    "tags": [
+      "Java",
+      "Exceptions",
+      "finally"
+    ]
+  },
+  {
+    "id": 5,
+    "topic": "Exceptions",
+    "difficulty": "Medium",
+    "question": "What is try-with-resources used for?",
+    "options": [
+      "To handle multiple exceptions in one catch",
+      "To automatically close resources that implement AutoCloseable",
+      "To retry failed operations",
+      "To catch Error types"
+    ],
+    "correctAnswer": 1,
+    "explanation": "try-with-resources (Java 7+) automatically closes resources declared in the try parentheses after the block ends. Resources must implement AutoCloseable.",
+    "tags": [
+      "Java",
+      "Exceptions",
+      "Java 7"
+    ]
+  },
+  {
+    "id": 6,
+    "topic": "Exceptions",
+    "difficulty": "Hard",
+    "question": "Can we have a try block without a catch block?",
+    "options": [
+      "No, catch is mandatory",
+      "Yes, if a finally block is present",
+      "Yes, always",
+      "No, both catch and finally are mandatory"
+    ],
+    "correctAnswer": 1,
+    "explanation": "A try block can be paired with either catch, finally, or both. try-finally without catch is valid — the finally block runs after the try block.",
+    "tags": [
+      "Java",
+      "Exceptions",
+      "finally"
+    ]
+  },
+  {
+    "id": 7,
+    "topic": "Exceptions",
+    "difficulty": "Easy",
+    "question": "Which keyword is used to throw an exception manually?",
+    "options": [
+      "throws",
+      "throw",
+      "raise",
+      "exception"
+    ],
+    "correctAnswer": 1,
+    "explanation": "'throw' is used to manually throw an exception object. 'throws' declares what exceptions a method might throw in its signature.",
+    "tags": [
+      "Java",
+      "Exceptions",
+      "Keywords"
+    ]
+  },
+  {
+    "id": 8,
+    "topic": "Exceptions",
+    "difficulty": "Medium",
+    "question": "What exception is thrown when accessing a null reference?",
+    "options": [
+      "IllegalStateException",
+      "IllegalArgumentException",
+      "NullPointerException",
+      "IndexOutOfBoundsException"
+    ],
+    "correctAnswer": 2,
+    "explanation": "NullPointerException (NPE) is thrown when you attempt to use a reference that points to null — e.g., calling a method on null.",
+    "tags": [
+      "Java",
+      "Exceptions",
+      "NullPointerException"
+    ]
+  },
+  {
+    "id": 9,
+    "topic": "Exceptions",
+    "difficulty": "Hard",
+    "question": "Which is true about multi-catch in Java 7+?",
+    "options": [
+      "Not supported in Java",
+      "Each catch must handle a related exception type",
+      "One catch can handle multiple exception types with |",
+      "Multi-catch requires a common supertype"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Java 7 introduced multi-catch: catch (IOException | SQLException e). This reduces code duplication when handling multiple unrelated exception types the same way.",
+    "tags": [
+      "Java",
+      "Exceptions",
+      "Java 7",
+      "Multi-catch"
+    ]
+  },
+  {
+    "id": 10,
+    "topic": "Exceptions",
+    "difficulty": "Hard",
+    "question": "What is exception chaining?",
+    "options": [
+      "Catching multiple exceptions",
+      "Rethrowing the same exception",
+      "Wrapping one exception inside another to preserve the original cause",
+      "Using multi-catch blocks"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Exception chaining (initCause / constructor with cause) preserves the original exception when wrapping it in another. This maintains the full stack trace context.",
+    "tags": [
+      "Java",
+      "Exceptions",
+      "Chaining"
+    ]
+  },
+  {
+    "id": 11,
+    "topic": "exceptions",
+    "difficulty": "Medium",
+    "question": "[Generated] What happens if a boolean is thrown and not caught?",
+    "options": [
+      "Incorrect option A",
+      "Correct generated option for exceptions",
+      "Incorrect option C",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/exceptions.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 12,
+    "topic": "exceptions",
+    "difficulty": "Hard",
+    "question": "[Generated] Which block is executed after a filter()?",
+    "options": [
+      "Correct generated option for exceptions",
+      "Incorrect option C",
+      "Incorrect option A",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/exceptions.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 13,
+    "topic": "exceptions",
+    "difficulty": "Hard",
+    "question": "[Generated] Which block is executed after a HashMap?",
+    "options": [
+      "Incorrect option A",
+      "Incorrect option C",
+      "Correct generated option for exceptions",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/exceptions.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  },
+  {
+    "id": 14,
+    "topic": "exceptions",
+    "difficulty": "Easy",
+    "question": "[Generated] Is HashMap a checked or unchecked exception?",
+    "options": [
+      "Incorrect option A",
+      "Correct generated option for exceptions",
+      "Incorrect option B",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/exceptions.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 15,
+    "topic": "exceptions",
+    "difficulty": "Medium",
+    "question": "[Generated] What happens if a int is thrown and not caught?",
+    "options": [
+      "Correct generated option for exceptions",
+      "Incorrect option B",
+      "Incorrect option A",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/exceptions.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  },
+  {
+    "id": 16,
+    "topic": "exceptions",
+    "difficulty": "Easy",
+    "question": "[Generated] What happens if a boolean is thrown and not caught?",
+    "options": [
+      "Incorrect option B",
+      "Incorrect option A",
+      "Incorrect option C",
+      "Correct generated option for exceptions"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/exceptions.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 17,
+    "topic": "exceptions",
+    "difficulty": "Medium",
+    "question": "[Generated] Is boolean a checked or unchecked exception?",
+    "options": [
+      "Correct generated option for exceptions",
+      "Incorrect option C",
+      "Incorrect option B",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/exceptions.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 18,
+    "topic": "exceptions",
+    "difficulty": "Hard",
+    "question": "[Generated] Which block is executed after a map()?",
+    "options": [
+      "Correct generated option for exceptions",
+      "Incorrect option A",
+      "Incorrect option C",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/exceptions.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  },
+  {
+    "id": 19,
+    "topic": "exceptions",
+    "difficulty": "Medium",
+    "question": "[Generated] What happens if a ArrayList is thrown and not caught?",
+    "options": [
+      "Incorrect option B",
+      "Incorrect option C",
+      "Correct generated option for exceptions",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/exceptions.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 20,
+    "topic": "exceptions",
+    "difficulty": "Medium",
+    "question": "[Generated] What happens if a map() is thrown and not caught?",
+    "options": [
+      "Incorrect option B",
+      "Correct generated option for exceptions",
+      "Incorrect option C",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/exceptions.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  },
+  {
+    "id": 21,
+    "topic": "exceptions",
+    "difficulty": "Hard",
+    "question": "[Generated] Is map() a checked or unchecked exception?",
+    "options": [
+      "Incorrect option A",
+      "Correct generated option for exceptions",
+      "Incorrect option B",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/exceptions.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 22,
+    "topic": "exceptions",
+    "difficulty": "Medium",
+    "question": "[Generated] Which block is executed after a map()?",
+    "options": [
+      "Incorrect option B",
+      "Incorrect option A",
+      "Incorrect option C",
+      "Correct generated option for exceptions"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/exceptions.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 23,
+    "topic": "exceptions",
+    "difficulty": "Hard",
+    "question": "[Generated] Is int a checked or unchecked exception?",
+    "options": [
+      "Incorrect option C",
+      "Incorrect option B",
+      "Incorrect option A",
+      "Correct generated option for exceptions"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/exceptions.",
+    "tags": [
+      "fundamentals",
+      "procedural"
+    ]
+  },
+  {
+    "id": 24,
+    "topic": "exceptions",
+    "difficulty": "Easy",
+    "question": "[Generated] Is NullPointerException a checked or unchecked exception?",
+    "options": [
+      "Incorrect option B",
+      "Correct generated option for exceptions",
+      "Incorrect option C",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/exceptions.",
+    "tags": [
+      "fundamentals",
+      "procedural"
+    ]
+  },
+  {
+    "id": 25,
+    "topic": "exceptions",
+    "difficulty": "Easy",
+    "question": "[Generated] Is HashMap a checked or unchecked exception?",
+    "options": [
+      "Correct generated option for exceptions",
+      "Incorrect option C",
+      "Incorrect option B",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/exceptions.",
+    "tags": [
+      "interview-frequent",
+      "procedural"
+    ]
+  },
+  {
+    "id": 26,
+    "topic": "exceptions",
+    "difficulty": "Easy",
+    "question": "[Generated] What happens if a boolean is thrown and not caught?",
+    "options": [
+      "Incorrect option B",
+      "Incorrect option C",
+      "Incorrect option A",
+      "Correct generated option for exceptions"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/exceptions.",
+    "tags": [
+      "fundamentals",
+      "procedural"
+    ]
+  },
+  {
+    "id": 27,
+    "topic": "exceptions",
+    "difficulty": "Medium",
+    "question": "[Generated] What happens if a boolean is thrown and not caught?",
+    "options": [
+      "Incorrect option C",
+      "Incorrect option B",
+      "Incorrect option A",
+      "Correct generated option for exceptions"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/exceptions.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  },
+  {
+    "id": 28,
+    "topic": "exceptions",
+    "difficulty": "Easy",
+    "question": "[Generated] Which block is executed after a map()?",
+    "options": [
+      "Correct generated option for exceptions",
+      "Incorrect option B",
+      "Incorrect option C",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/exceptions.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 29,
+    "topic": "exceptions",
+    "difficulty": "Easy",
+    "question": "[Generated] What happens if a ArrayList is thrown and not caught?",
+    "options": [
+      "Incorrect option B",
+      "Incorrect option C",
+      "Correct generated option for exceptions",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/exceptions.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  },
+  {
+    "id": 30,
+    "topic": "exceptions",
+    "difficulty": "Easy",
+    "question": "[Generated] What happens if a HashMap is thrown and not caught?",
+    "options": [
+      "Correct generated option for exceptions",
+      "Incorrect option B",
+      "Incorrect option C",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/exceptions.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 31,
+    "topic": "exceptions",
+    "difficulty": "Hard",
+    "question": "[Generated] What happens if a int is thrown and not caught?",
+    "options": [
+      "Incorrect option C",
+      "Correct generated option for exceptions",
+      "Incorrect option A",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/exceptions.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 32,
+    "topic": "exceptions",
+    "difficulty": "Hard",
+    "question": "[Generated] Which block is executed after a ArrayList?",
+    "options": [
+      "Incorrect option A",
+      "Incorrect option B",
+      "Correct generated option for exceptions",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/exceptions.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  },
+  {
+    "id": 33,
+    "topic": "exceptions",
+    "difficulty": "Medium",
+    "question": "[Generated] Is filter() a checked or unchecked exception?",
+    "options": [
+      "Incorrect option A",
+      "Incorrect option B",
+      "Correct generated option for exceptions",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/exceptions.",
+    "tags": [
+      "interview-frequent",
+      "procedural"
+    ]
+  },
+  {
+    "id": 34,
+    "topic": "exceptions",
+    "difficulty": "Hard",
+    "question": "[Generated] What happens if a ArrayList is thrown and not caught?",
+    "options": [
+      "Incorrect option C",
+      "Incorrect option B",
+      "Incorrect option A",
+      "Correct generated option for exceptions"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/exceptions.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 35,
+    "topic": "exceptions",
+    "difficulty": "Hard",
+    "question": "[Generated] Which block is executed after a ArrayList?",
+    "options": [
+      "Incorrect option C",
+      "Correct generated option for exceptions",
+      "Incorrect option B",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/exceptions.",
+    "tags": [
+      "interview-frequent",
+      "procedural"
+    ]
+  },
+  {
+    "id": 36,
+    "topic": "exceptions",
+    "difficulty": "Medium",
+    "question": "[Generated] Is map() a checked or unchecked exception?",
+    "options": [
+      "Correct generated option for exceptions",
+      "Incorrect option C",
+      "Incorrect option A",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/exceptions.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  },
+  {
+    "id": 37,
+    "topic": "exceptions",
+    "difficulty": "Medium",
+    "question": "[Generated] What happens if a map() is thrown and not caught?",
+    "options": [
+      "Incorrect option B",
+      "Incorrect option A",
+      "Correct generated option for exceptions",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/exceptions.",
+    "tags": [
+      "interview-frequent",
+      "procedural"
+    ]
+  },
+  {
+    "id": 38,
+    "topic": "exceptions",
+    "difficulty": "Medium",
+    "question": "[Generated] What happens if a boolean is thrown and not caught?",
+    "options": [
+      "Incorrect option B",
+      "Correct generated option for exceptions",
+      "Incorrect option C",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/exceptions.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 39,
+    "topic": "exceptions",
+    "difficulty": "Easy",
+    "question": "[Generated] Which block is executed after a ArrayList?",
+    "options": [
+      "Incorrect option B",
+      "Correct generated option for exceptions",
+      "Incorrect option A",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/exceptions.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 40,
+    "topic": "exceptions",
+    "difficulty": "Hard",
+    "question": "[Generated] What happens if a ArrayList is thrown and not caught?",
+    "options": [
+      "Incorrect option A",
+      "Incorrect option C",
+      "Incorrect option B",
+      "Correct generated option for exceptions"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/exceptions.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 41,
+    "topic": "exceptions",
+    "difficulty": "Hard",
+    "question": "[Generated] Which block is executed after a NullPointerException?",
+    "options": [
+      "Incorrect option B",
+      "Incorrect option A",
+      "Correct generated option for exceptions",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/exceptions.",
+    "tags": [
+      "interview-frequent",
+      "procedural"
+    ]
+  },
+  {
+    "id": 42,
+    "topic": "exceptions",
+    "difficulty": "Easy",
+    "question": "[Generated] Which block is executed after a NullPointerException?",
+    "options": [
+      "Incorrect option A",
+      "Correct generated option for exceptions",
+      "Incorrect option B",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/exceptions.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 43,
+    "topic": "exceptions",
+    "difficulty": "Hard",
+    "question": "[Generated] Is int a checked or unchecked exception?",
+    "options": [
+      "Incorrect option B",
+      "Incorrect option A",
+      "Correct generated option for exceptions",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/exceptions.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  },
+  {
+    "id": 44,
+    "topic": "exceptions",
+    "difficulty": "Medium",
+    "question": "[Generated] Is int a checked or unchecked exception?",
+    "options": [
+      "Incorrect option B",
+      "Correct generated option for exceptions",
+      "Incorrect option A",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/exceptions.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 45,
+    "topic": "exceptions",
+    "difficulty": "Medium",
+    "question": "[Generated] Is ArrayList a checked or unchecked exception?",
+    "options": [
+      "Incorrect option A",
+      "Incorrect option C",
+      "Incorrect option B",
+      "Correct generated option for exceptions"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/exceptions.",
+    "tags": [
+      "interview-frequent",
+      "procedural"
+    ]
+  },
+  {
+    "id": 46,
+    "topic": "exceptions",
+    "difficulty": "Easy",
+    "question": "[Generated] What happens if a int is thrown and not caught?",
+    "options": [
+      "Incorrect option A",
+      "Incorrect option C",
+      "Incorrect option B",
+      "Correct generated option for exceptions"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/exceptions.",
+    "tags": [
+      "interview-frequent",
+      "procedural"
+    ]
+  },
+  {
+    "id": 47,
+    "topic": "exceptions",
+    "difficulty": "Medium",
+    "question": "[Generated] Which block is executed after a map()?",
+    "options": [
+      "Incorrect option A",
+      "Correct generated option for exceptions",
+      "Incorrect option C",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/exceptions.",
+    "tags": [
+      "fundamentals",
+      "procedural"
+    ]
+  },
+  {
+    "id": 48,
+    "topic": "exceptions",
+    "difficulty": "Easy",
+    "question": "[Generated] Which block is executed after a map()?",
+    "options": [
+      "Incorrect option B",
+      "Correct generated option for exceptions",
+      "Incorrect option C",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/exceptions.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  },
+  {
+    "id": 49,
+    "topic": "exceptions",
+    "difficulty": "Medium",
+    "question": "[Generated] What happens if a ArrayList is thrown and not caught?",
+    "options": [
+      "Incorrect option B",
+      "Incorrect option C",
+      "Correct generated option for exceptions",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/exceptions.",
+    "tags": [
+      "fundamentals",
+      "procedural"
+    ]
+  },
+  {
+    "id": 50,
+    "topic": "exceptions",
+    "difficulty": "Medium",
+    "question": "[Generated] Is ArrayList a checked or unchecked exception?",
+    "options": [
+      "Incorrect option A",
+      "Incorrect option C",
+      "Correct generated option for exceptions",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/exceptions.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  },
+  {
+    "id": 51,
+    "topic": "exceptions",
+    "difficulty": "Easy",
+    "question": "[Generated] Which block is executed after a HashMap?",
+    "options": [
+      "Incorrect option B",
+      "Incorrect option C",
+      "Correct generated option for exceptions",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/exceptions.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  },
+  {
+    "id": 52,
+    "topic": "exceptions",
+    "difficulty": "Hard",
+    "question": "[Generated] Which block is executed after a ArrayList?",
+    "options": [
+      "Incorrect option A",
+      "Incorrect option C",
+      "Correct generated option for exceptions",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/exceptions.",
+    "tags": [
+      "fundamentals",
+      "procedural"
+    ]
+  },
+  {
+    "id": 53,
+    "topic": "exceptions",
+    "difficulty": "Easy",
+    "question": "[Generated] Is int a checked or unchecked exception?",
+    "options": [
+      "Incorrect option A",
+      "Incorrect option C",
+      "Incorrect option B",
+      "Correct generated option for exceptions"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/exceptions.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 54,
+    "topic": "exceptions",
+    "difficulty": "Easy",
+    "question": "[Generated] What happens if a ArrayList is thrown and not caught?",
+    "options": [
+      "Correct generated option for exceptions",
+      "Incorrect option A",
+      "Incorrect option B",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/exceptions.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  },
+  {
+    "id": 55,
+    "topic": "exceptions",
+    "difficulty": "Easy",
+    "question": "[Generated] Which block is executed after a int?",
+    "options": [
+      "Incorrect option A",
+      "Incorrect option C",
+      "Incorrect option B",
+      "Correct generated option for exceptions"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/exceptions.",
+    "tags": [
+      "fundamentals",
+      "procedural"
+    ]
+  },
+  {
+    "id": 56,
+    "topic": "exceptions",
+    "difficulty": "Easy",
+    "question": "[Generated] What happens if a boolean is thrown and not caught?",
+    "options": [
+      "Correct generated option for exceptions",
+      "Incorrect option C",
+      "Incorrect option B",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/exceptions.",
+    "tags": [
+      "fundamentals",
+      "procedural"
+    ]
+  },
+  {
+    "id": 57,
+    "topic": "exceptions",
+    "difficulty": "Medium",
+    "question": "[Generated] Is NullPointerException a checked or unchecked exception?",
+    "options": [
+      "Incorrect option C",
+      "Incorrect option B",
+      "Incorrect option A",
+      "Correct generated option for exceptions"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/exceptions.",
+    "tags": [
+      "interview-frequent",
+      "procedural"
+    ]
+  },
+  {
+    "id": 58,
+    "topic": "exceptions",
+    "difficulty": "Easy",
+    "question": "[Generated] Is boolean a checked or unchecked exception?",
+    "options": [
+      "Incorrect option A",
+      "Incorrect option C",
+      "Correct generated option for exceptions",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/exceptions.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 59,
+    "topic": "exceptions",
+    "difficulty": "Easy",
+    "question": "[Generated] Which block is executed after a filter()?",
+    "options": [
+      "Incorrect option C",
+      "Correct generated option for exceptions",
+      "Incorrect option A",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/exceptions.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 60,
+    "topic": "exceptions",
+    "difficulty": "Hard",
+    "question": "[Generated] Which block is executed after a filter()?",
+    "options": [
+      "Incorrect option C",
+      "Correct generated option for exceptions",
+      "Incorrect option B",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/exceptions.",
+    "tags": [
+      "interview-frequent",
+      "procedural"
+    ]
+  }
+]

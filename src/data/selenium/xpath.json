@@ -1,0 +1,1090 @@
+[
+  {
+    "id": 1,
+    "topic": "XPath",
+    "difficulty": "Easy",
+    "question": "What does '//' at the start of an XPath expression mean?",
+    "options": [
+      "Select from root only",
+      "Select anywhere in the document",
+      "Select direct children",
+      "Comment in XPath"
+    ],
+    "correctAnswer": 1,
+    "explanation": "'//' selects nodes anywhere in the document regardless of their position. A single '/' starts from the root element.",
+    "tags": [
+      "Selenium",
+      "XPath"
+    ]
+  },
+  {
+    "id": 2,
+    "topic": "XPath",
+    "difficulty": "Easy",
+    "question": "Which XPath finds an input element with id='username'?",
+    "options": [
+      "//input.username",
+      "//input[@id='username']",
+      "//input[id='username']",
+      "#input[@id='username']"
+    ],
+    "correctAnswer": 1,
+    "explanation": "In XPath, attribute conditions use @ prefix: //input[@id='username']. Square brackets [] contain predicates (conditions).",
+    "tags": [
+      "Selenium",
+      "XPath",
+      "Attributes"
+    ]
+  },
+  {
+    "id": 3,
+    "topic": "XPath",
+    "difficulty": "Medium",
+    "question": "How do you write an XPath that finds an element containing specific text?",
+    "options": [
+      "//div[@text='Login']",
+      "//div[contains(text(), 'Login')]",
+      "//div[text='Login']",
+      "//div.contains('Login')"
+    ],
+    "correctAnswer": 1,
+    "explanation": "contains(text(), 'Login') is an XPath function that checks if the element's text contains the specified string. Useful for partial text matching.",
+    "tags": [
+      "Selenium",
+      "XPath",
+      "Functions"
+    ]
+  },
+  {
+    "id": 4,
+    "topic": "XPath",
+    "difficulty": "Medium",
+    "question": "What is the difference between absolute and relative XPath?",
+    "options": [
+      "No difference",
+      "Absolute starts with /, relative starts with //",
+      "Absolute is faster, relative is more flexible",
+      "Both B and C"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Absolute XPath (/html/body/div/input) starts from root — fragile and breaks with DOM changes. Relative XPath (//input[@id='x']) is more flexible and recommended.",
+    "tags": [
+      "Selenium",
+      "XPath"
+    ]
+  },
+  {
+    "id": 5,
+    "topic": "XPath",
+    "difficulty": "Medium",
+    "question": "Which XPath axis selects the parent of the current node?",
+    "options": [
+      "child::",
+      "sibling::",
+      "parent::",
+      "ancestor::"
+    ],
+    "correctAnswer": 2,
+    "explanation": "parent:: selects the immediate parent node. ancestor:: selects all ancestors. child:: selects direct children. These are XPath axes for navigation.",
+    "tags": [
+      "Selenium",
+      "XPath",
+      "Axes"
+    ]
+  },
+  {
+    "id": 6,
+    "topic": "XPath",
+    "difficulty": "Hard",
+    "question": "How do you select the 2nd td element in a table row using XPath?",
+    "options": [
+      "//tr/td[index=2]",
+      "//tr/td[@position=2]",
+      "//tr/td[2]",
+      "//tr/td.second()"
+    ],
+    "correctAnswer": 2,
+    "explanation": "XPath uses positional predicates: //tr/td[2] selects the 2nd td. Note: XPath is 1-indexed (not 0-indexed like arrays).",
+    "tags": [
+      "Selenium",
+      "XPath",
+      "Indexing"
+    ]
+  },
+  {
+    "id": 7,
+    "topic": "XPath",
+    "difficulty": "Easy",
+    "question": "Which XPath function checks if an attribute starts with a specific text?",
+    "options": [
+      "contains()",
+      "starts-with()",
+      "text()",
+      "normalize-space()"
+    ],
+    "correctAnswer": 1,
+    "explanation": "starts-with(@attribute, 'text') is an XPath string function. Example: //input[starts-with(@id, 'user')] matches inputs with IDs starting with 'user'.",
+    "tags": [
+      "Selenium",
+      "XPath",
+      "Functions"
+    ]
+  },
+  {
+    "id": 8,
+    "topic": "XPath",
+    "difficulty": "Hard",
+    "question": "How do you combine two XPath conditions with AND?",
+    "options": [
+      "//div[@id='a' && @class='b']",
+      "//div[@id='a' and @class='b']",
+      "//div[@id='a' & @class='b']",
+      "//div[@id='a', @class='b']"
+    ],
+    "correctAnswer": 1,
+    "explanation": "XPath uses lowercase 'and' and 'or' operators (not && or ||). Example: //div[@id='a' and @class='b'] requires both conditions.",
+    "tags": [
+      "Selenium",
+      "XPath",
+      "Operators"
+    ]
+  },
+  {
+    "id": 9,
+    "topic": "XPath",
+    "difficulty": "Medium",
+    "question": "What does //following-sibling::td select?",
+    "options": [
+      "The first sibling",
+      "All td elements that are siblings after the current node",
+      "The parent td",
+      "All siblings before the current node"
+    ],
+    "correctAnswer": 1,
+    "explanation": "following-sibling:: is an XPath axis that selects all siblings that come after the current node at the same level in the DOM.",
+    "tags": [
+      "Selenium",
+      "XPath",
+      "Axes"
+    ]
+  },
+  {
+    "id": 10,
+    "topic": "XPath",
+    "difficulty": "Hard",
+    "question": "Which XPath finds an element whose text exactly equals 'Submit'?",
+    "options": [
+      "//button[contains(text(),'Submit')]",
+      "//button[@text='Submit']",
+      "//button[text()='Submit']",
+      "//button[.='Submit']"
+    ],
+    "correctAnswer": 2,
+    "explanation": "text()='Submit' matches elements with exactly that text. contains(text(),'Submit') would also match 'Submit Now'. Both C and D are valid but C is more common.",
+    "tags": [
+      "Selenium",
+      "XPath",
+      "text()"
+    ]
+  },
+  {
+    "id": 11,
+    "topic": "xpath",
+    "difficulty": "Medium",
+    "question": "[Generated] What does the `parallel execution` axis do in XPath?",
+    "options": [
+      "Incorrect option B",
+      "Correct generated option for xpath",
+      "Incorrect option A",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/xpath.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 12,
+    "topic": "xpath",
+    "difficulty": "Easy",
+    "question": "[Generated] Is `dynamic elements` an absolute or relative XPath?",
+    "options": [
+      "Incorrect option B",
+      "Correct generated option for xpath",
+      "Incorrect option C",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/xpath.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 13,
+    "topic": "xpath",
+    "difficulty": "Hard",
+    "question": "[Generated] How do you find an element by @Test in XPath?",
+    "options": [
+      "Incorrect option B",
+      "Incorrect option A",
+      "Correct generated option for xpath",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/xpath.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  },
+  {
+    "id": 14,
+    "topic": "xpath",
+    "difficulty": "Medium",
+    "question": "[Generated] What does the `PageFactory` axis do in XPath?",
+    "options": [
+      "Correct generated option for xpath",
+      "Incorrect option A",
+      "Incorrect option C",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/xpath.",
+    "tags": [
+      "fundamentals",
+      "procedural"
+    ]
+  },
+  {
+    "id": 15,
+    "topic": "xpath",
+    "difficulty": "Hard",
+    "question": "[Generated] How do you find an element by @Test in XPath?",
+    "options": [
+      "Incorrect option C",
+      "Incorrect option A",
+      "Correct generated option for xpath",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/xpath.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  },
+  {
+    "id": 16,
+    "topic": "xpath",
+    "difficulty": "Hard",
+    "question": "[Generated] What does the `PageFactory` axis do in XPath?",
+    "options": [
+      "Incorrect option B",
+      "Correct generated option for xpath",
+      "Incorrect option A",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/xpath.",
+    "tags": [
+      "interview-frequent",
+      "procedural"
+    ]
+  },
+  {
+    "id": 17,
+    "topic": "xpath",
+    "difficulty": "Easy",
+    "question": "[Generated] What does the `PageFactory` axis do in XPath?",
+    "options": [
+      "Incorrect option C",
+      "Incorrect option B",
+      "Correct generated option for xpath",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/xpath.",
+    "tags": [
+      "interview-frequent",
+      "procedural"
+    ]
+  },
+  {
+    "id": 18,
+    "topic": "xpath",
+    "difficulty": "Hard",
+    "question": "[Generated] What does the `PageFactory` axis do in XPath?",
+    "options": [
+      "Correct generated option for xpath",
+      "Incorrect option B",
+      "Incorrect option C",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/xpath.",
+    "tags": [
+      "interview-frequent",
+      "procedural"
+    ]
+  },
+  {
+    "id": 19,
+    "topic": "xpath",
+    "difficulty": "Easy",
+    "question": "[Generated] How do you find an element by By.id in XPath?",
+    "options": [
+      "Incorrect option C",
+      "Incorrect option B",
+      "Correct generated option for xpath",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/xpath.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 20,
+    "topic": "xpath",
+    "difficulty": "Medium",
+    "question": "[Generated] How do you find an element by @BeforeMethod in XPath?",
+    "options": [
+      "Incorrect option B",
+      "Incorrect option C",
+      "Incorrect option A",
+      "Correct generated option for xpath"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/xpath.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 21,
+    "topic": "xpath",
+    "difficulty": "Easy",
+    "question": "[Generated] How do you find an element by By.id in XPath?",
+    "options": [
+      "Incorrect option A",
+      "Incorrect option B",
+      "Incorrect option C",
+      "Correct generated option for xpath"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/xpath.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  },
+  {
+    "id": 22,
+    "topic": "xpath",
+    "difficulty": "Medium",
+    "question": "[Generated] Is `child-to-parent` an absolute or relative XPath?",
+    "options": [
+      "Incorrect option B",
+      "Incorrect option A",
+      "Incorrect option C",
+      "Correct generated option for xpath"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/xpath.",
+    "tags": [
+      "interview-frequent",
+      "procedural"
+    ]
+  },
+  {
+    "id": 23,
+    "topic": "xpath",
+    "difficulty": "Easy",
+    "question": "[Generated] How do you find an element by @BeforeMethod in XPath?",
+    "options": [
+      "Incorrect option C",
+      "Incorrect option B",
+      "Incorrect option A",
+      "Correct generated option for xpath"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/xpath.",
+    "tags": [
+      "fundamentals",
+      "procedural"
+    ]
+  },
+  {
+    "id": 24,
+    "topic": "xpath",
+    "difficulty": "Medium",
+    "question": "[Generated] How do you find an element by Implicit Wait in XPath?",
+    "options": [
+      "Incorrect option A",
+      "Correct generated option for xpath",
+      "Incorrect option C",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/xpath.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  },
+  {
+    "id": 25,
+    "topic": "xpath",
+    "difficulty": "Medium",
+    "question": "[Generated] How do you find an element by By.id in XPath?",
+    "options": [
+      "Incorrect option B",
+      "Incorrect option C",
+      "Incorrect option A",
+      "Correct generated option for xpath"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/xpath.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  },
+  {
+    "id": 26,
+    "topic": "xpath",
+    "difficulty": "Hard",
+    "question": "[Generated] How do you find an element by @Test in XPath?",
+    "options": [
+      "Incorrect option A",
+      "Incorrect option C",
+      "Incorrect option B",
+      "Correct generated option for xpath"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/xpath.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  },
+  {
+    "id": 27,
+    "topic": "xpath",
+    "difficulty": "Hard",
+    "question": "[Generated] How do you find an element by Implicit Wait in XPath?",
+    "options": [
+      "Correct generated option for xpath",
+      "Incorrect option A",
+      "Incorrect option B",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/xpath.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  },
+  {
+    "id": 28,
+    "topic": "xpath",
+    "difficulty": "Medium",
+    "question": "[Generated] How do you find an element by Explicit Wait in XPath?",
+    "options": [
+      "Correct generated option for xpath",
+      "Incorrect option C",
+      "Incorrect option A",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/xpath.",
+    "tags": [
+      "interview-frequent",
+      "procedural"
+    ]
+  },
+  {
+    "id": 29,
+    "topic": "xpath",
+    "difficulty": "Medium",
+    "question": "[Generated] How do you find an element by By.cssSelector in XPath?",
+    "options": [
+      "Incorrect option A",
+      "Correct generated option for xpath",
+      "Incorrect option B",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/xpath.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 30,
+    "topic": "xpath",
+    "difficulty": "Hard",
+    "question": "[Generated] What does the `child-to-parent` axis do in XPath?",
+    "options": [
+      "Incorrect option A",
+      "Correct generated option for xpath",
+      "Incorrect option B",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/xpath.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 31,
+    "topic": "xpath",
+    "difficulty": "Easy",
+    "question": "[Generated] How do you find an element by @BeforeMethod in XPath?",
+    "options": [
+      "Correct generated option for xpath",
+      "Incorrect option B",
+      "Incorrect option C",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/xpath.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  },
+  {
+    "id": 32,
+    "topic": "xpath",
+    "difficulty": "Hard",
+    "question": "[Generated] What does the `dynamic elements` axis do in XPath?",
+    "options": [
+      "Incorrect option A",
+      "Incorrect option B",
+      "Correct generated option for xpath",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/xpath.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  },
+  {
+    "id": 33,
+    "topic": "xpath",
+    "difficulty": "Medium",
+    "question": "[Generated] How do you find an element by By.cssSelector in XPath?",
+    "options": [
+      "Incorrect option C",
+      "Correct generated option for xpath",
+      "Incorrect option A",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/xpath.",
+    "tags": [
+      "fundamentals",
+      "procedural"
+    ]
+  },
+  {
+    "id": 34,
+    "topic": "xpath",
+    "difficulty": "Medium",
+    "question": "[Generated] Is `child-to-parent` an absolute or relative XPath?",
+    "options": [
+      "Incorrect option B",
+      "Incorrect option A",
+      "Correct generated option for xpath",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/xpath.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 35,
+    "topic": "xpath",
+    "difficulty": "Easy",
+    "question": "[Generated] How do you find an element by @Test in XPath?",
+    "options": [
+      "Incorrect option B",
+      "Correct generated option for xpath",
+      "Incorrect option A",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/xpath.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 36,
+    "topic": "xpath",
+    "difficulty": "Hard",
+    "question": "[Generated] Is `PageFactory` an absolute or relative XPath?",
+    "options": [
+      "Incorrect option B",
+      "Incorrect option A",
+      "Incorrect option C",
+      "Correct generated option for xpath"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/xpath.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 37,
+    "topic": "xpath",
+    "difficulty": "Medium",
+    "question": "[Generated] Is `parallel execution` an absolute or relative XPath?",
+    "options": [
+      "Correct generated option for xpath",
+      "Incorrect option B",
+      "Incorrect option C",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/xpath.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 38,
+    "topic": "xpath",
+    "difficulty": "Easy",
+    "question": "[Generated] What does the `parallel execution` axis do in XPath?",
+    "options": [
+      "Incorrect option C",
+      "Incorrect option B",
+      "Correct generated option for xpath",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/xpath.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 39,
+    "topic": "xpath",
+    "difficulty": "Hard",
+    "question": "[Generated] How do you find an element by Explicit Wait in XPath?",
+    "options": [
+      "Incorrect option A",
+      "Correct generated option for xpath",
+      "Incorrect option B",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/xpath.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 40,
+    "topic": "xpath",
+    "difficulty": "Easy",
+    "question": "[Generated] How do you find an element by @BeforeMethod in XPath?",
+    "options": [
+      "Incorrect option B",
+      "Incorrect option A",
+      "Correct generated option for xpath",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/xpath.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 41,
+    "topic": "xpath",
+    "difficulty": "Medium",
+    "question": "[Generated] How do you find an element by By.id in XPath?",
+    "options": [
+      "Incorrect option B",
+      "Incorrect option C",
+      "Correct generated option for xpath",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/xpath.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 42,
+    "topic": "xpath",
+    "difficulty": "Easy",
+    "question": "[Generated] What does the `PageFactory` axis do in XPath?",
+    "options": [
+      "Correct generated option for xpath",
+      "Incorrect option B",
+      "Incorrect option C",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/xpath.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 43,
+    "topic": "xpath",
+    "difficulty": "Medium",
+    "question": "[Generated] How do you find an element by Explicit Wait in XPath?",
+    "options": [
+      "Correct generated option for xpath",
+      "Incorrect option B",
+      "Incorrect option C",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/xpath.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 44,
+    "topic": "xpath",
+    "difficulty": "Easy",
+    "question": "[Generated] Is `child-to-parent` an absolute or relative XPath?",
+    "options": [
+      "Incorrect option B",
+      "Correct generated option for xpath",
+      "Incorrect option C",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/xpath.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 45,
+    "topic": "xpath",
+    "difficulty": "Medium",
+    "question": "[Generated] How do you find an element by Implicit Wait in XPath?",
+    "options": [
+      "Incorrect option C",
+      "Correct generated option for xpath",
+      "Incorrect option B",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/xpath.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 46,
+    "topic": "xpath",
+    "difficulty": "Medium",
+    "question": "[Generated] What does the `parallel execution` axis do in XPath?",
+    "options": [
+      "Incorrect option A",
+      "Incorrect option B",
+      "Incorrect option C",
+      "Correct generated option for xpath"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/xpath.",
+    "tags": [
+      "fundamentals",
+      "procedural"
+    ]
+  },
+  {
+    "id": 47,
+    "topic": "xpath",
+    "difficulty": "Hard",
+    "question": "[Generated] How do you find an element by Explicit Wait in XPath?",
+    "options": [
+      "Incorrect option A",
+      "Correct generated option for xpath",
+      "Incorrect option B",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/xpath.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  },
+  {
+    "id": 48,
+    "topic": "xpath",
+    "difficulty": "Easy",
+    "question": "[Generated] Is `parallel execution` an absolute or relative XPath?",
+    "options": [
+      "Incorrect option B",
+      "Incorrect option A",
+      "Incorrect option C",
+      "Correct generated option for xpath"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/xpath.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 49,
+    "topic": "xpath",
+    "difficulty": "Hard",
+    "question": "[Generated] Is `child-to-parent` an absolute or relative XPath?",
+    "options": [
+      "Correct generated option for xpath",
+      "Incorrect option C",
+      "Incorrect option B",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/xpath.",
+    "tags": [
+      "fundamentals",
+      "procedural"
+    ]
+  },
+  {
+    "id": 50,
+    "topic": "xpath",
+    "difficulty": "Medium",
+    "question": "[Generated] What does the `parallel execution` axis do in XPath?",
+    "options": [
+      "Incorrect option A",
+      "Incorrect option B",
+      "Incorrect option C",
+      "Correct generated option for xpath"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/xpath.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 51,
+    "topic": "xpath",
+    "difficulty": "Hard",
+    "question": "[Generated] Is `dynamic elements` an absolute or relative XPath?",
+    "options": [
+      "Incorrect option B",
+      "Correct generated option for xpath",
+      "Incorrect option A",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/xpath.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  },
+  {
+    "id": 52,
+    "topic": "xpath",
+    "difficulty": "Hard",
+    "question": "[Generated] Is `PageFactory` an absolute or relative XPath?",
+    "options": [
+      "Incorrect option A",
+      "Incorrect option B",
+      "Incorrect option C",
+      "Correct generated option for xpath"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/xpath.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  },
+  {
+    "id": 53,
+    "topic": "xpath",
+    "difficulty": "Easy",
+    "question": "[Generated] What does the `parallel execution` axis do in XPath?",
+    "options": [
+      "Incorrect option C",
+      "Correct generated option for xpath",
+      "Incorrect option A",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/xpath.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 54,
+    "topic": "xpath",
+    "difficulty": "Medium",
+    "question": "[Generated] How do you find an element by Implicit Wait in XPath?",
+    "options": [
+      "Correct generated option for xpath",
+      "Incorrect option A",
+      "Incorrect option B",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/xpath.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  },
+  {
+    "id": 55,
+    "topic": "xpath",
+    "difficulty": "Easy",
+    "question": "[Generated] What does the `parallel execution` axis do in XPath?",
+    "options": [
+      "Incorrect option A",
+      "Incorrect option C",
+      "Incorrect option B",
+      "Correct generated option for xpath"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/xpath.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 56,
+    "topic": "xpath",
+    "difficulty": "Easy",
+    "question": "[Generated] How do you find an element by @BeforeMethod in XPath?",
+    "options": [
+      "Correct generated option for xpath",
+      "Incorrect option A",
+      "Incorrect option C",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/xpath.",
+    "tags": [
+      "interview-frequent",
+      "procedural"
+    ]
+  },
+  {
+    "id": 57,
+    "topic": "xpath",
+    "difficulty": "Easy",
+    "question": "[Generated] How do you find an element by By.id in XPath?",
+    "options": [
+      "Incorrect option A",
+      "Incorrect option B",
+      "Incorrect option C",
+      "Correct generated option for xpath"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/xpath.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 58,
+    "topic": "xpath",
+    "difficulty": "Medium",
+    "question": "[Generated] How do you find an element by @Test in XPath?",
+    "options": [
+      "Correct generated option for xpath",
+      "Incorrect option C",
+      "Incorrect option B",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/xpath.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 59,
+    "topic": "xpath",
+    "difficulty": "Hard",
+    "question": "[Generated] How do you find an element by @Test in XPath?",
+    "options": [
+      "Incorrect option C",
+      "Incorrect option A",
+      "Correct generated option for xpath",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/xpath.",
+    "tags": [
+      "fundamentals",
+      "procedural"
+    ]
+  },
+  {
+    "id": 60,
+    "topic": "xpath",
+    "difficulty": "Hard",
+    "question": "[Generated] How do you find an element by By.cssSelector in XPath?",
+    "options": [
+      "Correct generated option for xpath",
+      "Incorrect option A",
+      "Incorrect option B",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/xpath.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  }
+]

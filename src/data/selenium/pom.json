@@ -1,0 +1,1093 @@
+[
+  {
+    "id": 1,
+    "topic": "POM",
+    "difficulty": "Easy",
+    "question": "What does POM stand for in Selenium testing?",
+    "options": [
+      "Page Object Module",
+      "Page Object Model",
+      "Page Operation Method",
+      "Project Object Management"
+    ],
+    "correctAnswer": 1,
+    "explanation": "POM stands for Page Object Model — a design pattern that creates an object repository for web UI elements, separating test logic from page interaction code.",
+    "tags": [
+      "Selenium",
+      "POM",
+      "Design Pattern"
+    ]
+  },
+  {
+    "id": 2,
+    "topic": "POM",
+    "difficulty": "Easy",
+    "question": "What is the main benefit of the Page Object Model?",
+    "options": [
+      "Faster test execution",
+      "Separation of concerns — locators and actions in page classes, assertions in tests",
+      "Fewer lines of code",
+      "Automatic screenshot capture"
+    ],
+    "correctAnswer": 1,
+    "explanation": "POM separates the test logic (assertions, test flow) from the page interaction code (locators, click, type). This improves maintainability and reduces duplication.",
+    "tags": [
+      "Selenium",
+      "POM",
+      "Maintainability"
+    ]
+  },
+  {
+    "id": 3,
+    "topic": "POM",
+    "difficulty": "Medium",
+    "question": "Which annotation is used in POM with PageFactory?",
+    "options": [
+      "@Element",
+      "@Locate",
+      "@FindBy",
+      "@WebElement"
+    ],
+    "correctAnswer": 2,
+    "explanation": "@FindBy is used with PageFactory.initElements() to declare web elements in a Page Object class. It supports various locator strategies (id, css, xpath, etc.).",
+    "tags": [
+      "Selenium",
+      "POM",
+      "PageFactory"
+    ]
+  },
+  {
+    "id": 4,
+    "topic": "POM",
+    "difficulty": "Medium",
+    "question": "Where should web element locators be defined in a POM framework?",
+    "options": [
+      "In the test class",
+      "In a properties file",
+      "In the Page Object class",
+      "In the Base class"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Locators should be in the Page Object class corresponding to the page they belong to. This makes maintenance easy — one change fixes all tests using that element.",
+    "tags": [
+      "Selenium",
+      "POM",
+      "Best Practices"
+    ]
+  },
+  {
+    "id": 5,
+    "topic": "POM",
+    "difficulty": "Medium",
+    "question": "What does PageFactory.initElements() do?",
+    "options": [
+      "Creates a new WebDriver",
+      "Initializes WebElements annotated with @FindBy in the Page class",
+      "Captures screenshots",
+      "Waits for page to load"
+    ],
+    "correctAnswer": 1,
+    "explanation": "PageFactory.initElements(driver, this) scans the class for @FindBy annotations and creates lazy-loaded proxies for those elements, binding them to the WebDriver.",
+    "tags": [
+      "Selenium",
+      "POM",
+      "PageFactory"
+    ]
+  },
+  {
+    "id": 6,
+    "topic": "POM",
+    "difficulty": "Hard",
+    "question": "What is the disadvantage of using PageFactory in Selenium 4?",
+    "options": [
+      "It doesn't support @FindBy",
+      "It uses stale element caching which can cause StaleElementReferenceException",
+      "It's too verbose",
+      "It doesn't work with Chrome"
+    ],
+    "correctAnswer": 1,
+    "explanation": "PageFactory caches element lookups. In dynamic pages, the cached reference can become stale. Many teams prefer plain WebDriver findElement() in Selenium 4 for this reason.",
+    "tags": [
+      "Selenium",
+      "POM",
+      "PageFactory",
+      "Selenium 4"
+    ]
+  },
+  {
+    "id": 7,
+    "topic": "POM",
+    "difficulty": "Easy",
+    "question": "What should Page Object methods return?",
+    "options": [
+      "void always",
+      "The WebElement acted upon",
+      "Page objects (for fluent API / method chaining)",
+      "String"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Page Object methods typically return page objects to support method chaining (fluent interface). For example: loginPage.enterEmail().enterPassword().clickLogin() returns HomePage.",
+    "tags": [
+      "Selenium",
+      "POM",
+      "Fluent API"
+    ]
+  },
+  {
+    "id": 8,
+    "topic": "POM",
+    "difficulty": "Hard",
+    "question": "What is Page Object Factory vs Page Object Model?",
+    "options": [
+      "They are the same thing",
+      "POM is the design pattern; PageFactory is a Selenium utility to implement POM using annotations",
+      "PageFactory replaces POM",
+      "POM uses annotations; PageFactory uses manual findElement"
+    ],
+    "correctAnswer": 1,
+    "explanation": "POM is the architectural design pattern. PageFactory is a Selenium class that provides an implementation of POM using @FindBy annotations and initElements(). POM can be implemented without PageFactory.",
+    "tags": [
+      "Selenium",
+      "POM",
+      "PageFactory"
+    ]
+  },
+  {
+    "id": 9,
+    "topic": "POM",
+    "difficulty": "Medium",
+    "question": "Should a Page Object class contain assertions?",
+    "options": [
+      "Yes, always",
+      "No — assertions belong in test classes",
+      "Only for validation methods",
+      "Depends on the framework"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Best practice: Page Objects should NOT contain assertions. They represent page interactions only. Assertions should live in the test layer for better separation and debugging.",
+    "tags": [
+      "Selenium",
+      "POM",
+      "Best Practices"
+    ]
+  },
+  {
+    "id": 10,
+    "topic": "POM",
+    "difficulty": "Hard",
+    "question": "What is a Base Page class used for in POM?",
+    "options": [
+      "To hold all locators",
+      "To store test data",
+      "To provide common utility methods (click, type, wait) shared across all Page Objects",
+      "To extend TestNG"
+    ],
+    "correctAnswer": 2,
+    "explanation": "A Base Page (BasePage) class contains shared utility methods like safeClick(), sendKeys(), waitForElement() that all page objects inherit. This avoids code duplication.",
+    "tags": [
+      "Selenium",
+      "POM",
+      "Base Class"
+    ]
+  },
+  {
+    "id": 11,
+    "topic": "pom",
+    "difficulty": "Hard",
+    "question": "[Generated] How do you initialize elements using @Test?",
+    "options": [
+      "Incorrect option B",
+      "Incorrect option A",
+      "Incorrect option C",
+      "Correct generated option for pom"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/pom.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 12,
+    "topic": "pom",
+    "difficulty": "Easy",
+    "question": "[Generated] What is the main advantage of child-to-parent in POM?",
+    "options": [
+      "Incorrect option C",
+      "Incorrect option B",
+      "Incorrect option A",
+      "Correct generated option for pom"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/pom.",
+    "tags": [
+      "interview-frequent",
+      "procedural"
+    ]
+  },
+  {
+    "id": 13,
+    "topic": "pom",
+    "difficulty": "Easy",
+    "question": "[Generated] Where should child-to-parent be stored in a POM framework?",
+    "options": [
+      "Incorrect option B",
+      "Incorrect option A",
+      "Incorrect option C",
+      "Correct generated option for pom"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/pom.",
+    "tags": [
+      "interview-frequent",
+      "procedural"
+    ]
+  },
+  {
+    "id": 14,
+    "topic": "pom",
+    "difficulty": "Hard",
+    "question": "[Generated] How do you initialize elements using Implicit Wait?",
+    "options": [
+      "Incorrect option B",
+      "Incorrect option C",
+      "Correct generated option for pom",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/pom.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  },
+  {
+    "id": 15,
+    "topic": "pom",
+    "difficulty": "Medium",
+    "question": "[Generated] Where should PageFactory be stored in a POM framework?",
+    "options": [
+      "Incorrect option A",
+      "Incorrect option B",
+      "Incorrect option C",
+      "Correct generated option for pom"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/pom.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 16,
+    "topic": "pom",
+    "difficulty": "Easy",
+    "question": "[Generated] How do you initialize elements using By.cssSelector?",
+    "options": [
+      "Incorrect option A",
+      "Incorrect option C",
+      "Incorrect option B",
+      "Correct generated option for pom"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/pom.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  },
+  {
+    "id": 17,
+    "topic": "pom",
+    "difficulty": "Easy",
+    "question": "[Generated] How do you initialize elements using By.cssSelector?",
+    "options": [
+      "Incorrect option A",
+      "Incorrect option C",
+      "Incorrect option B",
+      "Correct generated option for pom"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/pom.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 18,
+    "topic": "pom",
+    "difficulty": "Easy",
+    "question": "[Generated] Where should parallel execution be stored in a POM framework?",
+    "options": [
+      "Incorrect option C",
+      "Incorrect option B",
+      "Correct generated option for pom",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/pom.",
+    "tags": [
+      "interview-frequent",
+      "procedural"
+    ]
+  },
+  {
+    "id": 19,
+    "topic": "pom",
+    "difficulty": "Hard",
+    "question": "[Generated] Where should PageFactory be stored in a POM framework?",
+    "options": [
+      "Incorrect option C",
+      "Incorrect option A",
+      "Incorrect option B",
+      "Correct generated option for pom"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/pom.",
+    "tags": [
+      "fundamentals",
+      "procedural"
+    ]
+  },
+  {
+    "id": 20,
+    "topic": "pom",
+    "difficulty": "Hard",
+    "question": "[Generated] What is the main advantage of child-to-parent in POM?",
+    "options": [
+      "Incorrect option B",
+      "Incorrect option C",
+      "Incorrect option A",
+      "Correct generated option for pom"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/pom.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 21,
+    "topic": "pom",
+    "difficulty": "Easy",
+    "question": "[Generated] How do you initialize elements using Implicit Wait?",
+    "options": [
+      "Incorrect option B",
+      "Correct generated option for pom",
+      "Incorrect option C",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/pom.",
+    "tags": [
+      "interview-frequent",
+      "procedural"
+    ]
+  },
+  {
+    "id": 22,
+    "topic": "pom",
+    "difficulty": "Medium",
+    "question": "[Generated] Where should PageFactory be stored in a POM framework?",
+    "options": [
+      "Correct generated option for pom",
+      "Incorrect option A",
+      "Incorrect option B",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/pom.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 23,
+    "topic": "pom",
+    "difficulty": "Easy",
+    "question": "[Generated] What is the main advantage of child-to-parent in POM?",
+    "options": [
+      "Incorrect option A",
+      "Incorrect option C",
+      "Correct generated option for pom",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/pom.",
+    "tags": [
+      "fundamentals",
+      "procedural"
+    ]
+  },
+  {
+    "id": 24,
+    "topic": "pom",
+    "difficulty": "Medium",
+    "question": "[Generated] Where should dynamic elements be stored in a POM framework?",
+    "options": [
+      "Incorrect option A",
+      "Incorrect option C",
+      "Incorrect option B",
+      "Correct generated option for pom"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/pom.",
+    "tags": [
+      "fundamentals",
+      "procedural"
+    ]
+  },
+  {
+    "id": 25,
+    "topic": "pom",
+    "difficulty": "Easy",
+    "question": "[Generated] Where should PageFactory be stored in a POM framework?",
+    "options": [
+      "Incorrect option C",
+      "Incorrect option B",
+      "Incorrect option A",
+      "Correct generated option for pom"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/pom.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  },
+  {
+    "id": 26,
+    "topic": "pom",
+    "difficulty": "Medium",
+    "question": "[Generated] Where should parallel execution be stored in a POM framework?",
+    "options": [
+      "Incorrect option C",
+      "Incorrect option A",
+      "Correct generated option for pom",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/pom.",
+    "tags": [
+      "interview-frequent",
+      "procedural"
+    ]
+  },
+  {
+    "id": 27,
+    "topic": "pom",
+    "difficulty": "Easy",
+    "question": "[Generated] Where should PageFactory be stored in a POM framework?",
+    "options": [
+      "Incorrect option B",
+      "Incorrect option A",
+      "Correct generated option for pom",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/pom.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 28,
+    "topic": "pom",
+    "difficulty": "Easy",
+    "question": "[Generated] Where should child-to-parent be stored in a POM framework?",
+    "options": [
+      "Incorrect option C",
+      "Correct generated option for pom",
+      "Incorrect option A",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/pom.",
+    "tags": [
+      "fundamentals",
+      "procedural"
+    ]
+  },
+  {
+    "id": 29,
+    "topic": "pom",
+    "difficulty": "Hard",
+    "question": "[Generated] What is the main advantage of child-to-parent in POM?",
+    "options": [
+      "Incorrect option C",
+      "Incorrect option A",
+      "Correct generated option for pom",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/pom.",
+    "tags": [
+      "fundamentals",
+      "procedural"
+    ]
+  },
+  {
+    "id": 30,
+    "topic": "pom",
+    "difficulty": "Hard",
+    "question": "[Generated] How do you initialize elements using By.cssSelector?",
+    "options": [
+      "Incorrect option C",
+      "Correct generated option for pom",
+      "Incorrect option B",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/pom.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 31,
+    "topic": "pom",
+    "difficulty": "Medium",
+    "question": "[Generated] How do you initialize elements using By.cssSelector?",
+    "options": [
+      "Incorrect option A",
+      "Correct generated option for pom",
+      "Incorrect option B",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/pom.",
+    "tags": [
+      "fundamentals",
+      "procedural"
+    ]
+  },
+  {
+    "id": 32,
+    "topic": "pom",
+    "difficulty": "Medium",
+    "question": "[Generated] Where should child-to-parent be stored in a POM framework?",
+    "options": [
+      "Incorrect option A",
+      "Incorrect option B",
+      "Incorrect option C",
+      "Correct generated option for pom"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/pom.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  },
+  {
+    "id": 33,
+    "topic": "pom",
+    "difficulty": "Medium",
+    "question": "[Generated] What is the main advantage of PageFactory in POM?",
+    "options": [
+      "Correct generated option for pom",
+      "Incorrect option A",
+      "Incorrect option B",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/pom.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  },
+  {
+    "id": 34,
+    "topic": "pom",
+    "difficulty": "Medium",
+    "question": "[Generated] What is the main advantage of parallel execution in POM?",
+    "options": [
+      "Incorrect option B",
+      "Incorrect option A",
+      "Incorrect option C",
+      "Correct generated option for pom"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/pom.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 35,
+    "topic": "pom",
+    "difficulty": "Hard",
+    "question": "[Generated] Where should parallel execution be stored in a POM framework?",
+    "options": [
+      "Incorrect option C",
+      "Incorrect option B",
+      "Incorrect option A",
+      "Correct generated option for pom"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/pom.",
+    "tags": [
+      "interview-frequent",
+      "procedural"
+    ]
+  },
+  {
+    "id": 36,
+    "topic": "pom",
+    "difficulty": "Medium",
+    "question": "[Generated] Where should child-to-parent be stored in a POM framework?",
+    "options": [
+      "Incorrect option A",
+      "Incorrect option C",
+      "Incorrect option B",
+      "Correct generated option for pom"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/pom.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  },
+  {
+    "id": 37,
+    "topic": "pom",
+    "difficulty": "Medium",
+    "question": "[Generated] Where should parallel execution be stored in a POM framework?",
+    "options": [
+      "Incorrect option B",
+      "Incorrect option A",
+      "Incorrect option C",
+      "Correct generated option for pom"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/pom.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 38,
+    "topic": "pom",
+    "difficulty": "Easy",
+    "question": "[Generated] Where should parallel execution be stored in a POM framework?",
+    "options": [
+      "Correct generated option for pom",
+      "Incorrect option C",
+      "Incorrect option A",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/pom.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  },
+  {
+    "id": 39,
+    "topic": "pom",
+    "difficulty": "Easy",
+    "question": "[Generated] Where should parallel execution be stored in a POM framework?",
+    "options": [
+      "Correct generated option for pom",
+      "Incorrect option B",
+      "Incorrect option A",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/pom.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  },
+  {
+    "id": 40,
+    "topic": "pom",
+    "difficulty": "Medium",
+    "question": "[Generated] What is the main advantage of child-to-parent in POM?",
+    "options": [
+      "Incorrect option A",
+      "Incorrect option B",
+      "Correct generated option for pom",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/pom.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 41,
+    "topic": "pom",
+    "difficulty": "Hard",
+    "question": "[Generated] Where should dynamic elements be stored in a POM framework?",
+    "options": [
+      "Incorrect option B",
+      "Incorrect option A",
+      "Incorrect option C",
+      "Correct generated option for pom"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/pom.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  },
+  {
+    "id": 42,
+    "topic": "pom",
+    "difficulty": "Hard",
+    "question": "[Generated] What is the main advantage of dynamic elements in POM?",
+    "options": [
+      "Incorrect option A",
+      "Correct generated option for pom",
+      "Incorrect option C",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/pom.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 43,
+    "topic": "pom",
+    "difficulty": "Medium",
+    "question": "[Generated] How do you initialize elements using Implicit Wait?",
+    "options": [
+      "Incorrect option B",
+      "Incorrect option C",
+      "Incorrect option A",
+      "Correct generated option for pom"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/pom.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 44,
+    "topic": "pom",
+    "difficulty": "Hard",
+    "question": "[Generated] What is the main advantage of child-to-parent in POM?",
+    "options": [
+      "Incorrect option C",
+      "Correct generated option for pom",
+      "Incorrect option B",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/pom.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 45,
+    "topic": "pom",
+    "difficulty": "Easy",
+    "question": "[Generated] Where should parallel execution be stored in a POM framework?",
+    "options": [
+      "Incorrect option B",
+      "Incorrect option C",
+      "Incorrect option A",
+      "Correct generated option for pom"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/pom.",
+    "tags": [
+      "fundamentals",
+      "procedural"
+    ]
+  },
+  {
+    "id": 46,
+    "topic": "pom",
+    "difficulty": "Medium",
+    "question": "[Generated] What is the main advantage of child-to-parent in POM?",
+    "options": [
+      "Correct generated option for pom",
+      "Incorrect option C",
+      "Incorrect option B",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/pom.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 47,
+    "topic": "pom",
+    "difficulty": "Easy",
+    "question": "[Generated] What is the main advantage of dynamic elements in POM?",
+    "options": [
+      "Incorrect option C",
+      "Incorrect option B",
+      "Correct generated option for pom",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/pom.",
+    "tags": [
+      "interview-frequent",
+      "procedural"
+    ]
+  },
+  {
+    "id": 48,
+    "topic": "pom",
+    "difficulty": "Easy",
+    "question": "[Generated] How do you initialize elements using @Test?",
+    "options": [
+      "Incorrect option A",
+      "Correct generated option for pom",
+      "Incorrect option C",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/pom.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 49,
+    "topic": "pom",
+    "difficulty": "Medium",
+    "question": "[Generated] What is the main advantage of dynamic elements in POM?",
+    "options": [
+      "Incorrect option B",
+      "Incorrect option C",
+      "Incorrect option A",
+      "Correct generated option for pom"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/pom.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 50,
+    "topic": "pom",
+    "difficulty": "Hard",
+    "question": "[Generated] How do you initialize elements using @BeforeMethod?",
+    "options": [
+      "Correct generated option for pom",
+      "Incorrect option B",
+      "Incorrect option C",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/pom.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  },
+  {
+    "id": 51,
+    "topic": "pom",
+    "difficulty": "Hard",
+    "question": "[Generated] Where should child-to-parent be stored in a POM framework?",
+    "options": [
+      "Correct generated option for pom",
+      "Incorrect option A",
+      "Incorrect option C",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/pom.",
+    "tags": [
+      "interview-frequent",
+      "procedural"
+    ]
+  },
+  {
+    "id": 52,
+    "topic": "pom",
+    "difficulty": "Medium",
+    "question": "[Generated] Where should PageFactory be stored in a POM framework?",
+    "options": [
+      "Incorrect option A",
+      "Correct generated option for pom",
+      "Incorrect option C",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/pom.",
+    "tags": [
+      "fundamentals",
+      "procedural"
+    ]
+  },
+  {
+    "id": 53,
+    "topic": "pom",
+    "difficulty": "Medium",
+    "question": "[Generated] How do you initialize elements using @BeforeMethod?",
+    "options": [
+      "Incorrect option B",
+      "Correct generated option for pom",
+      "Incorrect option C",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/pom.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 54,
+    "topic": "pom",
+    "difficulty": "Easy",
+    "question": "[Generated] Where should parallel execution be stored in a POM framework?",
+    "options": [
+      "Incorrect option A",
+      "Incorrect option C",
+      "Incorrect option B",
+      "Correct generated option for pom"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/pom.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 55,
+    "topic": "pom",
+    "difficulty": "Hard",
+    "question": "[Generated] What is the main advantage of child-to-parent in POM?",
+    "options": [
+      "Incorrect option B",
+      "Correct generated option for pom",
+      "Incorrect option C",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/pom.",
+    "tags": [
+      "fundamentals",
+      "procedural"
+    ]
+  },
+  {
+    "id": 56,
+    "topic": "pom",
+    "difficulty": "Medium",
+    "question": "[Generated] What is the main advantage of dynamic elements in POM?",
+    "options": [
+      "Incorrect option A",
+      "Incorrect option B",
+      "Correct generated option for pom",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/pom.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 57,
+    "topic": "pom",
+    "difficulty": "Easy",
+    "question": "[Generated] How do you initialize elements using Explicit Wait?",
+    "options": [
+      "Correct generated option for pom",
+      "Incorrect option C",
+      "Incorrect option B",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/pom.",
+    "tags": [
+      "fundamentals",
+      "procedural"
+    ]
+  },
+  {
+    "id": 58,
+    "topic": "pom",
+    "difficulty": "Easy",
+    "question": "[Generated] Where should child-to-parent be stored in a POM framework?",
+    "options": [
+      "Incorrect option A",
+      "Correct generated option for pom",
+      "Incorrect option C",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/pom.",
+    "tags": [
+      "interview-frequent",
+      "procedural"
+    ]
+  },
+  {
+    "id": 59,
+    "topic": "pom",
+    "difficulty": "Medium",
+    "question": "[Generated] What is the main advantage of PageFactory in POM?",
+    "options": [
+      "Correct generated option for pom",
+      "Incorrect option A",
+      "Incorrect option C",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/pom.",
+    "tags": [
+      "fundamentals",
+      "procedural"
+    ]
+  },
+  {
+    "id": 60,
+    "topic": "pom",
+    "difficulty": "Medium",
+    "question": "[Generated] Where should dynamic elements be stored in a POM framework?",
+    "options": [
+      "Incorrect option B",
+      "Incorrect option A",
+      "Correct generated option for pom",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/pom.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  }
+]

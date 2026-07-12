@@ -1,0 +1,1095 @@
+[
+  {
+    "id": 1,
+    "topic": "Collections",
+    "difficulty": "Medium",
+    "question": "Which collection maintains insertion order?",
+    "options": [
+      "HashMap",
+      "HashSet",
+      "LinkedHashMap",
+      "TreeMap"
+    ],
+    "correctAnswer": 2,
+    "explanation": "LinkedHashMap preserves the insertion order of entries, unlike HashMap which has no guaranteed order, and TreeMap which sorts by key.",
+    "tags": [
+      "Java",
+      "Collections",
+      "Map"
+    ]
+  },
+  {
+    "id": 2,
+    "topic": "Collections",
+    "difficulty": "Easy",
+    "question": "Which interface does ArrayList implement?",
+    "options": [
+      "Set",
+      "Map",
+      "List",
+      "Queue"
+    ],
+    "correctAnswer": 2,
+    "explanation": "ArrayList implements the List interface, providing a resizable array-backed implementation with index-based access.",
+    "tags": [
+      "Java",
+      "Collections",
+      "List"
+    ]
+  },
+  {
+    "id": 3,
+    "topic": "Collections",
+    "difficulty": "Medium",
+    "question": "What is the initial capacity of ArrayList?",
+    "options": [
+      "5",
+      "8",
+      "10",
+      "16"
+    ],
+    "correctAnswer": 2,
+    "explanation": "The default initial capacity of ArrayList is 10. When it's full, it grows to (oldCapacity * 3/2 + 1), approximately 1.5x.",
+    "tags": [
+      "Java",
+      "Collections",
+      "ArrayList"
+    ]
+  },
+  {
+    "id": 4,
+    "topic": "Collections",
+    "difficulty": "Easy",
+    "question": "Which collection does not allow duplicate elements?",
+    "options": [
+      "ArrayList",
+      "LinkedList",
+      "HashSet",
+      "Vector"
+    ],
+    "correctAnswer": 2,
+    "explanation": "HashSet implements the Set interface which does not allow duplicate elements. It uses a hash table for storage.",
+    "tags": [
+      "Java",
+      "Collections",
+      "Set"
+    ]
+  },
+  {
+    "id": 5,
+    "topic": "Collections",
+    "difficulty": "Medium",
+    "question": "What is the time complexity of HashMap.get()?",
+    "options": [
+      "O(n)",
+      "O(log n)",
+      "O(1)",
+      "O(n log n)"
+    ],
+    "correctAnswer": 2,
+    "explanation": "HashMap.get() is O(1) on average due to direct hash-based bucket lookup. In the worst case (all keys hash to the same bucket), it degrades to O(n).",
+    "tags": [
+      "Java",
+      "Collections",
+      "HashMap",
+      "Complexity"
+    ]
+  },
+  {
+    "id": 6,
+    "topic": "Collections",
+    "difficulty": "Hard",
+    "question": "Which Map implementation is thread-safe?",
+    "options": [
+      "HashMap",
+      "LinkedHashMap",
+      "TreeMap",
+      "ConcurrentHashMap"
+    ],
+    "correctAnswer": 3,
+    "explanation": "ConcurrentHashMap is thread-safe and designed for concurrent access. HashMap is not thread-safe. Use Collections.synchronizedMap() or ConcurrentHashMap for multi-threaded scenarios.",
+    "tags": [
+      "Java",
+      "Collections",
+      "Concurrency",
+      "Thread Safety"
+    ]
+  },
+  {
+    "id": 7,
+    "topic": "Collections",
+    "difficulty": "Medium",
+    "question": "What does TreeMap use for ordering?",
+    "options": [
+      "Insertion order",
+      "Hash code",
+      "Natural ordering or custom Comparator",
+      "Random order"
+    ],
+    "correctAnswer": 2,
+    "explanation": "TreeMap implements NavigableMap using a Red-Black tree. It sorts keys by their natural ordering (Comparable) or a custom Comparator provided at construction.",
+    "tags": [
+      "Java",
+      "Collections",
+      "TreeMap"
+    ]
+  },
+  {
+    "id": 8,
+    "topic": "Collections",
+    "difficulty": "Easy",
+    "question": "Which method is used to add an element to the end of an ArrayList?",
+    "options": [
+      "insert()",
+      "push()",
+      "add()",
+      "append()"
+    ],
+    "correctAnswer": 2,
+    "explanation": "ArrayList.add(element) appends the element to the end of the list. add(index, element) inserts at a specific position.",
+    "tags": [
+      "Java",
+      "Collections",
+      "ArrayList"
+    ]
+  },
+  {
+    "id": 9,
+    "topic": "Collections",
+    "difficulty": "Hard",
+    "question": "What happens when you put a key that already exists in a HashMap?",
+    "options": [
+      "Throws an exception",
+      "The old value is kept",
+      "The new value replaces the old value",
+      "Both values are stored"
+    ],
+    "correctAnswer": 2,
+    "explanation": "HashMap.put() replaces the value for an existing key and returns the old value. Keys are unique in a Map.",
+    "tags": [
+      "Java",
+      "Collections",
+      "HashMap"
+    ]
+  },
+  {
+    "id": 10,
+    "topic": "Collections",
+    "difficulty": "Medium",
+    "question": "Which collection is best for FIFO (First-In-First-Out) operations?",
+    "options": [
+      "Stack",
+      "ArrayList",
+      "LinkedList / Queue",
+      "HashSet"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Queue (implemented by LinkedList, ArrayDeque) is designed for FIFO. offer() adds to tail, poll() removes from head.",
+    "tags": [
+      "Java",
+      "Collections",
+      "Queue",
+      "FIFO"
+    ]
+  },
+  {
+    "id": 11,
+    "topic": "collections",
+    "difficulty": "Medium",
+    "question": "[Generated] What is the time complexity of adding to a int?",
+    "options": [
+      "Incorrect option A",
+      "Correct generated option for collections",
+      "Incorrect option C",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/collections.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  },
+  {
+    "id": 12,
+    "topic": "collections",
+    "difficulty": "Easy",
+    "question": "[Generated] Which interface does filter() implement?",
+    "options": [
+      "Correct generated option for collections",
+      "Incorrect option A",
+      "Incorrect option B",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/collections.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 13,
+    "topic": "collections",
+    "difficulty": "Easy",
+    "question": "[Generated] Is NullPointerException thread-safe in Java?",
+    "options": [
+      "Incorrect option C",
+      "Incorrect option B",
+      "Correct generated option for collections",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/collections.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  },
+  {
+    "id": 14,
+    "topic": "collections",
+    "difficulty": "Hard",
+    "question": "[Generated] Is filter() thread-safe in Java?",
+    "options": [
+      "Correct generated option for collections",
+      "Incorrect option B",
+      "Incorrect option C",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/collections.",
+    "tags": [
+      "interview-frequent",
+      "procedural"
+    ]
+  },
+  {
+    "id": 15,
+    "topic": "collections",
+    "difficulty": "Medium",
+    "question": "[Generated] Which interface does int implement?",
+    "options": [
+      "Incorrect option B",
+      "Incorrect option C",
+      "Correct generated option for collections",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/collections.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 16,
+    "topic": "collections",
+    "difficulty": "Hard",
+    "question": "[Generated] Is boolean thread-safe in Java?",
+    "options": [
+      "Incorrect option C",
+      "Incorrect option A",
+      "Incorrect option B",
+      "Correct generated option for collections"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/collections.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  },
+  {
+    "id": 17,
+    "topic": "collections",
+    "difficulty": "Medium",
+    "question": "[Generated] What is the time complexity of adding to a NullPointerException?",
+    "options": [
+      "Incorrect option C",
+      "Incorrect option A",
+      "Incorrect option B",
+      "Correct generated option for collections"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/collections.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 18,
+    "topic": "collections",
+    "difficulty": "Easy",
+    "question": "[Generated] What is the time complexity of adding to a HashMap?",
+    "options": [
+      "Incorrect option B",
+      "Correct generated option for collections",
+      "Incorrect option C",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/collections.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 19,
+    "topic": "collections",
+    "difficulty": "Medium",
+    "question": "[Generated] What is the time complexity of adding to a ArrayList?",
+    "options": [
+      "Incorrect option B",
+      "Correct generated option for collections",
+      "Incorrect option A",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/collections.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  },
+  {
+    "id": 20,
+    "topic": "collections",
+    "difficulty": "Hard",
+    "question": "[Generated] Is filter() thread-safe in Java?",
+    "options": [
+      "Incorrect option C",
+      "Correct generated option for collections",
+      "Incorrect option A",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/collections.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 21,
+    "topic": "collections",
+    "difficulty": "Medium",
+    "question": "[Generated] Which interface does ArrayList implement?",
+    "options": [
+      "Incorrect option C",
+      "Incorrect option B",
+      "Incorrect option A",
+      "Correct generated option for collections"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/collections.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  },
+  {
+    "id": 22,
+    "topic": "collections",
+    "difficulty": "Hard",
+    "question": "[Generated] Is HashMap thread-safe in Java?",
+    "options": [
+      "Incorrect option A",
+      "Correct generated option for collections",
+      "Incorrect option C",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/collections.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 23,
+    "topic": "collections",
+    "difficulty": "Hard",
+    "question": "[Generated] Is ArrayList thread-safe in Java?",
+    "options": [
+      "Incorrect option B",
+      "Incorrect option A",
+      "Correct generated option for collections",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/collections.",
+    "tags": [
+      "interview-frequent",
+      "procedural"
+    ]
+  },
+  {
+    "id": 24,
+    "topic": "collections",
+    "difficulty": "Easy",
+    "question": "[Generated] What is the time complexity of adding to a NullPointerException?",
+    "options": [
+      "Incorrect option B",
+      "Incorrect option A",
+      "Incorrect option C",
+      "Correct generated option for collections"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/collections.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  },
+  {
+    "id": 25,
+    "topic": "collections",
+    "difficulty": "Hard",
+    "question": "[Generated] Which interface does boolean implement?",
+    "options": [
+      "Incorrect option A",
+      "Incorrect option C",
+      "Incorrect option B",
+      "Correct generated option for collections"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/collections.",
+    "tags": [
+      "interview-frequent",
+      "procedural"
+    ]
+  },
+  {
+    "id": 26,
+    "topic": "collections",
+    "difficulty": "Easy",
+    "question": "[Generated] What is the time complexity of adding to a NullPointerException?",
+    "options": [
+      "Incorrect option C",
+      "Incorrect option A",
+      "Correct generated option for collections",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/collections.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 27,
+    "topic": "collections",
+    "difficulty": "Medium",
+    "question": "[Generated] Is map() thread-safe in Java?",
+    "options": [
+      "Correct generated option for collections",
+      "Incorrect option B",
+      "Incorrect option C",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/collections.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 28,
+    "topic": "collections",
+    "difficulty": "Easy",
+    "question": "[Generated] What is the time complexity of adding to a boolean?",
+    "options": [
+      "Incorrect option A",
+      "Incorrect option B",
+      "Correct generated option for collections",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/collections.",
+    "tags": [
+      "interview-frequent",
+      "procedural"
+    ]
+  },
+  {
+    "id": 29,
+    "topic": "collections",
+    "difficulty": "Hard",
+    "question": "[Generated] What is the time complexity of adding to a int?",
+    "options": [
+      "Incorrect option B",
+      "Incorrect option C",
+      "Correct generated option for collections",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/collections.",
+    "tags": [
+      "fundamentals",
+      "procedural"
+    ]
+  },
+  {
+    "id": 30,
+    "topic": "collections",
+    "difficulty": "Hard",
+    "question": "[Generated] Which interface does map() implement?",
+    "options": [
+      "Correct generated option for collections",
+      "Incorrect option B",
+      "Incorrect option C",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/collections.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  },
+  {
+    "id": 31,
+    "topic": "collections",
+    "difficulty": "Easy",
+    "question": "[Generated] Is boolean thread-safe in Java?",
+    "options": [
+      "Incorrect option B",
+      "Correct generated option for collections",
+      "Incorrect option C",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/collections.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 32,
+    "topic": "collections",
+    "difficulty": "Easy",
+    "question": "[Generated] Is map() thread-safe in Java?",
+    "options": [
+      "Incorrect option B",
+      "Incorrect option C",
+      "Correct generated option for collections",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/collections.",
+    "tags": [
+      "interview-frequent",
+      "procedural"
+    ]
+  },
+  {
+    "id": 33,
+    "topic": "collections",
+    "difficulty": "Easy",
+    "question": "[Generated] What is the time complexity of adding to a HashMap?",
+    "options": [
+      "Incorrect option A",
+      "Incorrect option C",
+      "Correct generated option for collections",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/collections.",
+    "tags": [
+      "interview-frequent",
+      "procedural"
+    ]
+  },
+  {
+    "id": 34,
+    "topic": "collections",
+    "difficulty": "Easy",
+    "question": "[Generated] What is the time complexity of adding to a ArrayList?",
+    "options": [
+      "Incorrect option C",
+      "Incorrect option B",
+      "Incorrect option A",
+      "Correct generated option for collections"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/collections.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 35,
+    "topic": "collections",
+    "difficulty": "Hard",
+    "question": "[Generated] Is filter() thread-safe in Java?",
+    "options": [
+      "Incorrect option A",
+      "Incorrect option B",
+      "Incorrect option C",
+      "Correct generated option for collections"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/collections.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 36,
+    "topic": "collections",
+    "difficulty": "Easy",
+    "question": "[Generated] What is the time complexity of adding to a map()?",
+    "options": [
+      "Incorrect option B",
+      "Incorrect option A",
+      "Incorrect option C",
+      "Correct generated option for collections"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/collections.",
+    "tags": [
+      "interview-frequent",
+      "procedural"
+    ]
+  },
+  {
+    "id": 37,
+    "topic": "collections",
+    "difficulty": "Easy",
+    "question": "[Generated] Which interface does HashMap implement?",
+    "options": [
+      "Correct generated option for collections",
+      "Incorrect option C",
+      "Incorrect option B",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/collections.",
+    "tags": [
+      "fundamentals",
+      "procedural"
+    ]
+  },
+  {
+    "id": 38,
+    "topic": "collections",
+    "difficulty": "Medium",
+    "question": "[Generated] Is ArrayList thread-safe in Java?",
+    "options": [
+      "Incorrect option B",
+      "Correct generated option for collections",
+      "Incorrect option C",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/collections.",
+    "tags": [
+      "fundamentals",
+      "procedural"
+    ]
+  },
+  {
+    "id": 39,
+    "topic": "collections",
+    "difficulty": "Medium",
+    "question": "[Generated] Is HashMap thread-safe in Java?",
+    "options": [
+      "Correct generated option for collections",
+      "Incorrect option A",
+      "Incorrect option C",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/collections.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  },
+  {
+    "id": 40,
+    "topic": "collections",
+    "difficulty": "Easy",
+    "question": "[Generated] Is NullPointerException thread-safe in Java?",
+    "options": [
+      "Incorrect option C",
+      "Incorrect option B",
+      "Incorrect option A",
+      "Correct generated option for collections"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/collections.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 41,
+    "topic": "collections",
+    "difficulty": "Easy",
+    "question": "[Generated] Is boolean thread-safe in Java?",
+    "options": [
+      "Incorrect option A",
+      "Correct generated option for collections",
+      "Incorrect option C",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/collections.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 42,
+    "topic": "collections",
+    "difficulty": "Easy",
+    "question": "[Generated] Is boolean thread-safe in Java?",
+    "options": [
+      "Incorrect option A",
+      "Incorrect option C",
+      "Correct generated option for collections",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/collections.",
+    "tags": [
+      "interview-frequent",
+      "procedural"
+    ]
+  },
+  {
+    "id": 43,
+    "topic": "collections",
+    "difficulty": "Hard",
+    "question": "[Generated] Is ArrayList thread-safe in Java?",
+    "options": [
+      "Incorrect option A",
+      "Incorrect option C",
+      "Incorrect option B",
+      "Correct generated option for collections"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/collections.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 44,
+    "topic": "collections",
+    "difficulty": "Medium",
+    "question": "[Generated] Is NullPointerException thread-safe in Java?",
+    "options": [
+      "Incorrect option C",
+      "Incorrect option B",
+      "Correct generated option for collections",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/collections.",
+    "tags": [
+      "fundamentals",
+      "procedural"
+    ]
+  },
+  {
+    "id": 45,
+    "topic": "collections",
+    "difficulty": "Hard",
+    "question": "[Generated] Is map() thread-safe in Java?",
+    "options": [
+      "Incorrect option A",
+      "Correct generated option for collections",
+      "Incorrect option B",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/collections.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 46,
+    "topic": "collections",
+    "difficulty": "Medium",
+    "question": "[Generated] What is the time complexity of adding to a NullPointerException?",
+    "options": [
+      "Incorrect option C",
+      "Incorrect option A",
+      "Incorrect option B",
+      "Correct generated option for collections"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/collections.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 47,
+    "topic": "collections",
+    "difficulty": "Medium",
+    "question": "[Generated] Is NullPointerException thread-safe in Java?",
+    "options": [
+      "Correct generated option for collections",
+      "Incorrect option A",
+      "Incorrect option C",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/collections.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 48,
+    "topic": "collections",
+    "difficulty": "Easy",
+    "question": "[Generated] Is HashMap thread-safe in Java?",
+    "options": [
+      "Correct generated option for collections",
+      "Incorrect option B",
+      "Incorrect option C",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/collections.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 49,
+    "topic": "collections",
+    "difficulty": "Hard",
+    "question": "[Generated] Which interface does map() implement?",
+    "options": [
+      "Incorrect option C",
+      "Incorrect option B",
+      "Incorrect option A",
+      "Correct generated option for collections"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/collections.",
+    "tags": [
+      "interview-frequent",
+      "procedural"
+    ]
+  },
+  {
+    "id": 50,
+    "topic": "collections",
+    "difficulty": "Hard",
+    "question": "[Generated] What is the time complexity of adding to a NullPointerException?",
+    "options": [
+      "Correct generated option for collections",
+      "Incorrect option C",
+      "Incorrect option B",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/collections.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 51,
+    "topic": "collections",
+    "difficulty": "Medium",
+    "question": "[Generated] Is boolean thread-safe in Java?",
+    "options": [
+      "Incorrect option B",
+      "Incorrect option C",
+      "Correct generated option for collections",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/collections.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 52,
+    "topic": "collections",
+    "difficulty": "Hard",
+    "question": "[Generated] Is NullPointerException thread-safe in Java?",
+    "options": [
+      "Incorrect option A",
+      "Incorrect option B",
+      "Correct generated option for collections",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/collections.",
+    "tags": [
+      "interview-frequent",
+      "procedural"
+    ]
+  },
+  {
+    "id": 53,
+    "topic": "collections",
+    "difficulty": "Easy",
+    "question": "[Generated] Is HashMap thread-safe in Java?",
+    "options": [
+      "Incorrect option C",
+      "Correct generated option for collections",
+      "Incorrect option B",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/collections.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 54,
+    "topic": "collections",
+    "difficulty": "Easy",
+    "question": "[Generated] Is boolean thread-safe in Java?",
+    "options": [
+      "Incorrect option B",
+      "Incorrect option C",
+      "Correct generated option for collections",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/collections.",
+    "tags": [
+      "fundamentals",
+      "procedural"
+    ]
+  },
+  {
+    "id": 55,
+    "topic": "collections",
+    "difficulty": "Hard",
+    "question": "[Generated] Which interface does int implement?",
+    "options": [
+      "Incorrect option A",
+      "Incorrect option C",
+      "Correct generated option for collections",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/collections.",
+    "tags": [
+      "fundamentals",
+      "procedural"
+    ]
+  },
+  {
+    "id": 56,
+    "topic": "collections",
+    "difficulty": "Medium",
+    "question": "[Generated] What is the time complexity of adding to a int?",
+    "options": [
+      "Correct generated option for collections",
+      "Incorrect option B",
+      "Incorrect option C",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/collections.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 57,
+    "topic": "collections",
+    "difficulty": "Medium",
+    "question": "[Generated] What is the time complexity of adding to a ArrayList?",
+    "options": [
+      "Incorrect option C",
+      "Incorrect option A",
+      "Incorrect option B",
+      "Correct generated option for collections"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/collections.",
+    "tags": [
+      "fundamentals",
+      "procedural"
+    ]
+  },
+  {
+    "id": 58,
+    "topic": "collections",
+    "difficulty": "Hard",
+    "question": "[Generated] What is the time complexity of adding to a filter()?",
+    "options": [
+      "Incorrect option A",
+      "Incorrect option B",
+      "Incorrect option C",
+      "Correct generated option for collections"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/collections.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  },
+  {
+    "id": 59,
+    "topic": "collections",
+    "difficulty": "Hard",
+    "question": "[Generated] Is map() thread-safe in Java?",
+    "options": [
+      "Incorrect option B",
+      "Incorrect option A",
+      "Correct generated option for collections",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/collections.",
+    "tags": [
+      "fundamentals",
+      "procedural"
+    ]
+  },
+  {
+    "id": 60,
+    "topic": "collections",
+    "difficulty": "Easy",
+    "question": "[Generated] Which interface does ArrayList implement?",
+    "options": [
+      "Incorrect option C",
+      "Correct generated option for collections",
+      "Incorrect option B",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/collections.",
+    "tags": [
+      "interview-frequent",
+      "procedural"
+    ]
+  }
+]

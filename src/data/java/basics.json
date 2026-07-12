@@ -1,0 +1,1092 @@
+[
+  {
+    "id": 1,
+    "topic": "Basics",
+    "difficulty": "Easy",
+    "question": "Which keyword is used to define a constant in Java?",
+    "options": [
+      "static",
+      "final",
+      "const",
+      "immutable"
+    ],
+    "correctAnswer": 1,
+    "explanation": "'final' makes a variable's value unchangeable once assigned. Java does not have a 'const' keyword (unlike C++).",
+    "tags": [
+      "Java",
+      "Basics",
+      "Keywords"
+    ]
+  },
+  {
+    "id": 2,
+    "topic": "Basics",
+    "difficulty": "Easy",
+    "question": "What is the default value of an int variable in Java?",
+    "options": [
+      "null",
+      "undefined",
+      "0",
+      "-1"
+    ],
+    "correctAnswer": 2,
+    "explanation": "In Java, instance variables of type int are initialized to 0 by default. Local variables are not initialized automatically.",
+    "tags": [
+      "Java",
+      "Basics",
+      "Data Types"
+    ]
+  },
+  {
+    "id": 3,
+    "topic": "Basics",
+    "difficulty": "Easy",
+    "question": "Which of the following is NOT a primitive data type in Java?",
+    "options": [
+      "int",
+      "char",
+      "String",
+      "boolean"
+    ],
+    "correctAnswer": 2,
+    "explanation": "String is a class (reference type) in Java, not a primitive. The 8 primitive types are: byte, short, int, long, float, double, char, boolean.",
+    "tags": [
+      "Java",
+      "Basics",
+      "Data Types"
+    ]
+  },
+  {
+    "id": 4,
+    "topic": "Basics",
+    "difficulty": "Medium",
+    "question": "What is the output of: System.out.println(10 / 3)?",
+    "options": [
+      "3.33",
+      "3",
+      "3.0",
+      "Compilation error"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Integer division in Java truncates the fractional part. 10/3 = 3 (integer). To get 3.33, you'd need 10.0/3 or (double)10/3.",
+    "tags": [
+      "Java",
+      "Basics",
+      "Operators"
+    ]
+  },
+  {
+    "id": 5,
+    "topic": "Basics",
+    "difficulty": "Medium",
+    "question": "Which method is the entry point of a Java application?",
+    "options": [
+      "start()",
+      "run()",
+      "main()",
+      "init()"
+    ],
+    "correctAnswer": 2,
+    "explanation": "public static void main(String[] args) is the standard entry point that the JVM calls when you run a Java application.",
+    "tags": [
+      "Java",
+      "Basics",
+      "JVM"
+    ]
+  },
+  {
+    "id": 6,
+    "topic": "Basics",
+    "difficulty": "Medium",
+    "question": "What does the 'static' keyword mean in Java?",
+    "options": [
+      "The variable is constant",
+      "The method/variable belongs to the class, not instances",
+      "The method cannot be overridden",
+      "The class cannot be instantiated"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Static members belong to the class itself rather than to any particular object instance. They can be accessed without creating an object.",
+    "tags": [
+      "Java",
+      "Basics",
+      "Keywords"
+    ]
+  },
+  {
+    "id": 7,
+    "topic": "Basics",
+    "difficulty": "Hard",
+    "question": "What is the output of: System.out.println('a' + 'b')?",
+    "options": [
+      "ab",
+      "195",
+      "97",
+      "Compilation error"
+    ],
+    "correctAnswer": 1,
+    "explanation": "char literals 'a' (97) and 'b' (98) are promoted to int during arithmetic. 97 + 98 = 195. To concatenate strings, use \"a\" + \"b\".",
+    "tags": [
+      "Java",
+      "Basics",
+      "Type Casting"
+    ]
+  },
+  {
+    "id": 8,
+    "topic": "Basics",
+    "difficulty": "Easy",
+    "question": "Which package is automatically imported in every Java program?",
+    "options": [
+      "java.io",
+      "java.util",
+      "java.lang",
+      "java.net"
+    ],
+    "correctAnswer": 2,
+    "explanation": "java.lang is automatically imported in every Java class. It contains fundamental classes like String, Math, Object, System, etc.",
+    "tags": [
+      "Java",
+      "Basics",
+      "Packages"
+    ]
+  },
+  {
+    "id": 9,
+    "topic": "Basics",
+    "difficulty": "Medium",
+    "question": "What is the range of a byte data type in Java?",
+    "options": [
+      "0 to 255",
+      "-128 to 127",
+      "-256 to 255",
+      "0 to 127"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Java's byte is an 8-bit signed integer. Its range is -2^7 to 2^7-1, which is -128 to 127.",
+    "tags": [
+      "Java",
+      "Basics",
+      "Data Types"
+    ]
+  },
+  {
+    "id": 10,
+    "topic": "Basics",
+    "difficulty": "Hard",
+    "question": "Which statement about Java is correct?",
+    "options": [
+      "Java is purely compiled",
+      "Java is purely interpreted",
+      "Java is both compiled and interpreted",
+      "Java compiles to machine code"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Java source is compiled to bytecode (.class) by javac, then interpreted/JIT-compiled by the JVM at runtime — making Java both compiled and interpreted.",
+    "tags": [
+      "Java",
+      "Basics",
+      "JVM"
+    ]
+  },
+  {
+    "id": 11,
+    "topic": "basics",
+    "difficulty": "Medium",
+    "question": "[Generated] What is the default value of a map() variable in Java?",
+    "options": [
+      "Incorrect option C",
+      "Correct generated option for basics",
+      "Incorrect option B",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/basics.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 12,
+    "topic": "basics",
+    "difficulty": "Easy",
+    "question": "[Generated] Which keyword is used to define a polymorphism in Java?",
+    "options": [
+      "Incorrect option A",
+      "Correct generated option for basics",
+      "Incorrect option C",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/basics.",
+    "tags": [
+      "interview-frequent",
+      "procedural"
+    ]
+  },
+  {
+    "id": 13,
+    "topic": "basics",
+    "difficulty": "Medium",
+    "question": "[Generated] What is the size of the NullPointerException primitive in Java?",
+    "options": [
+      "Incorrect option C",
+      "Incorrect option A",
+      "Incorrect option B",
+      "Correct generated option for basics"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/basics.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  },
+  {
+    "id": 14,
+    "topic": "basics",
+    "difficulty": "Hard",
+    "question": "[Generated] Which keyword is used to define a polymorphism in Java?",
+    "options": [
+      "Incorrect option A",
+      "Incorrect option C",
+      "Correct generated option for basics",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/basics.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 15,
+    "topic": "basics",
+    "difficulty": "Hard",
+    "question": "[Generated] Which keyword is used to define a encapsulation in Java?",
+    "options": [
+      "Correct generated option for basics",
+      "Incorrect option A",
+      "Incorrect option B",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/basics.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 16,
+    "topic": "basics",
+    "difficulty": "Easy",
+    "question": "[Generated] What is the size of the filter() primitive in Java?",
+    "options": [
+      "Incorrect option C",
+      "Incorrect option A",
+      "Correct generated option for basics",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/basics.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 17,
+    "topic": "basics",
+    "difficulty": "Hard",
+    "question": "[Generated] What is the default value of a boolean variable in Java?",
+    "options": [
+      "Incorrect option B",
+      "Correct generated option for basics",
+      "Incorrect option A",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/basics.",
+    "tags": [
+      "interview-frequent",
+      "procedural"
+    ]
+  },
+  {
+    "id": 18,
+    "topic": "basics",
+    "difficulty": "Medium",
+    "question": "[Generated] What is the size of the ArrayList primitive in Java?",
+    "options": [
+      "Incorrect option C",
+      "Incorrect option A",
+      "Correct generated option for basics",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/basics.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 19,
+    "topic": "basics",
+    "difficulty": "Medium",
+    "question": "[Generated] Which keyword is used to define a polymorphism in Java?",
+    "options": [
+      "Incorrect option A",
+      "Incorrect option C",
+      "Incorrect option B",
+      "Correct generated option for basics"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/basics.",
+    "tags": [
+      "interview-frequent",
+      "procedural"
+    ]
+  },
+  {
+    "id": 20,
+    "topic": "basics",
+    "difficulty": "Medium",
+    "question": "[Generated] What is the size of the HashMap primitive in Java?",
+    "options": [
+      "Incorrect option A",
+      "Incorrect option B",
+      "Incorrect option C",
+      "Correct generated option for basics"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/basics.",
+    "tags": [
+      "fundamentals",
+      "procedural"
+    ]
+  },
+  {
+    "id": 21,
+    "topic": "basics",
+    "difficulty": "Hard",
+    "question": "[Generated] What is the default value of a boolean variable in Java?",
+    "options": [
+      "Incorrect option C",
+      "Correct generated option for basics",
+      "Incorrect option B",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/basics.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 22,
+    "topic": "basics",
+    "difficulty": "Hard",
+    "question": "[Generated] Which keyword is used to define a encapsulation in Java?",
+    "options": [
+      "Incorrect option B",
+      "Correct generated option for basics",
+      "Incorrect option A",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/basics.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 23,
+    "topic": "basics",
+    "difficulty": "Hard",
+    "question": "[Generated] What is the default value of a NullPointerException variable in Java?",
+    "options": [
+      "Incorrect option B",
+      "Incorrect option C",
+      "Correct generated option for basics",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/basics.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  },
+  {
+    "id": 24,
+    "topic": "basics",
+    "difficulty": "Medium",
+    "question": "[Generated] What is the default value of a NullPointerException variable in Java?",
+    "options": [
+      "Incorrect option C",
+      "Correct generated option for basics",
+      "Incorrect option B",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/basics.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  },
+  {
+    "id": 25,
+    "topic": "basics",
+    "difficulty": "Medium",
+    "question": "[Generated] What is the size of the HashMap primitive in Java?",
+    "options": [
+      "Incorrect option C",
+      "Correct generated option for basics",
+      "Incorrect option B",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/basics.",
+    "tags": [
+      "interview-frequent",
+      "procedural"
+    ]
+  },
+  {
+    "id": 26,
+    "topic": "basics",
+    "difficulty": "Hard",
+    "question": "[Generated] What is the size of the HashMap primitive in Java?",
+    "options": [
+      "Incorrect option A",
+      "Incorrect option C",
+      "Incorrect option B",
+      "Correct generated option for basics"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/basics.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 27,
+    "topic": "basics",
+    "difficulty": "Easy",
+    "question": "[Generated] What is the default value of a ArrayList variable in Java?",
+    "options": [
+      "Incorrect option A",
+      "Incorrect option C",
+      "Correct generated option for basics",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/basics.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 28,
+    "topic": "basics",
+    "difficulty": "Medium",
+    "question": "[Generated] What is the size of the HashMap primitive in Java?",
+    "options": [
+      "Incorrect option B",
+      "Incorrect option A",
+      "Correct generated option for basics",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/basics.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 29,
+    "topic": "basics",
+    "difficulty": "Hard",
+    "question": "[Generated] What is the size of the NullPointerException primitive in Java?",
+    "options": [
+      "Incorrect option C",
+      "Incorrect option A",
+      "Correct generated option for basics",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/basics.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  },
+  {
+    "id": 30,
+    "topic": "basics",
+    "difficulty": "Easy",
+    "question": "[Generated] Which keyword is used to define a inheritance in Java?",
+    "options": [
+      "Incorrect option B",
+      "Incorrect option A",
+      "Incorrect option C",
+      "Correct generated option for basics"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/basics.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  },
+  {
+    "id": 31,
+    "topic": "basics",
+    "difficulty": "Easy",
+    "question": "[Generated] What is the size of the filter() primitive in Java?",
+    "options": [
+      "Correct generated option for basics",
+      "Incorrect option B",
+      "Incorrect option A",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/basics.",
+    "tags": [
+      "interview-frequent",
+      "procedural"
+    ]
+  },
+  {
+    "id": 32,
+    "topic": "basics",
+    "difficulty": "Easy",
+    "question": "[Generated] What is the size of the NullPointerException primitive in Java?",
+    "options": [
+      "Correct generated option for basics",
+      "Incorrect option B",
+      "Incorrect option A",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/basics.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 33,
+    "topic": "basics",
+    "difficulty": "Hard",
+    "question": "[Generated] What is the default value of a NullPointerException variable in Java?",
+    "options": [
+      "Incorrect option C",
+      "Incorrect option A",
+      "Correct generated option for basics",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/basics.",
+    "tags": [
+      "fundamentals",
+      "procedural"
+    ]
+  },
+  {
+    "id": 34,
+    "topic": "basics",
+    "difficulty": "Easy",
+    "question": "[Generated] What is the default value of a ArrayList variable in Java?",
+    "options": [
+      "Incorrect option C",
+      "Incorrect option B",
+      "Correct generated option for basics",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/basics.",
+    "tags": [
+      "interview-frequent",
+      "procedural"
+    ]
+  },
+  {
+    "id": 35,
+    "topic": "basics",
+    "difficulty": "Hard",
+    "question": "[Generated] Which keyword is used to define a encapsulation in Java?",
+    "options": [
+      "Incorrect option B",
+      "Incorrect option C",
+      "Incorrect option A",
+      "Correct generated option for basics"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/basics.",
+    "tags": [
+      "interview-frequent",
+      "procedural"
+    ]
+  },
+  {
+    "id": 36,
+    "topic": "basics",
+    "difficulty": "Hard",
+    "question": "[Generated] Which keyword is used to define a encapsulation in Java?",
+    "options": [
+      "Incorrect option A",
+      "Correct generated option for basics",
+      "Incorrect option C",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/basics.",
+    "tags": [
+      "fundamentals",
+      "procedural"
+    ]
+  },
+  {
+    "id": 37,
+    "topic": "basics",
+    "difficulty": "Medium",
+    "question": "[Generated] Which keyword is used to define a polymorphism in Java?",
+    "options": [
+      "Incorrect option A",
+      "Correct generated option for basics",
+      "Incorrect option B",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/basics.",
+    "tags": [
+      "interview-frequent",
+      "procedural"
+    ]
+  },
+  {
+    "id": 38,
+    "topic": "basics",
+    "difficulty": "Hard",
+    "question": "[Generated] What is the size of the HashMap primitive in Java?",
+    "options": [
+      "Incorrect option C",
+      "Incorrect option B",
+      "Incorrect option A",
+      "Correct generated option for basics"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/basics.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  },
+  {
+    "id": 39,
+    "topic": "basics",
+    "difficulty": "Easy",
+    "question": "[Generated] Which keyword is used to define a inheritance in Java?",
+    "options": [
+      "Incorrect option C",
+      "Correct generated option for basics",
+      "Incorrect option B",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/basics.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  },
+  {
+    "id": 40,
+    "topic": "basics",
+    "difficulty": "Hard",
+    "question": "[Generated] What is the size of the map() primitive in Java?",
+    "options": [
+      "Incorrect option A",
+      "Correct generated option for basics",
+      "Incorrect option B",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/basics.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 41,
+    "topic": "basics",
+    "difficulty": "Easy",
+    "question": "[Generated] Which keyword is used to define a encapsulation in Java?",
+    "options": [
+      "Incorrect option A",
+      "Incorrect option B",
+      "Incorrect option C",
+      "Correct generated option for basics"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/basics.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 42,
+    "topic": "basics",
+    "difficulty": "Medium",
+    "question": "[Generated] Which keyword is used to define a encapsulation in Java?",
+    "options": [
+      "Incorrect option C",
+      "Correct generated option for basics",
+      "Incorrect option B",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/basics.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 43,
+    "topic": "basics",
+    "difficulty": "Hard",
+    "question": "[Generated] What is the default value of a NullPointerException variable in Java?",
+    "options": [
+      "Incorrect option A",
+      "Incorrect option C",
+      "Incorrect option B",
+      "Correct generated option for basics"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/basics.",
+    "tags": [
+      "fundamentals",
+      "procedural"
+    ]
+  },
+  {
+    "id": 44,
+    "topic": "basics",
+    "difficulty": "Easy",
+    "question": "[Generated] Which keyword is used to define a encapsulation in Java?",
+    "options": [
+      "Incorrect option A",
+      "Incorrect option C",
+      "Incorrect option B",
+      "Correct generated option for basics"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/basics.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  },
+  {
+    "id": 45,
+    "topic": "basics",
+    "difficulty": "Medium",
+    "question": "[Generated] What is the default value of a int variable in Java?",
+    "options": [
+      "Incorrect option C",
+      "Incorrect option B",
+      "Incorrect option A",
+      "Correct generated option for basics"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/basics.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 46,
+    "topic": "basics",
+    "difficulty": "Easy",
+    "question": "[Generated] Which keyword is used to define a class in Java?",
+    "options": [
+      "Incorrect option C",
+      "Incorrect option A",
+      "Incorrect option B",
+      "Correct generated option for basics"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/basics.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  },
+  {
+    "id": 47,
+    "topic": "basics",
+    "difficulty": "Hard",
+    "question": "[Generated] Which keyword is used to define a inheritance in Java?",
+    "options": [
+      "Correct generated option for basics",
+      "Incorrect option A",
+      "Incorrect option C",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/basics.",
+    "tags": [
+      "interview-frequent",
+      "procedural"
+    ]
+  },
+  {
+    "id": 48,
+    "topic": "basics",
+    "difficulty": "Hard",
+    "question": "[Generated] What is the default value of a int variable in Java?",
+    "options": [
+      "Incorrect option A",
+      "Incorrect option C",
+      "Incorrect option B",
+      "Correct generated option for basics"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/basics.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 49,
+    "topic": "basics",
+    "difficulty": "Medium",
+    "question": "[Generated] What is the size of the ArrayList primitive in Java?",
+    "options": [
+      "Correct generated option for basics",
+      "Incorrect option A",
+      "Incorrect option C",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/basics.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 50,
+    "topic": "basics",
+    "difficulty": "Medium",
+    "question": "[Generated] Which keyword is used to define a polymorphism in Java?",
+    "options": [
+      "Incorrect option B",
+      "Incorrect option C",
+      "Correct generated option for basics",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/basics.",
+    "tags": [
+      "interview-frequent",
+      "procedural"
+    ]
+  },
+  {
+    "id": 51,
+    "topic": "basics",
+    "difficulty": "Hard",
+    "question": "[Generated] What is the default value of a map() variable in Java?",
+    "options": [
+      "Incorrect option A",
+      "Correct generated option for basics",
+      "Incorrect option B",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/basics.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 52,
+    "topic": "basics",
+    "difficulty": "Easy",
+    "question": "[Generated] What is the default value of a ArrayList variable in Java?",
+    "options": [
+      "Correct generated option for basics",
+      "Incorrect option A",
+      "Incorrect option B",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/basics.",
+    "tags": [
+      "interview-frequent",
+      "procedural"
+    ]
+  },
+  {
+    "id": 53,
+    "topic": "basics",
+    "difficulty": "Easy",
+    "question": "[Generated] What is the size of the ArrayList primitive in Java?",
+    "options": [
+      "Incorrect option A",
+      "Correct generated option for basics",
+      "Incorrect option C",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/basics.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 54,
+    "topic": "basics",
+    "difficulty": "Medium",
+    "question": "[Generated] What is the default value of a map() variable in Java?",
+    "options": [
+      "Correct generated option for basics",
+      "Incorrect option B",
+      "Incorrect option C",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/basics.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 55,
+    "topic": "basics",
+    "difficulty": "Medium",
+    "question": "[Generated] Which keyword is used to define a encapsulation in Java?",
+    "options": [
+      "Incorrect option B",
+      "Incorrect option C",
+      "Correct generated option for basics",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/basics.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  },
+  {
+    "id": 56,
+    "topic": "basics",
+    "difficulty": "Hard",
+    "question": "[Generated] Which keyword is used to define a inheritance in Java?",
+    "options": [
+      "Incorrect option A",
+      "Incorrect option C",
+      "Correct generated option for basics",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/basics.",
+    "tags": [
+      "interview-frequent",
+      "procedural"
+    ]
+  },
+  {
+    "id": 57,
+    "topic": "basics",
+    "difficulty": "Medium",
+    "question": "[Generated] What is the default value of a boolean variable in Java?",
+    "options": [
+      "Incorrect option C",
+      "Incorrect option B",
+      "Correct generated option for basics",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/basics.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 58,
+    "topic": "basics",
+    "difficulty": "Easy",
+    "question": "[Generated] What is the size of the NullPointerException primitive in Java?",
+    "options": [
+      "Incorrect option A",
+      "Correct generated option for basics",
+      "Incorrect option C",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/basics.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 59,
+    "topic": "basics",
+    "difficulty": "Easy",
+    "question": "[Generated] What is the default value of a HashMap variable in Java?",
+    "options": [
+      "Incorrect option C",
+      "Incorrect option A",
+      "Incorrect option B",
+      "Correct generated option for basics"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/basics.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 60,
+    "topic": "basics",
+    "difficulty": "Medium",
+    "question": "[Generated] What is the size of the NullPointerException primitive in Java?",
+    "options": [
+      "Incorrect option B",
+      "Correct generated option for basics",
+      "Incorrect option A",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in java/basics.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  }
+]

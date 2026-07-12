@@ -1,0 +1,1095 @@
+[
+  {
+    "id": 1,
+    "topic": "Collections",
+    "difficulty": "Easy",
+    "question": "What is the difference between a list and a tuple in Python?",
+    "options": [
+      "Lists use [] and are mutable; tuples use () and are immutable",
+      "Tuples are faster for indexing; no other difference",
+      "Lists are sorted; tuples are not",
+      "No difference"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Lists ([]) are mutable — elements can be added, removed, or changed. Tuples (()) are immutable — their content cannot be changed after creation.",
+    "tags": [
+      "Python",
+      "Collections",
+      "List",
+      "Tuple"
+    ]
+  },
+  {
+    "id": 2,
+    "topic": "Collections",
+    "difficulty": "Easy",
+    "question": "Which Python collection ensures unique elements?",
+    "options": [
+      "list",
+      "dict",
+      "set",
+      "tuple"
+    ],
+    "correctAnswer": 2,
+    "explanation": "A set is an unordered collection of unique elements. Adding a duplicate to a set is silently ignored.",
+    "tags": [
+      "Python",
+      "Collections",
+      "Set"
+    ]
+  },
+  {
+    "id": 3,
+    "topic": "Collections",
+    "difficulty": "Medium",
+    "question": "How do you merge two dictionaries in Python 3.9+?",
+    "options": [
+      "dict1 + dict2",
+      "dict1.merge(dict2)",
+      "dict1 | dict2",
+      "dict1.update(dict2)"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Python 3.9+ introduced the | operator for dict merging. dict1 | dict2 creates a new merged dict. dict1.update(dict2) modifies dict1 in-place.",
+    "tags": [
+      "Python",
+      "Collections",
+      "Dict",
+      "Python 3.9"
+    ]
+  },
+  {
+    "id": 4,
+    "topic": "Collections",
+    "difficulty": "Medium",
+    "question": "What does the get() method on a dict return if the key doesn't exist?",
+    "options": [
+      "KeyError",
+      "None by default (or a specified default)",
+      "False",
+      "Empty string"
+    ],
+    "correctAnswer": 1,
+    "explanation": "dict.get(key) returns None if the key doesn't exist. dict.get(key, default) returns the specified default. This avoids KeyError unlike dict[key].",
+    "tags": [
+      "Python",
+      "Collections",
+      "Dict"
+    ]
+  },
+  {
+    "id": 5,
+    "topic": "Collections",
+    "difficulty": "Easy",
+    "question": "How do you add an element to a set?",
+    "options": [
+      "set.append()",
+      "set.push()",
+      "set.add()",
+      "set.insert()"
+    ],
+    "correctAnswer": 2,
+    "explanation": "set.add(element) adds a single element. set.update(iterable) adds multiple elements. Unlike lists, sets have no append() or insert().",
+    "tags": [
+      "Python",
+      "Collections",
+      "Set"
+    ]
+  },
+  {
+    "id": 6,
+    "topic": "Collections",
+    "difficulty": "Hard",
+    "question": "What is a defaultdict in Python?",
+    "options": [
+      "A dict that is sorted by default",
+      "A dict that raises no error for missing keys and provides a default factory",
+      "A dict with fixed types",
+      "A read-only dict"
+    ],
+    "correctAnswer": 1,
+    "explanation": "defaultdict(default_factory) from collections automatically creates a default value for missing keys. E.g., defaultdict(list) creates [] for new keys, avoiding KeyError.",
+    "tags": [
+      "Python",
+      "Collections",
+      "defaultdict"
+    ]
+  },
+  {
+    "id": 7,
+    "topic": "Collections",
+    "difficulty": "Medium",
+    "question": "How do you sort a list in descending order in Python?",
+    "options": [
+      "list.sort(reverse=False)",
+      "list.sort(descending=True)",
+      "list.sort(reverse=True)",
+      "sorted(list, order='desc')"
+    ],
+    "correctAnswer": 2,
+    "explanation": "list.sort(reverse=True) sorts in-place descending. sorted(list, reverse=True) returns a new sorted list without modifying the original.",
+    "tags": [
+      "Python",
+      "Collections",
+      "Sorting"
+    ]
+  },
+  {
+    "id": 8,
+    "topic": "Collections",
+    "difficulty": "Hard",
+    "question": "What is a Counter in Python's collections module?",
+    "options": [
+      "A class that counts loop iterations",
+      "A dict subclass for counting hashable objects",
+      "An integer counter",
+      "A thread-safe counter"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Counter({'a': 3, 'b': 2}) — Counter is a dict subclass that counts element occurrences. Counter('aababc') gives {'a':3,'b':2,'c':1}.",
+    "tags": [
+      "Python",
+      "Collections",
+      "Counter"
+    ]
+  },
+  {
+    "id": 9,
+    "topic": "Collections",
+    "difficulty": "Medium",
+    "question": "What is list slicing in Python?",
+    "options": [
+      "Removing elements from a list",
+      "Extracting a sublist with list[start:end:step]",
+      "Splitting a list into two",
+      "Sorting a portion of a list"
+    ],
+    "correctAnswer": 1,
+    "explanation": "list[start:end:step] creates a new sublist. list[1:4] = elements at index 1,2,3. list[::2] = every other element. list[::-1] = reversed list.",
+    "tags": [
+      "Python",
+      "Collections",
+      "List",
+      "Slicing"
+    ]
+  },
+  {
+    "id": 10,
+    "topic": "Collections",
+    "difficulty": "Easy",
+    "question": "Which method removes and returns the last element of a list?",
+    "options": [
+      "list.remove()",
+      "list.delete()",
+      "list.pop()",
+      "list.dequeue()"
+    ],
+    "correctAnswer": 2,
+    "explanation": "list.pop() removes and returns the last element. list.pop(index) removes at a specific index. list.remove(value) removes the first occurrence of a value.",
+    "tags": [
+      "Python",
+      "Collections",
+      "List"
+    ]
+  },
+  {
+    "id": 11,
+    "topic": "collections",
+    "difficulty": "Easy",
+    "question": "[Generated] Is a __init__ mutable in Python?",
+    "options": [
+      "Incorrect option A",
+      "Incorrect option C",
+      "Incorrect option B",
+      "Correct generated option for collections"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in python/collections.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 12,
+    "topic": "collections",
+    "difficulty": "Easy",
+    "question": "[Generated] Is a set mutable in Python?",
+    "options": [
+      "Incorrect option B",
+      "Incorrect option A",
+      "Correct generated option for collections",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in python/collections.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 13,
+    "topic": "collections",
+    "difficulty": "Hard",
+    "question": "[Generated] Is a __init__ mutable in Python?",
+    "options": [
+      "Correct generated option for collections",
+      "Incorrect option B",
+      "Incorrect option C",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in python/collections.",
+    "tags": [
+      "interview-frequent",
+      "procedural"
+    ]
+  },
+  {
+    "id": 14,
+    "topic": "collections",
+    "difficulty": "Hard",
+    "question": "[Generated] What is the time complexity of `len()` on a list?",
+    "options": [
+      "Incorrect option A",
+      "Incorrect option C",
+      "Incorrect option B",
+      "Correct generated option for collections"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in python/collections.",
+    "tags": [
+      "interview-frequent",
+      "procedural"
+    ]
+  },
+  {
+    "id": 15,
+    "topic": "collections",
+    "difficulty": "Easy",
+    "question": "[Generated] Is a __init__ mutable in Python?",
+    "options": [
+      "Incorrect option A",
+      "Incorrect option B",
+      "Correct generated option for collections",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in python/collections.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 16,
+    "topic": "collections",
+    "difficulty": "Medium",
+    "question": "[Generated] Is a dictionary mutable in Python?",
+    "options": [
+      "Incorrect option B",
+      "Incorrect option A",
+      "Correct generated option for collections",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in python/collections.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 17,
+    "topic": "collections",
+    "difficulty": "Easy",
+    "question": "[Generated] What is the time complexity of `len()` on a list?",
+    "options": [
+      "Incorrect option A",
+      "Incorrect option C",
+      "Correct generated option for collections",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in python/collections.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 18,
+    "topic": "collections",
+    "difficulty": "Easy",
+    "question": "[Generated] Is a tuple mutable in Python?",
+    "options": [
+      "Incorrect option B",
+      "Incorrect option A",
+      "Correct generated option for collections",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in python/collections.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 19,
+    "topic": "collections",
+    "difficulty": "Medium",
+    "question": "[Generated] Is a set mutable in Python?",
+    "options": [
+      "Correct generated option for collections",
+      "Incorrect option C",
+      "Incorrect option A",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in python/collections.",
+    "tags": [
+      "fundamentals",
+      "procedural"
+    ]
+  },
+  {
+    "id": 20,
+    "topic": "collections",
+    "difficulty": "Easy",
+    "question": "[Generated] How does a ValueError differ from a list?",
+    "options": [
+      "Incorrect option A",
+      "Correct generated option for collections",
+      "Incorrect option B",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in python/collections.",
+    "tags": [
+      "fundamentals",
+      "procedural"
+    ]
+  },
+  {
+    "id": 21,
+    "topic": "collections",
+    "difficulty": "Easy",
+    "question": "[Generated] Is a tuple mutable in Python?",
+    "options": [
+      "Incorrect option A",
+      "Correct generated option for collections",
+      "Incorrect option B",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in python/collections.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 22,
+    "topic": "collections",
+    "difficulty": "Medium",
+    "question": "[Generated] Is a tuple mutable in Python?",
+    "options": [
+      "Incorrect option C",
+      "Incorrect option A",
+      "Correct generated option for collections",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in python/collections.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 23,
+    "topic": "collections",
+    "difficulty": "Medium",
+    "question": "[Generated] How does a tuple differ from a list?",
+    "options": [
+      "Correct generated option for collections",
+      "Incorrect option B",
+      "Incorrect option C",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in python/collections.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 24,
+    "topic": "collections",
+    "difficulty": "Easy",
+    "question": "[Generated] How does a set differ from a list?",
+    "options": [
+      "Correct generated option for collections",
+      "Incorrect option A",
+      "Incorrect option C",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in python/collections.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  },
+  {
+    "id": 25,
+    "topic": "collections",
+    "difficulty": "Medium",
+    "question": "[Generated] How does a set differ from a list?",
+    "options": [
+      "Incorrect option C",
+      "Incorrect option B",
+      "Correct generated option for collections",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in python/collections.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  },
+  {
+    "id": 26,
+    "topic": "collections",
+    "difficulty": "Easy",
+    "question": "[Generated] What is the time complexity of `list comprehension` on a list?",
+    "options": [
+      "Incorrect option C",
+      "Incorrect option A",
+      "Incorrect option B",
+      "Correct generated option for collections"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in python/collections.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  },
+  {
+    "id": 27,
+    "topic": "collections",
+    "difficulty": "Easy",
+    "question": "[Generated] How does a tuple differ from a list?",
+    "options": [
+      "Incorrect option A",
+      "Incorrect option B",
+      "Incorrect option C",
+      "Correct generated option for collections"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in python/collections.",
+    "tags": [
+      "interview-frequent",
+      "procedural"
+    ]
+  },
+  {
+    "id": 28,
+    "topic": "collections",
+    "difficulty": "Medium",
+    "question": "[Generated] How does a tuple differ from a list?",
+    "options": [
+      "Incorrect option C",
+      "Incorrect option A",
+      "Incorrect option B",
+      "Correct generated option for collections"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in python/collections.",
+    "tags": [
+      "fundamentals",
+      "procedural"
+    ]
+  },
+  {
+    "id": 29,
+    "topic": "collections",
+    "difficulty": "Hard",
+    "question": "[Generated] What is the time complexity of `inheritance` on a list?",
+    "options": [
+      "Incorrect option C",
+      "Correct generated option for collections",
+      "Incorrect option A",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in python/collections.",
+    "tags": [
+      "interview-frequent",
+      "procedural"
+    ]
+  },
+  {
+    "id": 30,
+    "topic": "collections",
+    "difficulty": "Easy",
+    "question": "[Generated] How does a set differ from a list?",
+    "options": [
+      "Incorrect option A",
+      "Incorrect option B",
+      "Incorrect option C",
+      "Correct generated option for collections"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in python/collections.",
+    "tags": [
+      "fundamentals",
+      "procedural"
+    ]
+  },
+  {
+    "id": 31,
+    "topic": "collections",
+    "difficulty": "Easy",
+    "question": "[Generated] How does a tuple differ from a list?",
+    "options": [
+      "Correct generated option for collections",
+      "Incorrect option C",
+      "Incorrect option B",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in python/collections.",
+    "tags": [
+      "fundamentals",
+      "procedural"
+    ]
+  },
+  {
+    "id": 32,
+    "topic": "collections",
+    "difficulty": "Easy",
+    "question": "[Generated] Is a __init__ mutable in Python?",
+    "options": [
+      "Incorrect option B",
+      "Incorrect option C",
+      "Correct generated option for collections",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in python/collections.",
+    "tags": [
+      "interview-frequent",
+      "procedural"
+    ]
+  },
+  {
+    "id": 33,
+    "topic": "collections",
+    "difficulty": "Medium",
+    "question": "[Generated] What is the time complexity of `inheritance` on a list?",
+    "options": [
+      "Correct generated option for collections",
+      "Incorrect option B",
+      "Incorrect option A",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in python/collections.",
+    "tags": [
+      "interview-frequent",
+      "procedural"
+    ]
+  },
+  {
+    "id": 34,
+    "topic": "collections",
+    "difficulty": "Medium",
+    "question": "[Generated] How does a ValueError differ from a list?",
+    "options": [
+      "Correct generated option for collections",
+      "Incorrect option A",
+      "Incorrect option B",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in python/collections.",
+    "tags": [
+      "interview-frequent",
+      "procedural"
+    ]
+  },
+  {
+    "id": 35,
+    "topic": "collections",
+    "difficulty": "Hard",
+    "question": "[Generated] How does a __init__ differ from a list?",
+    "options": [
+      "Correct generated option for collections",
+      "Incorrect option C",
+      "Incorrect option B",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in python/collections.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 36,
+    "topic": "collections",
+    "difficulty": "Easy",
+    "question": "[Generated] How does a __init__ differ from a list?",
+    "options": [
+      "Incorrect option A",
+      "Incorrect option C",
+      "Correct generated option for collections",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in python/collections.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  },
+  {
+    "id": 37,
+    "topic": "collections",
+    "difficulty": "Hard",
+    "question": "[Generated] What is the time complexity of `inheritance` on a list?",
+    "options": [
+      "Correct generated option for collections",
+      "Incorrect option C",
+      "Incorrect option B",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in python/collections.",
+    "tags": [
+      "interview-frequent",
+      "procedural"
+    ]
+  },
+  {
+    "id": 38,
+    "topic": "collections",
+    "difficulty": "Medium",
+    "question": "[Generated] Is a tuple mutable in Python?",
+    "options": [
+      "Incorrect option C",
+      "Incorrect option B",
+      "Correct generated option for collections",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in python/collections.",
+    "tags": [
+      "fundamentals",
+      "procedural"
+    ]
+  },
+  {
+    "id": 39,
+    "topic": "collections",
+    "difficulty": "Medium",
+    "question": "[Generated] How does a __init__ differ from a list?",
+    "options": [
+      "Correct generated option for collections",
+      "Incorrect option B",
+      "Incorrect option A",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in python/collections.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  },
+  {
+    "id": 40,
+    "topic": "collections",
+    "difficulty": "Easy",
+    "question": "[Generated] What is the time complexity of `inheritance` on a list?",
+    "options": [
+      "Incorrect option B",
+      "Incorrect option A",
+      "Incorrect option C",
+      "Correct generated option for collections"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in python/collections.",
+    "tags": [
+      "interview-frequent",
+      "procedural"
+    ]
+  },
+  {
+    "id": 41,
+    "topic": "collections",
+    "difficulty": "Medium",
+    "question": "[Generated] What is the time complexity of `inheritance` on a list?",
+    "options": [
+      "Incorrect option C",
+      "Incorrect option A",
+      "Correct generated option for collections",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in python/collections.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 42,
+    "topic": "collections",
+    "difficulty": "Medium",
+    "question": "[Generated] Is a ValueError mutable in Python?",
+    "options": [
+      "Incorrect option B",
+      "Correct generated option for collections",
+      "Incorrect option C",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in python/collections.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 43,
+    "topic": "collections",
+    "difficulty": "Hard",
+    "question": "[Generated] Is a tuple mutable in Python?",
+    "options": [
+      "Incorrect option B",
+      "Incorrect option C",
+      "Correct generated option for collections",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in python/collections.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 44,
+    "topic": "collections",
+    "difficulty": "Medium",
+    "question": "[Generated] What is the time complexity of `type()` on a list?",
+    "options": [
+      "Incorrect option C",
+      "Incorrect option A",
+      "Correct generated option for collections",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in python/collections.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 45,
+    "topic": "collections",
+    "difficulty": "Easy",
+    "question": "[Generated] What is the time complexity of `list comprehension` on a list?",
+    "options": [
+      "Correct generated option for collections",
+      "Incorrect option C",
+      "Incorrect option A",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in python/collections.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 46,
+    "topic": "collections",
+    "difficulty": "Hard",
+    "question": "[Generated] Is a set mutable in Python?",
+    "options": [
+      "Incorrect option C",
+      "Incorrect option B",
+      "Correct generated option for collections",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in python/collections.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 47,
+    "topic": "collections",
+    "difficulty": "Hard",
+    "question": "[Generated] Is a ValueError mutable in Python?",
+    "options": [
+      "Incorrect option B",
+      "Correct generated option for collections",
+      "Incorrect option C",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in python/collections.",
+    "tags": [
+      "interview-frequent",
+      "procedural"
+    ]
+  },
+  {
+    "id": 48,
+    "topic": "collections",
+    "difficulty": "Hard",
+    "question": "[Generated] Is a ValueError mutable in Python?",
+    "options": [
+      "Correct generated option for collections",
+      "Incorrect option A",
+      "Incorrect option C",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in python/collections.",
+    "tags": [
+      "fundamentals",
+      "procedural"
+    ]
+  },
+  {
+    "id": 49,
+    "topic": "collections",
+    "difficulty": "Hard",
+    "question": "[Generated] What is the time complexity of `len()` on a list?",
+    "options": [
+      "Incorrect option A",
+      "Correct generated option for collections",
+      "Incorrect option B",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in python/collections.",
+    "tags": [
+      "interview-frequent",
+      "procedural"
+    ]
+  },
+  {
+    "id": 50,
+    "topic": "collections",
+    "difficulty": "Hard",
+    "question": "[Generated] What is the time complexity of `list comprehension` on a list?",
+    "options": [
+      "Correct generated option for collections",
+      "Incorrect option B",
+      "Incorrect option A",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in python/collections.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  },
+  {
+    "id": 51,
+    "topic": "collections",
+    "difficulty": "Medium",
+    "question": "[Generated] How does a __init__ differ from a list?",
+    "options": [
+      "Incorrect option C",
+      "Correct generated option for collections",
+      "Incorrect option B",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in python/collections.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 52,
+    "topic": "collections",
+    "difficulty": "Medium",
+    "question": "[Generated] Is a tuple mutable in Python?",
+    "options": [
+      "Incorrect option B",
+      "Incorrect option C",
+      "Incorrect option A",
+      "Correct generated option for collections"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in python/collections.",
+    "tags": [
+      "fundamentals",
+      "procedural"
+    ]
+  },
+  {
+    "id": 53,
+    "topic": "collections",
+    "difficulty": "Easy",
+    "question": "[Generated] How does a set differ from a list?",
+    "options": [
+      "Incorrect option C",
+      "Incorrect option B",
+      "Correct generated option for collections",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in python/collections.",
+    "tags": [
+      "fundamentals",
+      "procedural"
+    ]
+  },
+  {
+    "id": 54,
+    "topic": "collections",
+    "difficulty": "Medium",
+    "question": "[Generated] Is a __init__ mutable in Python?",
+    "options": [
+      "Correct generated option for collections",
+      "Incorrect option B",
+      "Incorrect option A",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in python/collections.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 55,
+    "topic": "collections",
+    "difficulty": "Hard",
+    "question": "[Generated] Is a ValueError mutable in Python?",
+    "options": [
+      "Correct generated option for collections",
+      "Incorrect option A",
+      "Incorrect option C",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in python/collections.",
+    "tags": [
+      "fundamentals",
+      "procedural"
+    ]
+  },
+  {
+    "id": 56,
+    "topic": "collections",
+    "difficulty": "Easy",
+    "question": "[Generated] How does a set differ from a list?",
+    "options": [
+      "Correct generated option for collections",
+      "Incorrect option B",
+      "Incorrect option C",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in python/collections.",
+    "tags": [
+      "fundamentals",
+      "procedural"
+    ]
+  },
+  {
+    "id": 57,
+    "topic": "collections",
+    "difficulty": "Easy",
+    "question": "[Generated] Is a dictionary mutable in Python?",
+    "options": [
+      "Incorrect option A",
+      "Incorrect option B",
+      "Correct generated option for collections",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in python/collections.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 58,
+    "topic": "collections",
+    "difficulty": "Hard",
+    "question": "[Generated] How does a __init__ differ from a list?",
+    "options": [
+      "Incorrect option A",
+      "Incorrect option B",
+      "Incorrect option C",
+      "Correct generated option for collections"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in python/collections.",
+    "tags": [
+      "fundamentals",
+      "procedural"
+    ]
+  },
+  {
+    "id": 59,
+    "topic": "collections",
+    "difficulty": "Hard",
+    "question": "[Generated] What is the time complexity of `type()` on a list?",
+    "options": [
+      "Incorrect option C",
+      "Correct generated option for collections",
+      "Incorrect option A",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in python/collections.",
+    "tags": [
+      "interview-frequent",
+      "procedural"
+    ]
+  },
+  {
+    "id": 60,
+    "topic": "collections",
+    "difficulty": "Easy",
+    "question": "[Generated] How does a ValueError differ from a list?",
+    "options": [
+      "Incorrect option A",
+      "Incorrect option C",
+      "Incorrect option B",
+      "Correct generated option for collections"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in python/collections.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  }
+]

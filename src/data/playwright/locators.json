@@ -1,0 +1,1091 @@
+[
+  {
+    "id": 1,
+    "topic": "Locators",
+    "difficulty": "Easy",
+    "question": "Which Playwright locator is recommended as the primary way to find elements?",
+    "options": [
+      "page.querySelector()",
+      "page.getByRole()",
+      "page.locator('css')",
+      "page.findElement()"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Playwright recommends semantic locators like getByRole(), getByText(), getByLabel() that reflect how users interact with the page — more resilient to UI changes.",
+    "tags": [
+      "Playwright",
+      "Locators"
+    ]
+  },
+  {
+    "id": 2,
+    "topic": "Locators",
+    "difficulty": "Easy",
+    "question": "How do you find a button with text 'Submit' in Playwright?",
+    "options": [
+      "page.find('button', 'Submit')",
+      "page.getByRole('button', { name: 'Submit' })",
+      "page.button('Submit')",
+      "page.locator('Submit')"
+    ],
+    "correctAnswer": 1,
+    "explanation": "page.getByRole('button', { name: 'Submit' }) finds elements by their ARIA role and accessible name. This is the recommended approach in Playwright.",
+    "tags": [
+      "Playwright",
+      "Locators",
+      "getByRole"
+    ]
+  },
+  {
+    "id": 3,
+    "topic": "Locators",
+    "difficulty": "Medium",
+    "question": "What is the advantage of Playwright's auto-waiting?",
+    "options": [
+      "Faster test execution",
+      "Automatically waits for elements to be ready before interacting, without explicit waits",
+      "Reduces code size",
+      "Improves screenshot quality"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Playwright auto-waits for elements to be visible, stable, and actionable before performing actions like click() or fill(). This eliminates most explicit wait code.",
+    "tags": [
+      "Playwright",
+      "Locators",
+      "Auto-waiting"
+    ]
+  },
+  {
+    "id": 4,
+    "topic": "Locators",
+    "difficulty": "Medium",
+    "question": "Which Playwright locator finds an input by its label text?",
+    "options": [
+      "page.getByName()",
+      "page.locator('label')",
+      "page.getByLabel()",
+      "page.getByPlaceholder()"
+    ],
+    "correctAnswer": 2,
+    "explanation": "page.getByLabel('Email') finds form inputs associated with a label element containing 'Email'. This uses accessibility attributes and is resilient to layout changes.",
+    "tags": [
+      "Playwright",
+      "Locators",
+      "getByLabel"
+    ]
+  },
+  {
+    "id": 5,
+    "topic": "Locators",
+    "difficulty": "Hard",
+    "question": "What does locator chaining do in Playwright?",
+    "options": [
+      "Runs locators in parallel",
+      "Narrows the search to elements within a parent locator's scope",
+      "Chains multiple click actions",
+      "Creates fallback locators"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Chaining: page.getByRole('list').getByRole('listitem') first finds the list, then searches for listitems within it. Scopes subsequent queries to the matched element.",
+    "tags": [
+      "Playwright",
+      "Locators",
+      "Chaining"
+    ]
+  },
+  {
+    "id": 6,
+    "topic": "Locators",
+    "difficulty": "Easy",
+    "question": "How do you fill a text input in Playwright?",
+    "options": [
+      "page.type('selector', 'text')",
+      "page.getByLabel('Name').fill('Alice')",
+      "page.input('Name', 'Alice')",
+      "Both A and B"
+    ],
+    "correctAnswer": 1,
+    "explanation": "locator.fill('value') clears and types the value into an input. page.type() is a keyboard-level simulation that types character by character. fill() is preferred.",
+    "tags": [
+      "Playwright",
+      "Locators",
+      "fill"
+    ]
+  },
+  {
+    "id": 7,
+    "topic": "Locators",
+    "difficulty": "Medium",
+    "question": "Which Playwright method finds elements by their test ID attribute?",
+    "options": [
+      "page.getByTestId()",
+      "page.locator('[data-testid]')",
+      "page.getById()",
+      "Both A and B"
+    ],
+    "correctAnswer": 3,
+    "explanation": "page.getByTestId('submit') uses the data-testid attribute (configurable). Both getByTestId() and locator('[data-testid=\"submit\"]') work, but getByTestId() is cleaner.",
+    "tags": [
+      "Playwright",
+      "Locators",
+      "getByTestId"
+    ]
+  },
+  {
+    "id": 8,
+    "topic": "Locators",
+    "difficulty": "Hard",
+    "question": "What does the filter() method do on a Playwright locator?",
+    "options": [
+      "Removes elements from the DOM",
+      "Narrows a locator to only elements matching additional conditions",
+      "Filters network requests",
+      "Removes hidden elements"
+    ],
+    "correctAnswer": 1,
+    "explanation": "locator.filter({ hasText: 'Price', has: page.getByRole('button') }) refines the matched elements. filter() is powerful for selecting specific elements from a list.",
+    "tags": [
+      "Playwright",
+      "Locators",
+      "filter"
+    ]
+  },
+  {
+    "id": 9,
+    "topic": "Locators",
+    "difficulty": "Easy",
+    "question": "How do you verify an element is visible in Playwright?",
+    "options": [
+      "expect(locator).toBeVisible()",
+      "locator.isVisible()",
+      "locator.assertVisible()",
+      "Both A and B"
+    ],
+    "correctAnswer": 3,
+    "explanation": "expect(locator).toBeVisible() is the assertion form (fails test if not visible). locator.isVisible() returns a boolean. Both are valid but assertions are preferred in tests.",
+    "tags": [
+      "Playwright",
+      "Locators",
+      "Assertions"
+    ]
+  },
+  {
+    "id": 10,
+    "topic": "Locators",
+    "difficulty": "Medium",
+    "question": "What is the nth() method used for in Playwright?",
+    "options": [
+      "Selecting the nth page",
+      "Accessing the nth matching element from a locator",
+      "Setting timeout in nth seconds",
+      "Running a test nth times"
+    ],
+    "correctAnswer": 1,
+    "explanation": "page.getByRole('listitem').nth(2) selects the 3rd (0-indexed) list item. first() and last() are convenience methods for nth(0) and the last element.",
+    "tags": [
+      "Playwright",
+      "Locators",
+      "nth"
+    ]
+  },
+  {
+    "id": 11,
+    "topic": "locators",
+    "difficulty": "Medium",
+    "question": "[Generated] Does Playwright support test isolation by default?",
+    "options": [
+      "Incorrect option B",
+      "Incorrect option A",
+      "Correct generated option for locators",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/locators.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 12,
+    "topic": "locators",
+    "difficulty": "Easy",
+    "question": "[Generated] How does Playwright locate a GET?",
+    "options": [
+      "Incorrect option B",
+      "Incorrect option A",
+      "Correct generated option for locators",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/locators.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  },
+  {
+    "id": 13,
+    "topic": "locators",
+    "difficulty": "Hard",
+    "question": "[Generated] Does Playwright support auto-waiting by default?",
+    "options": [
+      "Correct generated option for locators",
+      "Incorrect option C",
+      "Incorrect option B",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/locators.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  },
+  {
+    "id": 14,
+    "topic": "locators",
+    "difficulty": "Easy",
+    "question": "[Generated] Does Playwright support test isolation by default?",
+    "options": [
+      "Correct generated option for locators",
+      "Incorrect option C",
+      "Incorrect option A",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/locators.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 15,
+    "topic": "locators",
+    "difficulty": "Easy",
+    "question": "[Generated] Does Playwright support test isolation by default?",
+    "options": [
+      "Incorrect option A",
+      "Incorrect option C",
+      "Incorrect option B",
+      "Correct generated option for locators"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/locators.",
+    "tags": [
+      "interview-frequent",
+      "procedural"
+    ]
+  },
+  {
+    "id": 16,
+    "topic": "locators",
+    "difficulty": "Hard",
+    "question": "[Generated] How does Playwright locate a getByText?",
+    "options": [
+      "Incorrect option A",
+      "Incorrect option C",
+      "Incorrect option B",
+      "Correct generated option for locators"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/locators.",
+    "tags": [
+      "interview-frequent",
+      "procedural"
+    ]
+  },
+  {
+    "id": 17,
+    "topic": "locators",
+    "difficulty": "Medium",
+    "question": "[Generated] What is the difference between shadow DOM and getByText locators?",
+    "options": [
+      "Correct generated option for locators",
+      "Incorrect option B",
+      "Incorrect option C",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/locators.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  },
+  {
+    "id": 18,
+    "topic": "locators",
+    "difficulty": "Easy",
+    "question": "[Generated] How does Playwright locate a toHaveText()?",
+    "options": [
+      "Incorrect option C",
+      "Incorrect option B",
+      "Incorrect option A",
+      "Correct generated option for locators"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/locators.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  },
+  {
+    "id": 19,
+    "topic": "locators",
+    "difficulty": "Easy",
+    "question": "[Generated] How does Playwright locate a toBeVisible()?",
+    "options": [
+      "Incorrect option B",
+      "Correct generated option for locators",
+      "Incorrect option C",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/locators.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 20,
+    "topic": "locators",
+    "difficulty": "Hard",
+    "question": "[Generated] Does Playwright support status code by default?",
+    "options": [
+      "Incorrect option C",
+      "Correct generated option for locators",
+      "Incorrect option A",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/locators.",
+    "tags": [
+      "interview-frequent",
+      "procedural"
+    ]
+  },
+  {
+    "id": 21,
+    "topic": "locators",
+    "difficulty": "Medium",
+    "question": "[Generated] Does Playwright support shadow DOM by default?",
+    "options": [
+      "Correct generated option for locators",
+      "Incorrect option A",
+      "Incorrect option C",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/locators.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 22,
+    "topic": "locators",
+    "difficulty": "Hard",
+    "question": "[Generated] How does Playwright locate a toBeVisible()?",
+    "options": [
+      "Incorrect option B",
+      "Incorrect option C",
+      "Incorrect option A",
+      "Correct generated option for locators"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/locators.",
+    "tags": [
+      "interview-frequent",
+      "procedural"
+    ]
+  },
+  {
+    "id": 23,
+    "topic": "locators",
+    "difficulty": "Easy",
+    "question": "[Generated] How does Playwright locate a getByRole?",
+    "options": [
+      "Correct generated option for locators",
+      "Incorrect option A",
+      "Incorrect option B",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/locators.",
+    "tags": [
+      "fundamentals",
+      "procedural"
+    ]
+  },
+  {
+    "id": 24,
+    "topic": "locators",
+    "difficulty": "Medium",
+    "question": "[Generated] How does Playwright locate a POST?",
+    "options": [
+      "Incorrect option A",
+      "Correct generated option for locators",
+      "Incorrect option B",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/locators.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 25,
+    "topic": "locators",
+    "difficulty": "Medium",
+    "question": "[Generated] Does Playwright support test isolation by default?",
+    "options": [
+      "Incorrect option B",
+      "Incorrect option A",
+      "Incorrect option C",
+      "Correct generated option for locators"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/locators.",
+    "tags": [
+      "interview-frequent",
+      "procedural"
+    ]
+  },
+  {
+    "id": 26,
+    "topic": "locators",
+    "difficulty": "Medium",
+    "question": "[Generated] How does Playwright locate a getByRole?",
+    "options": [
+      "Correct generated option for locators",
+      "Incorrect option B",
+      "Incorrect option C",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/locators.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  },
+  {
+    "id": 27,
+    "topic": "locators",
+    "difficulty": "Medium",
+    "question": "[Generated] Does Playwright support test isolation by default?",
+    "options": [
+      "Correct generated option for locators",
+      "Incorrect option B",
+      "Incorrect option A",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/locators.",
+    "tags": [
+      "interview-frequent",
+      "procedural"
+    ]
+  },
+  {
+    "id": 28,
+    "topic": "locators",
+    "difficulty": "Hard",
+    "question": "[Generated] How does Playwright locate a toBeVisible()?",
+    "options": [
+      "Incorrect option A",
+      "Correct generated option for locators",
+      "Incorrect option C",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/locators.",
+    "tags": [
+      "fundamentals",
+      "procedural"
+    ]
+  },
+  {
+    "id": 29,
+    "topic": "locators",
+    "difficulty": "Medium",
+    "question": "[Generated] How does Playwright locate a POST?",
+    "options": [
+      "Correct generated option for locators",
+      "Incorrect option C",
+      "Incorrect option B",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/locators.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 30,
+    "topic": "locators",
+    "difficulty": "Easy",
+    "question": "[Generated] Does Playwright support shadow DOM by default?",
+    "options": [
+      "Incorrect option B",
+      "Incorrect option C",
+      "Incorrect option A",
+      "Correct generated option for locators"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/locators.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  },
+  {
+    "id": 31,
+    "topic": "locators",
+    "difficulty": "Medium",
+    "question": "[Generated] Does Playwright support shadow DOM by default?",
+    "options": [
+      "Incorrect option B",
+      "Incorrect option C",
+      "Incorrect option A",
+      "Correct generated option for locators"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/locators.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  },
+  {
+    "id": 32,
+    "topic": "locators",
+    "difficulty": "Hard",
+    "question": "[Generated] Does Playwright support shadow DOM by default?",
+    "options": [
+      "Incorrect option C",
+      "Incorrect option A",
+      "Incorrect option B",
+      "Correct generated option for locators"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/locators.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 33,
+    "topic": "locators",
+    "difficulty": "Medium",
+    "question": "[Generated] How does Playwright locate a toBeVisible()?",
+    "options": [
+      "Incorrect option B",
+      "Incorrect option C",
+      "Correct generated option for locators",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/locators.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  },
+  {
+    "id": 34,
+    "topic": "locators",
+    "difficulty": "Hard",
+    "question": "[Generated] What is the difference between shadow DOM and getByText locators?",
+    "options": [
+      "Incorrect option B",
+      "Incorrect option A",
+      "Incorrect option C",
+      "Correct generated option for locators"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/locators.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 35,
+    "topic": "locators",
+    "difficulty": "Medium",
+    "question": "[Generated] What is the difference between shadow DOM and getByRole locators?",
+    "options": [
+      "Incorrect option A",
+      "Incorrect option C",
+      "Correct generated option for locators",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/locators.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 36,
+    "topic": "locators",
+    "difficulty": "Hard",
+    "question": "[Generated] What is the difference between status code and POST locators?",
+    "options": [
+      "Incorrect option A",
+      "Correct generated option for locators",
+      "Incorrect option B",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/locators.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 37,
+    "topic": "locators",
+    "difficulty": "Medium",
+    "question": "[Generated] What is the difference between test isolation and toHaveText() locators?",
+    "options": [
+      "Correct generated option for locators",
+      "Incorrect option A",
+      "Incorrect option B",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/locators.",
+    "tags": [
+      "fundamentals",
+      "procedural"
+    ]
+  },
+  {
+    "id": 38,
+    "topic": "locators",
+    "difficulty": "Easy",
+    "question": "[Generated] Does Playwright support auto-waiting by default?",
+    "options": [
+      "Incorrect option B",
+      "Incorrect option A",
+      "Incorrect option C",
+      "Correct generated option for locators"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/locators.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 39,
+    "topic": "locators",
+    "difficulty": "Easy",
+    "question": "[Generated] What is the difference between test isolation and browser locators?",
+    "options": [
+      "Incorrect option A",
+      "Incorrect option B",
+      "Correct generated option for locators",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/locators.",
+    "tags": [
+      "fundamentals",
+      "procedural"
+    ]
+  },
+  {
+    "id": 40,
+    "topic": "locators",
+    "difficulty": "Easy",
+    "question": "[Generated] Does Playwright support test isolation by default?",
+    "options": [
+      "Incorrect option B",
+      "Incorrect option C",
+      "Incorrect option A",
+      "Correct generated option for locators"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/locators.",
+    "tags": [
+      "interview-frequent",
+      "procedural"
+    ]
+  },
+  {
+    "id": 41,
+    "topic": "locators",
+    "difficulty": "Hard",
+    "question": "[Generated] Does Playwright support test isolation by default?",
+    "options": [
+      "Incorrect option C",
+      "Incorrect option B",
+      "Correct generated option for locators",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/locators.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  },
+  {
+    "id": 42,
+    "topic": "locators",
+    "difficulty": "Easy",
+    "question": "[Generated] What is the difference between test isolation and toHaveText() locators?",
+    "options": [
+      "Correct generated option for locators",
+      "Incorrect option C",
+      "Incorrect option B",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/locators.",
+    "tags": [
+      "fundamentals",
+      "procedural"
+    ]
+  },
+  {
+    "id": 43,
+    "topic": "locators",
+    "difficulty": "Medium",
+    "question": "[Generated] What is the difference between shadow DOM and getByRole locators?",
+    "options": [
+      "Correct generated option for locators",
+      "Incorrect option A",
+      "Incorrect option C",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/locators.",
+    "tags": [
+      "interview-frequent",
+      "procedural"
+    ]
+  },
+  {
+    "id": 44,
+    "topic": "locators",
+    "difficulty": "Hard",
+    "question": "[Generated] How does Playwright locate a toBeVisible()?",
+    "options": [
+      "Incorrect option C",
+      "Incorrect option B",
+      "Correct generated option for locators",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/locators.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 45,
+    "topic": "locators",
+    "difficulty": "Hard",
+    "question": "[Generated] Does Playwright support status code by default?",
+    "options": [
+      "Incorrect option C",
+      "Incorrect option A",
+      "Incorrect option B",
+      "Correct generated option for locators"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/locators.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 46,
+    "topic": "locators",
+    "difficulty": "Hard",
+    "question": "[Generated] Does Playwright support status code by default?",
+    "options": [
+      "Incorrect option B",
+      "Correct generated option for locators",
+      "Incorrect option C",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/locators.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  },
+  {
+    "id": 47,
+    "topic": "locators",
+    "difficulty": "Hard",
+    "question": "[Generated] What is the difference between auto-waiting and getByRole locators?",
+    "options": [
+      "Correct generated option for locators",
+      "Incorrect option B",
+      "Incorrect option C",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/locators.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 48,
+    "topic": "locators",
+    "difficulty": "Easy",
+    "question": "[Generated] Does Playwright support status code by default?",
+    "options": [
+      "Incorrect option B",
+      "Incorrect option A",
+      "Incorrect option C",
+      "Correct generated option for locators"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/locators.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  },
+  {
+    "id": 49,
+    "topic": "locators",
+    "difficulty": "Medium",
+    "question": "[Generated] What is the difference between test isolation and toBeVisible() locators?",
+    "options": [
+      "Correct generated option for locators",
+      "Incorrect option C",
+      "Incorrect option B",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/locators.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 50,
+    "topic": "locators",
+    "difficulty": "Hard",
+    "question": "[Generated] Does Playwright support shadow DOM by default?",
+    "options": [
+      "Incorrect option C",
+      "Correct generated option for locators",
+      "Incorrect option B",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/locators.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 51,
+    "topic": "locators",
+    "difficulty": "Medium",
+    "question": "[Generated] What is the difference between test isolation and toHaveText() locators?",
+    "options": [
+      "Incorrect option B",
+      "Incorrect option C",
+      "Correct generated option for locators",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/locators.",
+    "tags": [
+      "fundamentals",
+      "procedural"
+    ]
+  },
+  {
+    "id": 52,
+    "topic": "locators",
+    "difficulty": "Medium",
+    "question": "[Generated] How does Playwright locate a POST?",
+    "options": [
+      "Incorrect option C",
+      "Correct generated option for locators",
+      "Incorrect option B",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/locators.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  },
+  {
+    "id": 53,
+    "topic": "locators",
+    "difficulty": "Medium",
+    "question": "[Generated] How does Playwright locate a getByText?",
+    "options": [
+      "Incorrect option A",
+      "Incorrect option C",
+      "Incorrect option B",
+      "Correct generated option for locators"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/locators.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 54,
+    "topic": "locators",
+    "difficulty": "Easy",
+    "question": "[Generated] How does Playwright locate a GET?",
+    "options": [
+      "Correct generated option for locators",
+      "Incorrect option C",
+      "Incorrect option A",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/locators.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 55,
+    "topic": "locators",
+    "difficulty": "Easy",
+    "question": "[Generated] How does Playwright locate a getByText?",
+    "options": [
+      "Incorrect option A",
+      "Incorrect option B",
+      "Incorrect option C",
+      "Correct generated option for locators"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/locators.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  },
+  {
+    "id": 56,
+    "topic": "locators",
+    "difficulty": "Hard",
+    "question": "[Generated] Does Playwright support status code by default?",
+    "options": [
+      "Incorrect option A",
+      "Incorrect option C",
+      "Incorrect option B",
+      "Correct generated option for locators"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/locators.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 57,
+    "topic": "locators",
+    "difficulty": "Hard",
+    "question": "[Generated] Does Playwright support shadow DOM by default?",
+    "options": [
+      "Incorrect option C",
+      "Correct generated option for locators",
+      "Incorrect option B",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/locators.",
+    "tags": [
+      "fundamentals",
+      "procedural"
+    ]
+  },
+  {
+    "id": 58,
+    "topic": "locators",
+    "difficulty": "Hard",
+    "question": "[Generated] What is the difference between auto-waiting and GET locators?",
+    "options": [
+      "Incorrect option A",
+      "Incorrect option B",
+      "Correct generated option for locators",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/locators.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 59,
+    "topic": "locators",
+    "difficulty": "Hard",
+    "question": "[Generated] How does Playwright locate a page?",
+    "options": [
+      "Correct generated option for locators",
+      "Incorrect option B",
+      "Incorrect option C",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/locators.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 60,
+    "topic": "locators",
+    "difficulty": "Hard",
+    "question": "[Generated] Does Playwright support auto-waiting by default?",
+    "options": [
+      "Correct generated option for locators",
+      "Incorrect option C",
+      "Incorrect option B",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/locators.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  }
+]

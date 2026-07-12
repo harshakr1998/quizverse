@@ -1,0 +1,1090 @@
+[
+  {
+    "id": 1,
+    "topic": "TestNG",
+    "difficulty": "Easy",
+    "question": "Which annotation marks a method as a test in TestNG?",
+    "options": [
+      "@Test",
+      "@TestMethod",
+      "@RunWith",
+      "@TestCase"
+    ],
+    "correctAnswer": 0,
+    "explanation": "@Test annotation marks a method as a TestNG test method. The method must be public and can have various parameters like priority, groups, description.",
+    "tags": [
+      "Selenium",
+      "TestNG"
+    ]
+  },
+  {
+    "id": 2,
+    "topic": "TestNG",
+    "difficulty": "Easy",
+    "question": "Which TestNG annotation runs before every test method?",
+    "options": [
+      "@BeforeClass",
+      "@BeforeTest",
+      "@BeforeMethod",
+      "@BeforeSuite"
+    ],
+    "correctAnswer": 2,
+    "explanation": "@BeforeMethod runs before each @Test method. @BeforeClass runs once before all tests in the class. @BeforeSuite runs once before the entire suite.",
+    "tags": [
+      "Selenium",
+      "TestNG",
+      "Annotations"
+    ]
+  },
+  {
+    "id": 3,
+    "topic": "TestNG",
+    "difficulty": "Medium",
+    "question": "How do you run tests in a specific order in TestNG?",
+    "options": [
+      "Using @Order annotation",
+      "Using priority attribute in @Test",
+      "Alphabetical order only",
+      "TestNG always runs in declaration order"
+    ],
+    "correctAnswer": 1,
+    "explanation": "@Test(priority = 1), @Test(priority = 2) etc. sets execution order. Lower priority number runs first. Default priority is 0.",
+    "tags": [
+      "Selenium",
+      "TestNG",
+      "Priority"
+    ]
+  },
+  {
+    "id": 4,
+    "topic": "TestNG",
+    "difficulty": "Medium",
+    "question": "What is the use of testng.xml?",
+    "options": [
+      "To write test cases in XML",
+      "To configure test suites, groups, listeners, parallel execution settings",
+      "To store test data",
+      "To generate reports"
+    ],
+    "correctAnswer": 1,
+    "explanation": "testng.xml is the TestNG configuration file that defines suites, tests, classes, groups, listeners, and parallel execution settings for organizing test runs.",
+    "tags": [
+      "Selenium",
+      "TestNG",
+      "Configuration"
+    ]
+  },
+  {
+    "id": 5,
+    "topic": "TestNG",
+    "difficulty": "Medium",
+    "question": "How do you skip a test in TestNG?",
+    "options": [
+      "@Test(skip=true)",
+      "@Ignore",
+      "throw new SkipException()",
+      "@Test(enabled=false)"
+    ],
+    "correctAnswer": 2,
+    "explanation": "throw new SkipException('reason') marks the test as skipped at runtime. @Test(enabled=false) disables the test at configuration time, so it won't appear in the report.",
+    "tags": [
+      "Selenium",
+      "TestNG"
+    ]
+  },
+  {
+    "id": 6,
+    "topic": "TestNG",
+    "difficulty": "Hard",
+    "question": "What is a TestNG Listener?",
+    "options": [
+      "A method that listens for element events",
+      "An interface that captures and reacts to TestNG test execution events",
+      "A Reporter plugin",
+      "A configuration file"
+    ],
+    "correctAnswer": 1,
+    "explanation": "TestNG Listeners (ITestListener, ISuiteListener) receive callbacks at test events (start, pass, fail, skip). Used for custom reporting, screenshots on failure, logging.",
+    "tags": [
+      "Selenium",
+      "TestNG",
+      "Listeners"
+    ]
+  },
+  {
+    "id": 7,
+    "topic": "TestNG",
+    "difficulty": "Easy",
+    "question": "Which annotation is used to pass data to a test from a data provider?",
+    "options": [
+      "@DataProvider only",
+      "@Test(dataProvider='...')",
+      "@Parameters",
+      "@TestData"
+    ],
+    "correctAnswer": 1,
+    "explanation": "@Test(dataProvider='myData') links the test method to a @DataProvider annotated method that supplies an Object[][] of test data for data-driven testing.",
+    "tags": [
+      "Selenium",
+      "TestNG",
+      "DataProvider"
+    ]
+  },
+  {
+    "id": 8,
+    "topic": "TestNG",
+    "difficulty": "Hard",
+    "question": "How do you run tests in parallel in TestNG?",
+    "options": [
+      "@Test(parallel=true)",
+      "testng.xml parallel attribute on suite/test tags",
+      "Using @Parallel annotation",
+      "Not supported"
+    ],
+    "correctAnswer": 1,
+    "explanation": "In testng.xml, <suite parallel='methods' thread-count='5'> runs test methods in parallel. You can parallelize at the suite, test, class, or method level.",
+    "tags": [
+      "Selenium",
+      "TestNG",
+      "Parallel"
+    ]
+  },
+  {
+    "id": 9,
+    "topic": "TestNG",
+    "difficulty": "Medium",
+    "question": "What is soft assertion in TestNG?",
+    "options": [
+      "An assertion that only logs warnings",
+      "An assertion that doesn't stop test on failure, collecting all failures",
+      "A weaker form of assertTrue",
+      "An assertion for null checks only"
+    ],
+    "correctAnswer": 1,
+    "explanation": "SoftAssert collects all assertion failures without stopping the test. You call assertAll() at the end to report all failures at once. Useful for validating multiple UI elements.",
+    "tags": [
+      "Selenium",
+      "TestNG",
+      "Assertions"
+    ]
+  },
+  {
+    "id": 10,
+    "topic": "TestNG",
+    "difficulty": "Hard",
+    "question": "What does dependsOnMethods in TestNG do?",
+    "options": [
+      "Runs multiple methods simultaneously",
+      "Makes a test depend on another test — skips if dependency fails",
+      "Imports test methods from another class",
+      "Defines test priority"
+    ],
+    "correctAnswer": 1,
+    "explanation": "@Test(dependsOnMethods='loginTest') skips or fails the current test if the specified dependency test fails. Creates explicit test ordering and dependency chains.",
+    "tags": [
+      "Selenium",
+      "TestNG",
+      "Dependencies"
+    ]
+  },
+  {
+    "id": 11,
+    "topic": "testng",
+    "difficulty": "Medium",
+    "question": "[Generated] What is the execution order of Implicit Wait?",
+    "options": [
+      "Incorrect option A",
+      "Correct generated option for testng",
+      "Incorrect option B",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/testng.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 12,
+    "topic": "testng",
+    "difficulty": "Easy",
+    "question": "[Generated] How do you run tests in dynamic elements using TestNG?",
+    "options": [
+      "Correct generated option for testng",
+      "Incorrect option B",
+      "Incorrect option C",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/testng.",
+    "tags": [
+      "interview-frequent",
+      "procedural"
+    ]
+  },
+  {
+    "id": 13,
+    "topic": "testng",
+    "difficulty": "Hard",
+    "question": "[Generated] What does the By.cssSelector annotation do?",
+    "options": [
+      "Incorrect option B",
+      "Incorrect option A",
+      "Correct generated option for testng",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/testng.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  },
+  {
+    "id": 14,
+    "topic": "testng",
+    "difficulty": "Easy",
+    "question": "[Generated] What is the execution order of By.cssSelector?",
+    "options": [
+      "Incorrect option A",
+      "Incorrect option B",
+      "Correct generated option for testng",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/testng.",
+    "tags": [
+      "fundamentals",
+      "procedural"
+    ]
+  },
+  {
+    "id": 15,
+    "topic": "testng",
+    "difficulty": "Hard",
+    "question": "[Generated] What is the execution order of @Test?",
+    "options": [
+      "Incorrect option A",
+      "Incorrect option B",
+      "Incorrect option C",
+      "Correct generated option for testng"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/testng.",
+    "tags": [
+      "fundamentals",
+      "procedural"
+    ]
+  },
+  {
+    "id": 16,
+    "topic": "testng",
+    "difficulty": "Easy",
+    "question": "[Generated] How do you run tests in child-to-parent using TestNG?",
+    "options": [
+      "Incorrect option A",
+      "Incorrect option C",
+      "Incorrect option B",
+      "Correct generated option for testng"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/testng.",
+    "tags": [
+      "interview-frequent",
+      "procedural"
+    ]
+  },
+  {
+    "id": 17,
+    "topic": "testng",
+    "difficulty": "Hard",
+    "question": "[Generated] What is the execution order of @BeforeMethod?",
+    "options": [
+      "Incorrect option A",
+      "Incorrect option C",
+      "Correct generated option for testng",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/testng.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 18,
+    "topic": "testng",
+    "difficulty": "Easy",
+    "question": "[Generated] What does the By.id annotation do?",
+    "options": [
+      "Correct generated option for testng",
+      "Incorrect option A",
+      "Incorrect option B",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/testng.",
+    "tags": [
+      "fundamentals",
+      "procedural"
+    ]
+  },
+  {
+    "id": 19,
+    "topic": "testng",
+    "difficulty": "Easy",
+    "question": "[Generated] What is the execution order of @Test?",
+    "options": [
+      "Incorrect option B",
+      "Incorrect option A",
+      "Correct generated option for testng",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/testng.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  },
+  {
+    "id": 20,
+    "topic": "testng",
+    "difficulty": "Hard",
+    "question": "[Generated] What is the execution order of Implicit Wait?",
+    "options": [
+      "Incorrect option C",
+      "Incorrect option B",
+      "Incorrect option A",
+      "Correct generated option for testng"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/testng.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 21,
+    "topic": "testng",
+    "difficulty": "Easy",
+    "question": "[Generated] How do you run tests in PageFactory using TestNG?",
+    "options": [
+      "Correct generated option for testng",
+      "Incorrect option B",
+      "Incorrect option A",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/testng.",
+    "tags": [
+      "interview-frequent",
+      "procedural"
+    ]
+  },
+  {
+    "id": 22,
+    "topic": "testng",
+    "difficulty": "Medium",
+    "question": "[Generated] How do you run tests in PageFactory using TestNG?",
+    "options": [
+      "Incorrect option C",
+      "Incorrect option B",
+      "Correct generated option for testng",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/testng.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 23,
+    "topic": "testng",
+    "difficulty": "Hard",
+    "question": "[Generated] What does the By.id annotation do?",
+    "options": [
+      "Incorrect option B",
+      "Incorrect option A",
+      "Correct generated option for testng",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/testng.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 24,
+    "topic": "testng",
+    "difficulty": "Hard",
+    "question": "[Generated] How do you run tests in dynamic elements using TestNG?",
+    "options": [
+      "Correct generated option for testng",
+      "Incorrect option C",
+      "Incorrect option B",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/testng.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  },
+  {
+    "id": 25,
+    "topic": "testng",
+    "difficulty": "Medium",
+    "question": "[Generated] What does the @Test annotation do?",
+    "options": [
+      "Correct generated option for testng",
+      "Incorrect option B",
+      "Incorrect option C",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/testng.",
+    "tags": [
+      "fundamentals",
+      "procedural"
+    ]
+  },
+  {
+    "id": 26,
+    "topic": "testng",
+    "difficulty": "Hard",
+    "question": "[Generated] How do you run tests in PageFactory using TestNG?",
+    "options": [
+      "Correct generated option for testng",
+      "Incorrect option B",
+      "Incorrect option A",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/testng.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 27,
+    "topic": "testng",
+    "difficulty": "Hard",
+    "question": "[Generated] What is the execution order of @Test?",
+    "options": [
+      "Incorrect option A",
+      "Correct generated option for testng",
+      "Incorrect option B",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/testng.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  },
+  {
+    "id": 28,
+    "topic": "testng",
+    "difficulty": "Medium",
+    "question": "[Generated] What is the execution order of Implicit Wait?",
+    "options": [
+      "Incorrect option A",
+      "Incorrect option B",
+      "Correct generated option for testng",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/testng.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  },
+  {
+    "id": 29,
+    "topic": "testng",
+    "difficulty": "Medium",
+    "question": "[Generated] How do you run tests in PageFactory using TestNG?",
+    "options": [
+      "Correct generated option for testng",
+      "Incorrect option B",
+      "Incorrect option A",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/testng.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  },
+  {
+    "id": 30,
+    "topic": "testng",
+    "difficulty": "Easy",
+    "question": "[Generated] What does the Implicit Wait annotation do?",
+    "options": [
+      "Incorrect option C",
+      "Incorrect option B",
+      "Incorrect option A",
+      "Correct generated option for testng"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/testng.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 31,
+    "topic": "testng",
+    "difficulty": "Easy",
+    "question": "[Generated] What does the Explicit Wait annotation do?",
+    "options": [
+      "Incorrect option B",
+      "Incorrect option A",
+      "Incorrect option C",
+      "Correct generated option for testng"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/testng.",
+    "tags": [
+      "fundamentals",
+      "procedural"
+    ]
+  },
+  {
+    "id": 32,
+    "topic": "testng",
+    "difficulty": "Hard",
+    "question": "[Generated] What is the execution order of @BeforeMethod?",
+    "options": [
+      "Correct generated option for testng",
+      "Incorrect option C",
+      "Incorrect option B",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/testng.",
+    "tags": [
+      "fundamentals",
+      "procedural"
+    ]
+  },
+  {
+    "id": 33,
+    "topic": "testng",
+    "difficulty": "Hard",
+    "question": "[Generated] How do you run tests in PageFactory using TestNG?",
+    "options": [
+      "Incorrect option C",
+      "Correct generated option for testng",
+      "Incorrect option B",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/testng.",
+    "tags": [
+      "fundamentals",
+      "procedural"
+    ]
+  },
+  {
+    "id": 34,
+    "topic": "testng",
+    "difficulty": "Medium",
+    "question": "[Generated] How do you run tests in PageFactory using TestNG?",
+    "options": [
+      "Incorrect option C",
+      "Incorrect option A",
+      "Correct generated option for testng",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/testng.",
+    "tags": [
+      "interview-frequent",
+      "procedural"
+    ]
+  },
+  {
+    "id": 35,
+    "topic": "testng",
+    "difficulty": "Hard",
+    "question": "[Generated] What is the execution order of @Test?",
+    "options": [
+      "Correct generated option for testng",
+      "Incorrect option C",
+      "Incorrect option A",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/testng.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  },
+  {
+    "id": 36,
+    "topic": "testng",
+    "difficulty": "Easy",
+    "question": "[Generated] How do you run tests in dynamic elements using TestNG?",
+    "options": [
+      "Incorrect option B",
+      "Incorrect option A",
+      "Correct generated option for testng",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/testng.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 37,
+    "topic": "testng",
+    "difficulty": "Medium",
+    "question": "[Generated] What does the Implicit Wait annotation do?",
+    "options": [
+      "Incorrect option A",
+      "Incorrect option C",
+      "Incorrect option B",
+      "Correct generated option for testng"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/testng.",
+    "tags": [
+      "interview-frequent",
+      "procedural"
+    ]
+  },
+  {
+    "id": 38,
+    "topic": "testng",
+    "difficulty": "Hard",
+    "question": "[Generated] What does the @BeforeMethod annotation do?",
+    "options": [
+      "Incorrect option A",
+      "Correct generated option for testng",
+      "Incorrect option B",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/testng.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 39,
+    "topic": "testng",
+    "difficulty": "Hard",
+    "question": "[Generated] How do you run tests in parallel execution using TestNG?",
+    "options": [
+      "Correct generated option for testng",
+      "Incorrect option C",
+      "Incorrect option A",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/testng.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 40,
+    "topic": "testng",
+    "difficulty": "Hard",
+    "question": "[Generated] What is the execution order of By.id?",
+    "options": [
+      "Incorrect option C",
+      "Incorrect option A",
+      "Incorrect option B",
+      "Correct generated option for testng"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/testng.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 41,
+    "topic": "testng",
+    "difficulty": "Medium",
+    "question": "[Generated] How do you run tests in PageFactory using TestNG?",
+    "options": [
+      "Incorrect option C",
+      "Incorrect option A",
+      "Incorrect option B",
+      "Correct generated option for testng"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/testng.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  },
+  {
+    "id": 42,
+    "topic": "testng",
+    "difficulty": "Hard",
+    "question": "[Generated] What does the By.id annotation do?",
+    "options": [
+      "Incorrect option B",
+      "Incorrect option A",
+      "Correct generated option for testng",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/testng.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 43,
+    "topic": "testng",
+    "difficulty": "Easy",
+    "question": "[Generated] What is the execution order of Implicit Wait?",
+    "options": [
+      "Incorrect option B",
+      "Correct generated option for testng",
+      "Incorrect option A",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/testng.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 44,
+    "topic": "testng",
+    "difficulty": "Medium",
+    "question": "[Generated] What is the execution order of By.id?",
+    "options": [
+      "Incorrect option B",
+      "Correct generated option for testng",
+      "Incorrect option C",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/testng.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 45,
+    "topic": "testng",
+    "difficulty": "Easy",
+    "question": "[Generated] What does the @BeforeMethod annotation do?",
+    "options": [
+      "Incorrect option C",
+      "Incorrect option B",
+      "Correct generated option for testng",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/testng.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  },
+  {
+    "id": 46,
+    "topic": "testng",
+    "difficulty": "Easy",
+    "question": "[Generated] What is the execution order of Explicit Wait?",
+    "options": [
+      "Incorrect option B",
+      "Incorrect option A",
+      "Incorrect option C",
+      "Correct generated option for testng"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/testng.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 47,
+    "topic": "testng",
+    "difficulty": "Easy",
+    "question": "[Generated] What is the execution order of Explicit Wait?",
+    "options": [
+      "Correct generated option for testng",
+      "Incorrect option A",
+      "Incorrect option B",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/testng.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 48,
+    "topic": "testng",
+    "difficulty": "Easy",
+    "question": "[Generated] What is the execution order of Explicit Wait?",
+    "options": [
+      "Incorrect option B",
+      "Incorrect option A",
+      "Incorrect option C",
+      "Correct generated option for testng"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/testng.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  },
+  {
+    "id": 49,
+    "topic": "testng",
+    "difficulty": "Medium",
+    "question": "[Generated] What does the By.cssSelector annotation do?",
+    "options": [
+      "Correct generated option for testng",
+      "Incorrect option A",
+      "Incorrect option C",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/testng.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 50,
+    "topic": "testng",
+    "difficulty": "Medium",
+    "question": "[Generated] What is the execution order of By.id?",
+    "options": [
+      "Incorrect option B",
+      "Correct generated option for testng",
+      "Incorrect option C",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/testng.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 51,
+    "topic": "testng",
+    "difficulty": "Medium",
+    "question": "[Generated] What does the By.id annotation do?",
+    "options": [
+      "Correct generated option for testng",
+      "Incorrect option C",
+      "Incorrect option A",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/testng.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 52,
+    "topic": "testng",
+    "difficulty": "Medium",
+    "question": "[Generated] What does the By.id annotation do?",
+    "options": [
+      "Incorrect option A",
+      "Incorrect option B",
+      "Incorrect option C",
+      "Correct generated option for testng"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/testng.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 53,
+    "topic": "testng",
+    "difficulty": "Medium",
+    "question": "[Generated] What does the @BeforeMethod annotation do?",
+    "options": [
+      "Correct generated option for testng",
+      "Incorrect option C",
+      "Incorrect option B",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/testng.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 54,
+    "topic": "testng",
+    "difficulty": "Easy",
+    "question": "[Generated] What does the Explicit Wait annotation do?",
+    "options": [
+      "Incorrect option A",
+      "Correct generated option for testng",
+      "Incorrect option C",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/testng.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 55,
+    "topic": "testng",
+    "difficulty": "Medium",
+    "question": "[Generated] How do you run tests in parallel execution using TestNG?",
+    "options": [
+      "Incorrect option A",
+      "Incorrect option C",
+      "Incorrect option B",
+      "Correct generated option for testng"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/testng.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 56,
+    "topic": "testng",
+    "difficulty": "Medium",
+    "question": "[Generated] How do you run tests in dynamic elements using TestNG?",
+    "options": [
+      "Incorrect option B",
+      "Correct generated option for testng",
+      "Incorrect option A",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/testng.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 57,
+    "topic": "testng",
+    "difficulty": "Medium",
+    "question": "[Generated] What does the By.id annotation do?",
+    "options": [
+      "Correct generated option for testng",
+      "Incorrect option C",
+      "Incorrect option A",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/testng.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 58,
+    "topic": "testng",
+    "difficulty": "Medium",
+    "question": "[Generated] What does the By.id annotation do?",
+    "options": [
+      "Incorrect option B",
+      "Incorrect option C",
+      "Correct generated option for testng",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/testng.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 59,
+    "topic": "testng",
+    "difficulty": "Hard",
+    "question": "[Generated] How do you run tests in PageFactory using TestNG?",
+    "options": [
+      "Incorrect option A",
+      "Incorrect option B",
+      "Incorrect option C",
+      "Correct generated option for testng"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/testng.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  },
+  {
+    "id": 60,
+    "topic": "testng",
+    "difficulty": "Easy",
+    "question": "[Generated] What is the execution order of Implicit Wait?",
+    "options": [
+      "Correct generated option for testng",
+      "Incorrect option C",
+      "Incorrect option B",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/testng.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  }
+]

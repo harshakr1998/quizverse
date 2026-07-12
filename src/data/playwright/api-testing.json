@@ -1,0 +1,1092 @@
+[
+  {
+    "id": 1,
+    "topic": "API Testing",
+    "difficulty": "Easy",
+    "question": "Which Playwright object is used for API testing?",
+    "options": [
+      "page.api()",
+      "APIRequestContext",
+      "playwright.request",
+      "fetch()"
+    ],
+    "correctAnswer": 1,
+    "explanation": "APIRequestContext provides methods to make HTTP requests. Access it via request fixture in tests or playwright.request.newContext() in global setup.",
+    "tags": [
+      "Playwright",
+      "API Testing"
+    ]
+  },
+  {
+    "id": 2,
+    "topic": "API Testing",
+    "difficulty": "Easy",
+    "question": "How do you make a GET request in Playwright API testing?",
+    "options": [
+      "request.fetch('url')",
+      "request.get('url')",
+      "page.get('url')",
+      "APIClient.get('url')"
+    ],
+    "correctAnswer": 1,
+    "explanation": "const response = await request.get('https://api.example.com/users') makes a GET request. The response object has status(), json(), text() methods.",
+    "tags": [
+      "Playwright",
+      "API Testing",
+      "GET"
+    ]
+  },
+  {
+    "id": 3,
+    "topic": "API Testing",
+    "difficulty": "Medium",
+    "question": "How do you assert the HTTP status code of an API response?",
+    "options": [
+      "response.status === 200",
+      "expect(response.status()).toBe(200)",
+      "expect(response).toHaveStatus(200)",
+      "Both B and C"
+    ],
+    "correctAnswer": 2,
+    "explanation": "expect(response).toHaveStatus(200) is the web-first assertion for HTTP status. response.status() returns the numeric code for manual checks.",
+    "tags": [
+      "Playwright",
+      "API Testing",
+      "Assertions"
+    ]
+  },
+  {
+    "id": 4,
+    "topic": "API Testing",
+    "difficulty": "Medium",
+    "question": "How do you send a POST request with JSON body in Playwright?",
+    "options": [
+      "request.post(url, body)",
+      "request.post(url, { data: {...} })",
+      "request.post(url, { json: {...} })",
+      "request.postJSON(url, {...})"
+    ],
+    "correctAnswer": 1,
+    "explanation": "await request.post('/api/users', { data: { name: 'Alice' } }) sends a POST with JSON body. Playwright automatically sets Content-Type: application/json.",
+    "tags": [
+      "Playwright",
+      "API Testing",
+      "POST"
+    ]
+  },
+  {
+    "id": 5,
+    "topic": "API Testing",
+    "difficulty": "Medium",
+    "question": "What is the benefit of combining UI and API tests in Playwright?",
+    "options": [
+      "Faster API responses",
+      "Can use API to set up state quickly and UI to verify, or vice versa",
+      "Better screenshots",
+      "Parallel execution"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Hybrid testing: use API to create test data quickly (bypassing UI), then use UI to verify. Or use UI for e2e flows but validate API responses simultaneously.",
+    "tags": [
+      "Playwright",
+      "API Testing",
+      "Hybrid"
+    ]
+  },
+  {
+    "id": 6,
+    "topic": "API Testing",
+    "difficulty": "Hard",
+    "question": "How do you add authentication headers to all API requests?",
+    "options": [
+      "Using request.setHeader()",
+      "Using extraHTTPHeaders in newContext() or baseURL config",
+      "Per-request header parameter",
+      "Both B and C"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Use extraHTTPHeaders in newContext({ extraHTTPHeaders: { Authorization: 'Bearer token' } }) for all requests in a context, or pass headers per request.",
+    "tags": [
+      "Playwright",
+      "API Testing",
+      "Authentication"
+    ]
+  },
+  {
+    "id": 7,
+    "topic": "API Testing",
+    "difficulty": "Easy",
+    "question": "How do you read the JSON body of an API response?",
+    "options": [
+      "response.body()",
+      "response.json()",
+      "response.text()",
+      "JSON.parse(response)"
+    ],
+    "correctAnswer": 1,
+    "explanation": "await response.json() parses and returns the response body as a JavaScript object. response.text() returns the raw string.",
+    "tags": [
+      "Playwright",
+      "API Testing",
+      "Response"
+    ]
+  },
+  {
+    "id": 8,
+    "topic": "API Testing",
+    "difficulty": "Hard",
+    "question": "What is route interception in Playwright used for?",
+    "options": [
+      "Intercepting keyboard input",
+      "Mocking/modifying network requests and responses",
+      "Routing page navigation",
+      "Intercepting console errors"
+    ],
+    "correctAnswer": 1,
+    "explanation": "page.route('**/api/**', route => route.fulfill({ json: mockData })) intercepts matching requests and returns mock responses. Perfect for testing UI without a real backend.",
+    "tags": [
+      "Playwright",
+      "API Testing",
+      "Mocking",
+      "route"
+    ]
+  },
+  {
+    "id": 9,
+    "topic": "API Testing",
+    "difficulty": "Medium",
+    "question": "How do you set a base URL for API requests in Playwright?",
+    "options": [
+      "request.baseURL = 'url'",
+      "In playwright.config.ts use property: use: { baseURL: '...' }",
+      "request.configure({ base: 'url' })",
+      "Using env variables only"
+    ],
+    "correctAnswer": 1,
+    "explanation": "In playwright.config.ts: use: { baseURL: 'https://api.example.com' }. Then you can use relative URLs: request.get('/users') instead of the full URL.",
+    "tags": [
+      "Playwright",
+      "API Testing",
+      "Configuration"
+    ]
+  },
+  {
+    "id": 10,
+    "topic": "API Testing",
+    "difficulty": "Hard",
+    "question": "What does page.waitForResponse() do?",
+    "options": [
+      "Waits for the page to load",
+      "Waits for a specific network response matching a URL pattern",
+      "Waits for all network requests to complete",
+      "Waits for the API server to start"
+    ],
+    "correctAnswer": 1,
+    "explanation": "await page.waitForResponse('**/api/users') returns a Promise that resolves when a response matching the pattern is received. Useful for waiting for async operations triggered by UI interactions.",
+    "tags": [
+      "Playwright",
+      "API Testing",
+      "waitForResponse"
+    ]
+  },
+  {
+    "id": 11,
+    "topic": "api-testing",
+    "difficulty": "Easy",
+    "question": "[Generated] What object is used for browser in Playwright?",
+    "options": [
+      "Incorrect option C",
+      "Incorrect option B",
+      "Incorrect option A",
+      "Correct generated option for api-testing"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/api-testing.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  },
+  {
+    "id": 12,
+    "topic": "api-testing",
+    "difficulty": "Easy",
+    "question": "[Generated] How do you send a page request in Playwright?",
+    "options": [
+      "Incorrect option C",
+      "Incorrect option A",
+      "Incorrect option B",
+      "Correct generated option for api-testing"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/api-testing.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 13,
+    "topic": "api-testing",
+    "difficulty": "Easy",
+    "question": "[Generated] How do you send a POST request in Playwright?",
+    "options": [
+      "Incorrect option A",
+      "Incorrect option C",
+      "Correct generated option for api-testing",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/api-testing.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  },
+  {
+    "id": 14,
+    "topic": "api-testing",
+    "difficulty": "Easy",
+    "question": "[Generated] How do you send a toHaveText() request in Playwright?",
+    "options": [
+      "Correct generated option for api-testing",
+      "Incorrect option B",
+      "Incorrect option C",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/api-testing.",
+    "tags": [
+      "fundamentals",
+      "procedural"
+    ]
+  },
+  {
+    "id": 15,
+    "topic": "api-testing",
+    "difficulty": "Medium",
+    "question": "[Generated] How do you validate the test isolation of an API response?",
+    "options": [
+      "Incorrect option B",
+      "Incorrect option A",
+      "Incorrect option C",
+      "Correct generated option for api-testing"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/api-testing.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 16,
+    "topic": "api-testing",
+    "difficulty": "Hard",
+    "question": "[Generated] How do you send a toHaveText() request in Playwright?",
+    "options": [
+      "Incorrect option B",
+      "Correct generated option for api-testing",
+      "Incorrect option A",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/api-testing.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 17,
+    "topic": "api-testing",
+    "difficulty": "Hard",
+    "question": "[Generated] What object is used for toHaveText() in Playwright?",
+    "options": [
+      "Incorrect option A",
+      "Incorrect option C",
+      "Incorrect option B",
+      "Correct generated option for api-testing"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/api-testing.",
+    "tags": [
+      "interview-frequent",
+      "procedural"
+    ]
+  },
+  {
+    "id": 18,
+    "topic": "api-testing",
+    "difficulty": "Medium",
+    "question": "[Generated] How do you validate the auto-waiting of an API response?",
+    "options": [
+      "Incorrect option A",
+      "Incorrect option C",
+      "Correct generated option for api-testing",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/api-testing.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 19,
+    "topic": "api-testing",
+    "difficulty": "Hard",
+    "question": "[Generated] What object is used for browser in Playwright?",
+    "options": [
+      "Incorrect option A",
+      "Incorrect option C",
+      "Correct generated option for api-testing",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/api-testing.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 20,
+    "topic": "api-testing",
+    "difficulty": "Hard",
+    "question": "[Generated] How do you send a page request in Playwright?",
+    "options": [
+      "Incorrect option C",
+      "Incorrect option A",
+      "Incorrect option B",
+      "Correct generated option for api-testing"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/api-testing.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 21,
+    "topic": "api-testing",
+    "difficulty": "Medium",
+    "question": "[Generated] How do you send a getByRole request in Playwright?",
+    "options": [
+      "Incorrect option A",
+      "Incorrect option C",
+      "Correct generated option for api-testing",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/api-testing.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  },
+  {
+    "id": 22,
+    "topic": "api-testing",
+    "difficulty": "Hard",
+    "question": "[Generated] What object is used for getByText in Playwright?",
+    "options": [
+      "Correct generated option for api-testing",
+      "Incorrect option B",
+      "Incorrect option C",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/api-testing.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 23,
+    "topic": "api-testing",
+    "difficulty": "Hard",
+    "question": "[Generated] How do you send a getByRole request in Playwright?",
+    "options": [
+      "Incorrect option B",
+      "Correct generated option for api-testing",
+      "Incorrect option C",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/api-testing.",
+    "tags": [
+      "fundamentals",
+      "procedural"
+    ]
+  },
+  {
+    "id": 24,
+    "topic": "api-testing",
+    "difficulty": "Easy",
+    "question": "[Generated] How do you validate the auto-waiting of an API response?",
+    "options": [
+      "Incorrect option B",
+      "Incorrect option C",
+      "Correct generated option for api-testing",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/api-testing.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 25,
+    "topic": "api-testing",
+    "difficulty": "Easy",
+    "question": "[Generated] What object is used for toBeVisible() in Playwright?",
+    "options": [
+      "Incorrect option A",
+      "Incorrect option B",
+      "Correct generated option for api-testing",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/api-testing.",
+    "tags": [
+      "interview-frequent",
+      "procedural"
+    ]
+  },
+  {
+    "id": 26,
+    "topic": "api-testing",
+    "difficulty": "Medium",
+    "question": "[Generated] How do you validate the auto-waiting of an API response?",
+    "options": [
+      "Correct generated option for api-testing",
+      "Incorrect option A",
+      "Incorrect option C",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/api-testing.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 27,
+    "topic": "api-testing",
+    "difficulty": "Easy",
+    "question": "[Generated] What object is used for GET in Playwright?",
+    "options": [
+      "Incorrect option B",
+      "Incorrect option C",
+      "Correct generated option for api-testing",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/api-testing.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 28,
+    "topic": "api-testing",
+    "difficulty": "Easy",
+    "question": "[Generated] What object is used for page in Playwright?",
+    "options": [
+      "Incorrect option A",
+      "Correct generated option for api-testing",
+      "Incorrect option C",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/api-testing.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  },
+  {
+    "id": 29,
+    "topic": "api-testing",
+    "difficulty": "Medium",
+    "question": "[Generated] How do you send a toBeVisible() request in Playwright?",
+    "options": [
+      "Incorrect option C",
+      "Incorrect option B",
+      "Incorrect option A",
+      "Correct generated option for api-testing"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/api-testing.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  },
+  {
+    "id": 30,
+    "topic": "api-testing",
+    "difficulty": "Hard",
+    "question": "[Generated] How do you validate the test isolation of an API response?",
+    "options": [
+      "Incorrect option B",
+      "Incorrect option A",
+      "Incorrect option C",
+      "Correct generated option for api-testing"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/api-testing.",
+    "tags": [
+      "fundamentals",
+      "procedural"
+    ]
+  },
+  {
+    "id": 31,
+    "topic": "api-testing",
+    "difficulty": "Hard",
+    "question": "[Generated] How do you validate the status code of an API response?",
+    "options": [
+      "Correct generated option for api-testing",
+      "Incorrect option B",
+      "Incorrect option C",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/api-testing.",
+    "tags": [
+      "interview-frequent",
+      "procedural"
+    ]
+  },
+  {
+    "id": 32,
+    "topic": "api-testing",
+    "difficulty": "Hard",
+    "question": "[Generated] How do you send a getByText request in Playwright?",
+    "options": [
+      "Incorrect option B",
+      "Incorrect option C",
+      "Correct generated option for api-testing",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/api-testing.",
+    "tags": [
+      "interview-frequent",
+      "procedural"
+    ]
+  },
+  {
+    "id": 33,
+    "topic": "api-testing",
+    "difficulty": "Hard",
+    "question": "[Generated] How do you validate the auto-waiting of an API response?",
+    "options": [
+      "Correct generated option for api-testing",
+      "Incorrect option C",
+      "Incorrect option B",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/api-testing.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  },
+  {
+    "id": 34,
+    "topic": "api-testing",
+    "difficulty": "Medium",
+    "question": "[Generated] How do you send a page request in Playwright?",
+    "options": [
+      "Incorrect option A",
+      "Incorrect option B",
+      "Correct generated option for api-testing",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/api-testing.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 35,
+    "topic": "api-testing",
+    "difficulty": "Easy",
+    "question": "[Generated] How do you validate the shadow DOM of an API response?",
+    "options": [
+      "Incorrect option B",
+      "Incorrect option A",
+      "Incorrect option C",
+      "Correct generated option for api-testing"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/api-testing.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 36,
+    "topic": "api-testing",
+    "difficulty": "Hard",
+    "question": "[Generated] What object is used for getByRole in Playwright?",
+    "options": [
+      "Incorrect option B",
+      "Incorrect option A",
+      "Incorrect option C",
+      "Correct generated option for api-testing"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/api-testing.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  },
+  {
+    "id": 37,
+    "topic": "api-testing",
+    "difficulty": "Easy",
+    "question": "[Generated] What object is used for POST in Playwright?",
+    "options": [
+      "Incorrect option C",
+      "Incorrect option A",
+      "Incorrect option B",
+      "Correct generated option for api-testing"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/api-testing.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 38,
+    "topic": "api-testing",
+    "difficulty": "Hard",
+    "question": "[Generated] How do you validate the shadow DOM of an API response?",
+    "options": [
+      "Incorrect option A",
+      "Correct generated option for api-testing",
+      "Incorrect option B",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/api-testing.",
+    "tags": [
+      "fundamentals",
+      "procedural"
+    ]
+  },
+  {
+    "id": 39,
+    "topic": "api-testing",
+    "difficulty": "Hard",
+    "question": "[Generated] How do you validate the auto-waiting of an API response?",
+    "options": [
+      "Incorrect option B",
+      "Correct generated option for api-testing",
+      "Incorrect option C",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/api-testing.",
+    "tags": [
+      "interview-frequent",
+      "procedural"
+    ]
+  },
+  {
+    "id": 40,
+    "topic": "api-testing",
+    "difficulty": "Easy",
+    "question": "[Generated] How do you validate the status code of an API response?",
+    "options": [
+      "Incorrect option A",
+      "Incorrect option B",
+      "Incorrect option C",
+      "Correct generated option for api-testing"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/api-testing.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 41,
+    "topic": "api-testing",
+    "difficulty": "Easy",
+    "question": "[Generated] What object is used for GET in Playwright?",
+    "options": [
+      "Correct generated option for api-testing",
+      "Incorrect option B",
+      "Incorrect option A",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/api-testing.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 42,
+    "topic": "api-testing",
+    "difficulty": "Medium",
+    "question": "[Generated] How do you validate the auto-waiting of an API response?",
+    "options": [
+      "Incorrect option A",
+      "Incorrect option C",
+      "Incorrect option B",
+      "Correct generated option for api-testing"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/api-testing.",
+    "tags": [
+      "fundamentals",
+      "procedural"
+    ]
+  },
+  {
+    "id": 43,
+    "topic": "api-testing",
+    "difficulty": "Hard",
+    "question": "[Generated] How do you send a page request in Playwright?",
+    "options": [
+      "Incorrect option C",
+      "Incorrect option A",
+      "Incorrect option B",
+      "Correct generated option for api-testing"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/api-testing.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  },
+  {
+    "id": 44,
+    "topic": "api-testing",
+    "difficulty": "Hard",
+    "question": "[Generated] How do you validate the test isolation of an API response?",
+    "options": [
+      "Incorrect option B",
+      "Incorrect option A",
+      "Incorrect option C",
+      "Correct generated option for api-testing"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/api-testing.",
+    "tags": [
+      "interview-frequent",
+      "procedural"
+    ]
+  },
+  {
+    "id": 45,
+    "topic": "api-testing",
+    "difficulty": "Medium",
+    "question": "[Generated] What object is used for toBeVisible() in Playwright?",
+    "options": [
+      "Incorrect option B",
+      "Correct generated option for api-testing",
+      "Incorrect option C",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/api-testing.",
+    "tags": [
+      "fundamentals",
+      "procedural"
+    ]
+  },
+  {
+    "id": 46,
+    "topic": "api-testing",
+    "difficulty": "Easy",
+    "question": "[Generated] What object is used for POST in Playwright?",
+    "options": [
+      "Correct generated option for api-testing",
+      "Incorrect option A",
+      "Incorrect option B",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/api-testing.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  },
+  {
+    "id": 47,
+    "topic": "api-testing",
+    "difficulty": "Medium",
+    "question": "[Generated] How do you send a getByRole request in Playwright?",
+    "options": [
+      "Correct generated option for api-testing",
+      "Incorrect option C",
+      "Incorrect option A",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/api-testing.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  },
+  {
+    "id": 48,
+    "topic": "api-testing",
+    "difficulty": "Easy",
+    "question": "[Generated] What object is used for getByText in Playwright?",
+    "options": [
+      "Incorrect option A",
+      "Incorrect option C",
+      "Correct generated option for api-testing",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/api-testing.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 49,
+    "topic": "api-testing",
+    "difficulty": "Easy",
+    "question": "[Generated] What object is used for getByText in Playwright?",
+    "options": [
+      "Incorrect option B",
+      "Incorrect option C",
+      "Incorrect option A",
+      "Correct generated option for api-testing"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/api-testing.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  },
+  {
+    "id": 50,
+    "topic": "api-testing",
+    "difficulty": "Easy",
+    "question": "[Generated] What object is used for getByRole in Playwright?",
+    "options": [
+      "Incorrect option A",
+      "Incorrect option C",
+      "Correct generated option for api-testing",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/api-testing.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 51,
+    "topic": "api-testing",
+    "difficulty": "Easy",
+    "question": "[Generated] How do you validate the status code of an API response?",
+    "options": [
+      "Correct generated option for api-testing",
+      "Incorrect option B",
+      "Incorrect option A",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/api-testing.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 52,
+    "topic": "api-testing",
+    "difficulty": "Hard",
+    "question": "[Generated] How do you validate the shadow DOM of an API response?",
+    "options": [
+      "Incorrect option A",
+      "Incorrect option C",
+      "Correct generated option for api-testing",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/api-testing.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  },
+  {
+    "id": 53,
+    "topic": "api-testing",
+    "difficulty": "Hard",
+    "question": "[Generated] How do you validate the status code of an API response?",
+    "options": [
+      "Correct generated option for api-testing",
+      "Incorrect option C",
+      "Incorrect option A",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/api-testing.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 54,
+    "topic": "api-testing",
+    "difficulty": "Hard",
+    "question": "[Generated] How do you send a POST request in Playwright?",
+    "options": [
+      "Incorrect option A",
+      "Correct generated option for api-testing",
+      "Incorrect option C",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/api-testing.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 55,
+    "topic": "api-testing",
+    "difficulty": "Easy",
+    "question": "[Generated] What object is used for getByText in Playwright?",
+    "options": [
+      "Correct generated option for api-testing",
+      "Incorrect option C",
+      "Incorrect option B",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/api-testing.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  },
+  {
+    "id": 56,
+    "topic": "api-testing",
+    "difficulty": "Hard",
+    "question": "[Generated] How do you send a getByRole request in Playwright?",
+    "options": [
+      "Incorrect option A",
+      "Incorrect option B",
+      "Correct generated option for api-testing",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/api-testing.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 57,
+    "topic": "api-testing",
+    "difficulty": "Medium",
+    "question": "[Generated] What object is used for POST in Playwright?",
+    "options": [
+      "Incorrect option A",
+      "Incorrect option B",
+      "Correct generated option for api-testing",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/api-testing.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 58,
+    "topic": "api-testing",
+    "difficulty": "Easy",
+    "question": "[Generated] What object is used for toBeVisible() in Playwright?",
+    "options": [
+      "Incorrect option A",
+      "Incorrect option B",
+      "Incorrect option C",
+      "Correct generated option for api-testing"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/api-testing.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 59,
+    "topic": "api-testing",
+    "difficulty": "Hard",
+    "question": "[Generated] How do you send a toHaveText() request in Playwright?",
+    "options": [
+      "Correct generated option for api-testing",
+      "Incorrect option C",
+      "Incorrect option B",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/api-testing.",
+    "tags": [
+      "interview-frequent",
+      "procedural"
+    ]
+  },
+  {
+    "id": 60,
+    "topic": "api-testing",
+    "difficulty": "Medium",
+    "question": "[Generated] What object is used for POST in Playwright?",
+    "options": [
+      "Incorrect option C",
+      "Incorrect option B",
+      "Incorrect option A",
+      "Correct generated option for api-testing"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/api-testing.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  }
+]

@@ -1,0 +1,1091 @@
+[
+  {
+    "id": 1,
+    "topic": "Assertions",
+    "difficulty": "Easy",
+    "question": "Which function is used for assertions in Playwright?",
+    "options": [
+      "assert()",
+      "verify()",
+      "expect()",
+      "check()"
+    ],
+    "correctAnswer": 2,
+    "explanation": "expect() is Playwright's assertion function. It wraps locators or values and provides auto-retrying assertions. E.g., expect(page).toHaveTitle('My App').",
+    "tags": [
+      "Playwright",
+      "Assertions"
+    ]
+  },
+  {
+    "id": 2,
+    "topic": "Assertions",
+    "difficulty": "Easy",
+    "question": "What assertion checks if a page has a specific URL?",
+    "options": [
+      "expect(page).toHaveURL()",
+      "expect(page).urlEquals()",
+      "page.assertURL()",
+      "expect(page.url()).toBe()"
+    ],
+    "correctAnswer": 0,
+    "explanation": "expect(page).toHaveURL('https://example.com') or with a regex. This is an auto-retrying assertion that waits for the URL to match.",
+    "tags": [
+      "Playwright",
+      "Assertions",
+      "Page"
+    ]
+  },
+  {
+    "id": 3,
+    "topic": "Assertions",
+    "difficulty": "Medium",
+    "question": "What makes Playwright assertions 'auto-retrying'?",
+    "options": [
+      "They run in a loop until timeout",
+      "They automatically retry until the condition is met or timeout expires",
+      "They use WebDriverWait internally",
+      "They have built-in error recovery"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Playwright's web-first assertions (using expect()) automatically retry the assertion until it passes or the timeout expires. This handles dynamic content without explicit waits.",
+    "tags": [
+      "Playwright",
+      "Assertions",
+      "Auto-retry"
+    ]
+  },
+  {
+    "id": 4,
+    "topic": "Assertions",
+    "difficulty": "Medium",
+    "question": "How do you assert that a locator is NOT visible?",
+    "options": [
+      "expect(locator).notVisible()",
+      "expect(locator).toBeHidden()",
+      "expect(locator).not.toBeVisible()",
+      "Both B and C"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Both expect(locator).toBeHidden() and expect(locator).not.toBeVisible() assert element invisibility. They are equivalent but toBeHidden() is more semantic.",
+    "tags": [
+      "Playwright",
+      "Assertions",
+      "Visibility"
+    ]
+  },
+  {
+    "id": 5,
+    "topic": "Assertions",
+    "difficulty": "Medium",
+    "question": "Which assertion checks text content of an element?",
+    "options": [
+      "expect(locator).toHaveContent()",
+      "expect(locator).toHaveText()",
+      "expect(locator).textEquals()",
+      "expect(locator).containsText()"
+    ],
+    "correctAnswer": 1,
+    "explanation": "expect(locator).toHaveText('Hello') checks the element's text content. It supports exact strings, regex, and arrays for multiple elements.",
+    "tags": [
+      "Playwright",
+      "Assertions",
+      "Text"
+    ]
+  },
+  {
+    "id": 6,
+    "topic": "Assertions",
+    "difficulty": "Hard",
+    "question": "What is the default assertion timeout in Playwright?",
+    "options": [
+      "5 seconds",
+      "10 seconds",
+      "30 seconds",
+      "Infinite"
+    ],
+    "correctAnswer": 2,
+    "explanation": "The default assertion timeout is 5000ms (5 seconds). The default action timeout is 30 seconds. Both are configurable in playwright.config.ts.",
+    "tags": [
+      "Playwright",
+      "Assertions",
+      "Timeout"
+    ]
+  },
+  {
+    "id": 7,
+    "topic": "Assertions",
+    "difficulty": "Easy",
+    "question": "How do you assert an input has a specific value?",
+    "options": [
+      "expect(input).hasValue()",
+      "expect(input).toHaveValue()",
+      "expect(input).valueIs()",
+      "expect(input).toContainValue()"
+    ],
+    "correctAnswer": 1,
+    "explanation": "expect(locator).toHaveValue('expected') asserts the input's current value. Works for text inputs, select elements, and textareas.",
+    "tags": [
+      "Playwright",
+      "Assertions",
+      "Input"
+    ]
+  },
+  {
+    "id": 8,
+    "topic": "Assertions",
+    "difficulty": "Hard",
+    "question": "How do you use soft assertions in Playwright?",
+    "options": [
+      "expect.soft(locator).toBeVisible()",
+      "locator.softAssert()",
+      "expect(locator, { soft: true })",
+      "SoftAssert.create()"
+    ],
+    "correctAnswer": 0,
+    "explanation": "expect.soft() marks assertions as non-fatal — they are recorded but don't stop test execution. At the end, test.fail() is called if any soft assertions failed.",
+    "tags": [
+      "Playwright",
+      "Assertions",
+      "Soft"
+    ]
+  },
+  {
+    "id": 9,
+    "topic": "Assertions",
+    "difficulty": "Medium",
+    "question": "Which assertion verifies a checkbox is checked?",
+    "options": [
+      "expect(checkbox).isChecked()",
+      "expect(checkbox).toBeChecked()",
+      "expect(checkbox).hasAttribute('checked')",
+      "expect(checkbox).toBeTrue()"
+    ],
+    "correctAnswer": 1,
+    "explanation": "expect(locator).toBeChecked() verifies the checkbox/radio is in checked state. expect(locator).not.toBeChecked() verifies unchecked state.",
+    "tags": [
+      "Playwright",
+      "Assertions",
+      "Checkbox"
+    ]
+  },
+  {
+    "id": 10,
+    "topic": "Assertions",
+    "difficulty": "Hard",
+    "question": "What does expect(locator).toHaveCount(n) assert?",
+    "options": [
+      "The element exists n times in DOM",
+      "The locator matches exactly n elements",
+      "The element has n child elements",
+      "The element has been clicked n times"
+    ],
+    "correctAnswer": 1,
+    "explanation": "expect(locator).toHaveCount(3) asserts that the locator matches exactly 3 elements. Useful for verifying list sizes, table rows, or repeated elements.",
+    "tags": [
+      "Playwright",
+      "Assertions",
+      "Count"
+    ]
+  },
+  {
+    "id": 11,
+    "topic": "assertions",
+    "difficulty": "Medium",
+    "question": "[Generated] What is the opposite of the toHaveText() assertion?",
+    "options": [
+      "Correct generated option for assertions",
+      "Incorrect option B",
+      "Incorrect option A",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/assertions.",
+    "tags": [
+      "fundamentals",
+      "procedural"
+    ]
+  },
+  {
+    "id": 12,
+    "topic": "assertions",
+    "difficulty": "Medium",
+    "question": "[Generated] Does the browser assertion auto-retry?",
+    "options": [
+      "Correct generated option for assertions",
+      "Incorrect option B",
+      "Incorrect option C",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/assertions.",
+    "tags": [
+      "fundamentals",
+      "procedural"
+    ]
+  },
+  {
+    "id": 13,
+    "topic": "assertions",
+    "difficulty": "Hard",
+    "question": "[Generated] How do you assert that auto-waiting in Playwright?",
+    "options": [
+      "Incorrect option A",
+      "Correct generated option for assertions",
+      "Incorrect option C",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/assertions.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  },
+  {
+    "id": 14,
+    "topic": "assertions",
+    "difficulty": "Hard",
+    "question": "[Generated] What is the opposite of the toBeVisible() assertion?",
+    "options": [
+      "Correct generated option for assertions",
+      "Incorrect option A",
+      "Incorrect option B",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/assertions.",
+    "tags": [
+      "interview-frequent",
+      "procedural"
+    ]
+  },
+  {
+    "id": 15,
+    "topic": "assertions",
+    "difficulty": "Medium",
+    "question": "[Generated] What is the opposite of the GET assertion?",
+    "options": [
+      "Incorrect option B",
+      "Correct generated option for assertions",
+      "Incorrect option C",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/assertions.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  },
+  {
+    "id": 16,
+    "topic": "assertions",
+    "difficulty": "Medium",
+    "question": "[Generated] How do you assert that status code in Playwright?",
+    "options": [
+      "Incorrect option C",
+      "Correct generated option for assertions",
+      "Incorrect option B",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/assertions.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 17,
+    "topic": "assertions",
+    "difficulty": "Hard",
+    "question": "[Generated] How do you assert that status code in Playwright?",
+    "options": [
+      "Incorrect option A",
+      "Incorrect option C",
+      "Incorrect option B",
+      "Correct generated option for assertions"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/assertions.",
+    "tags": [
+      "fundamentals",
+      "procedural"
+    ]
+  },
+  {
+    "id": 18,
+    "topic": "assertions",
+    "difficulty": "Hard",
+    "question": "[Generated] Does the toHaveText() assertion auto-retry?",
+    "options": [
+      "Correct generated option for assertions",
+      "Incorrect option A",
+      "Incorrect option B",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/assertions.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 19,
+    "topic": "assertions",
+    "difficulty": "Hard",
+    "question": "[Generated] How do you assert that auto-waiting in Playwright?",
+    "options": [
+      "Incorrect option A",
+      "Correct generated option for assertions",
+      "Incorrect option B",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/assertions.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 20,
+    "topic": "assertions",
+    "difficulty": "Hard",
+    "question": "[Generated] How do you assert that test isolation in Playwright?",
+    "options": [
+      "Incorrect option B",
+      "Incorrect option A",
+      "Incorrect option C",
+      "Correct generated option for assertions"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/assertions.",
+    "tags": [
+      "fundamentals",
+      "procedural"
+    ]
+  },
+  {
+    "id": 21,
+    "topic": "assertions",
+    "difficulty": "Hard",
+    "question": "[Generated] What is the opposite of the getByText assertion?",
+    "options": [
+      "Incorrect option C",
+      "Correct generated option for assertions",
+      "Incorrect option B",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/assertions.",
+    "tags": [
+      "interview-frequent",
+      "procedural"
+    ]
+  },
+  {
+    "id": 22,
+    "topic": "assertions",
+    "difficulty": "Medium",
+    "question": "[Generated] Does the GET assertion auto-retry?",
+    "options": [
+      "Incorrect option C",
+      "Incorrect option A",
+      "Correct generated option for assertions",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/assertions.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 23,
+    "topic": "assertions",
+    "difficulty": "Easy",
+    "question": "[Generated] How do you assert that status code in Playwright?",
+    "options": [
+      "Incorrect option C",
+      "Incorrect option A",
+      "Correct generated option for assertions",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/assertions.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  },
+  {
+    "id": 24,
+    "topic": "assertions",
+    "difficulty": "Easy",
+    "question": "[Generated] What is the opposite of the POST assertion?",
+    "options": [
+      "Correct generated option for assertions",
+      "Incorrect option A",
+      "Incorrect option C",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/assertions.",
+    "tags": [
+      "interview-frequent",
+      "procedural"
+    ]
+  },
+  {
+    "id": 25,
+    "topic": "assertions",
+    "difficulty": "Medium",
+    "question": "[Generated] What is the opposite of the page assertion?",
+    "options": [
+      "Incorrect option C",
+      "Correct generated option for assertions",
+      "Incorrect option A",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/assertions.",
+    "tags": [
+      "fundamentals",
+      "procedural"
+    ]
+  },
+  {
+    "id": 26,
+    "topic": "assertions",
+    "difficulty": "Easy",
+    "question": "[Generated] What is the opposite of the browser assertion?",
+    "options": [
+      "Correct generated option for assertions",
+      "Incorrect option C",
+      "Incorrect option B",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/assertions.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 27,
+    "topic": "assertions",
+    "difficulty": "Easy",
+    "question": "[Generated] Does the toHaveText() assertion auto-retry?",
+    "options": [
+      "Incorrect option C",
+      "Correct generated option for assertions",
+      "Incorrect option B",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/assertions.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  },
+  {
+    "id": 28,
+    "topic": "assertions",
+    "difficulty": "Medium",
+    "question": "[Generated] How do you assert that shadow DOM in Playwright?",
+    "options": [
+      "Correct generated option for assertions",
+      "Incorrect option C",
+      "Incorrect option B",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/assertions.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  },
+  {
+    "id": 29,
+    "topic": "assertions",
+    "difficulty": "Hard",
+    "question": "[Generated] Does the toHaveText() assertion auto-retry?",
+    "options": [
+      "Incorrect option B",
+      "Correct generated option for assertions",
+      "Incorrect option C",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/assertions.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 30,
+    "topic": "assertions",
+    "difficulty": "Easy",
+    "question": "[Generated] Does the toBeVisible() assertion auto-retry?",
+    "options": [
+      "Correct generated option for assertions",
+      "Incorrect option C",
+      "Incorrect option B",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/assertions.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 31,
+    "topic": "assertions",
+    "difficulty": "Easy",
+    "question": "[Generated] Does the toBeVisible() assertion auto-retry?",
+    "options": [
+      "Correct generated option for assertions",
+      "Incorrect option A",
+      "Incorrect option C",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/assertions.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 32,
+    "topic": "assertions",
+    "difficulty": "Medium",
+    "question": "[Generated] What is the opposite of the toHaveText() assertion?",
+    "options": [
+      "Incorrect option C",
+      "Incorrect option B",
+      "Correct generated option for assertions",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/assertions.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 33,
+    "topic": "assertions",
+    "difficulty": "Medium",
+    "question": "[Generated] What is the opposite of the toBeVisible() assertion?",
+    "options": [
+      "Incorrect option A",
+      "Incorrect option B",
+      "Incorrect option C",
+      "Correct generated option for assertions"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/assertions.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 34,
+    "topic": "assertions",
+    "difficulty": "Medium",
+    "question": "[Generated] What is the opposite of the browser assertion?",
+    "options": [
+      "Incorrect option C",
+      "Incorrect option B",
+      "Correct generated option for assertions",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/assertions.",
+    "tags": [
+      "fundamentals",
+      "procedural"
+    ]
+  },
+  {
+    "id": 35,
+    "topic": "assertions",
+    "difficulty": "Hard",
+    "question": "[Generated] Does the getByText assertion auto-retry?",
+    "options": [
+      "Incorrect option C",
+      "Incorrect option A",
+      "Incorrect option B",
+      "Correct generated option for assertions"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/assertions.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  },
+  {
+    "id": 36,
+    "topic": "assertions",
+    "difficulty": "Easy",
+    "question": "[Generated] Does the getByText assertion auto-retry?",
+    "options": [
+      "Incorrect option A",
+      "Correct generated option for assertions",
+      "Incorrect option B",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/assertions.",
+    "tags": [
+      "interview-frequent",
+      "procedural"
+    ]
+  },
+  {
+    "id": 37,
+    "topic": "assertions",
+    "difficulty": "Easy",
+    "question": "[Generated] What is the opposite of the toBeVisible() assertion?",
+    "options": [
+      "Incorrect option C",
+      "Incorrect option A",
+      "Incorrect option B",
+      "Correct generated option for assertions"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/assertions.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 38,
+    "topic": "assertions",
+    "difficulty": "Easy",
+    "question": "[Generated] Does the getByRole assertion auto-retry?",
+    "options": [
+      "Correct generated option for assertions",
+      "Incorrect option C",
+      "Incorrect option B",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/assertions.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 39,
+    "topic": "assertions",
+    "difficulty": "Easy",
+    "question": "[Generated] Does the getByText assertion auto-retry?",
+    "options": [
+      "Incorrect option A",
+      "Incorrect option C",
+      "Correct generated option for assertions",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/assertions.",
+    "tags": [
+      "fundamentals",
+      "procedural"
+    ]
+  },
+  {
+    "id": 40,
+    "topic": "assertions",
+    "difficulty": "Easy",
+    "question": "[Generated] How do you assert that status code in Playwright?",
+    "options": [
+      "Incorrect option A",
+      "Correct generated option for assertions",
+      "Incorrect option C",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/assertions.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 41,
+    "topic": "assertions",
+    "difficulty": "Hard",
+    "question": "[Generated] How do you assert that status code in Playwright?",
+    "options": [
+      "Incorrect option A",
+      "Incorrect option B",
+      "Incorrect option C",
+      "Correct generated option for assertions"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/assertions.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 42,
+    "topic": "assertions",
+    "difficulty": "Easy",
+    "question": "[Generated] What is the opposite of the toHaveText() assertion?",
+    "options": [
+      "Incorrect option B",
+      "Incorrect option A",
+      "Correct generated option for assertions",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/assertions.",
+    "tags": [
+      "interview-frequent",
+      "procedural"
+    ]
+  },
+  {
+    "id": 43,
+    "topic": "assertions",
+    "difficulty": "Easy",
+    "question": "[Generated] Does the toBeVisible() assertion auto-retry?",
+    "options": [
+      "Incorrect option B",
+      "Incorrect option C",
+      "Correct generated option for assertions",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/assertions.",
+    "tags": [
+      "fundamentals",
+      "procedural"
+    ]
+  },
+  {
+    "id": 44,
+    "topic": "assertions",
+    "difficulty": "Medium",
+    "question": "[Generated] How do you assert that status code in Playwright?",
+    "options": [
+      "Correct generated option for assertions",
+      "Incorrect option C",
+      "Incorrect option A",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/assertions.",
+    "tags": [
+      "interview-frequent",
+      "procedural"
+    ]
+  },
+  {
+    "id": 45,
+    "topic": "assertions",
+    "difficulty": "Easy",
+    "question": "[Generated] How do you assert that shadow DOM in Playwright?",
+    "options": [
+      "Incorrect option C",
+      "Correct generated option for assertions",
+      "Incorrect option B",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/assertions.",
+    "tags": [
+      "fundamentals",
+      "procedural"
+    ]
+  },
+  {
+    "id": 46,
+    "topic": "assertions",
+    "difficulty": "Hard",
+    "question": "[Generated] How do you assert that auto-waiting in Playwright?",
+    "options": [
+      "Correct generated option for assertions",
+      "Incorrect option C",
+      "Incorrect option B",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/assertions.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 47,
+    "topic": "assertions",
+    "difficulty": "Easy",
+    "question": "[Generated] How do you assert that status code in Playwright?",
+    "options": [
+      "Incorrect option B",
+      "Correct generated option for assertions",
+      "Incorrect option C",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/assertions.",
+    "tags": [
+      "interview-frequent",
+      "procedural"
+    ]
+  },
+  {
+    "id": 48,
+    "topic": "assertions",
+    "difficulty": "Easy",
+    "question": "[Generated] Does the getByRole assertion auto-retry?",
+    "options": [
+      "Incorrect option C",
+      "Correct generated option for assertions",
+      "Incorrect option A",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/assertions.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 49,
+    "topic": "assertions",
+    "difficulty": "Easy",
+    "question": "[Generated] Does the page assertion auto-retry?",
+    "options": [
+      "Incorrect option C",
+      "Correct generated option for assertions",
+      "Incorrect option A",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/assertions.",
+    "tags": [
+      "fundamentals",
+      "procedural"
+    ]
+  },
+  {
+    "id": 50,
+    "topic": "assertions",
+    "difficulty": "Easy",
+    "question": "[Generated] What is the opposite of the GET assertion?",
+    "options": [
+      "Correct generated option for assertions",
+      "Incorrect option C",
+      "Incorrect option B",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/assertions.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 51,
+    "topic": "assertions",
+    "difficulty": "Medium",
+    "question": "[Generated] Does the toHaveText() assertion auto-retry?",
+    "options": [
+      "Correct generated option for assertions",
+      "Incorrect option A",
+      "Incorrect option B",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/assertions.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 52,
+    "topic": "assertions",
+    "difficulty": "Hard",
+    "question": "[Generated] What is the opposite of the toBeVisible() assertion?",
+    "options": [
+      "Incorrect option A",
+      "Incorrect option B",
+      "Incorrect option C",
+      "Correct generated option for assertions"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/assertions.",
+    "tags": [
+      "fundamentals",
+      "procedural"
+    ]
+  },
+  {
+    "id": 53,
+    "topic": "assertions",
+    "difficulty": "Easy",
+    "question": "[Generated] Does the getByRole assertion auto-retry?",
+    "options": [
+      "Incorrect option C",
+      "Correct generated option for assertions",
+      "Incorrect option A",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/assertions.",
+    "tags": [
+      "fundamentals",
+      "procedural"
+    ]
+  },
+  {
+    "id": 54,
+    "topic": "assertions",
+    "difficulty": "Medium",
+    "question": "[Generated] How do you assert that status code in Playwright?",
+    "options": [
+      "Incorrect option C",
+      "Incorrect option A",
+      "Correct generated option for assertions",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/assertions.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 55,
+    "topic": "assertions",
+    "difficulty": "Easy",
+    "question": "[Generated] How do you assert that shadow DOM in Playwright?",
+    "options": [
+      "Incorrect option C",
+      "Incorrect option A",
+      "Incorrect option B",
+      "Correct generated option for assertions"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/assertions.",
+    "tags": [
+      "interview-frequent",
+      "procedural"
+    ]
+  },
+  {
+    "id": 56,
+    "topic": "assertions",
+    "difficulty": "Medium",
+    "question": "[Generated] How do you assert that shadow DOM in Playwright?",
+    "options": [
+      "Incorrect option C",
+      "Incorrect option B",
+      "Incorrect option A",
+      "Correct generated option for assertions"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/assertions.",
+    "tags": [
+      "fundamentals",
+      "procedural"
+    ]
+  },
+  {
+    "id": 57,
+    "topic": "assertions",
+    "difficulty": "Hard",
+    "question": "[Generated] Does the POST assertion auto-retry?",
+    "options": [
+      "Correct generated option for assertions",
+      "Incorrect option C",
+      "Incorrect option B",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/assertions.",
+    "tags": [
+      "interview-frequent",
+      "procedural"
+    ]
+  },
+  {
+    "id": 58,
+    "topic": "assertions",
+    "difficulty": "Medium",
+    "question": "[Generated] What is the opposite of the page assertion?",
+    "options": [
+      "Incorrect option C",
+      "Correct generated option for assertions",
+      "Incorrect option B",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/assertions.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 59,
+    "topic": "assertions",
+    "difficulty": "Easy",
+    "question": "[Generated] What is the opposite of the toHaveText() assertion?",
+    "options": [
+      "Incorrect option A",
+      "Correct generated option for assertions",
+      "Incorrect option B",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/assertions.",
+    "tags": [
+      "interview-frequent",
+      "procedural"
+    ]
+  },
+  {
+    "id": 60,
+    "topic": "assertions",
+    "difficulty": "Easy",
+    "question": "[Generated] What is the opposite of the toHaveText() assertion?",
+    "options": [
+      "Incorrect option B",
+      "Incorrect option A",
+      "Incorrect option C",
+      "Correct generated option for assertions"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in playwright/assertions.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  }
+]

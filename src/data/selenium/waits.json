@@ -1,0 +1,1092 @@
+[
+  {
+    "id": 1,
+    "topic": "Waits",
+    "difficulty": "Easy",
+    "question": "Which type of wait in Selenium applies globally to all findElement calls?",
+    "options": [
+      "Explicit Wait",
+      "Fluent Wait",
+      "Implicit Wait",
+      "Thread.sleep"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Implicit wait sets a global timeout. WebDriver polls the DOM for the specified duration before throwing NoSuchElementException if the element isn't found.",
+    "tags": [
+      "Selenium",
+      "Waits",
+      "Implicit"
+    ]
+  },
+  {
+    "id": 2,
+    "topic": "Waits",
+    "difficulty": "Easy",
+    "question": "Which class is used for Explicit Wait in Selenium?",
+    "options": [
+      "WebDriverWait",
+      "FluentWait",
+      "ImplicitWait",
+      "DriverWait"
+    ],
+    "correctAnswer": 0,
+    "explanation": "WebDriverWait combined with ExpectedConditions is used for explicit waits. It waits for a specific condition before proceeding, unlike the global implicit wait.",
+    "tags": [
+      "Selenium",
+      "Waits",
+      "Explicit"
+    ]
+  },
+  {
+    "id": 3,
+    "topic": "Waits",
+    "difficulty": "Medium",
+    "question": "What is the recommended wait strategy in Selenium automation frameworks?",
+    "options": [
+      "Thread.sleep()",
+      "Implicit wait only",
+      "Explicit wait with ExpectedConditions",
+      "Fluent wait only"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Explicit wait with ExpectedConditions is the most reliable. It waits for specific conditions (element visible, clickable) rather than a fixed time, making tests faster and more stable.",
+    "tags": [
+      "Selenium",
+      "Waits",
+      "Best Practices"
+    ]
+  },
+  {
+    "id": 4,
+    "topic": "Waits",
+    "difficulty": "Medium",
+    "question": "What ExpectedCondition waits for an element to be visible and enabled for clicking?",
+    "options": [
+      "visibilityOf()",
+      "presenceOfElement()",
+      "elementToBeClickable()",
+      "elementIsVisible()"
+    ],
+    "correctAnswer": 2,
+    "explanation": "ExpectedConditions.elementToBeClickable() waits until an element is visible, displayed, and enabled — ready to receive a click interaction.",
+    "tags": [
+      "Selenium",
+      "Waits",
+      "ExpectedConditions"
+    ]
+  },
+  {
+    "id": 5,
+    "topic": "Waits",
+    "difficulty": "Hard",
+    "question": "What is the difference between visibilityOfElementLocated() and presenceOfElementLocated()?",
+    "options": [
+      "No difference",
+      "visibilityOf checks DOM + visibility; presenceOf checks DOM only",
+      "presenceOf is for hidden elements only",
+      "visibilityOf works only with IDs"
+    ],
+    "correctAnswer": 1,
+    "explanation": "presenceOfElementLocated() confirms the element exists in DOM (even if hidden). visibilityOfElementLocated() additionally checks that the element is displayed and has non-zero size.",
+    "tags": [
+      "Selenium",
+      "Waits",
+      "ExpectedConditions"
+    ]
+  },
+  {
+    "id": 6,
+    "topic": "Waits",
+    "difficulty": "Medium",
+    "question": "What is Fluent Wait?",
+    "options": [
+      "Same as implicit wait",
+      "Wait that checks condition at configurable intervals with custom exception ignoring",
+      "A wait only for Ajax",
+      "A wait with no timeout"
+    ],
+    "correctAnswer": 1,
+    "explanation": "FluentWait allows configuring polling frequency, timeout, and which exceptions to ignore (e.g., NoSuchElementException). It's more customizable than WebDriverWait.",
+    "tags": [
+      "Selenium",
+      "Waits",
+      "Fluent"
+    ]
+  },
+  {
+    "id": 7,
+    "topic": "Waits",
+    "difficulty": "Easy",
+    "question": "Why should Thread.sleep() be avoided in Selenium tests?",
+    "options": [
+      "It doesn't work in Selenium",
+      "It causes hard-coded delays making tests slow and fragile",
+      "It's deprecated",
+      "It only works on Windows"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Thread.sleep() always waits the full duration even if the element is ready. This makes tests unnecessarily slow and can still fail if the element takes longer than the sleep time.",
+    "tags": [
+      "Selenium",
+      "Waits",
+      "Best Practices"
+    ]
+  },
+  {
+    "id": 8,
+    "topic": "Waits",
+    "difficulty": "Hard",
+    "question": "Can implicit and explicit waits be mixed in Selenium?",
+    "options": [
+      "Yes, always recommended",
+      "No, not possible",
+      "Yes, but it can cause unpredictable timeouts",
+      "Only in Selenium 4"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Mixing implicit and explicit waits can cause unpredictable behavior. The waits may compound, leading to timeouts longer than expected. Best practice: use one or the other.",
+    "tags": [
+      "Selenium",
+      "Waits",
+      "Best Practices"
+    ]
+  },
+  {
+    "id": 9,
+    "topic": "Waits",
+    "difficulty": "Medium",
+    "question": "Which exception is thrown when an explicit wait times out?",
+    "options": [
+      "TimeoutException",
+      "NoSuchElementException",
+      "WebDriverException",
+      "StaleElementException"
+    ],
+    "correctAnswer": 0,
+    "explanation": "When WebDriverWait's condition is not met within the timeout period, it throws TimeoutException with the last known cause.",
+    "tags": [
+      "Selenium",
+      "Waits",
+      "Exceptions"
+    ]
+  },
+  {
+    "id": 10,
+    "topic": "Waits",
+    "difficulty": "Hard",
+    "question": "What ExpectedCondition would you use to wait for a page title?",
+    "options": [
+      "titleIs()",
+      "pageTitle()",
+      "waitForTitle()",
+      "documentTitle()"
+    ],
+    "correctAnswer": 0,
+    "explanation": "ExpectedConditions.titleIs('exact title') and titleContains('partial') wait for the page title. Useful after navigation to confirm the correct page loaded.",
+    "tags": [
+      "Selenium",
+      "Waits",
+      "ExpectedConditions"
+    ]
+  },
+  {
+    "id": 11,
+    "topic": "waits",
+    "difficulty": "Easy",
+    "question": "[Generated] When should you use PageFactory over Thread.sleep()?",
+    "options": [
+      "Incorrect option C",
+      "Incorrect option B",
+      "Correct generated option for waits",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/waits.",
+    "tags": [
+      "interview-frequent",
+      "procedural"
+    ]
+  },
+  {
+    "id": 12,
+    "topic": "waits",
+    "difficulty": "Medium",
+    "question": "[Generated] How does @BeforeMethod handle a NoSuchElementException?",
+    "options": [
+      "Correct generated option for waits",
+      "Incorrect option B",
+      "Incorrect option A",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/waits.",
+    "tags": [
+      "interview-frequent",
+      "procedural"
+    ]
+  },
+  {
+    "id": 13,
+    "topic": "waits",
+    "difficulty": "Hard",
+    "question": "[Generated] When should you use parallel execution over Thread.sleep()?",
+    "options": [
+      "Incorrect option B",
+      "Incorrect option C",
+      "Incorrect option A",
+      "Correct generated option for waits"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/waits.",
+    "tags": [
+      "fundamentals",
+      "procedural"
+    ]
+  },
+  {
+    "id": 14,
+    "topic": "waits",
+    "difficulty": "Medium",
+    "question": "[Generated] When should you use parallel execution over Thread.sleep()?",
+    "options": [
+      "Correct generated option for waits",
+      "Incorrect option C",
+      "Incorrect option A",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/waits.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 15,
+    "topic": "waits",
+    "difficulty": "Hard",
+    "question": "[Generated] How does Implicit Wait handle a NoSuchElementException?",
+    "options": [
+      "Correct generated option for waits",
+      "Incorrect option B",
+      "Incorrect option C",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/waits.",
+    "tags": [
+      "fundamentals",
+      "procedural"
+    ]
+  },
+  {
+    "id": 16,
+    "topic": "waits",
+    "difficulty": "Hard",
+    "question": "[Generated] How does Implicit Wait handle a NoSuchElementException?",
+    "options": [
+      "Incorrect option B",
+      "Incorrect option C",
+      "Incorrect option A",
+      "Correct generated option for waits"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/waits.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 17,
+    "topic": "waits",
+    "difficulty": "Medium",
+    "question": "[Generated] When should you use dynamic elements over Thread.sleep()?",
+    "options": [
+      "Incorrect option A",
+      "Incorrect option C",
+      "Incorrect option B",
+      "Correct generated option for waits"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/waits.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  },
+  {
+    "id": 18,
+    "topic": "waits",
+    "difficulty": "Hard",
+    "question": "[Generated] What is the default timeout for By.cssSelector?",
+    "options": [
+      "Correct generated option for waits",
+      "Incorrect option C",
+      "Incorrect option A",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/waits.",
+    "tags": [
+      "fundamentals",
+      "procedural"
+    ]
+  },
+  {
+    "id": 19,
+    "topic": "waits",
+    "difficulty": "Easy",
+    "question": "[Generated] When should you use parallel execution over Thread.sleep()?",
+    "options": [
+      "Correct generated option for waits",
+      "Incorrect option B",
+      "Incorrect option A",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/waits.",
+    "tags": [
+      "interview-frequent",
+      "procedural"
+    ]
+  },
+  {
+    "id": 20,
+    "topic": "waits",
+    "difficulty": "Easy",
+    "question": "[Generated] When should you use dynamic elements over Thread.sleep()?",
+    "options": [
+      "Incorrect option A",
+      "Incorrect option C",
+      "Incorrect option B",
+      "Correct generated option for waits"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/waits.",
+    "tags": [
+      "fundamentals",
+      "procedural"
+    ]
+  },
+  {
+    "id": 21,
+    "topic": "waits",
+    "difficulty": "Hard",
+    "question": "[Generated] What is the default timeout for By.cssSelector?",
+    "options": [
+      "Incorrect option C",
+      "Incorrect option B",
+      "Incorrect option A",
+      "Correct generated option for waits"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/waits.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  },
+  {
+    "id": 22,
+    "topic": "waits",
+    "difficulty": "Medium",
+    "question": "[Generated] How does Explicit Wait handle a NoSuchElementException?",
+    "options": [
+      "Incorrect option A",
+      "Incorrect option B",
+      "Incorrect option C",
+      "Correct generated option for waits"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/waits.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 23,
+    "topic": "waits",
+    "difficulty": "Medium",
+    "question": "[Generated] What is the default timeout for @BeforeMethod?",
+    "options": [
+      "Correct generated option for waits",
+      "Incorrect option C",
+      "Incorrect option A",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/waits.",
+    "tags": [
+      "fundamentals",
+      "procedural"
+    ]
+  },
+  {
+    "id": 24,
+    "topic": "waits",
+    "difficulty": "Hard",
+    "question": "[Generated] What is the default timeout for @BeforeMethod?",
+    "options": [
+      "Incorrect option B",
+      "Incorrect option A",
+      "Incorrect option C",
+      "Correct generated option for waits"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/waits.",
+    "tags": [
+      "interview-frequent",
+      "procedural"
+    ]
+  },
+  {
+    "id": 25,
+    "topic": "waits",
+    "difficulty": "Hard",
+    "question": "[Generated] When should you use parallel execution over Thread.sleep()?",
+    "options": [
+      "Incorrect option C",
+      "Correct generated option for waits",
+      "Incorrect option B",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/waits.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  },
+  {
+    "id": 26,
+    "topic": "waits",
+    "difficulty": "Easy",
+    "question": "[Generated] When should you use dynamic elements over Thread.sleep()?",
+    "options": [
+      "Incorrect option A",
+      "Correct generated option for waits",
+      "Incorrect option C",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/waits.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 27,
+    "topic": "waits",
+    "difficulty": "Hard",
+    "question": "[Generated] What is the default timeout for By.id?",
+    "options": [
+      "Incorrect option C",
+      "Incorrect option A",
+      "Incorrect option B",
+      "Correct generated option for waits"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/waits.",
+    "tags": [
+      "interview-frequent",
+      "procedural"
+    ]
+  },
+  {
+    "id": 28,
+    "topic": "waits",
+    "difficulty": "Hard",
+    "question": "[Generated] What is the default timeout for @Test?",
+    "options": [
+      "Correct generated option for waits",
+      "Incorrect option C",
+      "Incorrect option B",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/waits.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 29,
+    "topic": "waits",
+    "difficulty": "Hard",
+    "question": "[Generated] How does @Test handle a NoSuchElementException?",
+    "options": [
+      "Correct generated option for waits",
+      "Incorrect option B",
+      "Incorrect option C",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/waits.",
+    "tags": [
+      "interview-frequent",
+      "procedural"
+    ]
+  },
+  {
+    "id": 30,
+    "topic": "waits",
+    "difficulty": "Hard",
+    "question": "[Generated] What is the default timeout for Implicit Wait?",
+    "options": [
+      "Incorrect option B",
+      "Correct generated option for waits",
+      "Incorrect option A",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/waits.",
+    "tags": [
+      "fundamentals",
+      "procedural"
+    ]
+  },
+  {
+    "id": 31,
+    "topic": "waits",
+    "difficulty": "Hard",
+    "question": "[Generated] When should you use child-to-parent over Thread.sleep()?",
+    "options": [
+      "Incorrect option B",
+      "Incorrect option A",
+      "Correct generated option for waits",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/waits.",
+    "tags": [
+      "interview-frequent",
+      "procedural"
+    ]
+  },
+  {
+    "id": 32,
+    "topic": "waits",
+    "difficulty": "Hard",
+    "question": "[Generated] When should you use PageFactory over Thread.sleep()?",
+    "options": [
+      "Incorrect option A",
+      "Incorrect option B",
+      "Incorrect option C",
+      "Correct generated option for waits"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/waits.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 33,
+    "topic": "waits",
+    "difficulty": "Easy",
+    "question": "[Generated] What is the default timeout for @Test?",
+    "options": [
+      "Incorrect option C",
+      "Incorrect option A",
+      "Correct generated option for waits",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/waits.",
+    "tags": [
+      "interview-frequent",
+      "procedural"
+    ]
+  },
+  {
+    "id": 34,
+    "topic": "waits",
+    "difficulty": "Easy",
+    "question": "[Generated] What is the default timeout for Explicit Wait?",
+    "options": [
+      "Correct generated option for waits",
+      "Incorrect option A",
+      "Incorrect option B",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/waits.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  },
+  {
+    "id": 35,
+    "topic": "waits",
+    "difficulty": "Hard",
+    "question": "[Generated] What is the default timeout for @BeforeMethod?",
+    "options": [
+      "Incorrect option B",
+      "Incorrect option A",
+      "Incorrect option C",
+      "Correct generated option for waits"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/waits.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 36,
+    "topic": "waits",
+    "difficulty": "Medium",
+    "question": "[Generated] When should you use dynamic elements over Thread.sleep()?",
+    "options": [
+      "Correct generated option for waits",
+      "Incorrect option B",
+      "Incorrect option A",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/waits.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 37,
+    "topic": "waits",
+    "difficulty": "Medium",
+    "question": "[Generated] How does @BeforeMethod handle a NoSuchElementException?",
+    "options": [
+      "Incorrect option A",
+      "Incorrect option B",
+      "Correct generated option for waits",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/waits.",
+    "tags": [
+      "interview-frequent",
+      "procedural"
+    ]
+  },
+  {
+    "id": 38,
+    "topic": "waits",
+    "difficulty": "Medium",
+    "question": "[Generated] What is the default timeout for Explicit Wait?",
+    "options": [
+      "Correct generated option for waits",
+      "Incorrect option A",
+      "Incorrect option C",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/waits.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 39,
+    "topic": "waits",
+    "difficulty": "Hard",
+    "question": "[Generated] What is the default timeout for @BeforeMethod?",
+    "options": [
+      "Incorrect option B",
+      "Incorrect option A",
+      "Incorrect option C",
+      "Correct generated option for waits"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/waits.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  },
+  {
+    "id": 40,
+    "topic": "waits",
+    "difficulty": "Easy",
+    "question": "[Generated] What is the default timeout for By.cssSelector?",
+    "options": [
+      "Incorrect option B",
+      "Incorrect option A",
+      "Incorrect option C",
+      "Correct generated option for waits"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/waits.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 41,
+    "topic": "waits",
+    "difficulty": "Easy",
+    "question": "[Generated] How does By.cssSelector handle a NoSuchElementException?",
+    "options": [
+      "Incorrect option C",
+      "Incorrect option B",
+      "Correct generated option for waits",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/waits.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  },
+  {
+    "id": 42,
+    "topic": "waits",
+    "difficulty": "Easy",
+    "question": "[Generated] How does @BeforeMethod handle a NoSuchElementException?",
+    "options": [
+      "Incorrect option A",
+      "Incorrect option B",
+      "Correct generated option for waits",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/waits.",
+    "tags": [
+      "interview-frequent",
+      "procedural"
+    ]
+  },
+  {
+    "id": 43,
+    "topic": "waits",
+    "difficulty": "Easy",
+    "question": "[Generated] What is the default timeout for @Test?",
+    "options": [
+      "Incorrect option A",
+      "Incorrect option B",
+      "Incorrect option C",
+      "Correct generated option for waits"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/waits.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 44,
+    "topic": "waits",
+    "difficulty": "Medium",
+    "question": "[Generated] How does By.cssSelector handle a NoSuchElementException?",
+    "options": [
+      "Incorrect option A",
+      "Incorrect option B",
+      "Incorrect option C",
+      "Correct generated option for waits"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/waits.",
+    "tags": [
+      "fundamentals",
+      "procedural"
+    ]
+  },
+  {
+    "id": 45,
+    "topic": "waits",
+    "difficulty": "Easy",
+    "question": "[Generated] How does Implicit Wait handle a NoSuchElementException?",
+    "options": [
+      "Incorrect option B",
+      "Correct generated option for waits",
+      "Incorrect option A",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/waits.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 46,
+    "topic": "waits",
+    "difficulty": "Easy",
+    "question": "[Generated] What is the default timeout for Explicit Wait?",
+    "options": [
+      "Correct generated option for waits",
+      "Incorrect option C",
+      "Incorrect option B",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/waits.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 47,
+    "topic": "waits",
+    "difficulty": "Easy",
+    "question": "[Generated] When should you use child-to-parent over Thread.sleep()?",
+    "options": [
+      "Incorrect option B",
+      "Correct generated option for waits",
+      "Incorrect option C",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/waits.",
+    "tags": [
+      "fundamentals",
+      "procedural"
+    ]
+  },
+  {
+    "id": 48,
+    "topic": "waits",
+    "difficulty": "Easy",
+    "question": "[Generated] What is the default timeout for @Test?",
+    "options": [
+      "Correct generated option for waits",
+      "Incorrect option C",
+      "Incorrect option A",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/waits.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 49,
+    "topic": "waits",
+    "difficulty": "Easy",
+    "question": "[Generated] What is the default timeout for Implicit Wait?",
+    "options": [
+      "Incorrect option B",
+      "Correct generated option for waits",
+      "Incorrect option A",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/waits.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 50,
+    "topic": "waits",
+    "difficulty": "Medium",
+    "question": "[Generated] When should you use dynamic elements over Thread.sleep()?",
+    "options": [
+      "Correct generated option for waits",
+      "Incorrect option B",
+      "Incorrect option C",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/waits.",
+    "tags": [
+      "interview-frequent",
+      "procedural"
+    ]
+  },
+  {
+    "id": 51,
+    "topic": "waits",
+    "difficulty": "Easy",
+    "question": "[Generated] What is the default timeout for By.id?",
+    "options": [
+      "Correct generated option for waits",
+      "Incorrect option C",
+      "Incorrect option A",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/waits.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 52,
+    "topic": "waits",
+    "difficulty": "Medium",
+    "question": "[Generated] When should you use child-to-parent over Thread.sleep()?",
+    "options": [
+      "Incorrect option B",
+      "Incorrect option C",
+      "Correct generated option for waits",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/waits.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 53,
+    "topic": "waits",
+    "difficulty": "Hard",
+    "question": "[Generated] How does By.cssSelector handle a NoSuchElementException?",
+    "options": [
+      "Incorrect option C",
+      "Correct generated option for waits",
+      "Incorrect option A",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/waits.",
+    "tags": [
+      "fundamentals",
+      "procedural"
+    ]
+  },
+  {
+    "id": 54,
+    "topic": "waits",
+    "difficulty": "Easy",
+    "question": "[Generated] What is the default timeout for Implicit Wait?",
+    "options": [
+      "Incorrect option A",
+      "Incorrect option C",
+      "Incorrect option B",
+      "Correct generated option for waits"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/waits.",
+    "tags": [
+      "interview-frequent",
+      "procedural"
+    ]
+  },
+  {
+    "id": 55,
+    "topic": "waits",
+    "difficulty": "Medium",
+    "question": "[Generated] What is the default timeout for Explicit Wait?",
+    "options": [
+      "Incorrect option C",
+      "Incorrect option A",
+      "Correct generated option for waits",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/waits.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 56,
+    "topic": "waits",
+    "difficulty": "Easy",
+    "question": "[Generated] When should you use parallel execution over Thread.sleep()?",
+    "options": [
+      "Correct generated option for waits",
+      "Incorrect option B",
+      "Incorrect option C",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/waits.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 57,
+    "topic": "waits",
+    "difficulty": "Hard",
+    "question": "[Generated] When should you use child-to-parent over Thread.sleep()?",
+    "options": [
+      "Incorrect option B",
+      "Incorrect option A",
+      "Correct generated option for waits",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/waits.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  },
+  {
+    "id": 58,
+    "topic": "waits",
+    "difficulty": "Hard",
+    "question": "[Generated] When should you use dynamic elements over Thread.sleep()?",
+    "options": [
+      "Incorrect option A",
+      "Incorrect option C",
+      "Incorrect option B",
+      "Correct generated option for waits"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/waits.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  },
+  {
+    "id": 59,
+    "topic": "waits",
+    "difficulty": "Medium",
+    "question": "[Generated] What is the default timeout for @Test?",
+    "options": [
+      "Incorrect option C",
+      "Incorrect option A",
+      "Incorrect option B",
+      "Correct generated option for waits"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/waits.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  },
+  {
+    "id": 60,
+    "topic": "waits",
+    "difficulty": "Medium",
+    "question": "[Generated] When should you use child-to-parent over Thread.sleep()?",
+    "options": [
+      "Correct generated option for waits",
+      "Incorrect option B",
+      "Incorrect option C",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/waits.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  }
+]

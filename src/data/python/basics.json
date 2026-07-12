@@ -1,0 +1,1093 @@
+[
+  {
+    "id": 1,
+    "topic": "Basics",
+    "difficulty": "Easy",
+    "question": "Which keyword is used to define a function in Python?",
+    "options": [
+      "function",
+      "define",
+      "def",
+      "func"
+    ],
+    "correctAnswer": 2,
+    "explanation": "'def' is the keyword used to define a function in Python. Example: def my_function(): pass",
+    "tags": [
+      "Python",
+      "Basics",
+      "Functions"
+    ]
+  },
+  {
+    "id": 2,
+    "topic": "Basics",
+    "difficulty": "Easy",
+    "question": "What is the output of: print(type([]))?",
+    "options": [
+      "<class 'tuple'>",
+      "<class 'list'>",
+      "<class 'array'>",
+      "<class 'dict'>"
+    ],
+    "correctAnswer": 1,
+    "explanation": "[] creates an empty list in Python. type([]) returns <class 'list'>.",
+    "tags": [
+      "Python",
+      "Basics",
+      "Data Types"
+    ]
+  },
+  {
+    "id": 3,
+    "topic": "Basics",
+    "difficulty": "Easy",
+    "question": "Which of these is a mutable data type in Python?",
+    "options": [
+      "tuple",
+      "string",
+      "list",
+      "int"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Lists are mutable — you can modify, add, or remove elements. Tuples, strings, and integers are immutable.",
+    "tags": [
+      "Python",
+      "Basics",
+      "Data Types"
+    ]
+  },
+  {
+    "id": 4,
+    "topic": "Basics",
+    "difficulty": "Medium",
+    "question": "What does the 'pass' statement do in Python?",
+    "options": [
+      "Exits the function",
+      "Skips the current iteration",
+      "Does nothing — acts as a placeholder",
+      "Passes a value to caller"
+    ],
+    "correctAnswer": 2,
+    "explanation": "'pass' is a null operation. It's used as a placeholder where code is syntactically required but no action is needed.",
+    "tags": [
+      "Python",
+      "Basics",
+      "Keywords"
+    ]
+  },
+  {
+    "id": 5,
+    "topic": "Basics",
+    "difficulty": "Medium",
+    "question": "What is the difference between '==' and 'is' in Python?",
+    "options": [
+      "No difference",
+      "'==' compares values; 'is' checks identity (same object in memory)",
+      "'is' is faster",
+      "'==' checks identity; 'is' compares values"
+    ],
+    "correctAnswer": 1,
+    "explanation": "'==' checks if two objects have equal values. 'is' checks if both variables point to the same object in memory (identity check).",
+    "tags": [
+      "Python",
+      "Basics",
+      "Operators"
+    ]
+  },
+  {
+    "id": 6,
+    "topic": "Basics",
+    "difficulty": "Easy",
+    "question": "How do you get the number of items in a list?",
+    "options": [
+      "list.count()",
+      "list.size()",
+      "len(list)",
+      "list.length()"
+    ],
+    "correctAnswer": 2,
+    "explanation": "len() is the built-in function to get the number of elements. It works with lists, tuples, strings, dicts, and any sequence.",
+    "tags": [
+      "Python",
+      "Basics",
+      "Built-in Functions"
+    ]
+  },
+  {
+    "id": 7,
+    "topic": "Basics",
+    "difficulty": "Medium",
+    "question": "What does the '//' operator do in Python?",
+    "options": [
+      "Divides and returns float",
+      "Floor division — divides and rounds down",
+      "Modulus operation",
+      "Comment delimiter"
+    ],
+    "correctAnswer": 1,
+    "explanation": "// is floor division — it divides and rounds down to the nearest integer. 7 // 2 = 3, not 3.5.",
+    "tags": [
+      "Python",
+      "Basics",
+      "Operators"
+    ]
+  },
+  {
+    "id": 8,
+    "topic": "Basics",
+    "difficulty": "Hard",
+    "question": "What is a Python list comprehension?",
+    "options": [
+      "A way to import lists",
+      "A concise way to create lists: [expr for item in iterable if cond]",
+      "A method to compress lists",
+      "A sorting algorithm"
+    ],
+    "correctAnswer": 1,
+    "explanation": "List comprehension: [x*2 for x in range(10) if x > 3] — creates a new list by applying an expression to each item, optionally filtering with a condition.",
+    "tags": [
+      "Python",
+      "Basics",
+      "List Comprehension"
+    ]
+  },
+  {
+    "id": 9,
+    "topic": "Basics",
+    "difficulty": "Easy",
+    "question": "Which Python data type uses key-value pairs?",
+    "options": [
+      "list",
+      "tuple",
+      "set",
+      "dict"
+    ],
+    "correctAnswer": 3,
+    "explanation": "dict (dictionary) stores key-value pairs. Example: {'name': 'Alice', 'age': 30}. Keys must be hashable (immutable).",
+    "tags": [
+      "Python",
+      "Basics",
+      "Data Types"
+    ]
+  },
+  {
+    "id": 10,
+    "topic": "Basics",
+    "difficulty": "Hard",
+    "question": "What does *args do in a function definition?",
+    "options": [
+      "Allows only one argument",
+      "Makes all arguments keyword-only",
+      "Collects extra positional arguments into a tuple",
+      "Makes arguments optional"
+    ],
+    "correctAnswer": 2,
+    "explanation": "*args collects any number of positional arguments into a tuple inside the function. **kwargs collects keyword arguments into a dict.",
+    "tags": [
+      "Python",
+      "Basics",
+      "Functions",
+      "Args"
+    ]
+  },
+  {
+    "id": 11,
+    "topic": "basics",
+    "difficulty": "Easy",
+    "question": "[Generated] What is the output of `len()` in Python?",
+    "options": [
+      "Correct generated option for basics",
+      "Incorrect option B",
+      "Incorrect option C",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in python/basics.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 12,
+    "topic": "basics",
+    "difficulty": "Hard",
+    "question": "[Generated] What is the output of `list comprehension` in Python?",
+    "options": [
+      "Incorrect option A",
+      "Incorrect option C",
+      "Incorrect option B",
+      "Correct generated option for basics"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in python/basics.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  },
+  {
+    "id": 13,
+    "topic": "basics",
+    "difficulty": "Medium",
+    "question": "[Generated] What does the `list comprehension` function do?",
+    "options": [
+      "Incorrect option B",
+      "Incorrect option A",
+      "Incorrect option C",
+      "Correct generated option for basics"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in python/basics.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 14,
+    "topic": "basics",
+    "difficulty": "Hard",
+    "question": "[Generated] What is the output of `inheritance` in Python?",
+    "options": [
+      "Correct generated option for basics",
+      "Incorrect option C",
+      "Incorrect option B",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in python/basics.",
+    "tags": [
+      "fundamentals",
+      "procedural"
+    ]
+  },
+  {
+    "id": 15,
+    "topic": "basics",
+    "difficulty": "Medium",
+    "question": "[Generated] What is the output of `type()` in Python?",
+    "options": [
+      "Incorrect option A",
+      "Incorrect option B",
+      "Correct generated option for basics",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in python/basics.",
+    "tags": [
+      "fundamentals",
+      "procedural"
+    ]
+  },
+  {
+    "id": 16,
+    "topic": "basics",
+    "difficulty": "Medium",
+    "question": "[Generated] How do you declare a __init__ in Python?",
+    "options": [
+      "Incorrect option B",
+      "Incorrect option C",
+      "Incorrect option A",
+      "Correct generated option for basics"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in python/basics.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 17,
+    "topic": "basics",
+    "difficulty": "Hard",
+    "question": "[Generated] How do you declare a __init__ in Python?",
+    "options": [
+      "Incorrect option C",
+      "Incorrect option B",
+      "Incorrect option A",
+      "Correct generated option for basics"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in python/basics.",
+    "tags": [
+      "interview-frequent",
+      "procedural"
+    ]
+  },
+  {
+    "id": 18,
+    "topic": "basics",
+    "difficulty": "Medium",
+    "question": "[Generated] What is the output of `list comprehension` in Python?",
+    "options": [
+      "Incorrect option C",
+      "Correct generated option for basics",
+      "Incorrect option B",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in python/basics.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 19,
+    "topic": "basics",
+    "difficulty": "Hard",
+    "question": "[Generated] How do you declare a __init__ in Python?",
+    "options": [
+      "Incorrect option C",
+      "Correct generated option for basics",
+      "Incorrect option B",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in python/basics.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 20,
+    "topic": "basics",
+    "difficulty": "Hard",
+    "question": "[Generated] What does the `type()` function do?",
+    "options": [
+      "Correct generated option for basics",
+      "Incorrect option C",
+      "Incorrect option A",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in python/basics.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 21,
+    "topic": "basics",
+    "difficulty": "Hard",
+    "question": "[Generated] What is the output of `inheritance` in Python?",
+    "options": [
+      "Incorrect option A",
+      "Correct generated option for basics",
+      "Incorrect option B",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in python/basics.",
+    "tags": [
+      "interview-frequent",
+      "procedural"
+    ]
+  },
+  {
+    "id": 22,
+    "topic": "basics",
+    "difficulty": "Hard",
+    "question": "[Generated] What does the `inheritance` function do?",
+    "options": [
+      "Incorrect option A",
+      "Incorrect option B",
+      "Incorrect option C",
+      "Correct generated option for basics"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in python/basics.",
+    "tags": [
+      "interview-frequent",
+      "procedural"
+    ]
+  },
+  {
+    "id": 23,
+    "topic": "basics",
+    "difficulty": "Hard",
+    "question": "[Generated] How do you declare a ValueError in Python?",
+    "options": [
+      "Incorrect option B",
+      "Incorrect option C",
+      "Correct generated option for basics",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in python/basics.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 24,
+    "topic": "basics",
+    "difficulty": "Hard",
+    "question": "[Generated] How do you declare a tuple in Python?",
+    "options": [
+      "Correct generated option for basics",
+      "Incorrect option C",
+      "Incorrect option B",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in python/basics.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 25,
+    "topic": "basics",
+    "difficulty": "Medium",
+    "question": "[Generated] How do you declare a set in Python?",
+    "options": [
+      "Correct generated option for basics",
+      "Incorrect option A",
+      "Incorrect option C",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in python/basics.",
+    "tags": [
+      "fundamentals",
+      "procedural"
+    ]
+  },
+  {
+    "id": 26,
+    "topic": "basics",
+    "difficulty": "Hard",
+    "question": "[Generated] What is the output of `list comprehension` in Python?",
+    "options": [
+      "Incorrect option A",
+      "Incorrect option B",
+      "Incorrect option C",
+      "Correct generated option for basics"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in python/basics.",
+    "tags": [
+      "fundamentals",
+      "procedural"
+    ]
+  },
+  {
+    "id": 27,
+    "topic": "basics",
+    "difficulty": "Easy",
+    "question": "[Generated] How do you declare a tuple in Python?",
+    "options": [
+      "Correct generated option for basics",
+      "Incorrect option B",
+      "Incorrect option C",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in python/basics.",
+    "tags": [
+      "interview-frequent",
+      "procedural"
+    ]
+  },
+  {
+    "id": 28,
+    "topic": "basics",
+    "difficulty": "Hard",
+    "question": "[Generated] What is the output of `inheritance` in Python?",
+    "options": [
+      "Incorrect option B",
+      "Correct generated option for basics",
+      "Incorrect option C",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in python/basics.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  },
+  {
+    "id": 29,
+    "topic": "basics",
+    "difficulty": "Hard",
+    "question": "[Generated] How do you declare a ValueError in Python?",
+    "options": [
+      "Incorrect option B",
+      "Incorrect option A",
+      "Correct generated option for basics",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in python/basics.",
+    "tags": [
+      "interview-frequent",
+      "procedural"
+    ]
+  },
+  {
+    "id": 30,
+    "topic": "basics",
+    "difficulty": "Hard",
+    "question": "[Generated] How do you declare a dictionary in Python?",
+    "options": [
+      "Incorrect option C",
+      "Incorrect option B",
+      "Incorrect option A",
+      "Correct generated option for basics"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in python/basics.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 31,
+    "topic": "basics",
+    "difficulty": "Medium",
+    "question": "[Generated] What does the `list comprehension` function do?",
+    "options": [
+      "Incorrect option B",
+      "Correct generated option for basics",
+      "Incorrect option A",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in python/basics.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  },
+  {
+    "id": 32,
+    "topic": "basics",
+    "difficulty": "Easy",
+    "question": "[Generated] What is the output of `inheritance` in Python?",
+    "options": [
+      "Correct generated option for basics",
+      "Incorrect option B",
+      "Incorrect option C",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in python/basics.",
+    "tags": [
+      "fundamentals",
+      "procedural"
+    ]
+  },
+  {
+    "id": 33,
+    "topic": "basics",
+    "difficulty": "Easy",
+    "question": "[Generated] What is the output of `inheritance` in Python?",
+    "options": [
+      "Incorrect option A",
+      "Correct generated option for basics",
+      "Incorrect option B",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in python/basics.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 34,
+    "topic": "basics",
+    "difficulty": "Hard",
+    "question": "[Generated] How do you declare a dictionary in Python?",
+    "options": [
+      "Correct generated option for basics",
+      "Incorrect option A",
+      "Incorrect option C",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in python/basics.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  },
+  {
+    "id": 35,
+    "topic": "basics",
+    "difficulty": "Easy",
+    "question": "[Generated] What does the `inheritance` function do?",
+    "options": [
+      "Incorrect option A",
+      "Incorrect option B",
+      "Correct generated option for basics",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in python/basics.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 36,
+    "topic": "basics",
+    "difficulty": "Medium",
+    "question": "[Generated] How do you declare a tuple in Python?",
+    "options": [
+      "Incorrect option B",
+      "Incorrect option A",
+      "Correct generated option for basics",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in python/basics.",
+    "tags": [
+      "interview-frequent",
+      "procedural"
+    ]
+  },
+  {
+    "id": 37,
+    "topic": "basics",
+    "difficulty": "Medium",
+    "question": "[Generated] How do you declare a __init__ in Python?",
+    "options": [
+      "Incorrect option C",
+      "Correct generated option for basics",
+      "Incorrect option B",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in python/basics.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 38,
+    "topic": "basics",
+    "difficulty": "Medium",
+    "question": "[Generated] How do you declare a set in Python?",
+    "options": [
+      "Incorrect option C",
+      "Incorrect option B",
+      "Correct generated option for basics",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in python/basics.",
+    "tags": [
+      "fundamentals",
+      "procedural"
+    ]
+  },
+  {
+    "id": 39,
+    "topic": "basics",
+    "difficulty": "Easy",
+    "question": "[Generated] What is the output of `len()` in Python?",
+    "options": [
+      "Incorrect option C",
+      "Correct generated option for basics",
+      "Incorrect option A",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in python/basics.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  },
+  {
+    "id": 40,
+    "topic": "basics",
+    "difficulty": "Medium",
+    "question": "[Generated] What does the `inheritance` function do?",
+    "options": [
+      "Incorrect option B",
+      "Correct generated option for basics",
+      "Incorrect option A",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in python/basics.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  },
+  {
+    "id": 41,
+    "topic": "basics",
+    "difficulty": "Medium",
+    "question": "[Generated] What is the output of `inheritance` in Python?",
+    "options": [
+      "Incorrect option C",
+      "Incorrect option B",
+      "Correct generated option for basics",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in python/basics.",
+    "tags": [
+      "interview-frequent",
+      "procedural"
+    ]
+  },
+  {
+    "id": 42,
+    "topic": "basics",
+    "difficulty": "Hard",
+    "question": "[Generated] How do you declare a dictionary in Python?",
+    "options": [
+      "Incorrect option A",
+      "Correct generated option for basics",
+      "Incorrect option C",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in python/basics.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  },
+  {
+    "id": 43,
+    "topic": "basics",
+    "difficulty": "Easy",
+    "question": "[Generated] What does the `list comprehension` function do?",
+    "options": [
+      "Incorrect option A",
+      "Incorrect option B",
+      "Incorrect option C",
+      "Correct generated option for basics"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in python/basics.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  },
+  {
+    "id": 44,
+    "topic": "basics",
+    "difficulty": "Hard",
+    "question": "[Generated] What is the output of `len()` in Python?",
+    "options": [
+      "Correct generated option for basics",
+      "Incorrect option A",
+      "Incorrect option C",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in python/basics.",
+    "tags": [
+      "fundamentals",
+      "procedural"
+    ]
+  },
+  {
+    "id": 45,
+    "topic": "basics",
+    "difficulty": "Hard",
+    "question": "[Generated] What is the output of `type()` in Python?",
+    "options": [
+      "Incorrect option A",
+      "Incorrect option C",
+      "Correct generated option for basics",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in python/basics.",
+    "tags": [
+      "interview-frequent",
+      "procedural"
+    ]
+  },
+  {
+    "id": 46,
+    "topic": "basics",
+    "difficulty": "Easy",
+    "question": "[Generated] How do you declare a ValueError in Python?",
+    "options": [
+      "Incorrect option C",
+      "Correct generated option for basics",
+      "Incorrect option A",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in python/basics.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  },
+  {
+    "id": 47,
+    "topic": "basics",
+    "difficulty": "Easy",
+    "question": "[Generated] What does the `list comprehension` function do?",
+    "options": [
+      "Correct generated option for basics",
+      "Incorrect option A",
+      "Incorrect option C",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in python/basics.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 48,
+    "topic": "basics",
+    "difficulty": "Easy",
+    "question": "[Generated] How do you declare a ValueError in Python?",
+    "options": [
+      "Correct generated option for basics",
+      "Incorrect option A",
+      "Incorrect option B",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in python/basics.",
+    "tags": [
+      "fundamentals",
+      "procedural"
+    ]
+  },
+  {
+    "id": 49,
+    "topic": "basics",
+    "difficulty": "Hard",
+    "question": "[Generated] How do you declare a tuple in Python?",
+    "options": [
+      "Incorrect option C",
+      "Incorrect option A",
+      "Correct generated option for basics",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in python/basics.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 50,
+    "topic": "basics",
+    "difficulty": "Easy",
+    "question": "[Generated] What does the `inheritance` function do?",
+    "options": [
+      "Incorrect option C",
+      "Incorrect option A",
+      "Incorrect option B",
+      "Correct generated option for basics"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in python/basics.",
+    "tags": [
+      "fundamentals",
+      "procedural"
+    ]
+  },
+  {
+    "id": 51,
+    "topic": "basics",
+    "difficulty": "Hard",
+    "question": "[Generated] What is the output of `inheritance` in Python?",
+    "options": [
+      "Correct generated option for basics",
+      "Incorrect option B",
+      "Incorrect option C",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in python/basics.",
+    "tags": [
+      "fundamentals",
+      "procedural"
+    ]
+  },
+  {
+    "id": 52,
+    "topic": "basics",
+    "difficulty": "Hard",
+    "question": "[Generated] How do you declare a dictionary in Python?",
+    "options": [
+      "Incorrect option C",
+      "Correct generated option for basics",
+      "Incorrect option B",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in python/basics.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 53,
+    "topic": "basics",
+    "difficulty": "Easy",
+    "question": "[Generated] What is the output of `len()` in Python?",
+    "options": [
+      "Incorrect option A",
+      "Incorrect option B",
+      "Incorrect option C",
+      "Correct generated option for basics"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in python/basics.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 54,
+    "topic": "basics",
+    "difficulty": "Easy",
+    "question": "[Generated] How do you declare a dictionary in Python?",
+    "options": [
+      "Incorrect option C",
+      "Incorrect option B",
+      "Correct generated option for basics",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in python/basics.",
+    "tags": [
+      "fundamentals",
+      "procedural"
+    ]
+  },
+  {
+    "id": 55,
+    "topic": "basics",
+    "difficulty": "Easy",
+    "question": "[Generated] How do you declare a ValueError in Python?",
+    "options": [
+      "Incorrect option C",
+      "Incorrect option B",
+      "Correct generated option for basics",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in python/basics.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 56,
+    "topic": "basics",
+    "difficulty": "Hard",
+    "question": "[Generated] What does the `len()` function do?",
+    "options": [
+      "Incorrect option A",
+      "Incorrect option B",
+      "Correct generated option for basics",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in python/basics.",
+    "tags": [
+      "fundamentals",
+      "procedural"
+    ]
+  },
+  {
+    "id": 57,
+    "topic": "basics",
+    "difficulty": "Easy",
+    "question": "[Generated] What does the `list comprehension` function do?",
+    "options": [
+      "Incorrect option C",
+      "Incorrect option B",
+      "Incorrect option A",
+      "Correct generated option for basics"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in python/basics.",
+    "tags": [
+      "interview-frequent",
+      "procedural"
+    ]
+  },
+  {
+    "id": 58,
+    "topic": "basics",
+    "difficulty": "Easy",
+    "question": "[Generated] How do you declare a set in Python?",
+    "options": [
+      "Incorrect option B",
+      "Incorrect option A",
+      "Incorrect option C",
+      "Correct generated option for basics"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in python/basics.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  },
+  {
+    "id": 59,
+    "topic": "basics",
+    "difficulty": "Hard",
+    "question": "[Generated] What does the `inheritance` function do?",
+    "options": [
+      "Incorrect option B",
+      "Incorrect option C",
+      "Incorrect option A",
+      "Correct generated option for basics"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in python/basics.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 60,
+    "topic": "basics",
+    "difficulty": "Medium",
+    "question": "[Generated] How do you declare a __init__ in Python?",
+    "options": [
+      "Correct generated option for basics",
+      "Incorrect option B",
+      "Incorrect option A",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in python/basics.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  }
+]

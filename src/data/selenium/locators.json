@@ -1,0 +1,1090 @@
+[
+  {
+    "id": 1,
+    "topic": "Locators",
+    "difficulty": "Easy",
+    "question": "Which Selenium locator is considered the most reliable?",
+    "options": [
+      "By.name()",
+      "By.id()",
+      "By.className()",
+      "By.tagName()"
+    ],
+    "correctAnswer": 1,
+    "explanation": "By.id() is the most reliable locator because IDs should be unique per page. It's fast, readable, and less prone to breaking due to DOM changes.",
+    "tags": [
+      "Selenium",
+      "Locators"
+    ]
+  },
+  {
+    "id": 2,
+    "topic": "Locators",
+    "difficulty": "Easy",
+    "question": "How do you locate an element by its CSS class in Selenium?",
+    "options": [
+      "By.id('.myClass')",
+      "By.className('myClass')",
+      "By.css('myClass')",
+      "By.class('myClass')"
+    ],
+    "correctAnswer": 1,
+    "explanation": "By.className('myClass') finds elements with that CSS class. For complex selectors, use By.cssSelector('.myClass') which is more powerful.",
+    "tags": [
+      "Selenium",
+      "Locators",
+      "CSS"
+    ]
+  },
+  {
+    "id": 3,
+    "topic": "Locators",
+    "difficulty": "Medium",
+    "question": "Which locator strategy uses the text visible on screen?",
+    "options": [
+      "By.id()",
+      "By.name()",
+      "By.linkText()",
+      "By.tagName()"
+    ],
+    "correctAnswer": 2,
+    "explanation": "By.linkText() finds an anchor element by its exact visible text. By.partialLinkText() finds anchors containing the specified text.",
+    "tags": [
+      "Selenium",
+      "Locators",
+      "linkText"
+    ]
+  },
+  {
+    "id": 4,
+    "topic": "Locators",
+    "difficulty": "Medium",
+    "question": "What is the correct CSS selector to find an input with name='username'?",
+    "options": [
+      "input.username",
+      "input[name='username']",
+      "input#username",
+      "input@name=username"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Attribute selectors in CSS use the [attribute='value'] syntax. input[name='username'] targets input elements where the name attribute equals 'username'.",
+    "tags": [
+      "Selenium",
+      "Locators",
+      "CSS"
+    ]
+  },
+  {
+    "id": 5,
+    "topic": "Locators",
+    "difficulty": "Hard",
+    "question": "Which locator is slowest in Selenium?",
+    "options": [
+      "By.id()",
+      "By.xpath()",
+      "By.name()",
+      "By.cssSelector()"
+    ],
+    "correctAnswer": 1,
+    "explanation": "XPath is generally slower than CSS selectors and id/name locators because it traverses the DOM tree. CSS selectors are typically faster and preferred for modern browsers.",
+    "tags": [
+      "Selenium",
+      "Locators",
+      "Performance"
+    ]
+  },
+  {
+    "id": 6,
+    "topic": "Locators",
+    "difficulty": "Easy",
+    "question": "What method is used to find a single element in Selenium?",
+    "options": [
+      "findElements()",
+      "findElement()",
+      "getElement()",
+      "locateElement()"
+    ],
+    "correctAnswer": 1,
+    "explanation": "driver.findElement(By locator) returns the first matching WebElement. If not found, it throws NoSuchElementException.",
+    "tags": [
+      "Selenium",
+      "Locators",
+      "WebDriver"
+    ]
+  },
+  {
+    "id": 7,
+    "topic": "Locators",
+    "difficulty": "Medium",
+    "question": "What does findElements() return when no element is found?",
+    "options": [
+      "null",
+      "Throws NoSuchElementException",
+      "An empty List",
+      "An empty WebElement"
+    ],
+    "correctAnswer": 2,
+    "explanation": "findElements() returns an empty List<WebElement> (not null, no exception) when no elements match. This is useful for checking element presence.",
+    "tags": [
+      "Selenium",
+      "Locators",
+      "WebDriver"
+    ]
+  },
+  {
+    "id": 8,
+    "topic": "Locators",
+    "difficulty": "Hard",
+    "question": "How do you locate the 3rd element matching a CSS selector?",
+    "options": [
+      "By.cssSelector('div:3')",
+      "By.cssSelector('div:nth-child(3)')",
+      "findElements().get(2)",
+      "Both B and C"
+    ],
+    "correctAnswer": 3,
+    "explanation": "You can use CSS nth-child pseudo-class or get the list via findElements() and access index 2 (0-based). Both are valid approaches.",
+    "tags": [
+      "Selenium",
+      "Locators",
+      "CSS"
+    ]
+  },
+  {
+    "id": 9,
+    "topic": "Locators",
+    "difficulty": "Easy",
+    "question": "Which Selenium locator finds elements by HTML tag name?",
+    "options": [
+      "By.id()",
+      "By.className()",
+      "By.tagName()",
+      "By.name()"
+    ],
+    "correctAnswer": 2,
+    "explanation": "By.tagName('input') finds all input elements. Since multiple elements typically have the same tag, this is best used with findElements().",
+    "tags": [
+      "Selenium",
+      "Locators"
+    ]
+  },
+  {
+    "id": 10,
+    "topic": "Locators",
+    "difficulty": "Medium",
+    "question": "What is the recommended order of locator preference in Selenium?",
+    "options": [
+      "XPath > CSS > ID > Name",
+      "ID > Name > CSS Selector > XPath",
+      "CSS > XPath > ID > Name",
+      "Name > ID > CSS > XPath"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Best practice order: ID (unique, fast) > Name (fast, common) > CSS Selector (fast, flexible) > XPath (powerful but slowest). Prefer stable, unique attributes.",
+    "tags": [
+      "Selenium",
+      "Locators",
+      "Best Practices"
+    ]
+  },
+  {
+    "id": 11,
+    "topic": "locators",
+    "difficulty": "Easy",
+    "question": "[Generated] What is the syntax for @Test?",
+    "options": [
+      "Correct generated option for locators",
+      "Incorrect option B",
+      "Incorrect option C",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/locators.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 12,
+    "topic": "locators",
+    "difficulty": "Hard",
+    "question": "[Generated] Which locator strategy is best for child-to-parent?",
+    "options": [
+      "Incorrect option C",
+      "Incorrect option A",
+      "Correct generated option for locators",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/locators.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  },
+  {
+    "id": 13,
+    "topic": "locators",
+    "difficulty": "Easy",
+    "question": "[Generated] How does the @Test locator work?",
+    "options": [
+      "Incorrect option B",
+      "Correct generated option for locators",
+      "Incorrect option C",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/locators.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  },
+  {
+    "id": 14,
+    "topic": "locators",
+    "difficulty": "Easy",
+    "question": "[Generated] How does the By.cssSelector locator work?",
+    "options": [
+      "Incorrect option C",
+      "Correct generated option for locators",
+      "Incorrect option B",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/locators.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  },
+  {
+    "id": 15,
+    "topic": "locators",
+    "difficulty": "Medium",
+    "question": "[Generated] Which locator strategy is best for dynamic elements?",
+    "options": [
+      "Incorrect option C",
+      "Incorrect option A",
+      "Incorrect option B",
+      "Correct generated option for locators"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/locators.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 16,
+    "topic": "locators",
+    "difficulty": "Medium",
+    "question": "[Generated] Which locator strategy is best for parallel execution?",
+    "options": [
+      "Correct generated option for locators",
+      "Incorrect option C",
+      "Incorrect option B",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/locators.",
+    "tags": [
+      "interview-frequent",
+      "procedural"
+    ]
+  },
+  {
+    "id": 17,
+    "topic": "locators",
+    "difficulty": "Hard",
+    "question": "[Generated] How does the By.id locator work?",
+    "options": [
+      "Incorrect option B",
+      "Incorrect option A",
+      "Incorrect option C",
+      "Correct generated option for locators"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/locators.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  },
+  {
+    "id": 18,
+    "topic": "locators",
+    "difficulty": "Hard",
+    "question": "[Generated] How does the @BeforeMethod locator work?",
+    "options": [
+      "Incorrect option B",
+      "Incorrect option C",
+      "Incorrect option A",
+      "Correct generated option for locators"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/locators.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  },
+  {
+    "id": 19,
+    "topic": "locators",
+    "difficulty": "Hard",
+    "question": "[Generated] What is the syntax for By.id?",
+    "options": [
+      "Incorrect option A",
+      "Correct generated option for locators",
+      "Incorrect option C",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/locators.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 20,
+    "topic": "locators",
+    "difficulty": "Medium",
+    "question": "[Generated] How does the By.id locator work?",
+    "options": [
+      "Incorrect option C",
+      "Incorrect option B",
+      "Incorrect option A",
+      "Correct generated option for locators"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/locators.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 21,
+    "topic": "locators",
+    "difficulty": "Easy",
+    "question": "[Generated] What is the syntax for By.cssSelector?",
+    "options": [
+      "Correct generated option for locators",
+      "Incorrect option B",
+      "Incorrect option A",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/locators.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 22,
+    "topic": "locators",
+    "difficulty": "Hard",
+    "question": "[Generated] How does the @BeforeMethod locator work?",
+    "options": [
+      "Incorrect option C",
+      "Incorrect option B",
+      "Correct generated option for locators",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/locators.",
+    "tags": [
+      "interview-frequent",
+      "procedural"
+    ]
+  },
+  {
+    "id": 23,
+    "topic": "locators",
+    "difficulty": "Medium",
+    "question": "[Generated] How does the @Test locator work?",
+    "options": [
+      "Correct generated option for locators",
+      "Incorrect option B",
+      "Incorrect option A",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/locators.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 24,
+    "topic": "locators",
+    "difficulty": "Easy",
+    "question": "[Generated] Which locator strategy is best for child-to-parent?",
+    "options": [
+      "Correct generated option for locators",
+      "Incorrect option A",
+      "Incorrect option C",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/locators.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 25,
+    "topic": "locators",
+    "difficulty": "Easy",
+    "question": "[Generated] Which locator strategy is best for child-to-parent?",
+    "options": [
+      "Incorrect option C",
+      "Incorrect option B",
+      "Correct generated option for locators",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/locators.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 26,
+    "topic": "locators",
+    "difficulty": "Medium",
+    "question": "[Generated] What is the syntax for By.id?",
+    "options": [
+      "Incorrect option C",
+      "Correct generated option for locators",
+      "Incorrect option B",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/locators.",
+    "tags": [
+      "fundamentals",
+      "procedural"
+    ]
+  },
+  {
+    "id": 27,
+    "topic": "locators",
+    "difficulty": "Medium",
+    "question": "[Generated] How does the @Test locator work?",
+    "options": [
+      "Incorrect option B",
+      "Correct generated option for locators",
+      "Incorrect option A",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/locators.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 28,
+    "topic": "locators",
+    "difficulty": "Hard",
+    "question": "[Generated] What is the syntax for @Test?",
+    "options": [
+      "Incorrect option A",
+      "Incorrect option B",
+      "Incorrect option C",
+      "Correct generated option for locators"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/locators.",
+    "tags": [
+      "fundamentals",
+      "procedural"
+    ]
+  },
+  {
+    "id": 29,
+    "topic": "locators",
+    "difficulty": "Hard",
+    "question": "[Generated] Which locator strategy is best for PageFactory?",
+    "options": [
+      "Incorrect option C",
+      "Incorrect option B",
+      "Correct generated option for locators",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/locators.",
+    "tags": [
+      "fundamentals",
+      "procedural"
+    ]
+  },
+  {
+    "id": 30,
+    "topic": "locators",
+    "difficulty": "Medium",
+    "question": "[Generated] How does the By.id locator work?",
+    "options": [
+      "Correct generated option for locators",
+      "Incorrect option A",
+      "Incorrect option C",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/locators.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 31,
+    "topic": "locators",
+    "difficulty": "Easy",
+    "question": "[Generated] What is the syntax for @Test?",
+    "options": [
+      "Incorrect option C",
+      "Incorrect option A",
+      "Correct generated option for locators",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/locators.",
+    "tags": [
+      "fundamentals",
+      "procedural"
+    ]
+  },
+  {
+    "id": 32,
+    "topic": "locators",
+    "difficulty": "Easy",
+    "question": "[Generated] What is the syntax for @Test?",
+    "options": [
+      "Incorrect option B",
+      "Correct generated option for locators",
+      "Incorrect option C",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/locators.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  },
+  {
+    "id": 33,
+    "topic": "locators",
+    "difficulty": "Medium",
+    "question": "[Generated] How does the @Test locator work?",
+    "options": [
+      "Incorrect option A",
+      "Incorrect option B",
+      "Incorrect option C",
+      "Correct generated option for locators"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/locators.",
+    "tags": [
+      "interview-frequent",
+      "procedural"
+    ]
+  },
+  {
+    "id": 34,
+    "topic": "locators",
+    "difficulty": "Medium",
+    "question": "[Generated] How does the By.id locator work?",
+    "options": [
+      "Correct generated option for locators",
+      "Incorrect option A",
+      "Incorrect option B",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/locators.",
+    "tags": [
+      "interview-frequent",
+      "procedural"
+    ]
+  },
+  {
+    "id": 35,
+    "topic": "locators",
+    "difficulty": "Medium",
+    "question": "[Generated] How does the Implicit Wait locator work?",
+    "options": [
+      "Incorrect option A",
+      "Correct generated option for locators",
+      "Incorrect option B",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/locators.",
+    "tags": [
+      "fundamentals",
+      "procedural"
+    ]
+  },
+  {
+    "id": 36,
+    "topic": "locators",
+    "difficulty": "Hard",
+    "question": "[Generated] Which locator strategy is best for PageFactory?",
+    "options": [
+      "Incorrect option B",
+      "Incorrect option C",
+      "Incorrect option A",
+      "Correct generated option for locators"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/locators.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 37,
+    "topic": "locators",
+    "difficulty": "Medium",
+    "question": "[Generated] Which locator strategy is best for child-to-parent?",
+    "options": [
+      "Incorrect option A",
+      "Incorrect option B",
+      "Correct generated option for locators",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/locators.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  },
+  {
+    "id": 38,
+    "topic": "locators",
+    "difficulty": "Medium",
+    "question": "[Generated] Which locator strategy is best for PageFactory?",
+    "options": [
+      "Incorrect option A",
+      "Incorrect option C",
+      "Incorrect option B",
+      "Correct generated option for locators"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/locators.",
+    "tags": [
+      "fundamentals",
+      "procedural"
+    ]
+  },
+  {
+    "id": 39,
+    "topic": "locators",
+    "difficulty": "Hard",
+    "question": "[Generated] What is the syntax for @Test?",
+    "options": [
+      "Incorrect option C",
+      "Incorrect option B",
+      "Incorrect option A",
+      "Correct generated option for locators"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/locators.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 40,
+    "topic": "locators",
+    "difficulty": "Medium",
+    "question": "[Generated] How does the @BeforeMethod locator work?",
+    "options": [
+      "Incorrect option C",
+      "Correct generated option for locators",
+      "Incorrect option B",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/locators.",
+    "tags": [
+      "fundamentals",
+      "procedural"
+    ]
+  },
+  {
+    "id": 41,
+    "topic": "locators",
+    "difficulty": "Easy",
+    "question": "[Generated] Which locator strategy is best for PageFactory?",
+    "options": [
+      "Incorrect option A",
+      "Incorrect option C",
+      "Incorrect option B",
+      "Correct generated option for locators"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/locators.",
+    "tags": [
+      "fundamentals",
+      "procedural"
+    ]
+  },
+  {
+    "id": 42,
+    "topic": "locators",
+    "difficulty": "Easy",
+    "question": "[Generated] Which locator strategy is best for PageFactory?",
+    "options": [
+      "Incorrect option B",
+      "Incorrect option C",
+      "Incorrect option A",
+      "Correct generated option for locators"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/locators.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 43,
+    "topic": "locators",
+    "difficulty": "Easy",
+    "question": "[Generated] Which locator strategy is best for PageFactory?",
+    "options": [
+      "Incorrect option B",
+      "Correct generated option for locators",
+      "Incorrect option C",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/locators.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 44,
+    "topic": "locators",
+    "difficulty": "Medium",
+    "question": "[Generated] How does the By.cssSelector locator work?",
+    "options": [
+      "Incorrect option B",
+      "Incorrect option A",
+      "Incorrect option C",
+      "Correct generated option for locators"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/locators.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 45,
+    "topic": "locators",
+    "difficulty": "Medium",
+    "question": "[Generated] How does the @BeforeMethod locator work?",
+    "options": [
+      "Incorrect option B",
+      "Incorrect option C",
+      "Correct generated option for locators",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/locators.",
+    "tags": [
+      "advanced",
+      "procedural"
+    ]
+  },
+  {
+    "id": 46,
+    "topic": "locators",
+    "difficulty": "Easy",
+    "question": "[Generated] What is the syntax for @BeforeMethod?",
+    "options": [
+      "Incorrect option A",
+      "Incorrect option B",
+      "Incorrect option C",
+      "Correct generated option for locators"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/locators.",
+    "tags": [
+      "interview-frequent",
+      "procedural"
+    ]
+  },
+  {
+    "id": 47,
+    "topic": "locators",
+    "difficulty": "Medium",
+    "question": "[Generated] Which locator strategy is best for child-to-parent?",
+    "options": [
+      "Incorrect option C",
+      "Incorrect option B",
+      "Incorrect option A",
+      "Correct generated option for locators"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/locators.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 48,
+    "topic": "locators",
+    "difficulty": "Hard",
+    "question": "[Generated] What is the syntax for @Test?",
+    "options": [
+      "Incorrect option A",
+      "Incorrect option B",
+      "Correct generated option for locators",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/locators.",
+    "tags": [
+      "interview-frequent",
+      "procedural"
+    ]
+  },
+  {
+    "id": 49,
+    "topic": "locators",
+    "difficulty": "Hard",
+    "question": "[Generated] Which locator strategy is best for PageFactory?",
+    "options": [
+      "Correct generated option for locators",
+      "Incorrect option A",
+      "Incorrect option C",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/locators.",
+    "tags": [
+      "interview-frequent",
+      "procedural"
+    ]
+  },
+  {
+    "id": 50,
+    "topic": "locators",
+    "difficulty": "Medium",
+    "question": "[Generated] How does the By.cssSelector locator work?",
+    "options": [
+      "Incorrect option A",
+      "Incorrect option C",
+      "Incorrect option B",
+      "Correct generated option for locators"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/locators.",
+    "tags": [
+      "interview-frequent",
+      "procedural"
+    ]
+  },
+  {
+    "id": 51,
+    "topic": "locators",
+    "difficulty": "Hard",
+    "question": "[Generated] How does the @BeforeMethod locator work?",
+    "options": [
+      "Incorrect option A",
+      "Correct generated option for locators",
+      "Incorrect option C",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/locators.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 52,
+    "topic": "locators",
+    "difficulty": "Easy",
+    "question": "[Generated] Which locator strategy is best for PageFactory?",
+    "options": [
+      "Incorrect option B",
+      "Correct generated option for locators",
+      "Incorrect option C",
+      "Incorrect option A"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/locators.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 53,
+    "topic": "locators",
+    "difficulty": "Hard",
+    "question": "[Generated] How does the Implicit Wait locator work?",
+    "options": [
+      "Incorrect option B",
+      "Incorrect option A",
+      "Correct generated option for locators",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/locators.",
+    "tags": [
+      "fundamentals",
+      "procedural"
+    ]
+  },
+  {
+    "id": 54,
+    "topic": "locators",
+    "difficulty": "Easy",
+    "question": "[Generated] How does the By.id locator work?",
+    "options": [
+      "Correct generated option for locators",
+      "Incorrect option A",
+      "Incorrect option B",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/locators.",
+    "tags": [
+      "core-concept",
+      "procedural"
+    ]
+  },
+  {
+    "id": 55,
+    "topic": "locators",
+    "difficulty": "Hard",
+    "question": "[Generated] What is the syntax for Explicit Wait?",
+    "options": [
+      "Correct generated option for locators",
+      "Incorrect option C",
+      "Incorrect option A",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 0,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/locators.",
+    "tags": [
+      "interview-frequent",
+      "procedural"
+    ]
+  },
+  {
+    "id": 56,
+    "topic": "locators",
+    "difficulty": "Medium",
+    "question": "[Generated] How does the @Test locator work?",
+    "options": [
+      "Incorrect option B",
+      "Incorrect option A",
+      "Correct generated option for locators",
+      "Incorrect option C"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/locators.",
+    "tags": [
+      "interview-frequent",
+      "procedural"
+    ]
+  },
+  {
+    "id": 57,
+    "topic": "locators",
+    "difficulty": "Medium",
+    "question": "[Generated] How does the @BeforeMethod locator work?",
+    "options": [
+      "Incorrect option B",
+      "Incorrect option C",
+      "Incorrect option A",
+      "Correct generated option for locators"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/locators.",
+    "tags": [
+      "interview-frequent",
+      "procedural"
+    ]
+  },
+  {
+    "id": 58,
+    "topic": "locators",
+    "difficulty": "Hard",
+    "question": "[Generated] Which locator strategy is best for PageFactory?",
+    "options": [
+      "Incorrect option A",
+      "Correct generated option for locators",
+      "Incorrect option C",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/locators.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  },
+  {
+    "id": 59,
+    "topic": "locators",
+    "difficulty": "Medium",
+    "question": "[Generated] What is the syntax for Implicit Wait?",
+    "options": [
+      "Incorrect option C",
+      "Incorrect option A",
+      "Correct generated option for locators",
+      "Incorrect option B"
+    ],
+    "correctAnswer": 2,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/locators.",
+    "tags": [
+      "tricky",
+      "procedural"
+    ]
+  },
+  {
+    "id": 60,
+    "topic": "locators",
+    "difficulty": "Hard",
+    "question": "[Generated] What is the syntax for By.cssSelector?",
+    "options": [
+      "Incorrect option A",
+      "Incorrect option C",
+      "Incorrect option B",
+      "Correct generated option for locators"
+    ],
+    "correctAnswer": 3,
+    "explanation": "This is an auto-generated explanation for the procedural question in selenium/locators.",
+    "tags": [
+      "interview-frequent",
+      "procedural"
+    ]
+  }
+]
