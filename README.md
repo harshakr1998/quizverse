@@ -1,114 +1,30 @@
-# QuizVerse 🎯
+# QuizVerse
 
-> **Automation Interview Preparation Platform** — A fully static, zero-backend MCQ quiz app for QA Engineers, SDETs, and Automation Engineers.
+QuizVerse is a static interview-practice app for QA engineers and SDETs. Browse Java, Selenium, Python and Playwright topics, take a timed quiz, and review explanations afterward.
 
-[![Deploy](https://img.shields.io/badge/Deploy-GitHub%20Pages-blue?logo=github)](https://harshakr1998.github.io/quizverse/)
-[![React](https://img.shields.io/badge/React-18-blue?logo=react)](https://react.dev)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?logo=typescript)](https://typescriptlang.org)
-[![Vite](https://img.shields.io/badge/Vite-6-purple?logo=vite)](https://vitejs.dev)
-[![Tailwind](https://img.shields.io/badge/Tailwind-v4-cyan?logo=tailwindcss)](https://tailwindcss.com)
+## Getting started
 
----
-
-## 🚀 Live Demo
-
-**[https://harshakr1998.github.io/quizverse/](https://harshakr1998.github.io/quizverse/)**
-
----
-
-## ✨ Features
-
-- **4 Technologies** — Java, Selenium, Python, Playwright
-- **18+ Topics** with 10 curated questions each
-- **Randomized questions & options** every attempt
-- **10-minute countdown timer** with auto-submit
-- **Instant results** — score, grade, correct/incorrect/skipped
-- **Detailed review** — explanations for every answer
-- **Confetti 🎊** for 90%+ scores
-- **Zero backend** — runs entirely in the browser from JSON files
-- **Dark, premium UI** — glassmorphism, animations, responsive
-
----
-
-## 🛠 Tech Stack
-
-| Layer | Technology |
-|---|---|
-| Framework | React 18 + TypeScript |
-| Build Tool | Vite 6 |
-| Styling | Tailwind CSS v4 |
-| Animations | Framer Motion |
-| Routing | React Router v6 (HashRouter) |
-| Deployment | GitHub Actions → GitHub Pages |
-| Data | Static JSON files |
-
----
-
-## 📁 Project Structure
-
-```
-src/
-  components/    # Reusable UI components
-  data/          # JSON question banks
-    java/        # basics, oop, collections, exceptions, streams
-    selenium/    # locators, xpath, waits, pom, testng
-    python/      # basics, oop, collections, exceptions
-    playwright/  # locators, assertions, fixtures, api-testing
-  hooks/         # useQuiz, useTimer
-  layouts/       # MainLayout
-  pages/         # HomePage, TechnologyPage, InstructionsPage, QuizPage, ResultPage, ReviewPage
-  router/        # HashRouter setup
-  types/         # TypeScript interfaces
-  utils/         # shuffle, scoring, formatTime
-```
-
----
-
-## 🚀 Running Locally
-
-```bash
-git clone https://github.com/harshakr1998/quizverse.git
-cd quizverse
+```sh
 npm install
 npm run dev
 ```
 
-Open [http://localhost:5173/quizverse/](http://localhost:5173/quizverse/)
+Open the local URL printed by Vite. The production build uses the `/quizverse/` base path for GitHub Pages.
 
----
-
-## ➕ Adding New Questions
-
-1. Find or create a JSON file in `src/data/<technology>/`
-2. Follow the schema:
-
-```json
-{
-  "id": 11,
-  "topic": "Basics",
-  "difficulty": "Medium",
-  "question": "Your question here?",
-  "options": ["Option A", "Option B", "Option C", "Option D"],
-  "correctAnswer": 0,
-  "explanation": "Detailed explanation of why A is correct.",
-  "tags": ["Java", "Basics"]
-}
+```sh
+npm run validate:data
+npm run lint
+npm run build
 ```
 
-3. Register the import in `src/data/index.ts`
-4. Questions and options are automatically shuffled in every quiz!
+The app uses React 19, TypeScript, Vite, Anime.js and Lucide icons. GitHub Actions builds and deploys `dist` to GitHub Pages.
 
----
+## Practice sessions
 
-## 🤝 Contributing
+Each attempt draws up to 10 questions from its topic, shuffles the answer order, and has a 10-minute deadline. The current attempt and its deadline are stored in the browser so it can be resumed after a refresh. Storage is local to the device and may be unavailable in some browser configurations. Starting a new attempt replaces the previous one.
 
-Pull requests are welcome! Please:
-- Follow the JSON schema above
-- Write clear, accurate explanations
-- Tag questions appropriately
+## Question content
 
----
+Question banks live in `src/data/<technology>/<topic>.json` and are registered in `src/data/index.ts`. Each record has an ID, topic, difficulty (`Easy`, `Medium`, or `Hard`), question, four distinct options, a zero-based `correctAnswer`, an explanation, and tags. Run `npm run validate:data` after editing. Validation checks structure, obvious placeholders and normalized duplicate question text across the bank; it cannot detect every paraphrased duplicate or establish technical accuracy, so each addition needs subject-matter review.
 
-## 📄 License
-
-MIT © [Harsha K R](https://github.com/harshakr1998)
+The former placeholder generator produced fake answers and has been removed. Do not add procedurally generated filler to the question bank.

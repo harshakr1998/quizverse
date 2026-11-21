@@ -191,902 +191,416 @@
   },
   {
     "id": 11,
-    "topic": "fixtures",
-    "difficulty": "Easy",
-    "question": "[Generated] What is a GET fixture in Playwright?",
+    "topic": "Fixtures",
+    "difficulty": "Medium",
+    "question": "What is the default scope of a custom Playwright Test fixture?",
     "options": [
-      "Incorrect option A",
-      "Incorrect option B",
-      "Correct generated option for fixtures",
-      "Incorrect option C"
+      "test",
+      "worker",
+      "suite",
+      "global"
     ],
-    "correctAnswer": 2,
-    "explanation": "This is an auto-generated explanation for the procedural question in playwright/fixtures.",
+    "correctAnswer": 0,
+    "explanation": "A custom fixture is test-scoped unless a different scope is specified.",
     "tags": [
-      "fundamentals",
-      "procedural"
+      "Playwright",
+      "Fixtures"
     ]
   },
   {
     "id": 12,
-    "topic": "fixtures",
-    "difficulty": "Easy",
-    "question": "[Generated] Are fixtures isolated per GET?",
+    "topic": "Fixtures",
+    "difficulty": "Medium",
+    "question": "Which callback exposes a fixture value to a test?",
     "options": [
-      "Incorrect option A",
-      "Incorrect option B",
-      "Correct generated option for fixtures",
-      "Incorrect option C"
+      "use",
+      "yieldFixture",
+      "provide",
+      "resolveTest"
     ],
-    "correctAnswer": 2,
-    "explanation": "This is an auto-generated explanation for the procedural question in playwright/fixtures.",
+    "correctAnswer": 0,
+    "explanation": "A fixture calls `use(value)` to make the value available to dependent tests and fixtures.",
     "tags": [
-      "core-concept",
-      "procedural"
+      "Playwright",
+      "Fixtures"
     ]
   },
   {
     "id": 13,
-    "topic": "fixtures",
-    "difficulty": "Easy",
-    "question": "[Generated] What is a page fixture in Playwright?",
+    "topic": "Fixtures",
+    "difficulty": "Medium",
+    "question": "When does code after `await use(value)` in a fixture execute?",
     "options": [
-      "Correct generated option for fixtures",
-      "Incorrect option A",
-      "Incorrect option C",
-      "Incorrect option B"
+      "During fixture teardown",
+      "Before fixture setup",
+      "Only if every test passes",
+      "Before the test receives the value"
     ],
     "correctAnswer": 0,
-    "explanation": "This is an auto-generated explanation for the procedural question in playwright/fixtures.",
+    "explanation": "The code after `use` runs as teardown after the consumer finishes.",
     "tags": [
-      "advanced",
-      "procedural"
+      "Playwright",
+      "Fixtures"
     ]
   },
   {
     "id": 14,
-    "topic": "fixtures",
-    "difficulty": "Easy",
-    "question": "[Generated] How do you override the shadow DOM fixture?",
+    "topic": "Fixtures",
+    "difficulty": "Medium",
+    "question": "What happens to the built-in page fixture after its test finishes?",
     "options": [
-      "Correct generated option for fixtures",
-      "Incorrect option C",
-      "Incorrect option A",
-      "Incorrect option B"
+      "Its isolated context is torn down",
+      "It remains open for every later test",
+      "It becomes the worker browser",
+      "It is saved as a global variable"
     ],
     "correctAnswer": 0,
-    "explanation": "This is an auto-generated explanation for the procedural question in playwright/fixtures.",
+    "explanation": "The test-scoped browser context and its pages are cleaned up after the test.",
     "tags": [
-      "core-concept",
-      "procedural"
+      "Playwright",
+      "Fixtures"
     ]
   },
   {
     "id": 15,
-    "topic": "fixtures",
+    "topic": "Fixtures",
     "difficulty": "Medium",
-    "question": "[Generated] What is a getByRole fixture in Playwright?",
+    "question": "How is a fixture configured to run automatically without being requested by a test?",
     "options": [
-      "Correct generated option for fixtures",
-      "Incorrect option B",
-      "Incorrect option A",
-      "Incorrect option C"
+      "Set its `auto` option to true",
+      "Rename it to `default`",
+      "Call it from every assertion",
+      "Set `scope` to suite"
     ],
     "correctAnswer": 0,
-    "explanation": "This is an auto-generated explanation for the procedural question in playwright/fixtures.",
+    "explanation": "An automatic fixture is set up without an explicit fixture parameter in the test.",
     "tags": [
-      "interview-frequent",
-      "procedural"
+      "Playwright",
+      "Fixtures"
     ]
   },
   {
     "id": 16,
-    "topic": "fixtures",
-    "difficulty": "Easy",
-    "question": "[Generated] Are fixtures isolated per POST?",
+    "topic": "Fixtures",
+    "difficulty": "Medium",
+    "question": "Which scope allows a fixture to be reused by tests in the same worker process?",
     "options": [
-      "Incorrect option B",
-      "Incorrect option A",
-      "Correct generated option for fixtures",
-      "Incorrect option C"
+      "worker",
+      "test",
+      "file-only",
+      "assertion"
     ],
-    "correctAnswer": 2,
-    "explanation": "This is an auto-generated explanation for the procedural question in playwright/fixtures.",
+    "correctAnswer": 0,
+    "explanation": "A worker-scoped fixture is created for a worker and may be reused by its tests.",
     "tags": [
-      "interview-frequent",
-      "procedural"
+      "Playwright",
+      "Fixtures"
     ]
   },
   {
     "id": 17,
-    "topic": "fixtures",
-    "difficulty": "Hard",
-    "question": "[Generated] How do you override the test isolation fixture?",
+    "topic": "Fixtures",
+    "difficulty": "Medium",
+    "question": "How does a fixture declare a dependency on another fixture?",
     "options": [
-      "Incorrect option B",
-      "Incorrect option A",
-      "Incorrect option C",
-      "Correct generated option for fixtures"
+      "Destructure the dependency in its fixture function parameters",
+      "Import the dependency from a JSON file",
+      "Call `test.describe` inside `use`",
+      "Assign the dependency to `globalThis`"
     ],
-    "correctAnswer": 3,
-    "explanation": "This is an auto-generated explanation for the procedural question in playwright/fixtures.",
+    "correctAnswer": 0,
+    "explanation": "Fixtures request dependencies through the destructured first argument.",
     "tags": [
-      "fundamentals",
-      "procedural"
+      "Playwright",
+      "Fixtures"
     ]
   },
   {
     "id": 18,
-    "topic": "fixtures",
-    "difficulty": "Hard",
-    "question": "[Generated] Are fixtures isolated per browser?",
+    "topic": "Fixtures",
+    "difficulty": "Medium",
+    "question": "What does Playwright Test do before setting up a fixture that depends on another fixture?",
     "options": [
-      "Incorrect option A",
-      "Correct generated option for fixtures",
-      "Incorrect option C",
-      "Incorrect option B"
+      "Sets up the dependency first",
+      "Tears down the dependency first",
+      "Runs the test immediately",
+      "Skips both fixtures"
     ],
-    "correctAnswer": 1,
-    "explanation": "This is an auto-generated explanation for the procedural question in playwright/fixtures.",
+    "correctAnswer": 0,
+    "explanation": "Fixture dependencies are established before the dependent fixture is set up.",
     "tags": [
-      "tricky",
-      "procedural"
+      "Playwright",
+      "Fixtures"
     ]
   },
   {
     "id": 19,
-    "topic": "fixtures",
-    "difficulty": "Easy",
-    "question": "[Generated] Are fixtures isolated per toBeVisible()?",
+    "topic": "Fixtures",
+    "difficulty": "Medium",
+    "question": "When are fixture dependencies torn down relative to fixtures that depend on them?",
     "options": [
-      "Incorrect option C",
-      "Incorrect option B",
-      "Incorrect option A",
-      "Correct generated option for fixtures"
+      "After the dependent fixtures are torn down",
+      "Before dependent fixtures are torn down",
+      "Always at browser installation",
+      "Never automatically"
     ],
-    "correctAnswer": 3,
-    "explanation": "This is an auto-generated explanation for the procedural question in playwright/fixtures.",
+    "correctAnswer": 0,
+    "explanation": "Teardown occurs in reverse dependency order.",
     "tags": [
-      "interview-frequent",
-      "procedural"
+      "Playwright",
+      "Fixtures"
     ]
   },
   {
     "id": 20,
-    "topic": "fixtures",
-    "difficulty": "Easy",
-    "question": "[Generated] How do you override the shadow DOM fixture?",
+    "topic": "Fixtures",
+    "difficulty": "Medium",
+    "question": "Which built-in fixture provides an APIRequestContext for a test?",
     "options": [
-      "Incorrect option A",
-      "Correct generated option for fixtures",
-      "Incorrect option C",
-      "Incorrect option B"
+      "request",
+      "pageName",
+      "locator",
+      "expect"
     ],
-    "correctAnswer": 1,
-    "explanation": "This is an auto-generated explanation for the procedural question in playwright/fixtures.",
+    "correctAnswer": 0,
+    "explanation": "The `request` fixture provides an isolated APIRequestContext for the test.",
     "tags": [
-      "interview-frequent",
-      "procedural"
+      "Playwright",
+      "Fixtures"
     ]
   },
   {
     "id": 21,
-    "topic": "fixtures",
-    "difficulty": "Easy",
-    "question": "[Generated] Are fixtures isolated per toBeVisible()?",
+    "topic": "Fixtures",
+    "difficulty": "Medium",
+    "question": "What is `testInfo` useful for inside a fixture?",
     "options": [
-      "Correct generated option for fixtures",
-      "Incorrect option B",
-      "Incorrect option C",
-      "Incorrect option A"
+      "Reading metadata and attaching test artifacts",
+      "Creating a new JavaScript runtime",
+      "Changing the browser executable on disk",
+      "Accessing every worker’s private memory"
     ],
     "correctAnswer": 0,
-    "explanation": "This is an auto-generated explanation for the procedural question in playwright/fixtures.",
+    "explanation": "`testInfo` provides test metadata and APIs for artifacts and status.",
     "tags": [
-      "fundamentals",
-      "procedural"
+      "Playwright",
+      "Fixtures"
     ]
   },
   {
     "id": 22,
-    "topic": "fixtures",
-    "difficulty": "Hard",
-    "question": "[Generated] How do you override the auto-waiting fixture?",
+    "topic": "Fixtures",
+    "difficulty": "Medium",
+    "question": "How can a project-level fixture option be configured?",
     "options": [
-      "Correct generated option for fixtures",
-      "Incorrect option C",
-      "Incorrect option B",
-      "Incorrect option A"
+      "Set its value in the project’s `use` configuration",
+      "Add it to package-lock.json",
+      "Set it in the HTML title",
+      "Pass it as a command-line URL fragment"
     ],
     "correctAnswer": 0,
-    "explanation": "This is an auto-generated explanation for the procedural question in playwright/fixtures.",
+    "explanation": "Playwright projects can supply fixture option values through their `use` configuration.",
     "tags": [
-      "fundamentals",
-      "procedural"
+      "Playwright",
+      "Fixtures"
     ]
   },
   {
     "id": 23,
-    "topic": "fixtures",
+    "topic": "Fixtures",
     "difficulty": "Medium",
-    "question": "[Generated] How do you override the shadow DOM fixture?",
+    "question": "What does overriding the built-in `storageState` option commonly accomplish?",
     "options": [
-      "Incorrect option B",
-      "Correct generated option for fixtures",
-      "Incorrect option A",
-      "Incorrect option C"
+      "Provides browser contexts with an initial authenticated state",
+      "Persists every test’s state to every later test automatically",
+      "Disables browser contexts",
+      "Changes how JavaScript arrays are stored"
     ],
-    "correctAnswer": 1,
-    "explanation": "This is an auto-generated explanation for the procedural question in playwright/fixtures.",
+    "correctAnswer": 0,
+    "explanation": "`storageState` can seed a context with saved cookies and storage for authentication.",
     "tags": [
-      "advanced",
-      "procedural"
+      "Playwright",
+      "Fixtures"
     ]
   },
   {
     "id": 24,
-    "topic": "fixtures",
-    "difficulty": "Easy",
-    "question": "[Generated] How do you override the shadow DOM fixture?",
+    "topic": "Fixtures",
+    "difficulty": "Medium",
+    "question": "What should a fixture do with a resource it creates?",
     "options": [
-      "Incorrect option A",
-      "Incorrect option B",
-      "Correct generated option for fixtures",
-      "Incorrect option C"
+      "Release it during teardown",
+      "Leave it open until the operating system restarts",
+      "Store it in an untracked global variable",
+      "Close it before calling use"
     ],
-    "correctAnswer": 2,
-    "explanation": "This is an auto-generated explanation for the procedural question in playwright/fixtures.",
+    "correctAnswer": 0,
+    "explanation": "Resources created by a fixture should be cleaned up after the consumer finishes.",
     "tags": [
-      "fundamentals",
-      "procedural"
+      "Playwright",
+      "Fixtures"
     ]
   },
   {
     "id": 25,
-    "topic": "fixtures",
-    "difficulty": "Hard",
-    "question": "[Generated] How do you override the test isolation fixture?",
+    "topic": "Fixtures",
+    "difficulty": "Medium",
+    "question": "Which object is typically extended to define custom fixtures?",
     "options": [
-      "Correct generated option for fixtures",
-      "Incorrect option C",
-      "Incorrect option B",
-      "Incorrect option A"
+      "The base test object from Playwright Test",
+      "The global Promise constructor",
+      "A browser page’s document object",
+      "The Node.js process object"
     ],
     "correctAnswer": 0,
-    "explanation": "This is an auto-generated explanation for the procedural question in playwright/fixtures.",
+    "explanation": "`base.extend` creates a test object with additional or overridden fixtures.",
     "tags": [
-      "core-concept",
-      "procedural"
+      "Playwright",
+      "Fixtures"
     ]
   },
   {
     "id": 26,
-    "topic": "fixtures",
-    "difficulty": "Easy",
-    "question": "[Generated] What is a GET fixture in Playwright?",
+    "topic": "Fixtures",
+    "difficulty": "Medium",
+    "question": "Can a test-scoped fixture depend on a worker-scoped fixture?",
     "options": [
-      "Incorrect option B",
-      "Incorrect option C",
-      "Correct generated option for fixtures",
-      "Incorrect option A"
+      "Yes",
+      "No, different scopes can never interact",
+      "Only with browserName equal to chromium",
+      "Only when retries are disabled"
     ],
-    "correctAnswer": 2,
-    "explanation": "This is an auto-generated explanation for the procedural question in playwright/fixtures.",
+    "correctAnswer": 0,
+    "explanation": "A test-scoped fixture can consume a worker-scoped dependency.",
     "tags": [
-      "advanced",
-      "procedural"
+      "Playwright",
+      "Fixtures"
     ]
   },
   {
     "id": 27,
-    "topic": "fixtures",
+    "topic": "Fixtures",
     "difficulty": "Medium",
-    "question": "[Generated] How do you override the test isolation fixture?",
+    "question": "Can a worker-scoped fixture depend on a test-scoped fixture?",
     "options": [
-      "Incorrect option C",
-      "Incorrect option A",
-      "Incorrect option B",
-      "Correct generated option for fixtures"
+      "No, the dependency has a shorter lifetime",
+      "Yes, it uses the first test’s value forever",
+      "Yes, but only in headed mode",
+      "Yes, if the fixture is named page"
     ],
-    "correctAnswer": 3,
-    "explanation": "This is an auto-generated explanation for the procedural question in playwright/fixtures.",
+    "correctAnswer": 0,
+    "explanation": "A worker-scoped fixture cannot depend on a fixture whose lifetime is only one test.",
     "tags": [
-      "interview-frequent",
-      "procedural"
+      "Playwright",
+      "Fixtures"
     ]
   },
   {
     "id": 28,
-    "topic": "fixtures",
-    "difficulty": "Easy",
-    "question": "[Generated] What is a getByText fixture in Playwright?",
+    "topic": "Fixtures",
+    "difficulty": "Medium",
+    "question": "What is the benefit of creating a new browser context per test?",
     "options": [
-      "Incorrect option C",
-      "Incorrect option A",
-      "Incorrect option B",
-      "Correct generated option for fixtures"
+      "Tests start with isolated browser state",
+      "All tests share cookies automatically",
+      "No browser process is required",
+      "Every test runs in the same tab"
     ],
-    "correctAnswer": 3,
-    "explanation": "This is an auto-generated explanation for the procedural question in playwright/fixtures.",
+    "correctAnswer": 0,
+    "explanation": "Separate browser contexts isolate cookies and other browser state between tests.",
     "tags": [
-      "interview-frequent",
-      "procedural"
+      "Playwright",
+      "Fixtures"
     ]
   },
   {
     "id": 29,
-    "topic": "fixtures",
+    "topic": "Fixtures",
     "difficulty": "Medium",
-    "question": "[Generated] How do you override the test isolation fixture?",
+    "question": "When are non-automatic fixtures normally initialized?",
     "options": [
-      "Incorrect option C",
-      "Incorrect option A",
-      "Correct generated option for fixtures",
-      "Incorrect option B"
+      "When a test or another fixture requests them",
+      "Before Playwright is installed",
+      "For every test regardless of use",
+      "Only after a test has completed"
     ],
-    "correctAnswer": 2,
-    "explanation": "This is an auto-generated explanation for the procedural question in playwright/fixtures.",
+    "correctAnswer": 0,
+    "explanation": "Playwright sets up non-automatic fixtures lazily when they are required.",
     "tags": [
-      "interview-frequent",
-      "procedural"
+      "Playwright",
+      "Fixtures"
     ]
   },
   {
     "id": 30,
-    "topic": "fixtures",
-    "difficulty": "Easy",
-    "question": "[Generated] Are fixtures isolated per toHaveText()?",
+    "topic": "Fixtures",
+    "difficulty": "Medium",
+    "question": "What does `test.use({ viewport: ... })` configure?",
     "options": [
-      "Incorrect option C",
-      "Correct generated option for fixtures",
-      "Incorrect option B",
-      "Incorrect option A"
+      "A fixture option for tests in its applicable scope",
+      "The operating system’s display resolution permanently",
+      "The number of test workers",
+      "The source code formatter"
     ],
-    "correctAnswer": 1,
-    "explanation": "This is an auto-generated explanation for the procedural question in playwright/fixtures.",
+    "correctAnswer": 0,
+    "explanation": "`test.use` configures options such as viewport for tests in its scope.",
     "tags": [
-      "tricky",
-      "procedural"
+      "Playwright",
+      "Fixtures"
     ]
   },
   {
     "id": 31,
-    "topic": "fixtures",
-    "difficulty": "Hard",
-    "question": "[Generated] Are fixtures isolated per browser?",
+    "topic": "Fixtures",
+    "difficulty": "Medium",
+    "question": "What is the role of a page-object fixture?",
     "options": [
-      "Correct generated option for fixtures",
-      "Incorrect option C",
-      "Incorrect option A",
-      "Incorrect option B"
+      "It supplies a ready-to-use page object to tests",
+      "It replaces every assertion with a screenshot",
+      "It permanently stores browser cookies",
+      "It automatically writes test cases"
     ],
     "correctAnswer": 0,
-    "explanation": "This is an auto-generated explanation for the procedural question in playwright/fixtures.",
+    "explanation": "A custom fixture can instantiate and provide a page object for a test.",
     "tags": [
-      "tricky",
-      "procedural"
+      "Playwright",
+      "Fixtures"
     ]
   },
   {
     "id": 32,
-    "topic": "fixtures",
-    "difficulty": "Hard",
-    "question": "[Generated] Are fixtures isolated per browser?",
+    "topic": "Fixtures",
+    "difficulty": "Medium",
+    "question": "How are worker-scoped fixtures generally cleaned up?",
     "options": [
-      "Incorrect option C",
-      "Correct generated option for fixtures",
-      "Incorrect option A",
-      "Incorrect option B"
+      "When the worker process is torn down",
+      "Immediately after each assertion",
+      "Before the first test begins",
+      "Only by manually closing the terminal"
     ],
-    "correctAnswer": 1,
-    "explanation": "This is an auto-generated explanation for the procedural question in playwright/fixtures.",
+    "correctAnswer": 0,
+    "explanation": "Worker-scoped fixture teardown occurs when the worker is being shut down.",
     "tags": [
-      "advanced",
-      "procedural"
+      "Playwright",
+      "Fixtures"
     ]
   },
   {
     "id": 33,
-    "topic": "fixtures",
-    "difficulty": "Hard",
-    "question": "[Generated] What is a toHaveText() fixture in Playwright?",
+    "topic": "Fixtures",
+    "difficulty": "Medium",
+    "question": "What happens if a fixture setup fails before calling `use`?",
     "options": [
-      "Incorrect option A",
-      "Correct generated option for fixtures",
-      "Incorrect option B",
-      "Incorrect option C"
-    ],
-    "correctAnswer": 1,
-    "explanation": "This is an auto-generated explanation for the procedural question in playwright/fixtures.",
-    "tags": [
-      "tricky",
-      "procedural"
-    ]
-  },
-  {
-    "id": 34,
-    "topic": "fixtures",
-    "difficulty": "Easy",
-    "question": "[Generated] What is a POST fixture in Playwright?",
-    "options": [
-      "Incorrect option A",
-      "Incorrect option B",
-      "Correct generated option for fixtures",
-      "Incorrect option C"
-    ],
-    "correctAnswer": 2,
-    "explanation": "This is an auto-generated explanation for the procedural question in playwright/fixtures.",
-    "tags": [
-      "tricky",
-      "procedural"
-    ]
-  },
-  {
-    "id": 35,
-    "topic": "fixtures",
-    "difficulty": "Easy",
-    "question": "[Generated] Are fixtures isolated per toHaveText()?",
-    "options": [
-      "Incorrect option A",
-      "Incorrect option B",
-      "Correct generated option for fixtures",
-      "Incorrect option C"
-    ],
-    "correctAnswer": 2,
-    "explanation": "This is an auto-generated explanation for the procedural question in playwright/fixtures.",
-    "tags": [
-      "fundamentals",
-      "procedural"
-    ]
-  },
-  {
-    "id": 36,
-    "topic": "fixtures",
-    "difficulty": "Easy",
-    "question": "[Generated] Are fixtures isolated per browser?",
-    "options": [
-      "Incorrect option B",
-      "Correct generated option for fixtures",
-      "Incorrect option A",
-      "Incorrect option C"
-    ],
-    "correctAnswer": 1,
-    "explanation": "This is an auto-generated explanation for the procedural question in playwright/fixtures.",
-    "tags": [
-      "advanced",
-      "procedural"
-    ]
-  },
-  {
-    "id": 37,
-    "topic": "fixtures",
-    "difficulty": "Easy",
-    "question": "[Generated] What is a GET fixture in Playwright?",
-    "options": [
-      "Correct generated option for fixtures",
-      "Incorrect option A",
-      "Incorrect option C",
-      "Incorrect option B"
+      "Its dependent test cannot use the fixture and fails",
+      "The test receives an empty object automatically",
+      "The fixture silently becomes worker-scoped",
+      "The test always passes"
     ],
     "correctAnswer": 0,
-    "explanation": "This is an auto-generated explanation for the procedural question in playwright/fixtures.",
+    "explanation": "A setup failure prevents the fixture from supplying its value to the dependent test.",
     "tags": [
-      "fundamentals",
-      "procedural"
-    ]
-  },
-  {
-    "id": 38,
-    "topic": "fixtures",
-    "difficulty": "Easy",
-    "question": "[Generated] What is a getByText fixture in Playwright?",
-    "options": [
-      "Incorrect option B",
-      "Incorrect option A",
-      "Correct generated option for fixtures",
-      "Incorrect option C"
-    ],
-    "correctAnswer": 2,
-    "explanation": "This is an auto-generated explanation for the procedural question in playwright/fixtures.",
-    "tags": [
-      "core-concept",
-      "procedural"
-    ]
-  },
-  {
-    "id": 39,
-    "topic": "fixtures",
-    "difficulty": "Medium",
-    "question": "[Generated] What is a GET fixture in Playwright?",
-    "options": [
-      "Correct generated option for fixtures",
-      "Incorrect option C",
-      "Incorrect option B",
-      "Incorrect option A"
-    ],
-    "correctAnswer": 0,
-    "explanation": "This is an auto-generated explanation for the procedural question in playwright/fixtures.",
-    "tags": [
-      "fundamentals",
-      "procedural"
-    ]
-  },
-  {
-    "id": 40,
-    "topic": "fixtures",
-    "difficulty": "Hard",
-    "question": "[Generated] How do you override the status code fixture?",
-    "options": [
-      "Incorrect option A",
-      "Correct generated option for fixtures",
-      "Incorrect option C",
-      "Incorrect option B"
-    ],
-    "correctAnswer": 1,
-    "explanation": "This is an auto-generated explanation for the procedural question in playwright/fixtures.",
-    "tags": [
-      "tricky",
-      "procedural"
-    ]
-  },
-  {
-    "id": 41,
-    "topic": "fixtures",
-    "difficulty": "Medium",
-    "question": "[Generated] What is a getByRole fixture in Playwright?",
-    "options": [
-      "Incorrect option C",
-      "Correct generated option for fixtures",
-      "Incorrect option B",
-      "Incorrect option A"
-    ],
-    "correctAnswer": 1,
-    "explanation": "This is an auto-generated explanation for the procedural question in playwright/fixtures.",
-    "tags": [
-      "fundamentals",
-      "procedural"
-    ]
-  },
-  {
-    "id": 42,
-    "topic": "fixtures",
-    "difficulty": "Medium",
-    "question": "[Generated] Are fixtures isolated per toHaveText()?",
-    "options": [
-      "Incorrect option C",
-      "Incorrect option A",
-      "Incorrect option B",
-      "Correct generated option for fixtures"
-    ],
-    "correctAnswer": 3,
-    "explanation": "This is an auto-generated explanation for the procedural question in playwright/fixtures.",
-    "tags": [
-      "core-concept",
-      "procedural"
-    ]
-  },
-  {
-    "id": 43,
-    "topic": "fixtures",
-    "difficulty": "Easy",
-    "question": "[Generated] How do you override the shadow DOM fixture?",
-    "options": [
-      "Incorrect option A",
-      "Correct generated option for fixtures",
-      "Incorrect option B",
-      "Incorrect option C"
-    ],
-    "correctAnswer": 1,
-    "explanation": "This is an auto-generated explanation for the procedural question in playwright/fixtures.",
-    "tags": [
-      "interview-frequent",
-      "procedural"
-    ]
-  },
-  {
-    "id": 44,
-    "topic": "fixtures",
-    "difficulty": "Medium",
-    "question": "[Generated] How do you override the status code fixture?",
-    "options": [
-      "Incorrect option B",
-      "Incorrect option A",
-      "Correct generated option for fixtures",
-      "Incorrect option C"
-    ],
-    "correctAnswer": 2,
-    "explanation": "This is an auto-generated explanation for the procedural question in playwright/fixtures.",
-    "tags": [
-      "interview-frequent",
-      "procedural"
-    ]
-  },
-  {
-    "id": 45,
-    "topic": "fixtures",
-    "difficulty": "Hard",
-    "question": "[Generated] What is a browser fixture in Playwright?",
-    "options": [
-      "Incorrect option B",
-      "Incorrect option A",
-      "Correct generated option for fixtures",
-      "Incorrect option C"
-    ],
-    "correctAnswer": 2,
-    "explanation": "This is an auto-generated explanation for the procedural question in playwright/fixtures.",
-    "tags": [
-      "advanced",
-      "procedural"
-    ]
-  },
-  {
-    "id": 46,
-    "topic": "fixtures",
-    "difficulty": "Hard",
-    "question": "[Generated] How do you override the status code fixture?",
-    "options": [
-      "Incorrect option C",
-      "Incorrect option A",
-      "Correct generated option for fixtures",
-      "Incorrect option B"
-    ],
-    "correctAnswer": 2,
-    "explanation": "This is an auto-generated explanation for the procedural question in playwright/fixtures.",
-    "tags": [
-      "interview-frequent",
-      "procedural"
-    ]
-  },
-  {
-    "id": 47,
-    "topic": "fixtures",
-    "difficulty": "Hard",
-    "question": "[Generated] How do you override the auto-waiting fixture?",
-    "options": [
-      "Incorrect option A",
-      "Incorrect option B",
-      "Incorrect option C",
-      "Correct generated option for fixtures"
-    ],
-    "correctAnswer": 3,
-    "explanation": "This is an auto-generated explanation for the procedural question in playwright/fixtures.",
-    "tags": [
-      "interview-frequent",
-      "procedural"
-    ]
-  },
-  {
-    "id": 48,
-    "topic": "fixtures",
-    "difficulty": "Hard",
-    "question": "[Generated] What is a getByRole fixture in Playwright?",
-    "options": [
-      "Correct generated option for fixtures",
-      "Incorrect option A",
-      "Incorrect option B",
-      "Incorrect option C"
-    ],
-    "correctAnswer": 0,
-    "explanation": "This is an auto-generated explanation for the procedural question in playwright/fixtures.",
-    "tags": [
-      "tricky",
-      "procedural"
-    ]
-  },
-  {
-    "id": 49,
-    "topic": "fixtures",
-    "difficulty": "Easy",
-    "question": "[Generated] Are fixtures isolated per getByText?",
-    "options": [
-      "Correct generated option for fixtures",
-      "Incorrect option B",
-      "Incorrect option A",
-      "Incorrect option C"
-    ],
-    "correctAnswer": 0,
-    "explanation": "This is an auto-generated explanation for the procedural question in playwright/fixtures.",
-    "tags": [
-      "tricky",
-      "procedural"
-    ]
-  },
-  {
-    "id": 50,
-    "topic": "fixtures",
-    "difficulty": "Hard",
-    "question": "[Generated] What is a getByRole fixture in Playwright?",
-    "options": [
-      "Correct generated option for fixtures",
-      "Incorrect option A",
-      "Incorrect option B",
-      "Incorrect option C"
-    ],
-    "correctAnswer": 0,
-    "explanation": "This is an auto-generated explanation for the procedural question in playwright/fixtures.",
-    "tags": [
-      "interview-frequent",
-      "procedural"
-    ]
-  },
-  {
-    "id": 51,
-    "topic": "fixtures",
-    "difficulty": "Hard",
-    "question": "[Generated] How do you override the auto-waiting fixture?",
-    "options": [
-      "Incorrect option A",
-      "Incorrect option B",
-      "Correct generated option for fixtures",
-      "Incorrect option C"
-    ],
-    "correctAnswer": 2,
-    "explanation": "This is an auto-generated explanation for the procedural question in playwright/fixtures.",
-    "tags": [
-      "advanced",
-      "procedural"
-    ]
-  },
-  {
-    "id": 52,
-    "topic": "fixtures",
-    "difficulty": "Easy",
-    "question": "[Generated] Are fixtures isolated per getByRole?",
-    "options": [
-      "Incorrect option B",
-      "Incorrect option A",
-      "Incorrect option C",
-      "Correct generated option for fixtures"
-    ],
-    "correctAnswer": 3,
-    "explanation": "This is an auto-generated explanation for the procedural question in playwright/fixtures.",
-    "tags": [
-      "tricky",
-      "procedural"
-    ]
-  },
-  {
-    "id": 53,
-    "topic": "fixtures",
-    "difficulty": "Hard",
-    "question": "[Generated] What is a POST fixture in Playwright?",
-    "options": [
-      "Incorrect option A",
-      "Incorrect option C",
-      "Incorrect option B",
-      "Correct generated option for fixtures"
-    ],
-    "correctAnswer": 3,
-    "explanation": "This is an auto-generated explanation for the procedural question in playwright/fixtures.",
-    "tags": [
-      "interview-frequent",
-      "procedural"
-    ]
-  },
-  {
-    "id": 54,
-    "topic": "fixtures",
-    "difficulty": "Medium",
-    "question": "[Generated] How do you override the test isolation fixture?",
-    "options": [
-      "Correct generated option for fixtures",
-      "Incorrect option A",
-      "Incorrect option C",
-      "Incorrect option B"
-    ],
-    "correctAnswer": 0,
-    "explanation": "This is an auto-generated explanation for the procedural question in playwright/fixtures.",
-    "tags": [
-      "core-concept",
-      "procedural"
-    ]
-  },
-  {
-    "id": 55,
-    "topic": "fixtures",
-    "difficulty": "Hard",
-    "question": "[Generated] How do you override the status code fixture?",
-    "options": [
-      "Incorrect option A",
-      "Incorrect option C",
-      "Incorrect option B",
-      "Correct generated option for fixtures"
-    ],
-    "correctAnswer": 3,
-    "explanation": "This is an auto-generated explanation for the procedural question in playwright/fixtures.",
-    "tags": [
-      "interview-frequent",
-      "procedural"
-    ]
-  },
-  {
-    "id": 56,
-    "topic": "fixtures",
-    "difficulty": "Hard",
-    "question": "[Generated] How do you override the test isolation fixture?",
-    "options": [
-      "Incorrect option B",
-      "Incorrect option A",
-      "Incorrect option C",
-      "Correct generated option for fixtures"
-    ],
-    "correctAnswer": 3,
-    "explanation": "This is an auto-generated explanation for the procedural question in playwright/fixtures.",
-    "tags": [
-      "fundamentals",
-      "procedural"
-    ]
-  },
-  {
-    "id": 57,
-    "topic": "fixtures",
-    "difficulty": "Easy",
-    "question": "[Generated] Are fixtures isolated per POST?",
-    "options": [
-      "Incorrect option C",
-      "Incorrect option B",
-      "Incorrect option A",
-      "Correct generated option for fixtures"
-    ],
-    "correctAnswer": 3,
-    "explanation": "This is an auto-generated explanation for the procedural question in playwright/fixtures.",
-    "tags": [
-      "tricky",
-      "procedural"
-    ]
-  },
-  {
-    "id": 58,
-    "topic": "fixtures",
-    "difficulty": "Medium",
-    "question": "[Generated] How do you override the auto-waiting fixture?",
-    "options": [
-      "Incorrect option A",
-      "Incorrect option B",
-      "Correct generated option for fixtures",
-      "Incorrect option C"
-    ],
-    "correctAnswer": 2,
-    "explanation": "This is an auto-generated explanation for the procedural question in playwright/fixtures.",
-    "tags": [
-      "interview-frequent",
-      "procedural"
-    ]
-  },
-  {
-    "id": 59,
-    "topic": "fixtures",
-    "difficulty": "Medium",
-    "question": "[Generated] Are fixtures isolated per toBeVisible()?",
-    "options": [
-      "Incorrect option C",
-      "Correct generated option for fixtures",
-      "Incorrect option B",
-      "Incorrect option A"
-    ],
-    "correctAnswer": 1,
-    "explanation": "This is an auto-generated explanation for the procedural question in playwright/fixtures.",
-    "tags": [
-      "advanced",
-      "procedural"
-    ]
-  },
-  {
-    "id": 60,
-    "topic": "fixtures",
-    "difficulty": "Medium",
-    "question": "[Generated] Are fixtures isolated per page?",
-    "options": [
-      "Incorrect option B",
-      "Incorrect option A",
-      "Incorrect option C",
-      "Correct generated option for fixtures"
-    ],
-    "correctAnswer": 3,
-    "explanation": "This is an auto-generated explanation for the procedural question in playwright/fixtures.",
-    "tags": [
-      "interview-frequent",
-      "procedural"
+      "Playwright",
+      "Fixtures"
     ]
   }
 ]

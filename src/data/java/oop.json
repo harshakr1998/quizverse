@@ -3,7 +3,7 @@
     "id": 1,
     "topic": "OOP",
     "difficulty": "Easy",
-    "question": "Which OOP concept allows a class to inherit properties from another class?",
+    "question": "What is the core concept in Java that allows a class to inherit properties and methods from another class?",
     "options": [
       "Encapsulation",
       "Polymorphism",
@@ -11,1085 +11,142 @@
       "Abstraction"
     ],
     "correctAnswer": 2,
-    "explanation": "Inheritance allows a subclass to acquire attributes and methods of a superclass using the 'extends' keyword in Java.",
-    "tags": [
-      "Java",
-      "OOP",
-      "Inheritance"
-    ]
+    "explanation": "Inheritance is the OOP principle that allows a child class (subclass) to inherit fields and methods from a parent class (superclass), promoting code reusability.",
+    "tags": ["Java", "OOP", "Inheritance"]
   },
   {
     "id": 2,
     "topic": "OOP",
     "difficulty": "Easy",
-    "question": "What is encapsulation?",
+    "question": "Which keyword is used to prevent a class from being subclassed?",
     "options": [
-      "Hiding implementation details and exposing only necessary parts",
-      "Creating multiple methods with the same name",
-      "Extending a class",
-      "Creating abstract methods"
+      "static",
+      "abstract",
+      "final",
+      "private"
     ],
-    "correctAnswer": 0,
-    "explanation": "Encapsulation is wrapping data (fields) and methods into a single unit (class) and restricting direct access to some components via access modifiers.",
-    "tags": [
-      "Java",
-      "OOP",
-      "Encapsulation"
-    ]
+    "correctAnswer": 2,
+    "explanation": "The `final` keyword applied to a class prevents any other class from extending it. (e.g., `String` is a final class in Java).",
+    "tags": ["Java", "OOP", "Modifiers"]
   },
   {
     "id": 3,
     "topic": "OOP",
-    "difficulty": "Medium",
-    "question": "What is method overloading in Java?",
+    "difficulty": "Easy",
+    "question": "What is method overloading?",
     "options": [
-      "Redefining a method in a subclass",
-      "Multiple methods with same name but different parameters",
-      "Overriding a private method",
-      "Using super keyword"
+      "Having multiple methods with the same name but different parameters in the same class.",
+      "Providing a specific implementation in a subclass for a method defined in the superclass.",
+      "Using the `@Override` annotation on a method.",
+      "Hiding a superclass's variable by defining a variable with the same name in the subclass."
     ],
-    "correctAnswer": 1,
-    "explanation": "Method overloading (compile-time polymorphism) allows multiple methods with the same name but different parameter lists in the same class.",
-    "tags": [
-      "Java",
-      "OOP",
-      "Polymorphism"
-    ]
+    "correctAnswer": 0,
+    "explanation": "Method overloading occurs when a class has multiple methods with the same name but differing parameter lists (different number, type, or order of parameters). It is a form of compile-time polymorphism.",
+    "tags": ["Java", "OOP", "Polymorphism"]
   },
   {
     "id": 4,
     "topic": "OOP",
     "difficulty": "Medium",
-    "question": "Which keyword is used to call the parent class constructor?",
+    "question": "Can an abstract class have a constructor in Java?",
     "options": [
-      "parent()",
-      "super()",
-      "base()",
-      "this()"
+      "No, because abstract classes cannot be instantiated.",
+      "Yes, and it is called when a concrete subclass is instantiated.",
+      "Yes, but it must be declared `private`.",
+      "No, constructors are only for concrete classes."
     ],
     "correctAnswer": 1,
-    "explanation": "super() calls the parent class constructor. It must be the first statement in the subclass constructor if used.",
-    "tags": [
-      "Java",
-      "OOP",
-      "Inheritance"
-    ]
+    "explanation": "Abstract classes can have constructors. Even though you cannot instantiate an abstract class directly using `new`, its constructor is called via `super()` when a concrete subclass is instantiated.",
+    "tags": ["Java", "OOP", "Abstraction"]
   },
   {
     "id": 5,
     "topic": "OOP",
     "difficulty": "Medium",
-    "question": "Can Java support multiple inheritance?",
+    "question": "Which OOP concept is achieved by using `private` variables and public getter/setter methods?",
     "options": [
-      "Yes, via extends",
-      "No, not at all",
-      "Yes, via interfaces",
-      "Only with abstract classes"
-    ],
-    "correctAnswer": 2,
-    "explanation": "Java doesn't support multiple inheritance via classes (to avoid the diamond problem), but a class can implement multiple interfaces.",
-    "tags": [
-      "Java",
-      "OOP",
       "Inheritance",
-      "Interfaces"
-    ]
+      "Polymorphism",
+      "Abstraction",
+      "Encapsulation"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Encapsulation involves bundling data (variables) and methods operating on that data into a single unit (class), and restricting direct access to the data by making variables `private`.",
+    "tags": ["Java", "OOP", "Encapsulation"]
   },
   {
     "id": 6,
     "topic": "OOP",
-    "difficulty": "Easy",
-    "question": "What is an abstract class?",
+    "difficulty": "Medium",
+    "question": "What happens if a subclass does not implement all abstract methods of its abstract superclass?",
     "options": [
-      "A class with only static methods",
-      "A class that cannot be instantiated and may have abstract methods",
-      "A class with private constructor",
-      "A final class"
+      "It compiles fine, and the unimplemented methods are given default empty bodies.",
+      "The subclass must also be declared abstract.",
+      "It throws a RuntimeException when instantiated.",
+      "The superclass methods are automatically hidden."
     ],
     "correctAnswer": 1,
-    "explanation": "An abstract class cannot be instantiated. It can have both abstract (no body) and concrete (with body) methods. Subclasses must implement abstract methods.",
-    "tags": [
-      "Java",
-      "OOP",
-      "Abstraction"
-    ]
+    "explanation": "If a subclass fails to provide concrete implementations for all abstract methods inherited from an abstract parent class (or interface), the subclass itself must be declared `abstract`, otherwise the compiler will throw an error.",
+    "tags": ["Java", "OOP", "Abstraction"]
   },
   {
     "id": 7,
     "topic": "OOP",
     "difficulty": "Hard",
-    "question": "What is the difference between an interface and an abstract class in Java 8+?",
+    "question": "What is the primary difference between early binding and late binding in Java?",
     "options": [
-      "No difference",
-      "Abstract class can have constructors; interfaces can have default methods",
-      "Interfaces cannot have any methods with body",
-      "Abstract classes support multiple inheritance"
+      "Early binding happens at runtime; late binding happens at compile time.",
+      "Early binding applies to method overriding; late binding applies to method overloading.",
+      "Early binding occurs for static/private/final methods; late binding occurs for virtual (overridden) methods.",
+      "Early binding is used for object initialization; late binding is used for garbage collection."
     ],
-    "correctAnswer": 1,
-    "explanation": "Since Java 8, interfaces can have default and static methods. But only abstract classes can have constructors, instance fields, and access modifiers on methods.",
-    "tags": [
-      "Java",
-      "OOP",
-      "Interfaces",
-      "Java 8"
-    ]
+    "correctAnswer": 2,
+    "explanation": "Early binding (static binding) is resolved by the compiler at compile time for static, private, and final methods. Late binding (dynamic binding) is resolved at runtime based on the actual object type, enabling method overriding (polymorphism).",
+    "tags": ["Java", "OOP", "Polymorphism"]
   },
   {
     "id": 8,
     "topic": "OOP",
-    "difficulty": "Medium",
-    "question": "What does the '@Override' annotation do?",
+    "difficulty": "Hard",
+    "question": "Can an interface implement another interface in Java?",
     "options": [
-      "Creates a new method",
-      "Marks a method as deprecated",
-      "Tells the compiler the method overrides a superclass method",
-      "Makes a method static"
+      "Yes, using the `implements` keyword.",
+      "Yes, using the `extends` keyword.",
+      "No, interfaces cannot inherit from each other.",
+      "Yes, but only if they contain default methods."
     ],
-    "correctAnswer": 2,
-    "explanation": "@Override is a compile-time check that ensures the annotated method actually overrides a method from the superclass. It prevents typos causing new methods instead of overrides.",
-    "tags": [
-      "Java",
-      "OOP",
-      "Annotations"
-    ]
+    "correctAnswer": 1,
+    "explanation": "An interface can inherit from one or more other interfaces, but it must use the `extends` keyword (e.g., `interface B extends A`), not the `implements` keyword, which is strictly for classes implementing interfaces.",
+    "tags": ["Java", "OOP", "Interfaces"]
   },
   {
     "id": 9,
     "topic": "OOP",
     "difficulty": "Hard",
-    "question": "What is the output? class A { void print() { System.out.println('A'); } } class B extends A { void print() { System.out.println('B'); } } A obj = new B(); obj.print();",
+    "question": "In Java 8+, what is the Diamond Problem and how does Java handle it with interfaces?",
     "options": [
-      "A",
-      "B",
-      "Compilation error",
-      "AB"
+      "It relates to generic type inference and is resolved by the `<>` operator.",
+      "It occurs when a class inherits multiple default methods with the same signature from multiple interfaces. Java forces the implementing class to override the method.",
+      "It prevents a class from implementing more than two interfaces. Java handles it by throwing a compile-time error.",
+      "It refers to cyclic inheritance. Java handles it by breaking the cycle automatically."
     ],
     "correctAnswer": 1,
-    "explanation": "Runtime polymorphism: the reference type is A but the object is B. JVM calls B's print() method because method dispatch is based on the actual object type at runtime.",
-    "tags": [
-      "Java",
-      "OOP",
-      "Polymorphism",
-      "Runtime"
-    ]
+    "explanation": "The Diamond Problem in Java 8 occurs when a class implements two interfaces that both have a `default` method with the exact same signature. To resolve the ambiguity, Java requires the implementing class to explicitly override the method and optionally call `InterfaceName.super.methodName()`.",
+    "tags": ["Java", "OOP", "Interfaces"]
   },
   {
     "id": 10,
     "topic": "OOP",
-    "difficulty": "Easy",
-    "question": "Which access modifier makes a member accessible only within the same class?",
-    "options": [
-      "public",
-      "protected",
-      "default",
-      "private"
-    ],
-    "correctAnswer": 3,
-    "explanation": "private restricts access to only within the declaring class. It is the most restrictive access modifier in Java.",
-    "tags": [
-      "Java",
-      "OOP",
-      "Access Modifiers"
-    ]
-  },
-  {
-    "id": 11,
-    "topic": "oop",
     "difficulty": "Hard",
-    "question": "[Generated] What is the primary benefit of polymorphism?",
+    "question": "What is 'composition' over 'inheritance'?",
     "options": [
-      "Incorrect option A",
-      "Correct generated option for oop",
-      "Incorrect option C",
-      "Incorrect option B"
-    ],
-    "correctAnswer": 1,
-    "explanation": "This is an auto-generated explanation for the procedural question in java/oop.",
-    "tags": [
-      "fundamentals",
-      "procedural"
-    ]
-  },
-  {
-    "id": 12,
-    "topic": "oop",
-    "difficulty": "Easy",
-    "question": "[Generated] Which of the following breaks class in Java?",
-    "options": [
-      "Correct generated option for oop",
-      "Incorrect option B",
-      "Incorrect option A",
-      "Incorrect option C"
+      "A design principle favoring building complex objects from simpler, independent objects rather than deeply nested class hierarchies.",
+      "A rule that states all classes must be nested within each other.",
+      "A performance optimization technique replacing object creation with memory reuse.",
+      "A requirement to always use abstract classes instead of concrete classes."
     ],
     "correctAnswer": 0,
-    "explanation": "This is an auto-generated explanation for the procedural question in java/oop.",
-    "tags": [
-      "interview-frequent",
-      "procedural"
-    ]
-  },
-  {
-    "id": 13,
-    "topic": "oop",
-    "difficulty": "Hard",
-    "question": "[Generated] Which of the following breaks encapsulation in Java?",
-    "options": [
-      "Incorrect option C",
-      "Incorrect option A",
-      "Correct generated option for oop",
-      "Incorrect option B"
-    ],
-    "correctAnswer": 2,
-    "explanation": "This is an auto-generated explanation for the procedural question in java/oop.",
-    "tags": [
-      "core-concept",
-      "procedural"
-    ]
-  },
-  {
-    "id": 14,
-    "topic": "oop",
-    "difficulty": "Medium",
-    "question": "[Generated] What is the primary benefit of encapsulation?",
-    "options": [
-      "Incorrect option A",
-      "Correct generated option for oop",
-      "Incorrect option C",
-      "Incorrect option B"
-    ],
-    "correctAnswer": 1,
-    "explanation": "This is an auto-generated explanation for the procedural question in java/oop.",
-    "tags": [
-      "interview-frequent",
-      "procedural"
-    ]
-  },
-  {
-    "id": 15,
-    "topic": "oop",
-    "difficulty": "Hard",
-    "question": "[Generated] How is polymorphism implemented in Java?",
-    "options": [
-      "Incorrect option C",
-      "Incorrect option B",
-      "Incorrect option A",
-      "Correct generated option for oop"
-    ],
-    "correctAnswer": 3,
-    "explanation": "This is an auto-generated explanation for the procedural question in java/oop.",
-    "tags": [
-      "fundamentals",
-      "procedural"
-    ]
-  },
-  {
-    "id": 16,
-    "topic": "oop",
-    "difficulty": "Medium",
-    "question": "[Generated] How is polymorphism implemented in Java?",
-    "options": [
-      "Incorrect option A",
-      "Incorrect option C",
-      "Correct generated option for oop",
-      "Incorrect option B"
-    ],
-    "correctAnswer": 2,
-    "explanation": "This is an auto-generated explanation for the procedural question in java/oop.",
-    "tags": [
-      "core-concept",
-      "procedural"
-    ]
-  },
-  {
-    "id": 17,
-    "topic": "oop",
-    "difficulty": "Easy",
-    "question": "[Generated] Which of the following breaks class in Java?",
-    "options": [
-      "Incorrect option A",
-      "Correct generated option for oop",
-      "Incorrect option C",
-      "Incorrect option B"
-    ],
-    "correctAnswer": 1,
-    "explanation": "This is an auto-generated explanation for the procedural question in java/oop.",
-    "tags": [
-      "advanced",
-      "procedural"
-    ]
-  },
-  {
-    "id": 18,
-    "topic": "oop",
-    "difficulty": "Hard",
-    "question": "[Generated] Which of the following breaks encapsulation in Java?",
-    "options": [
-      "Incorrect option B",
-      "Incorrect option A",
-      "Incorrect option C",
-      "Correct generated option for oop"
-    ],
-    "correctAnswer": 3,
-    "explanation": "This is an auto-generated explanation for the procedural question in java/oop.",
-    "tags": [
-      "interview-frequent",
-      "procedural"
-    ]
-  },
-  {
-    "id": 19,
-    "topic": "oop",
-    "difficulty": "Medium",
-    "question": "[Generated] What is the primary benefit of encapsulation?",
-    "options": [
-      "Incorrect option A",
-      "Incorrect option C",
-      "Incorrect option B",
-      "Correct generated option for oop"
-    ],
-    "correctAnswer": 3,
-    "explanation": "This is an auto-generated explanation for the procedural question in java/oop.",
-    "tags": [
-      "tricky",
-      "procedural"
-    ]
-  },
-  {
-    "id": 20,
-    "topic": "oop",
-    "difficulty": "Medium",
-    "question": "[Generated] What is the primary benefit of polymorphism?",
-    "options": [
-      "Incorrect option A",
-      "Correct generated option for oop",
-      "Incorrect option B",
-      "Incorrect option C"
-    ],
-    "correctAnswer": 1,
-    "explanation": "This is an auto-generated explanation for the procedural question in java/oop.",
-    "tags": [
-      "fundamentals",
-      "procedural"
-    ]
-  },
-  {
-    "id": 21,
-    "topic": "oop",
-    "difficulty": "Hard",
-    "question": "[Generated] Which of the following breaks encapsulation in Java?",
-    "options": [
-      "Incorrect option B",
-      "Incorrect option C",
-      "Correct generated option for oop",
-      "Incorrect option A"
-    ],
-    "correctAnswer": 2,
-    "explanation": "This is an auto-generated explanation for the procedural question in java/oop.",
-    "tags": [
-      "core-concept",
-      "procedural"
-    ]
-  },
-  {
-    "id": 22,
-    "topic": "oop",
-    "difficulty": "Hard",
-    "question": "[Generated] How is polymorphism implemented in Java?",
-    "options": [
-      "Incorrect option A",
-      "Incorrect option B",
-      "Incorrect option C",
-      "Correct generated option for oop"
-    ],
-    "correctAnswer": 3,
-    "explanation": "This is an auto-generated explanation for the procedural question in java/oop.",
-    "tags": [
-      "core-concept",
-      "procedural"
-    ]
-  },
-  {
-    "id": 23,
-    "topic": "oop",
-    "difficulty": "Medium",
-    "question": "[Generated] Which of the following breaks encapsulation in Java?",
-    "options": [
-      "Correct generated option for oop",
-      "Incorrect option A",
-      "Incorrect option B",
-      "Incorrect option C"
-    ],
-    "correctAnswer": 0,
-    "explanation": "This is an auto-generated explanation for the procedural question in java/oop.",
-    "tags": [
-      "tricky",
-      "procedural"
-    ]
-  },
-  {
-    "id": 24,
-    "topic": "oop",
-    "difficulty": "Easy",
-    "question": "[Generated] Which of the following breaks inheritance in Java?",
-    "options": [
-      "Incorrect option C",
-      "Correct generated option for oop",
-      "Incorrect option A",
-      "Incorrect option B"
-    ],
-    "correctAnswer": 1,
-    "explanation": "This is an auto-generated explanation for the procedural question in java/oop.",
-    "tags": [
-      "fundamentals",
-      "procedural"
-    ]
-  },
-  {
-    "id": 25,
-    "topic": "oop",
-    "difficulty": "Easy",
-    "question": "[Generated] What is the primary benefit of polymorphism?",
-    "options": [
-      "Incorrect option C",
-      "Correct generated option for oop",
-      "Incorrect option A",
-      "Incorrect option B"
-    ],
-    "correctAnswer": 1,
-    "explanation": "This is an auto-generated explanation for the procedural question in java/oop.",
-    "tags": [
-      "fundamentals",
-      "procedural"
-    ]
-  },
-  {
-    "id": 26,
-    "topic": "oop",
-    "difficulty": "Easy",
-    "question": "[Generated] How is polymorphism implemented in Java?",
-    "options": [
-      "Incorrect option C",
-      "Correct generated option for oop",
-      "Incorrect option A",
-      "Incorrect option B"
-    ],
-    "correctAnswer": 1,
-    "explanation": "This is an auto-generated explanation for the procedural question in java/oop.",
-    "tags": [
-      "core-concept",
-      "procedural"
-    ]
-  },
-  {
-    "id": 27,
-    "topic": "oop",
-    "difficulty": "Hard",
-    "question": "[Generated] What is the primary benefit of encapsulation?",
-    "options": [
-      "Incorrect option A",
-      "Incorrect option C",
-      "Correct generated option for oop",
-      "Incorrect option B"
-    ],
-    "correctAnswer": 2,
-    "explanation": "This is an auto-generated explanation for the procedural question in java/oop.",
-    "tags": [
-      "tricky",
-      "procedural"
-    ]
-  },
-  {
-    "id": 28,
-    "topic": "oop",
-    "difficulty": "Hard",
-    "question": "[Generated] How is encapsulation implemented in Java?",
-    "options": [
-      "Incorrect option A",
-      "Incorrect option C",
-      "Correct generated option for oop",
-      "Incorrect option B"
-    ],
-    "correctAnswer": 2,
-    "explanation": "This is an auto-generated explanation for the procedural question in java/oop.",
-    "tags": [
-      "tricky",
-      "procedural"
-    ]
-  },
-  {
-    "id": 29,
-    "topic": "oop",
-    "difficulty": "Medium",
-    "question": "[Generated] How is polymorphism implemented in Java?",
-    "options": [
-      "Incorrect option B",
-      "Incorrect option A",
-      "Correct generated option for oop",
-      "Incorrect option C"
-    ],
-    "correctAnswer": 2,
-    "explanation": "This is an auto-generated explanation for the procedural question in java/oop.",
-    "tags": [
-      "advanced",
-      "procedural"
-    ]
-  },
-  {
-    "id": 30,
-    "topic": "oop",
-    "difficulty": "Medium",
-    "question": "[Generated] Which of the following breaks class in Java?",
-    "options": [
-      "Incorrect option B",
-      "Incorrect option A",
-      "Incorrect option C",
-      "Correct generated option for oop"
-    ],
-    "correctAnswer": 3,
-    "explanation": "This is an auto-generated explanation for the procedural question in java/oop.",
-    "tags": [
-      "advanced",
-      "procedural"
-    ]
-  },
-  {
-    "id": 31,
-    "topic": "oop",
-    "difficulty": "Hard",
-    "question": "[Generated] How is encapsulation implemented in Java?",
-    "options": [
-      "Correct generated option for oop",
-      "Incorrect option B",
-      "Incorrect option A",
-      "Incorrect option C"
-    ],
-    "correctAnswer": 0,
-    "explanation": "This is an auto-generated explanation for the procedural question in java/oop.",
-    "tags": [
-      "interview-frequent",
-      "procedural"
-    ]
-  },
-  {
-    "id": 32,
-    "topic": "oop",
-    "difficulty": "Medium",
-    "question": "[Generated] How is polymorphism implemented in Java?",
-    "options": [
-      "Incorrect option A",
-      "Incorrect option C",
-      "Incorrect option B",
-      "Correct generated option for oop"
-    ],
-    "correctAnswer": 3,
-    "explanation": "This is an auto-generated explanation for the procedural question in java/oop.",
-    "tags": [
-      "core-concept",
-      "procedural"
-    ]
-  },
-  {
-    "id": 33,
-    "topic": "oop",
-    "difficulty": "Medium",
-    "question": "[Generated] What is the primary benefit of inheritance?",
-    "options": [
-      "Incorrect option C",
-      "Incorrect option B",
-      "Incorrect option A",
-      "Correct generated option for oop"
-    ],
-    "correctAnswer": 3,
-    "explanation": "This is an auto-generated explanation for the procedural question in java/oop.",
-    "tags": [
-      "tricky",
-      "procedural"
-    ]
-  },
-  {
-    "id": 34,
-    "topic": "oop",
-    "difficulty": "Easy",
-    "question": "[Generated] How is class implemented in Java?",
-    "options": [
-      "Incorrect option C",
-      "Incorrect option A",
-      "Incorrect option B",
-      "Correct generated option for oop"
-    ],
-    "correctAnswer": 3,
-    "explanation": "This is an auto-generated explanation for the procedural question in java/oop.",
-    "tags": [
-      "advanced",
-      "procedural"
-    ]
-  },
-  {
-    "id": 35,
-    "topic": "oop",
-    "difficulty": "Easy",
-    "question": "[Generated] Which of the following breaks encapsulation in Java?",
-    "options": [
-      "Incorrect option A",
-      "Incorrect option B",
-      "Correct generated option for oop",
-      "Incorrect option C"
-    ],
-    "correctAnswer": 2,
-    "explanation": "This is an auto-generated explanation for the procedural question in java/oop.",
-    "tags": [
-      "tricky",
-      "procedural"
-    ]
-  },
-  {
-    "id": 36,
-    "topic": "oop",
-    "difficulty": "Hard",
-    "question": "[Generated] Which of the following breaks encapsulation in Java?",
-    "options": [
-      "Incorrect option C",
-      "Correct generated option for oop",
-      "Incorrect option A",
-      "Incorrect option B"
-    ],
-    "correctAnswer": 1,
-    "explanation": "This is an auto-generated explanation for the procedural question in java/oop.",
-    "tags": [
-      "fundamentals",
-      "procedural"
-    ]
-  },
-  {
-    "id": 37,
-    "topic": "oop",
-    "difficulty": "Medium",
-    "question": "[Generated] How is class implemented in Java?",
-    "options": [
-      "Correct generated option for oop",
-      "Incorrect option C",
-      "Incorrect option B",
-      "Incorrect option A"
-    ],
-    "correctAnswer": 0,
-    "explanation": "This is an auto-generated explanation for the procedural question in java/oop.",
-    "tags": [
-      "tricky",
-      "procedural"
-    ]
-  },
-  {
-    "id": 38,
-    "topic": "oop",
-    "difficulty": "Medium",
-    "question": "[Generated] How is encapsulation implemented in Java?",
-    "options": [
-      "Incorrect option C",
-      "Incorrect option B",
-      "Correct generated option for oop",
-      "Incorrect option A"
-    ],
-    "correctAnswer": 2,
-    "explanation": "This is an auto-generated explanation for the procedural question in java/oop.",
-    "tags": [
-      "tricky",
-      "procedural"
-    ]
-  },
-  {
-    "id": 39,
-    "topic": "oop",
-    "difficulty": "Easy",
-    "question": "[Generated] Which of the following breaks polymorphism in Java?",
-    "options": [
-      "Incorrect option C",
-      "Incorrect option B",
-      "Incorrect option A",
-      "Correct generated option for oop"
-    ],
-    "correctAnswer": 3,
-    "explanation": "This is an auto-generated explanation for the procedural question in java/oop.",
-    "tags": [
-      "fundamentals",
-      "procedural"
-    ]
-  },
-  {
-    "id": 40,
-    "topic": "oop",
-    "difficulty": "Hard",
-    "question": "[Generated] How is inheritance implemented in Java?",
-    "options": [
-      "Incorrect option A",
-      "Correct generated option for oop",
-      "Incorrect option C",
-      "Incorrect option B"
-    ],
-    "correctAnswer": 1,
-    "explanation": "This is an auto-generated explanation for the procedural question in java/oop.",
-    "tags": [
-      "advanced",
-      "procedural"
-    ]
-  },
-  {
-    "id": 41,
-    "topic": "oop",
-    "difficulty": "Hard",
-    "question": "[Generated] What is the primary benefit of polymorphism?",
-    "options": [
-      "Correct generated option for oop",
-      "Incorrect option A",
-      "Incorrect option B",
-      "Incorrect option C"
-    ],
-    "correctAnswer": 0,
-    "explanation": "This is an auto-generated explanation for the procedural question in java/oop.",
-    "tags": [
-      "advanced",
-      "procedural"
-    ]
-  },
-  {
-    "id": 42,
-    "topic": "oop",
-    "difficulty": "Medium",
-    "question": "[Generated] How is inheritance implemented in Java?",
-    "options": [
-      "Incorrect option C",
-      "Incorrect option A",
-      "Incorrect option B",
-      "Correct generated option for oop"
-    ],
-    "correctAnswer": 3,
-    "explanation": "This is an auto-generated explanation for the procedural question in java/oop.",
-    "tags": [
-      "tricky",
-      "procedural"
-    ]
-  },
-  {
-    "id": 43,
-    "topic": "oop",
-    "difficulty": "Easy",
-    "question": "[Generated] How is inheritance implemented in Java?",
-    "options": [
-      "Incorrect option C",
-      "Correct generated option for oop",
-      "Incorrect option B",
-      "Incorrect option A"
-    ],
-    "correctAnswer": 1,
-    "explanation": "This is an auto-generated explanation for the procedural question in java/oop.",
-    "tags": [
-      "core-concept",
-      "procedural"
-    ]
-  },
-  {
-    "id": 44,
-    "topic": "oop",
-    "difficulty": "Easy",
-    "question": "[Generated] Which of the following breaks class in Java?",
-    "options": [
-      "Incorrect option C",
-      "Incorrect option B",
-      "Incorrect option A",
-      "Correct generated option for oop"
-    ],
-    "correctAnswer": 3,
-    "explanation": "This is an auto-generated explanation for the procedural question in java/oop.",
-    "tags": [
-      "advanced",
-      "procedural"
-    ]
-  },
-  {
-    "id": 45,
-    "topic": "oop",
-    "difficulty": "Medium",
-    "question": "[Generated] How is encapsulation implemented in Java?",
-    "options": [
-      "Incorrect option A",
-      "Correct generated option for oop",
-      "Incorrect option C",
-      "Incorrect option B"
-    ],
-    "correctAnswer": 1,
-    "explanation": "This is an auto-generated explanation for the procedural question in java/oop.",
-    "tags": [
-      "advanced",
-      "procedural"
-    ]
-  },
-  {
-    "id": 46,
-    "topic": "oop",
-    "difficulty": "Easy",
-    "question": "[Generated] What is the primary benefit of class?",
-    "options": [
-      "Incorrect option A",
-      "Correct generated option for oop",
-      "Incorrect option B",
-      "Incorrect option C"
-    ],
-    "correctAnswer": 1,
-    "explanation": "This is an auto-generated explanation for the procedural question in java/oop.",
-    "tags": [
-      "core-concept",
-      "procedural"
-    ]
-  },
-  {
-    "id": 47,
-    "topic": "oop",
-    "difficulty": "Hard",
-    "question": "[Generated] Which of the following breaks inheritance in Java?",
-    "options": [
-      "Incorrect option A",
-      "Incorrect option C",
-      "Correct generated option for oop",
-      "Incorrect option B"
-    ],
-    "correctAnswer": 2,
-    "explanation": "This is an auto-generated explanation for the procedural question in java/oop.",
-    "tags": [
-      "core-concept",
-      "procedural"
-    ]
-  },
-  {
-    "id": 48,
-    "topic": "oop",
-    "difficulty": "Hard",
-    "question": "[Generated] What is the primary benefit of polymorphism?",
-    "options": [
-      "Incorrect option B",
-      "Correct generated option for oop",
-      "Incorrect option A",
-      "Incorrect option C"
-    ],
-    "correctAnswer": 1,
-    "explanation": "This is an auto-generated explanation for the procedural question in java/oop.",
-    "tags": [
-      "interview-frequent",
-      "procedural"
-    ]
-  },
-  {
-    "id": 49,
-    "topic": "oop",
-    "difficulty": "Medium",
-    "question": "[Generated] How is inheritance implemented in Java?",
-    "options": [
-      "Correct generated option for oop",
-      "Incorrect option A",
-      "Incorrect option B",
-      "Incorrect option C"
-    ],
-    "correctAnswer": 0,
-    "explanation": "This is an auto-generated explanation for the procedural question in java/oop.",
-    "tags": [
-      "interview-frequent",
-      "procedural"
-    ]
-  },
-  {
-    "id": 50,
-    "topic": "oop",
-    "difficulty": "Easy",
-    "question": "[Generated] Which of the following breaks class in Java?",
-    "options": [
-      "Correct generated option for oop",
-      "Incorrect option C",
-      "Incorrect option A",
-      "Incorrect option B"
-    ],
-    "correctAnswer": 0,
-    "explanation": "This is an auto-generated explanation for the procedural question in java/oop.",
-    "tags": [
-      "tricky",
-      "procedural"
-    ]
-  },
-  {
-    "id": 51,
-    "topic": "oop",
-    "difficulty": "Medium",
-    "question": "[Generated] What is the primary benefit of encapsulation?",
-    "options": [
-      "Incorrect option A",
-      "Incorrect option C",
-      "Incorrect option B",
-      "Correct generated option for oop"
-    ],
-    "correctAnswer": 3,
-    "explanation": "This is an auto-generated explanation for the procedural question in java/oop.",
-    "tags": [
-      "interview-frequent",
-      "procedural"
-    ]
-  },
-  {
-    "id": 52,
-    "topic": "oop",
-    "difficulty": "Medium",
-    "question": "[Generated] What is the primary benefit of polymorphism?",
-    "options": [
-      "Incorrect option A",
-      "Incorrect option B",
-      "Incorrect option C",
-      "Correct generated option for oop"
-    ],
-    "correctAnswer": 3,
-    "explanation": "This is an auto-generated explanation for the procedural question in java/oop.",
-    "tags": [
-      "tricky",
-      "procedural"
-    ]
-  },
-  {
-    "id": 53,
-    "topic": "oop",
-    "difficulty": "Easy",
-    "question": "[Generated] How is polymorphism implemented in Java?",
-    "options": [
-      "Incorrect option B",
-      "Incorrect option A",
-      "Correct generated option for oop",
-      "Incorrect option C"
-    ],
-    "correctAnswer": 2,
-    "explanation": "This is an auto-generated explanation for the procedural question in java/oop.",
-    "tags": [
-      "advanced",
-      "procedural"
-    ]
-  },
-  {
-    "id": 54,
-    "topic": "oop",
-    "difficulty": "Easy",
-    "question": "[Generated] What is the primary benefit of encapsulation?",
-    "options": [
-      "Incorrect option C",
-      "Incorrect option B",
-      "Incorrect option A",
-      "Correct generated option for oop"
-    ],
-    "correctAnswer": 3,
-    "explanation": "This is an auto-generated explanation for the procedural question in java/oop.",
-    "tags": [
-      "advanced",
-      "procedural"
-    ]
-  },
-  {
-    "id": 55,
-    "topic": "oop",
-    "difficulty": "Easy",
-    "question": "[Generated] Which of the following breaks class in Java?",
-    "options": [
-      "Incorrect option B",
-      "Incorrect option C",
-      "Correct generated option for oop",
-      "Incorrect option A"
-    ],
-    "correctAnswer": 2,
-    "explanation": "This is an auto-generated explanation for the procedural question in java/oop.",
-    "tags": [
-      "tricky",
-      "procedural"
-    ]
-  },
-  {
-    "id": 56,
-    "topic": "oop",
-    "difficulty": "Easy",
-    "question": "[Generated] How is encapsulation implemented in Java?",
-    "options": [
-      "Correct generated option for oop",
-      "Incorrect option A",
-      "Incorrect option C",
-      "Incorrect option B"
-    ],
-    "correctAnswer": 0,
-    "explanation": "This is an auto-generated explanation for the procedural question in java/oop.",
-    "tags": [
-      "tricky",
-      "procedural"
-    ]
-  },
-  {
-    "id": 57,
-    "topic": "oop",
-    "difficulty": "Hard",
-    "question": "[Generated] How is class implemented in Java?",
-    "options": [
-      "Incorrect option C",
-      "Incorrect option A",
-      "Correct generated option for oop",
-      "Incorrect option B"
-    ],
-    "correctAnswer": 2,
-    "explanation": "This is an auto-generated explanation for the procedural question in java/oop.",
-    "tags": [
-      "fundamentals",
-      "procedural"
-    ]
-  },
-  {
-    "id": 58,
-    "topic": "oop",
-    "difficulty": "Medium",
-    "question": "[Generated] What is the primary benefit of class?",
-    "options": [
-      "Incorrect option C",
-      "Incorrect option A",
-      "Correct generated option for oop",
-      "Incorrect option B"
-    ],
-    "correctAnswer": 2,
-    "explanation": "This is an auto-generated explanation for the procedural question in java/oop.",
-    "tags": [
-      "tricky",
-      "procedural"
-    ]
-  },
-  {
-    "id": 59,
-    "topic": "oop",
-    "difficulty": "Medium",
-    "question": "[Generated] How is class implemented in Java?",
-    "options": [
-      "Correct generated option for oop",
-      "Incorrect option C",
-      "Incorrect option B",
-      "Incorrect option A"
-    ],
-    "correctAnswer": 0,
-    "explanation": "This is an auto-generated explanation for the procedural question in java/oop.",
-    "tags": [
-      "advanced",
-      "procedural"
-    ]
-  },
-  {
-    "id": 60,
-    "topic": "oop",
-    "difficulty": "Easy",
-    "question": "[Generated] What is the primary benefit of polymorphism?",
-    "options": [
-      "Incorrect option C",
-      "Incorrect option B",
-      "Correct generated option for oop",
-      "Incorrect option A"
-    ],
-    "correctAnswer": 2,
-    "explanation": "This is an auto-generated explanation for the procedural question in java/oop.",
-    "tags": [
-      "core-concept",
-      "procedural"
-    ]
+    "explanation": "Composition over inheritance is a principle that states classes should achieve polymorphic behavior and code reuse by containing instances of other classes (HAS-A relationship) rather than inheriting from a base class (IS-A relationship). This leads to more flexible, decoupled designs.",
+    "tags": ["Java", "OOP", "Design Principles"]
   }
 ]

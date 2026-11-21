@@ -3,1091 +3,150 @@
     "id": 1,
     "topic": "Streams",
     "difficulty": "Easy",
-    "question": "Which method is used to convert a Stream to a List in Java 8?",
+    "question": "What is the primary purpose of the Java Stream API introduced in Java 8?",
     "options": [
-      "toList()",
-      "collect(Collectors.toList())",
-      "asList()",
-      "stream.list()"
+      "To read and write data to files on the disk (I/O Streams).",
+      "To enable functional-style operations on streams of elements (like collections).",
+      "To replace the traditional for-loop completely.",
+      "To establish continuous network connections."
     ],
     "correctAnswer": 1,
-    "explanation": "In Java 8, use stream.collect(Collectors.toList()) to collect stream elements into a List. Java 16+ added the shorthand .toList().",
-    "tags": [
-      "Java",
-      "Streams",
-      "Java 8"
-    ]
+    "explanation": "The Stream API (`java.util.stream`) is designed to support functional-style operations (map, filter, reduce) on streams of elements, allowing for declarative and parallel data processing. It is distinct from `java.io` Input/Output streams.",
+    "tags": ["Java", "Streams", "Java 8"]
   },
   {
     "id": 2,
     "topic": "Streams",
     "difficulty": "Easy",
-    "question": "Which Stream operation is a terminal operation?",
+    "question": "Which of these Stream operations is considered an 'intermediate' operation?",
     "options": [
-      "filter()",
-      "map()",
       "collect()",
-      "flatMap()"
+      "forEach()",
+      "filter()",
+      "count()"
     ],
     "correctAnswer": 2,
-    "explanation": "Terminal operations produce a result or side effect and close the stream. collect(), forEach(), count(), reduce(), findFirst() are terminal. filter/map/flatMap are intermediate.",
-    "tags": [
-      "Java",
-      "Streams",
-      "Terminal",
-      "Intermediate"
-    ]
+    "explanation": "Intermediate operations return a new Stream and are lazy (they don't execute until a terminal operation is invoked). `filter()`, `map()`, and `sorted()` are intermediate. `collect()`, `forEach()`, and `count()` are terminal operations.",
+    "tags": ["Java", "Streams", "Operations"]
   },
   {
     "id": 3,
     "topic": "Streams",
-    "difficulty": "Medium",
-    "question": "What does the filter() method do in Java Streams?",
+    "difficulty": "Easy",
+    "question": "What does the `map()` operation do in a Java Stream?",
     "options": [
-      "Transforms each element",
-      "Removes duplicate elements",
-      "Returns elements matching a predicate",
-      "Sorts elements"
+      "It converts the stream into a java.util.Map.",
+      "It filters out elements based on a condition.",
+      "It transforms each element in the stream to another object based on a provided function.",
+      "It sorts the elements in the stream."
     ],
     "correctAnswer": 2,
-    "explanation": "filter(Predicate<T>) is an intermediate operation that returns a stream of elements that match the given predicate condition.",
-    "tags": [
-      "Java",
-      "Streams",
-      "filter"
-    ]
+    "explanation": "The `map(Function<T,R> mapper)` operation applies the given function to each element of the stream, producing a new stream of transformed values (e.g., mapping a list of Strings to their lengths).",
+    "tags": ["Java", "Streams", "Transformations"]
   },
   {
     "id": 4,
     "topic": "Streams",
     "difficulty": "Medium",
-    "question": "Which method removes duplicate elements from a Stream?",
+    "question": "Why are Java Streams considered 'lazy'?",
     "options": [
-      "filter()",
-      "distinct()",
-      "unique()",
-      "deduplicate()"
+      "Because they process data slower than traditional for-loops.",
+      "Because intermediate operations are not executed until a terminal operation is invoked.",
+      "Because they do not utilize multi-core processors.",
+      "Because they consume less memory by resting threads."
     ],
     "correctAnswer": 1,
-    "explanation": "distinct() is an intermediate operation that returns a stream with duplicate elements removed, based on Object.equals().",
-    "tags": [
-      "Java",
-      "Streams",
-      "distinct"
-    ]
+    "explanation": "Streams are lazy because intermediate operations simply create a pipeline of instructions. No actual processing of the source data occurs until a terminal operation (like `collect` or `findFirst`) is executed.",
+    "tags": ["Java", "Streams", "Laziness"]
   },
   {
     "id": 5,
     "topic": "Streams",
     "difficulty": "Medium",
-    "question": "What is the purpose of flatMap() in Streams?",
+    "question": "Can a Java Stream be reused after a terminal operation has been executed on it?",
     "options": [
-      "Flattens nested streams into a single stream",
-      "Maps each element to a flat array",
-      "Sorts the stream",
-      "Groups elements"
+      "Yes, it can be reused multiple times.",
+      "Yes, but only if you call `.reset()` on it first.",
+      "No, a stream is consumed and cannot be reused once a terminal operation executes.",
+      "No, unless it is a Parallel Stream."
     ],
-    "correctAnswer": 0,
-    "explanation": "flatMap() transforms each element into a stream and then flattens all resulting streams into a single stream — useful for handling collections of collections.",
-    "tags": [
-      "Java",
-      "Streams",
-      "flatMap"
-    ]
+    "correctAnswer": 2,
+    "explanation": "Java Streams are one-time use objects. Once a terminal operation executes, the stream is considered consumed or closed. Attempting to operate on it again will throw an `IllegalStateException`.",
+    "tags": ["Java", "Streams", "Lifecycle"]
   },
   {
     "id": 6,
     "topic": "Streams",
-    "difficulty": "Easy",
-    "question": "Are Java Streams reusable?",
+    "difficulty": "Medium",
+    "question": "Which of the following creates a parallel stream from a List named `myList`?",
     "options": [
-      "Yes, always",
-      "Yes, if you reset the pointer",
-      "No, a stream can only be consumed once",
-      "Only parallel streams are reusable"
+      "myList.stream().parallel()",
+      "myList.parallelStream()",
+      "Both A and B",
+      "ParallelStream.of(myList)"
     ],
     "correctAnswer": 2,
-    "explanation": "A Stream can only be traversed once. After a terminal operation is called, the stream is consumed. Creating a new stream is needed for reuse.",
-    "tags": [
-      "Java",
-      "Streams"
-    ]
+    "explanation": "You can obtain a parallel stream directly from a collection using `collection.parallelStream()`, or you can convert an existing sequential stream to a parallel one by calling `.parallel()` on the stream pipeline.",
+    "tags": ["Java", "Streams", "Parallelism"]
   },
   {
     "id": 7,
     "topic": "Streams",
     "difficulty": "Hard",
-    "question": "What does Collectors.groupingBy() do?",
+    "question": "What is the difference between `findAny()` and `findFirst()` in parallel streams?",
     "options": [
-      "Sorts elements by a key",
-      "Groups elements by a classifier function into a Map",
-      "Partitions elements into true/false groups",
-      "Counts elements by category"
+      "There is no difference; they behave identically.",
+      "`findFirst()` is not supported in parallel streams.",
+      "`findAny()` is free to select any element from any thread, maximizing performance, while `findFirst()` strictly returns the first element in encounter order, which can be slower.",
+      "`findFirst()` returns an Optional; `findAny()` returns the raw object."
     ],
-    "correctAnswer": 1,
-    "explanation": "Collectors.groupingBy(classifier) groups stream elements into a Map<K, List<T>> where keys are produced by the classifier function.",
-    "tags": [
-      "Java",
-      "Streams",
-      "Collectors"
-    ]
+    "correctAnswer": 2,
+    "explanation": "In sequential streams, both usually return the first element. However, in parallel streams, `findFirst()` pays a performance penalty to ensure it returns the absolute first element in the original source order, whereas `findAny()` is non-deterministic and quickly returns the first element found by *any* thread.",
+    "tags": ["Java", "Streams", "Parallelism"]
   },
   {
     "id": 8,
     "topic": "Streams",
-    "difficulty": "Medium",
-    "question": "How do you create a parallel stream from a List?",
+    "difficulty": "Hard",
+    "question": "What does the `flatMap()` operation achieve that `map()` does not?",
     "options": [
-      "list.parallelStream()",
-      "Stream.parallel(list)",
-      "list.stream().parallel()",
-      "Both A and C"
+      "It flattens a stream of collections/arrays into a single unified stream of elements.",
+      "It allows returning null values without throwing NullPointerException.",
+      "It performs the map operation in parallel.",
+      "It converts objects to primitive streams like IntStream."
     ],
-    "correctAnswer": 3,
-    "explanation": "Both list.parallelStream() and list.stream().parallel() create a parallel stream. parallel() can be called on any existing sequential stream.",
-    "tags": [
-      "Java",
-      "Streams",
-      "Parallel"
-    ]
+    "correctAnswer": 0,
+    "explanation": "While `map()` maps one input object to one output object, `flatMap()` maps one input object to a *stream* of objects, and then 'flattens' all the resulting individual streams back down into a single massive stream. This is useful for resolving nested structures like `List<List<String>>` to a `Stream<String>`.",
+    "tags": ["Java", "Streams", "Transformations"]
   },
   {
     "id": 9,
     "topic": "Streams",
     "difficulty": "Hard",
-    "question": "What does reduce() do in Java Streams?",
+    "question": "What is the purpose of the `reduce()` operation in Java Streams?",
     "options": [
-      "Removes elements",
-      "Combines stream elements into a single result using a BinaryOperator",
-      "Reduces stream size",
-      "Filters elements"
+      "To shrink the size of the stream by skipping elements.",
+      "To compress objects in the stream to save memory.",
+      "To combine all elements of a stream into a single result using a binary operator.",
+      "To filter out null or empty elements."
     ],
-    "correctAnswer": 1,
-    "explanation": "reduce(identity, BinaryOperator) repeatedly applies a combining function to produce a single value from all stream elements (e.g., sum, max, concatenation).",
-    "tags": [
-      "Java",
-      "Streams",
-      "reduce"
-    ]
+    "correctAnswer": 2,
+    "explanation": "The `reduce()` operation takes a sequence of input elements and repeatedly applies a combining operation (a BinaryOperator) to merge them into a single summary result, such as finding the sum, max, min, or concatenating strings.",
+    "tags": ["Java", "Streams", "Reductions"]
   },
   {
     "id": 10,
     "topic": "Streams",
-    "difficulty": "Medium",
-    "question": "Which interface represents a function that takes one argument and returns a result in Java 8?",
-    "options": [
-      "Runnable",
-      "Callable",
-      "Function<T,R>",
-      "Supplier<T>"
-    ],
-    "correctAnswer": 2,
-    "explanation": "Function<T, R> is a functional interface that takes type T and returns type R. Used heavily in Stream.map(). Supplier takes nothing, Consumer returns void.",
-    "tags": [
-      "Java",
-      "Streams",
-      "Functional Interface",
-      "Java 8"
-    ]
-  },
-  {
-    "id": 11,
-    "topic": "streams",
-    "difficulty": "Medium",
-    "question": "[Generated] What does the HashMap method do in a Stream?",
-    "options": [
-      "Incorrect option C",
-      "Correct generated option for streams",
-      "Incorrect option B",
-      "Incorrect option A"
-    ],
-    "correctAnswer": 1,
-    "explanation": "This is an auto-generated explanation for the procedural question in java/streams.",
-    "tags": [
-      "fundamentals",
-      "procedural"
-    ]
-  },
-  {
-    "id": 12,
-    "topic": "streams",
-    "difficulty": "Easy",
-    "question": "[Generated] What does the map() method do in a Stream?",
-    "options": [
-      "Incorrect option A",
-      "Incorrect option C",
-      "Incorrect option B",
-      "Correct generated option for streams"
-    ],
-    "correctAnswer": 3,
-    "explanation": "This is an auto-generated explanation for the procedural question in java/streams.",
-    "tags": [
-      "tricky",
-      "procedural"
-    ]
-  },
-  {
-    "id": 13,
-    "topic": "streams",
-    "difficulty": "Easy",
-    "question": "[Generated] Is the map() operation intermediate or terminal?",
-    "options": [
-      "Incorrect option B",
-      "Incorrect option A",
-      "Incorrect option C",
-      "Correct generated option for streams"
-    ],
-    "correctAnswer": 3,
-    "explanation": "This is an auto-generated explanation for the procedural question in java/streams.",
-    "tags": [
-      "interview-frequent",
-      "procedural"
-    ]
-  },
-  {
-    "id": 14,
-    "topic": "streams",
     "difficulty": "Hard",
-    "question": "[Generated] How does HashMap affect the stream pipeline?",
+    "question": "Which of these is a valid way to collect a `Stream<String>` into a single comma-separated String?",
     "options": [
-      "Correct generated option for streams",
-      "Incorrect option B",
-      "Incorrect option C",
-      "Incorrect option A"
+      "stream.collect(Collectors.joining(\", \"));",
+      "stream.reduce(String::concat);",
+      "stream.toString(\", \");",
+      "stream.collect(String.join(\", \"));"
     ],
     "correctAnswer": 0,
-    "explanation": "This is an auto-generated explanation for the procedural question in java/streams.",
-    "tags": [
-      "interview-frequent",
-      "procedural"
-    ]
-  },
-  {
-    "id": 15,
-    "topic": "streams",
-    "difficulty": "Easy",
-    "question": "[Generated] Is the HashMap operation intermediate or terminal?",
-    "options": [
-      "Incorrect option B",
-      "Incorrect option C",
-      "Correct generated option for streams",
-      "Incorrect option A"
-    ],
-    "correctAnswer": 2,
-    "explanation": "This is an auto-generated explanation for the procedural question in java/streams.",
-    "tags": [
-      "advanced",
-      "procedural"
-    ]
-  },
-  {
-    "id": 16,
-    "topic": "streams",
-    "difficulty": "Hard",
-    "question": "[Generated] How does filter() affect the stream pipeline?",
-    "options": [
-      "Incorrect option C",
-      "Incorrect option B",
-      "Correct generated option for streams",
-      "Incorrect option A"
-    ],
-    "correctAnswer": 2,
-    "explanation": "This is an auto-generated explanation for the procedural question in java/streams.",
-    "tags": [
-      "core-concept",
-      "procedural"
-    ]
-  },
-  {
-    "id": 17,
-    "topic": "streams",
-    "difficulty": "Hard",
-    "question": "[Generated] How does ArrayList affect the stream pipeline?",
-    "options": [
-      "Incorrect option A",
-      "Incorrect option C",
-      "Correct generated option for streams",
-      "Incorrect option B"
-    ],
-    "correctAnswer": 2,
-    "explanation": "This is an auto-generated explanation for the procedural question in java/streams.",
-    "tags": [
-      "tricky",
-      "procedural"
-    ]
-  },
-  {
-    "id": 18,
-    "topic": "streams",
-    "difficulty": "Hard",
-    "question": "[Generated] What does the HashMap method do in a Stream?",
-    "options": [
-      "Correct generated option for streams",
-      "Incorrect option B",
-      "Incorrect option C",
-      "Incorrect option A"
-    ],
-    "correctAnswer": 0,
-    "explanation": "This is an auto-generated explanation for the procedural question in java/streams.",
-    "tags": [
-      "interview-frequent",
-      "procedural"
-    ]
-  },
-  {
-    "id": 19,
-    "topic": "streams",
-    "difficulty": "Medium",
-    "question": "[Generated] How does int affect the stream pipeline?",
-    "options": [
-      "Incorrect option A",
-      "Correct generated option for streams",
-      "Incorrect option C",
-      "Incorrect option B"
-    ],
-    "correctAnswer": 1,
-    "explanation": "This is an auto-generated explanation for the procedural question in java/streams.",
-    "tags": [
-      "fundamentals",
-      "procedural"
-    ]
-  },
-  {
-    "id": 20,
-    "topic": "streams",
-    "difficulty": "Hard",
-    "question": "[Generated] Is the int operation intermediate or terminal?",
-    "options": [
-      "Incorrect option A",
-      "Incorrect option C",
-      "Incorrect option B",
-      "Correct generated option for streams"
-    ],
-    "correctAnswer": 3,
-    "explanation": "This is an auto-generated explanation for the procedural question in java/streams.",
-    "tags": [
-      "advanced",
-      "procedural"
-    ]
-  },
-  {
-    "id": 21,
-    "topic": "streams",
-    "difficulty": "Hard",
-    "question": "[Generated] How does filter() affect the stream pipeline?",
-    "options": [
-      "Incorrect option C",
-      "Correct generated option for streams",
-      "Incorrect option B",
-      "Incorrect option A"
-    ],
-    "correctAnswer": 1,
-    "explanation": "This is an auto-generated explanation for the procedural question in java/streams.",
-    "tags": [
-      "core-concept",
-      "procedural"
-    ]
-  },
-  {
-    "id": 22,
-    "topic": "streams",
-    "difficulty": "Easy",
-    "question": "[Generated] How does map() affect the stream pipeline?",
-    "options": [
-      "Correct generated option for streams",
-      "Incorrect option C",
-      "Incorrect option B",
-      "Incorrect option A"
-    ],
-    "correctAnswer": 0,
-    "explanation": "This is an auto-generated explanation for the procedural question in java/streams.",
-    "tags": [
-      "interview-frequent",
-      "procedural"
-    ]
-  },
-  {
-    "id": 23,
-    "topic": "streams",
-    "difficulty": "Medium",
-    "question": "[Generated] What does the boolean method do in a Stream?",
-    "options": [
-      "Correct generated option for streams",
-      "Incorrect option B",
-      "Incorrect option A",
-      "Incorrect option C"
-    ],
-    "correctAnswer": 0,
-    "explanation": "This is an auto-generated explanation for the procedural question in java/streams.",
-    "tags": [
-      "tricky",
-      "procedural"
-    ]
-  },
-  {
-    "id": 24,
-    "topic": "streams",
-    "difficulty": "Easy",
-    "question": "[Generated] What does the NullPointerException method do in a Stream?",
-    "options": [
-      "Incorrect option B",
-      "Incorrect option A",
-      "Correct generated option for streams",
-      "Incorrect option C"
-    ],
-    "correctAnswer": 2,
-    "explanation": "This is an auto-generated explanation for the procedural question in java/streams.",
-    "tags": [
-      "advanced",
-      "procedural"
-    ]
-  },
-  {
-    "id": 25,
-    "topic": "streams",
-    "difficulty": "Easy",
-    "question": "[Generated] Is the ArrayList operation intermediate or terminal?",
-    "options": [
-      "Incorrect option C",
-      "Incorrect option A",
-      "Incorrect option B",
-      "Correct generated option for streams"
-    ],
-    "correctAnswer": 3,
-    "explanation": "This is an auto-generated explanation for the procedural question in java/streams.",
-    "tags": [
-      "advanced",
-      "procedural"
-    ]
-  },
-  {
-    "id": 26,
-    "topic": "streams",
-    "difficulty": "Hard",
-    "question": "[Generated] What does the int method do in a Stream?",
-    "options": [
-      "Correct generated option for streams",
-      "Incorrect option C",
-      "Incorrect option A",
-      "Incorrect option B"
-    ],
-    "correctAnswer": 0,
-    "explanation": "This is an auto-generated explanation for the procedural question in java/streams.",
-    "tags": [
-      "core-concept",
-      "procedural"
-    ]
-  },
-  {
-    "id": 27,
-    "topic": "streams",
-    "difficulty": "Medium",
-    "question": "[Generated] Is the ArrayList operation intermediate or terminal?",
-    "options": [
-      "Incorrect option C",
-      "Incorrect option B",
-      "Incorrect option A",
-      "Correct generated option for streams"
-    ],
-    "correctAnswer": 3,
-    "explanation": "This is an auto-generated explanation for the procedural question in java/streams.",
-    "tags": [
-      "fundamentals",
-      "procedural"
-    ]
-  },
-  {
-    "id": 28,
-    "topic": "streams",
-    "difficulty": "Easy",
-    "question": "[Generated] What does the HashMap method do in a Stream?",
-    "options": [
-      "Incorrect option B",
-      "Incorrect option C",
-      "Incorrect option A",
-      "Correct generated option for streams"
-    ],
-    "correctAnswer": 3,
-    "explanation": "This is an auto-generated explanation for the procedural question in java/streams.",
-    "tags": [
-      "tricky",
-      "procedural"
-    ]
-  },
-  {
-    "id": 29,
-    "topic": "streams",
-    "difficulty": "Medium",
-    "question": "[Generated] Is the map() operation intermediate or terminal?",
-    "options": [
-      "Correct generated option for streams",
-      "Incorrect option C",
-      "Incorrect option A",
-      "Incorrect option B"
-    ],
-    "correctAnswer": 0,
-    "explanation": "This is an auto-generated explanation for the procedural question in java/streams.",
-    "tags": [
-      "advanced",
-      "procedural"
-    ]
-  },
-  {
-    "id": 30,
-    "topic": "streams",
-    "difficulty": "Hard",
-    "question": "[Generated] What does the ArrayList method do in a Stream?",
-    "options": [
-      "Correct generated option for streams",
-      "Incorrect option C",
-      "Incorrect option A",
-      "Incorrect option B"
-    ],
-    "correctAnswer": 0,
-    "explanation": "This is an auto-generated explanation for the procedural question in java/streams.",
-    "tags": [
-      "tricky",
-      "procedural"
-    ]
-  },
-  {
-    "id": 31,
-    "topic": "streams",
-    "difficulty": "Medium",
-    "question": "[Generated] Is the boolean operation intermediate or terminal?",
-    "options": [
-      "Incorrect option B",
-      "Correct generated option for streams",
-      "Incorrect option C",
-      "Incorrect option A"
-    ],
-    "correctAnswer": 1,
-    "explanation": "This is an auto-generated explanation for the procedural question in java/streams.",
-    "tags": [
-      "core-concept",
-      "procedural"
-    ]
-  },
-  {
-    "id": 32,
-    "topic": "streams",
-    "difficulty": "Medium",
-    "question": "[Generated] What does the HashMap method do in a Stream?",
-    "options": [
-      "Incorrect option A",
-      "Incorrect option B",
-      "Incorrect option C",
-      "Correct generated option for streams"
-    ],
-    "correctAnswer": 3,
-    "explanation": "This is an auto-generated explanation for the procedural question in java/streams.",
-    "tags": [
-      "fundamentals",
-      "procedural"
-    ]
-  },
-  {
-    "id": 33,
-    "topic": "streams",
-    "difficulty": "Easy",
-    "question": "[Generated] What does the NullPointerException method do in a Stream?",
-    "options": [
-      "Incorrect option A",
-      "Incorrect option C",
-      "Correct generated option for streams",
-      "Incorrect option B"
-    ],
-    "correctAnswer": 2,
-    "explanation": "This is an auto-generated explanation for the procedural question in java/streams.",
-    "tags": [
-      "advanced",
-      "procedural"
-    ]
-  },
-  {
-    "id": 34,
-    "topic": "streams",
-    "difficulty": "Hard",
-    "question": "[Generated] Is the NullPointerException operation intermediate or terminal?",
-    "options": [
-      "Incorrect option A",
-      "Incorrect option C",
-      "Correct generated option for streams",
-      "Incorrect option B"
-    ],
-    "correctAnswer": 2,
-    "explanation": "This is an auto-generated explanation for the procedural question in java/streams.",
-    "tags": [
-      "fundamentals",
-      "procedural"
-    ]
-  },
-  {
-    "id": 35,
-    "topic": "streams",
-    "difficulty": "Easy",
-    "question": "[Generated] What does the ArrayList method do in a Stream?",
-    "options": [
-      "Correct generated option for streams",
-      "Incorrect option B",
-      "Incorrect option C",
-      "Incorrect option A"
-    ],
-    "correctAnswer": 0,
-    "explanation": "This is an auto-generated explanation for the procedural question in java/streams.",
-    "tags": [
-      "advanced",
-      "procedural"
-    ]
-  },
-  {
-    "id": 36,
-    "topic": "streams",
-    "difficulty": "Easy",
-    "question": "[Generated] What does the NullPointerException method do in a Stream?",
-    "options": [
-      "Incorrect option A",
-      "Incorrect option C",
-      "Incorrect option B",
-      "Correct generated option for streams"
-    ],
-    "correctAnswer": 3,
-    "explanation": "This is an auto-generated explanation for the procedural question in java/streams.",
-    "tags": [
-      "tricky",
-      "procedural"
-    ]
-  },
-  {
-    "id": 37,
-    "topic": "streams",
-    "difficulty": "Medium",
-    "question": "[Generated] What does the map() method do in a Stream?",
-    "options": [
-      "Incorrect option A",
-      "Incorrect option B",
-      "Correct generated option for streams",
-      "Incorrect option C"
-    ],
-    "correctAnswer": 2,
-    "explanation": "This is an auto-generated explanation for the procedural question in java/streams.",
-    "tags": [
-      "interview-frequent",
-      "procedural"
-    ]
-  },
-  {
-    "id": 38,
-    "topic": "streams",
-    "difficulty": "Medium",
-    "question": "[Generated] What does the ArrayList method do in a Stream?",
-    "options": [
-      "Incorrect option C",
-      "Incorrect option B",
-      "Incorrect option A",
-      "Correct generated option for streams"
-    ],
-    "correctAnswer": 3,
-    "explanation": "This is an auto-generated explanation for the procedural question in java/streams.",
-    "tags": [
-      "advanced",
-      "procedural"
-    ]
-  },
-  {
-    "id": 39,
-    "topic": "streams",
-    "difficulty": "Hard",
-    "question": "[Generated] Is the map() operation intermediate or terminal?",
-    "options": [
-      "Incorrect option A",
-      "Incorrect option B",
-      "Incorrect option C",
-      "Correct generated option for streams"
-    ],
-    "correctAnswer": 3,
-    "explanation": "This is an auto-generated explanation for the procedural question in java/streams.",
-    "tags": [
-      "core-concept",
-      "procedural"
-    ]
-  },
-  {
-    "id": 40,
-    "topic": "streams",
-    "difficulty": "Easy",
-    "question": "[Generated] How does int affect the stream pipeline?",
-    "options": [
-      "Correct generated option for streams",
-      "Incorrect option A",
-      "Incorrect option B",
-      "Incorrect option C"
-    ],
-    "correctAnswer": 0,
-    "explanation": "This is an auto-generated explanation for the procedural question in java/streams.",
-    "tags": [
-      "advanced",
-      "procedural"
-    ]
-  },
-  {
-    "id": 41,
-    "topic": "streams",
-    "difficulty": "Hard",
-    "question": "[Generated] Is the ArrayList operation intermediate or terminal?",
-    "options": [
-      "Correct generated option for streams",
-      "Incorrect option A",
-      "Incorrect option B",
-      "Incorrect option C"
-    ],
-    "correctAnswer": 0,
-    "explanation": "This is an auto-generated explanation for the procedural question in java/streams.",
-    "tags": [
-      "fundamentals",
-      "procedural"
-    ]
-  },
-  {
-    "id": 42,
-    "topic": "streams",
-    "difficulty": "Medium",
-    "question": "[Generated] What does the filter() method do in a Stream?",
-    "options": [
-      "Incorrect option B",
-      "Correct generated option for streams",
-      "Incorrect option A",
-      "Incorrect option C"
-    ],
-    "correctAnswer": 1,
-    "explanation": "This is an auto-generated explanation for the procedural question in java/streams.",
-    "tags": [
-      "core-concept",
-      "procedural"
-    ]
-  },
-  {
-    "id": 43,
-    "topic": "streams",
-    "difficulty": "Hard",
-    "question": "[Generated] How does filter() affect the stream pipeline?",
-    "options": [
-      "Incorrect option A",
-      "Incorrect option C",
-      "Correct generated option for streams",
-      "Incorrect option B"
-    ],
-    "correctAnswer": 2,
-    "explanation": "This is an auto-generated explanation for the procedural question in java/streams.",
-    "tags": [
-      "interview-frequent",
-      "procedural"
-    ]
-  },
-  {
-    "id": 44,
-    "topic": "streams",
-    "difficulty": "Hard",
-    "question": "[Generated] How does int affect the stream pipeline?",
-    "options": [
-      "Incorrect option B",
-      "Incorrect option A",
-      "Correct generated option for streams",
-      "Incorrect option C"
-    ],
-    "correctAnswer": 2,
-    "explanation": "This is an auto-generated explanation for the procedural question in java/streams.",
-    "tags": [
-      "advanced",
-      "procedural"
-    ]
-  },
-  {
-    "id": 45,
-    "topic": "streams",
-    "difficulty": "Hard",
-    "question": "[Generated] What does the filter() method do in a Stream?",
-    "options": [
-      "Incorrect option B",
-      "Incorrect option C",
-      "Incorrect option A",
-      "Correct generated option for streams"
-    ],
-    "correctAnswer": 3,
-    "explanation": "This is an auto-generated explanation for the procedural question in java/streams.",
-    "tags": [
-      "core-concept",
-      "procedural"
-    ]
-  },
-  {
-    "id": 46,
-    "topic": "streams",
-    "difficulty": "Easy",
-    "question": "[Generated] Is the boolean operation intermediate or terminal?",
-    "options": [
-      "Incorrect option C",
-      "Correct generated option for streams",
-      "Incorrect option B",
-      "Incorrect option A"
-    ],
-    "correctAnswer": 1,
-    "explanation": "This is an auto-generated explanation for the procedural question in java/streams.",
-    "tags": [
-      "advanced",
-      "procedural"
-    ]
-  },
-  {
-    "id": 47,
-    "topic": "streams",
-    "difficulty": "Easy",
-    "question": "[Generated] How does map() affect the stream pipeline?",
-    "options": [
-      "Correct generated option for streams",
-      "Incorrect option B",
-      "Incorrect option C",
-      "Incorrect option A"
-    ],
-    "correctAnswer": 0,
-    "explanation": "This is an auto-generated explanation for the procedural question in java/streams.",
-    "tags": [
-      "core-concept",
-      "procedural"
-    ]
-  },
-  {
-    "id": 48,
-    "topic": "streams",
-    "difficulty": "Easy",
-    "question": "[Generated] How does HashMap affect the stream pipeline?",
-    "options": [
-      "Correct generated option for streams",
-      "Incorrect option C",
-      "Incorrect option A",
-      "Incorrect option B"
-    ],
-    "correctAnswer": 0,
-    "explanation": "This is an auto-generated explanation for the procedural question in java/streams.",
-    "tags": [
-      "tricky",
-      "procedural"
-    ]
-  },
-  {
-    "id": 49,
-    "topic": "streams",
-    "difficulty": "Hard",
-    "question": "[Generated] How does int affect the stream pipeline?",
-    "options": [
-      "Incorrect option C",
-      "Incorrect option B",
-      "Incorrect option A",
-      "Correct generated option for streams"
-    ],
-    "correctAnswer": 3,
-    "explanation": "This is an auto-generated explanation for the procedural question in java/streams.",
-    "tags": [
-      "tricky",
-      "procedural"
-    ]
-  },
-  {
-    "id": 50,
-    "topic": "streams",
-    "difficulty": "Easy",
-    "question": "[Generated] What does the HashMap method do in a Stream?",
-    "options": [
-      "Incorrect option B",
-      "Incorrect option A",
-      "Correct generated option for streams",
-      "Incorrect option C"
-    ],
-    "correctAnswer": 2,
-    "explanation": "This is an auto-generated explanation for the procedural question in java/streams.",
-    "tags": [
-      "advanced",
-      "procedural"
-    ]
-  },
-  {
-    "id": 51,
-    "topic": "streams",
-    "difficulty": "Hard",
-    "question": "[Generated] How does map() affect the stream pipeline?",
-    "options": [
-      "Incorrect option B",
-      "Incorrect option A",
-      "Correct generated option for streams",
-      "Incorrect option C"
-    ],
-    "correctAnswer": 2,
-    "explanation": "This is an auto-generated explanation for the procedural question in java/streams.",
-    "tags": [
-      "core-concept",
-      "procedural"
-    ]
-  },
-  {
-    "id": 52,
-    "topic": "streams",
-    "difficulty": "Hard",
-    "question": "[Generated] How does HashMap affect the stream pipeline?",
-    "options": [
-      "Correct generated option for streams",
-      "Incorrect option C",
-      "Incorrect option A",
-      "Incorrect option B"
-    ],
-    "correctAnswer": 0,
-    "explanation": "This is an auto-generated explanation for the procedural question in java/streams.",
-    "tags": [
-      "core-concept",
-      "procedural"
-    ]
-  },
-  {
-    "id": 53,
-    "topic": "streams",
-    "difficulty": "Easy",
-    "question": "[Generated] What does the NullPointerException method do in a Stream?",
-    "options": [
-      "Incorrect option B",
-      "Incorrect option A",
-      "Incorrect option C",
-      "Correct generated option for streams"
-    ],
-    "correctAnswer": 3,
-    "explanation": "This is an auto-generated explanation for the procedural question in java/streams.",
-    "tags": [
-      "tricky",
-      "procedural"
-    ]
-  },
-  {
-    "id": 54,
-    "topic": "streams",
-    "difficulty": "Easy",
-    "question": "[Generated] What does the filter() method do in a Stream?",
-    "options": [
-      "Correct generated option for streams",
-      "Incorrect option A",
-      "Incorrect option B",
-      "Incorrect option C"
-    ],
-    "correctAnswer": 0,
-    "explanation": "This is an auto-generated explanation for the procedural question in java/streams.",
-    "tags": [
-      "advanced",
-      "procedural"
-    ]
-  },
-  {
-    "id": 55,
-    "topic": "streams",
-    "difficulty": "Easy",
-    "question": "[Generated] Is the boolean operation intermediate or terminal?",
-    "options": [
-      "Correct generated option for streams",
-      "Incorrect option C",
-      "Incorrect option B",
-      "Incorrect option A"
-    ],
-    "correctAnswer": 0,
-    "explanation": "This is an auto-generated explanation for the procedural question in java/streams.",
-    "tags": [
-      "core-concept",
-      "procedural"
-    ]
-  },
-  {
-    "id": 56,
-    "topic": "streams",
-    "difficulty": "Hard",
-    "question": "[Generated] How does int affect the stream pipeline?",
-    "options": [
-      "Correct generated option for streams",
-      "Incorrect option B",
-      "Incorrect option C",
-      "Incorrect option A"
-    ],
-    "correctAnswer": 0,
-    "explanation": "This is an auto-generated explanation for the procedural question in java/streams.",
-    "tags": [
-      "advanced",
-      "procedural"
-    ]
-  },
-  {
-    "id": 57,
-    "topic": "streams",
-    "difficulty": "Easy",
-    "question": "[Generated] How does HashMap affect the stream pipeline?",
-    "options": [
-      "Incorrect option A",
-      "Correct generated option for streams",
-      "Incorrect option B",
-      "Incorrect option C"
-    ],
-    "correctAnswer": 1,
-    "explanation": "This is an auto-generated explanation for the procedural question in java/streams.",
-    "tags": [
-      "interview-frequent",
-      "procedural"
-    ]
-  },
-  {
-    "id": 58,
-    "topic": "streams",
-    "difficulty": "Easy",
-    "question": "[Generated] Is the HashMap operation intermediate or terminal?",
-    "options": [
-      "Incorrect option A",
-      "Incorrect option C",
-      "Incorrect option B",
-      "Correct generated option for streams"
-    ],
-    "correctAnswer": 3,
-    "explanation": "This is an auto-generated explanation for the procedural question in java/streams.",
-    "tags": [
-      "tricky",
-      "procedural"
-    ]
-  },
-  {
-    "id": 59,
-    "topic": "streams",
-    "difficulty": "Medium",
-    "question": "[Generated] Is the HashMap operation intermediate or terminal?",
-    "options": [
-      "Incorrect option A",
-      "Correct generated option for streams",
-      "Incorrect option C",
-      "Incorrect option B"
-    ],
-    "correctAnswer": 1,
-    "explanation": "This is an auto-generated explanation for the procedural question in java/streams.",
-    "tags": [
-      "fundamentals",
-      "procedural"
-    ]
-  },
-  {
-    "id": 60,
-    "topic": "streams",
-    "difficulty": "Medium",
-    "question": "[Generated] How does filter() affect the stream pipeline?",
-    "options": [
-      "Correct generated option for streams",
-      "Incorrect option C",
-      "Incorrect option A",
-      "Incorrect option B"
-    ],
-    "correctAnswer": 0,
-    "explanation": "This is an auto-generated explanation for the procedural question in java/streams.",
-    "tags": [
-      "tricky",
-      "procedural"
-    ]
+    "explanation": "The `Collectors.joining(delimiter)` collector is designed specifically to concatenate the elements of a `Stream<CharSequence>` into a single `String`, optionally separating them with a provided delimiter.",
+    "tags": ["Java", "Streams", "Collectors"]
   }
 ]

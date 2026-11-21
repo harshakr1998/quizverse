@@ -189,902 +189,362 @@
   },
   {
     "id": 11,
-    "topic": "exceptions",
-    "difficulty": "Easy",
-    "question": "[Generated] What is the base class for tuple in Python?",
+    "topic": "Exceptions",
+    "difficulty": "Medium",
+    "question": "Which exception is normally raised by `int(\"not-a-number\")`?",
     "options": [
-      "Incorrect option B",
-      "Incorrect option A",
-      "Correct generated option for exceptions",
-      "Incorrect option C"
+      "ValueError",
+      "KeyError",
+      "IndexError",
+      "ZeroDivisionError"
     ],
-    "correctAnswer": 2,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/exceptions.",
+    "correctAnswer": 0,
+    "explanation": "The input has the correct type but an invalid value for integer conversion.",
     "tags": [
-      "interview-frequent",
-      "procedural"
+      "Python",
+      "Exceptions"
     ]
   },
   {
     "id": 12,
-    "topic": "exceptions",
-    "difficulty": "Easy",
-    "question": "[Generated] What is the base class for __init__ in Python?",
+    "topic": "Exceptions",
+    "difficulty": "Medium",
+    "question": "What exception is raised by accessing an out-of-range list index?",
     "options": [
-      "Incorrect option C",
-      "Incorrect option B",
-      "Incorrect option A",
-      "Correct generated option for exceptions"
+      "IndexError",
+      "KeyError",
+      "LookupWarning",
+      "AttributeError"
     ],
-    "correctAnswer": 3,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/exceptions.",
+    "correctAnswer": 0,
+    "explanation": "A list index outside its valid range raises `IndexError`.",
     "tags": [
-      "core-concept",
-      "procedural"
+      "Python",
+      "Exceptions"
     ]
   },
   {
     "id": 13,
-    "topic": "exceptions",
+    "topic": "Exceptions",
     "difficulty": "Medium",
-    "question": "[Generated] How do you handle a ValueError?",
+    "question": "Which exception results from dividing an integer by zero?",
     "options": [
-      "Incorrect option C",
-      "Correct generated option for exceptions",
-      "Incorrect option A",
-      "Incorrect option B"
+      "ZeroDivisionError",
+      "ArithmeticWarning",
+      "ValueError",
+      "OverflowError"
     ],
-    "correctAnswer": 1,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/exceptions.",
+    "correctAnswer": 0,
+    "explanation": "Division by zero raises `ZeroDivisionError`.",
     "tags": [
-      "tricky",
-      "procedural"
+      "Python",
+      "Exceptions"
     ]
   },
   {
     "id": 14,
-    "topic": "exceptions",
-    "difficulty": "Easy",
-    "question": "[Generated] What is the base class for tuple in Python?",
+    "topic": "Exceptions",
+    "difficulty": "Medium",
+    "question": "What does a bare `raise` inside an except block do?",
     "options": [
-      "Incorrect option C",
-      "Incorrect option A",
-      "Incorrect option B",
-      "Correct generated option for exceptions"
+      "Re-raises the active exception",
+      "Raises a new generic exception",
+      "Suppresses the exception",
+      "Returns from the function"
     ],
-    "correctAnswer": 3,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/exceptions.",
+    "correctAnswer": 0,
+    "explanation": "A bare `raise` propagates the exception currently being handled.",
     "tags": [
-      "tricky",
-      "procedural"
+      "Python",
+      "Exceptions"
     ]
   },
   {
     "id": 15,
-    "topic": "exceptions",
-    "difficulty": "Easy",
-    "question": "[Generated] What keyword is used to raise a tuple?",
+    "topic": "Exceptions",
+    "difficulty": "Medium",
+    "question": "What effect does `raise NewError() from None` have on displayed chaining?",
     "options": [
-      "Correct generated option for exceptions",
-      "Incorrect option B",
-      "Incorrect option A",
-      "Incorrect option C"
+      "It suppresses the automatic context in the traceback",
+      "It prevents the new exception from being raised",
+      "It deletes the original traceback permanently",
+      "It catches every exception"
     ],
     "correctAnswer": 0,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/exceptions.",
+    "explanation": "`from None` suppresses the implicit context when the traceback is displayed.",
     "tags": [
-      "interview-frequent",
-      "procedural"
+      "Python",
+      "Exceptions"
     ]
   },
   {
     "id": 16,
-    "topic": "exceptions",
-    "difficulty": "Easy",
-    "question": "[Generated] What is the base class for set in Python?",
+    "topic": "Exceptions",
+    "difficulty": "Medium",
+    "question": "Which exception is raised when an object lacks a requested attribute?",
     "options": [
-      "Incorrect option A",
-      "Correct generated option for exceptions",
-      "Incorrect option C",
-      "Incorrect option B"
+      "AttributeError",
+      "KeyError",
+      "NameError",
+      "IndexError"
     ],
-    "correctAnswer": 1,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/exceptions.",
+    "correctAnswer": 0,
+    "explanation": "Accessing an undefined attribute normally raises `AttributeError`.",
     "tags": [
-      "advanced",
-      "procedural"
+      "Python",
+      "Exceptions"
     ]
   },
   {
     "id": 17,
-    "topic": "exceptions",
-    "difficulty": "Easy",
-    "question": "[Generated] What keyword is used to raise a set?",
+    "topic": "Exceptions",
+    "difficulty": "Medium",
+    "question": "What is the usual base class for application-defined exceptions?",
     "options": [
-      "Incorrect option B",
-      "Incorrect option C",
-      "Incorrect option A",
-      "Correct generated option for exceptions"
+      "Exception",
+      "BaseExceptionGroup only",
+      "KeyboardInterrupt",
+      "SystemExit"
     ],
-    "correctAnswer": 3,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/exceptions.",
+    "correctAnswer": 0,
+    "explanation": "Custom application exceptions generally inherit from `Exception`.",
     "tags": [
-      "core-concept",
-      "procedural"
+      "Python",
+      "Exceptions"
     ]
   },
   {
     "id": 18,
-    "topic": "exceptions",
-    "difficulty": "Hard",
-    "question": "[Generated] How do you handle a dictionary?",
+    "topic": "Exceptions",
+    "difficulty": "Medium",
+    "question": "Which built-in exception is raised by `next(iterator)` when it is exhausted?",
     "options": [
-      "Correct generated option for exceptions",
-      "Incorrect option A",
-      "Incorrect option C",
-      "Incorrect option B"
+      "StopIteration",
+      "EndOfFile",
+      "IndexError",
+      "RuntimeWarning"
     ],
     "correctAnswer": 0,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/exceptions.",
+    "explanation": "An exhausted iterator signals completion by raising `StopIteration`.",
     "tags": [
-      "advanced",
-      "procedural"
+      "Python",
+      "Exceptions"
     ]
   },
   {
     "id": 19,
-    "topic": "exceptions",
+    "topic": "Exceptions",
     "difficulty": "Medium",
-    "question": "[Generated] What keyword is used to raise a __init__?",
+    "question": "What happens if no except clause matches a raised exception?",
     "options": [
-      "Incorrect option B",
-      "Incorrect option A",
-      "Correct generated option for exceptions",
-      "Incorrect option C"
+      "The exception propagates outward",
+      "The exception is ignored",
+      "The else block runs",
+      "Python retries the try block"
     ],
-    "correctAnswer": 2,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/exceptions.",
+    "correctAnswer": 0,
+    "explanation": "An unmatched exception continues propagating to the caller.",
     "tags": [
-      "fundamentals",
-      "procedural"
+      "Python",
+      "Exceptions"
     ]
   },
   {
     "id": 20,
-    "topic": "exceptions",
-    "difficulty": "Hard",
-    "question": "[Generated] How do you handle a __init__?",
+    "topic": "Exceptions",
+    "difficulty": "Medium",
+    "question": "What does `assert condition, message` do when condition is false and assertions are enabled?",
     "options": [
-      "Incorrect option A",
-      "Incorrect option B",
-      "Incorrect option C",
-      "Correct generated option for exceptions"
+      "Raises AssertionError with the message",
+      "Prints the message and continues",
+      "Raises ValueError",
+      "Returns False from the function"
     ],
-    "correctAnswer": 3,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/exceptions.",
+    "correctAnswer": 0,
+    "explanation": "A failed assertion raises `AssertionError`; optimized execution can remove assertions.",
     "tags": [
-      "interview-frequent",
-      "procedural"
+      "Python",
+      "Exceptions"
     ]
   },
   {
     "id": 21,
-    "topic": "exceptions",
+    "topic": "Exceptions",
     "difficulty": "Medium",
-    "question": "[Generated] How do you handle a dictionary?",
+    "question": "Why should assertions not be used for essential runtime validation?",
     "options": [
-      "Correct generated option for exceptions",
-      "Incorrect option B",
-      "Incorrect option C",
-      "Incorrect option A"
+      "They can be removed when Python runs with optimization",
+      "They always log sensitive values",
+      "They only work inside loops",
+      "They cannot evaluate Boolean expressions"
     ],
     "correctAnswer": 0,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/exceptions.",
+    "explanation": "Python can omit assert statements when optimization is enabled.",
     "tags": [
-      "fundamentals",
-      "procedural"
+      "Python",
+      "Exceptions"
     ]
   },
   {
     "id": 22,
-    "topic": "exceptions",
-    "difficulty": "Easy",
-    "question": "[Generated] What keyword is used to raise a __init__?",
+    "topic": "Exceptions",
+    "difficulty": "Medium",
+    "question": "Which exception indicates an operation received an argument of an inappropriate type?",
     "options": [
-      "Incorrect option A",
-      "Incorrect option B",
-      "Incorrect option C",
-      "Correct generated option for exceptions"
+      "TypeError",
+      "ValueError",
+      "KeyError",
+      "ImportWarning"
     ],
-    "correctAnswer": 3,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/exceptions.",
+    "correctAnswer": 0,
+    "explanation": "`TypeError` indicates an operation or function received an inappropriate type.",
     "tags": [
-      "advanced",
-      "procedural"
+      "Python",
+      "Exceptions"
     ]
   },
   {
     "id": 23,
-    "topic": "exceptions",
-    "difficulty": "Easy",
-    "question": "[Generated] What keyword is used to raise a tuple?",
+    "topic": "Exceptions",
+    "difficulty": "Medium",
+    "question": "What is the relationship between FileNotFoundError and OSError?",
     "options": [
-      "Incorrect option C",
-      "Correct generated option for exceptions",
-      "Incorrect option B",
-      "Incorrect option A"
+      "FileNotFoundError is a subclass of OSError",
+      "OSError is a subclass of FileNotFoundError",
+      "They are unrelated warning classes",
+      "Both are subclasses of KeyError"
     ],
-    "correctAnswer": 1,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/exceptions.",
+    "correctAnswer": 0,
+    "explanation": "`FileNotFoundError` is an `OSError` subclass for a missing file or directory.",
     "tags": [
-      "core-concept",
-      "procedural"
+      "Python",
+      "Exceptions"
     ]
   },
   {
     "id": 24,
-    "topic": "exceptions",
-    "difficulty": "Easy",
-    "question": "[Generated] What keyword is used to raise a tuple?",
+    "topic": "Exceptions",
+    "difficulty": "Medium",
+    "question": "Which exception occurs when a module import cannot be found?",
     "options": [
-      "Incorrect option A",
-      "Correct generated option for exceptions",
-      "Incorrect option B",
-      "Incorrect option C"
+      "ModuleNotFoundError",
+      "AttributeError",
+      "IndexError",
+      "SyntaxWarning"
     ],
-    "correctAnswer": 1,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/exceptions.",
+    "correctAnswer": 0,
+    "explanation": "`ModuleNotFoundError` is an `ImportError` subclass used for a missing module.",
     "tags": [
-      "advanced",
-      "procedural"
+      "Python",
+      "Exceptions"
     ]
   },
   {
     "id": 25,
-    "topic": "exceptions",
+    "topic": "Exceptions",
     "difficulty": "Medium",
-    "question": "[Generated] What is the base class for __init__ in Python?",
+    "question": "Which exception can occur when decoding invalid bytes using a strict text decoder?",
     "options": [
-      "Incorrect option A",
-      "Incorrect option B",
-      "Correct generated option for exceptions",
-      "Incorrect option C"
+      "UnicodeDecodeError",
+      "UnicodeEncodeError",
+      "KeyError",
+      "StopAsyncIteration"
     ],
-    "correctAnswer": 2,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/exceptions.",
+    "correctAnswer": 0,
+    "explanation": "`UnicodeDecodeError` reports a failure while decoding bytes into text.",
     "tags": [
-      "fundamentals",
-      "procedural"
+      "Python",
+      "Exceptions"
     ]
   },
   {
     "id": 26,
-    "topic": "exceptions",
-    "difficulty": "Hard",
-    "question": "[Generated] How do you handle a dictionary?",
+    "topic": "Exceptions",
+    "difficulty": "Medium",
+    "question": "What does an exception traceback primarily show?",
     "options": [
-      "Incorrect option A",
-      "Incorrect option B",
-      "Correct generated option for exceptions",
-      "Incorrect option C"
+      "The call stack leading to the exception",
+      "All objects currently in memory",
+      "Only the source file name",
+      "A list of installed packages"
     ],
-    "correctAnswer": 2,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/exceptions.",
+    "correctAnswer": 0,
+    "explanation": "A traceback records frames through which the exception propagated.",
     "tags": [
-      "core-concept",
-      "procedural"
+      "Python",
+      "Exceptions"
     ]
   },
   {
     "id": 27,
-    "topic": "exceptions",
-    "difficulty": "Easy",
-    "question": "[Generated] What keyword is used to raise a __init__?",
+    "topic": "Exceptions",
+    "difficulty": "Medium",
+    "question": "What can a context manager’s `__exit__` return to suppress an exception?",
     "options": [
-      "Incorrect option C",
-      "Correct generated option for exceptions",
-      "Incorrect option A",
-      "Incorrect option B"
+      "A truthy value",
+      "Always None",
+      "The exception class",
+      "A new traceback object"
     ],
-    "correctAnswer": 1,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/exceptions.",
+    "correctAnswer": 0,
+    "explanation": "A truthy result tells the with statement that the exception was handled.",
     "tags": [
-      "tricky",
-      "procedural"
+      "Python",
+      "Exceptions"
     ]
   },
   {
     "id": 28,
-    "topic": "exceptions",
+    "topic": "Exceptions",
     "difficulty": "Medium",
-    "question": "[Generated] What keyword is used to raise a set?",
+    "question": "Which exception represents failure to open a file due to insufficient permissions?",
     "options": [
-      "Incorrect option C",
-      "Correct generated option for exceptions",
-      "Incorrect option B",
-      "Incorrect option A"
+      "PermissionError",
+      "FileExistsError",
+      "IndentationError",
+      "LookupError"
     ],
-    "correctAnswer": 1,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/exceptions.",
+    "correctAnswer": 0,
+    "explanation": "`PermissionError` is an `OSError` subclass for insufficient access rights.",
     "tags": [
-      "interview-frequent",
-      "procedural"
+      "Python",
+      "Exceptions"
     ]
   },
   {
     "id": 29,
-    "topic": "exceptions",
+    "topic": "Exceptions",
     "difficulty": "Medium",
-    "question": "[Generated] What keyword is used to raise a dictionary?",
+    "question": "What is the effect of placing a more general matching except clause before a specific one?",
     "options": [
-      "Correct generated option for exceptions",
-      "Incorrect option B",
-      "Incorrect option A",
-      "Incorrect option C"
+      "The general handler can catch the exception first",
+      "Python always chooses the most specific handler",
+      "The exception is handled twice",
+      "It disables all exception handling"
     ],
     "correctAnswer": 0,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/exceptions.",
+    "explanation": "Except clauses are checked in order, so the first matching handler is used.",
     "tags": [
-      "advanced",
-      "procedural"
+      "Python",
+      "Exceptions"
     ]
   },
   {
     "id": 30,
-    "topic": "exceptions",
+    "topic": "Exceptions",
     "difficulty": "Medium",
-    "question": "[Generated] What keyword is used to raise a ValueError?",
+    "question": "Which exception is raised when a generator explicitly returns a value?",
     "options": [
-      "Incorrect option A",
-      "Correct generated option for exceptions",
-      "Incorrect option C",
-      "Incorrect option B"
-    ],
-    "correctAnswer": 1,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/exceptions.",
-    "tags": [
-      "core-concept",
-      "procedural"
-    ]
-  },
-  {
-    "id": 31,
-    "topic": "exceptions",
-    "difficulty": "Hard",
-    "question": "[Generated] What is the base class for set in Python?",
-    "options": [
-      "Correct generated option for exceptions",
-      "Incorrect option B",
-      "Incorrect option A",
-      "Incorrect option C"
+      "StopIteration carries the return value",
+      "GeneratorExit always carries the return value",
+      "ValueError is raised",
+      "No completion signal is produced"
     ],
     "correctAnswer": 0,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/exceptions.",
+    "explanation": "A generator return ends iteration; its value is attached to `StopIteration`.",
     "tags": [
-      "core-concept",
-      "procedural"
-    ]
-  },
-  {
-    "id": 32,
-    "topic": "exceptions",
-    "difficulty": "Medium",
-    "question": "[Generated] What keyword is used to raise a set?",
-    "options": [
-      "Incorrect option A",
-      "Correct generated option for exceptions",
-      "Incorrect option B",
-      "Incorrect option C"
-    ],
-    "correctAnswer": 1,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/exceptions.",
-    "tags": [
-      "core-concept",
-      "procedural"
-    ]
-  },
-  {
-    "id": 33,
-    "topic": "exceptions",
-    "difficulty": "Easy",
-    "question": "[Generated] How do you handle a __init__?",
-    "options": [
-      "Incorrect option C",
-      "Correct generated option for exceptions",
-      "Incorrect option B",
-      "Incorrect option A"
-    ],
-    "correctAnswer": 1,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/exceptions.",
-    "tags": [
-      "advanced",
-      "procedural"
-    ]
-  },
-  {
-    "id": 34,
-    "topic": "exceptions",
-    "difficulty": "Easy",
-    "question": "[Generated] What keyword is used to raise a __init__?",
-    "options": [
-      "Incorrect option A",
-      "Correct generated option for exceptions",
-      "Incorrect option B",
-      "Incorrect option C"
-    ],
-    "correctAnswer": 1,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/exceptions.",
-    "tags": [
-      "fundamentals",
-      "procedural"
-    ]
-  },
-  {
-    "id": 35,
-    "topic": "exceptions",
-    "difficulty": "Hard",
-    "question": "[Generated] What keyword is used to raise a tuple?",
-    "options": [
-      "Incorrect option B",
-      "Correct generated option for exceptions",
-      "Incorrect option A",
-      "Incorrect option C"
-    ],
-    "correctAnswer": 1,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/exceptions.",
-    "tags": [
-      "interview-frequent",
-      "procedural"
-    ]
-  },
-  {
-    "id": 36,
-    "topic": "exceptions",
-    "difficulty": "Medium",
-    "question": "[Generated] What is the base class for __init__ in Python?",
-    "options": [
-      "Incorrect option B",
-      "Incorrect option A",
-      "Correct generated option for exceptions",
-      "Incorrect option C"
-    ],
-    "correctAnswer": 2,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/exceptions.",
-    "tags": [
-      "core-concept",
-      "procedural"
-    ]
-  },
-  {
-    "id": 37,
-    "topic": "exceptions",
-    "difficulty": "Hard",
-    "question": "[Generated] How do you handle a set?",
-    "options": [
-      "Correct generated option for exceptions",
-      "Incorrect option B",
-      "Incorrect option C",
-      "Incorrect option A"
-    ],
-    "correctAnswer": 0,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/exceptions.",
-    "tags": [
-      "interview-frequent",
-      "procedural"
-    ]
-  },
-  {
-    "id": 38,
-    "topic": "exceptions",
-    "difficulty": "Hard",
-    "question": "[Generated] What is the base class for ValueError in Python?",
-    "options": [
-      "Incorrect option A",
-      "Incorrect option B",
-      "Correct generated option for exceptions",
-      "Incorrect option C"
-    ],
-    "correctAnswer": 2,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/exceptions.",
-    "tags": [
-      "fundamentals",
-      "procedural"
-    ]
-  },
-  {
-    "id": 39,
-    "topic": "exceptions",
-    "difficulty": "Medium",
-    "question": "[Generated] What keyword is used to raise a ValueError?",
-    "options": [
-      "Correct generated option for exceptions",
-      "Incorrect option C",
-      "Incorrect option A",
-      "Incorrect option B"
-    ],
-    "correctAnswer": 0,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/exceptions.",
-    "tags": [
-      "fundamentals",
-      "procedural"
-    ]
-  },
-  {
-    "id": 40,
-    "topic": "exceptions",
-    "difficulty": "Medium",
-    "question": "[Generated] What is the base class for set in Python?",
-    "options": [
-      "Incorrect option A",
-      "Correct generated option for exceptions",
-      "Incorrect option B",
-      "Incorrect option C"
-    ],
-    "correctAnswer": 1,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/exceptions.",
-    "tags": [
-      "interview-frequent",
-      "procedural"
-    ]
-  },
-  {
-    "id": 41,
-    "topic": "exceptions",
-    "difficulty": "Medium",
-    "question": "[Generated] What keyword is used to raise a dictionary?",
-    "options": [
-      "Incorrect option C",
-      "Incorrect option A",
-      "Correct generated option for exceptions",
-      "Incorrect option B"
-    ],
-    "correctAnswer": 2,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/exceptions.",
-    "tags": [
-      "fundamentals",
-      "procedural"
-    ]
-  },
-  {
-    "id": 42,
-    "topic": "exceptions",
-    "difficulty": "Easy",
-    "question": "[Generated] What is the base class for tuple in Python?",
-    "options": [
-      "Correct generated option for exceptions",
-      "Incorrect option B",
-      "Incorrect option C",
-      "Incorrect option A"
-    ],
-    "correctAnswer": 0,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/exceptions.",
-    "tags": [
-      "interview-frequent",
-      "procedural"
-    ]
-  },
-  {
-    "id": 43,
-    "topic": "exceptions",
-    "difficulty": "Easy",
-    "question": "[Generated] What keyword is used to raise a tuple?",
-    "options": [
-      "Incorrect option B",
-      "Correct generated option for exceptions",
-      "Incorrect option C",
-      "Incorrect option A"
-    ],
-    "correctAnswer": 1,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/exceptions.",
-    "tags": [
-      "interview-frequent",
-      "procedural"
-    ]
-  },
-  {
-    "id": 44,
-    "topic": "exceptions",
-    "difficulty": "Easy",
-    "question": "[Generated] What is the base class for set in Python?",
-    "options": [
-      "Correct generated option for exceptions",
-      "Incorrect option C",
-      "Incorrect option B",
-      "Incorrect option A"
-    ],
-    "correctAnswer": 0,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/exceptions.",
-    "tags": [
-      "fundamentals",
-      "procedural"
-    ]
-  },
-  {
-    "id": 45,
-    "topic": "exceptions",
-    "difficulty": "Hard",
-    "question": "[Generated] How do you handle a __init__?",
-    "options": [
-      "Incorrect option C",
-      "Incorrect option A",
-      "Incorrect option B",
-      "Correct generated option for exceptions"
-    ],
-    "correctAnswer": 3,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/exceptions.",
-    "tags": [
-      "interview-frequent",
-      "procedural"
-    ]
-  },
-  {
-    "id": 46,
-    "topic": "exceptions",
-    "difficulty": "Medium",
-    "question": "[Generated] What keyword is used to raise a set?",
-    "options": [
-      "Correct generated option for exceptions",
-      "Incorrect option B",
-      "Incorrect option A",
-      "Incorrect option C"
-    ],
-    "correctAnswer": 0,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/exceptions.",
-    "tags": [
-      "advanced",
-      "procedural"
-    ]
-  },
-  {
-    "id": 47,
-    "topic": "exceptions",
-    "difficulty": "Easy",
-    "question": "[Generated] What keyword is used to raise a tuple?",
-    "options": [
-      "Incorrect option C",
-      "Incorrect option B",
-      "Correct generated option for exceptions",
-      "Incorrect option A"
-    ],
-    "correctAnswer": 2,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/exceptions.",
-    "tags": [
-      "interview-frequent",
-      "procedural"
-    ]
-  },
-  {
-    "id": 48,
-    "topic": "exceptions",
-    "difficulty": "Medium",
-    "question": "[Generated] What keyword is used to raise a __init__?",
-    "options": [
-      "Incorrect option C",
-      "Incorrect option B",
-      "Correct generated option for exceptions",
-      "Incorrect option A"
-    ],
-    "correctAnswer": 2,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/exceptions.",
-    "tags": [
-      "advanced",
-      "procedural"
-    ]
-  },
-  {
-    "id": 49,
-    "topic": "exceptions",
-    "difficulty": "Hard",
-    "question": "[Generated] How do you handle a ValueError?",
-    "options": [
-      "Incorrect option A",
-      "Incorrect option B",
-      "Incorrect option C",
-      "Correct generated option for exceptions"
-    ],
-    "correctAnswer": 3,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/exceptions.",
-    "tags": [
-      "advanced",
-      "procedural"
-    ]
-  },
-  {
-    "id": 50,
-    "topic": "exceptions",
-    "difficulty": "Hard",
-    "question": "[Generated] How do you handle a set?",
-    "options": [
-      "Incorrect option C",
-      "Incorrect option B",
-      "Incorrect option A",
-      "Correct generated option for exceptions"
-    ],
-    "correctAnswer": 3,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/exceptions.",
-    "tags": [
-      "advanced",
-      "procedural"
-    ]
-  },
-  {
-    "id": 51,
-    "topic": "exceptions",
-    "difficulty": "Hard",
-    "question": "[Generated] What is the base class for dictionary in Python?",
-    "options": [
-      "Incorrect option A",
-      "Incorrect option C",
-      "Correct generated option for exceptions",
-      "Incorrect option B"
-    ],
-    "correctAnswer": 2,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/exceptions.",
-    "tags": [
-      "fundamentals",
-      "procedural"
-    ]
-  },
-  {
-    "id": 52,
-    "topic": "exceptions",
-    "difficulty": "Hard",
-    "question": "[Generated] What keyword is used to raise a ValueError?",
-    "options": [
-      "Correct generated option for exceptions",
-      "Incorrect option B",
-      "Incorrect option A",
-      "Incorrect option C"
-    ],
-    "correctAnswer": 0,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/exceptions.",
-    "tags": [
-      "tricky",
-      "procedural"
-    ]
-  },
-  {
-    "id": 53,
-    "topic": "exceptions",
-    "difficulty": "Medium",
-    "question": "[Generated] What is the base class for dictionary in Python?",
-    "options": [
-      "Incorrect option B",
-      "Incorrect option A",
-      "Incorrect option C",
-      "Correct generated option for exceptions"
-    ],
-    "correctAnswer": 3,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/exceptions.",
-    "tags": [
-      "interview-frequent",
-      "procedural"
-    ]
-  },
-  {
-    "id": 54,
-    "topic": "exceptions",
-    "difficulty": "Easy",
-    "question": "[Generated] What keyword is used to raise a tuple?",
-    "options": [
-      "Incorrect option B",
-      "Correct generated option for exceptions",
-      "Incorrect option C",
-      "Incorrect option A"
-    ],
-    "correctAnswer": 1,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/exceptions.",
-    "tags": [
-      "core-concept",
-      "procedural"
-    ]
-  },
-  {
-    "id": 55,
-    "topic": "exceptions",
-    "difficulty": "Hard",
-    "question": "[Generated] What keyword is used to raise a __init__?",
-    "options": [
-      "Incorrect option C",
-      "Incorrect option B",
-      "Correct generated option for exceptions",
-      "Incorrect option A"
-    ],
-    "correctAnswer": 2,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/exceptions.",
-    "tags": [
-      "fundamentals",
-      "procedural"
-    ]
-  },
-  {
-    "id": 56,
-    "topic": "exceptions",
-    "difficulty": "Medium",
-    "question": "[Generated] How do you handle a ValueError?",
-    "options": [
-      "Incorrect option A",
-      "Correct generated option for exceptions",
-      "Incorrect option B",
-      "Incorrect option C"
-    ],
-    "correctAnswer": 1,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/exceptions.",
-    "tags": [
-      "core-concept",
-      "procedural"
-    ]
-  },
-  {
-    "id": 57,
-    "topic": "exceptions",
-    "difficulty": "Medium",
-    "question": "[Generated] How do you handle a dictionary?",
-    "options": [
-      "Correct generated option for exceptions",
-      "Incorrect option B",
-      "Incorrect option C",
-      "Incorrect option A"
-    ],
-    "correctAnswer": 0,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/exceptions.",
-    "tags": [
-      "fundamentals",
-      "procedural"
-    ]
-  },
-  {
-    "id": 58,
-    "topic": "exceptions",
-    "difficulty": "Easy",
-    "question": "[Generated] What is the base class for __init__ in Python?",
-    "options": [
-      "Incorrect option B",
-      "Correct generated option for exceptions",
-      "Incorrect option C",
-      "Incorrect option A"
-    ],
-    "correctAnswer": 1,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/exceptions.",
-    "tags": [
-      "interview-frequent",
-      "procedural"
-    ]
-  },
-  {
-    "id": 59,
-    "topic": "exceptions",
-    "difficulty": "Hard",
-    "question": "[Generated] What is the base class for __init__ in Python?",
-    "options": [
-      "Incorrect option A",
-      "Incorrect option B",
-      "Incorrect option C",
-      "Correct generated option for exceptions"
-    ],
-    "correctAnswer": 3,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/exceptions.",
-    "tags": [
-      "tricky",
-      "procedural"
-    ]
-  },
-  {
-    "id": 60,
-    "topic": "exceptions",
-    "difficulty": "Hard",
-    "question": "[Generated] What is the base class for set in Python?",
-    "options": [
-      "Incorrect option B",
-      "Incorrect option C",
-      "Correct generated option for exceptions",
-      "Incorrect option A"
-    ],
-    "correctAnswer": 2,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/exceptions.",
-    "tags": [
-      "interview-frequent",
-      "procedural"
+      "Python",
+      "Exceptions"
     ]
   }
 ]

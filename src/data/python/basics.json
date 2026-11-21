@@ -192,902 +192,806 @@
   },
   {
     "id": 11,
-    "topic": "basics",
+    "topic": "Basics",
     "difficulty": "Easy",
-    "question": "[Generated] What is the output of `len()` in Python?",
+    "question": "What is the result of `2 ** 3 ** 2` in Python?",
     "options": [
-      "Correct generated option for basics",
-      "Incorrect option B",
-      "Incorrect option C",
-      "Incorrect option A"
+      "64",
+      "512",
+      "36",
+      "A syntax error"
     ],
-    "correctAnswer": 0,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/basics.",
+    "correctAnswer": 1,
+    "explanation": "Exponentiation associates from right to left, so the expression is `2 ** (3 ** 2)`.",
     "tags": [
-      "advanced",
-      "procedural"
+      "Python",
+      "Basics",
+      "Operators"
     ]
   },
   {
     "id": 12,
-    "topic": "basics",
-    "difficulty": "Hard",
-    "question": "[Generated] What is the output of `list comprehension` in Python?",
+    "topic": "Basics",
+    "difficulty": "Easy",
+    "question": "What does `bool([])` return?",
     "options": [
-      "Incorrect option A",
-      "Incorrect option C",
-      "Incorrect option B",
-      "Correct generated option for basics"
+      "True",
+      "False",
+      "None",
+      "It raises TypeError"
     ],
-    "correctAnswer": 3,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/basics.",
+    "correctAnswer": 1,
+    "explanation": "An empty list is false in a Boolean context.",
     "tags": [
-      "tricky",
-      "procedural"
+      "Python",
+      "Basics",
+      "Truth values"
     ]
   },
   {
     "id": 13,
-    "topic": "basics",
-    "difficulty": "Medium",
-    "question": "[Generated] What does the `list comprehension` function do?",
+    "topic": "Basics",
+    "difficulty": "Easy",
+    "question": "Which literal creates an empty set?",
     "options": [
-      "Incorrect option B",
-      "Incorrect option A",
-      "Incorrect option C",
-      "Correct generated option for basics"
+      "{}",
+      "[]",
+      "set()",
+      "()"
     ],
-    "correctAnswer": 3,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/basics.",
+    "correctAnswer": 2,
+    "explanation": "`set()` creates an empty set; `{}` creates an empty dictionary.",
     "tags": [
-      "core-concept",
-      "procedural"
+      "Python",
+      "Basics",
+      "Literals"
     ]
   },
   {
     "id": 14,
-    "topic": "basics",
-    "difficulty": "Hard",
-    "question": "[Generated] What is the output of `inheritance` in Python?",
+    "topic": "Basics",
+    "difficulty": "Easy",
+    "question": "What is the result of `\"python\"[1:4]`?",
     "options": [
-      "Correct generated option for basics",
-      "Incorrect option C",
-      "Incorrect option B",
-      "Incorrect option A"
+      "pyt",
+      "yth",
+      "ytho",
+      "tho"
     ],
-    "correctAnswer": 0,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/basics.",
+    "correctAnswer": 1,
+    "explanation": "A slice includes its start index and excludes its stop index.",
     "tags": [
-      "fundamentals",
-      "procedural"
+      "Python",
+      "Basics",
+      "Slicing"
     ]
   },
   {
     "id": 15,
-    "topic": "basics",
-    "difficulty": "Medium",
-    "question": "[Generated] What is the output of `type()` in Python?",
+    "topic": "Basics",
+    "difficulty": "Easy",
+    "question": "What does `range(2, 8, 2)` produce when converted to a list?",
     "options": [
-      "Incorrect option A",
-      "Incorrect option B",
-      "Correct generated option for basics",
-      "Incorrect option C"
+      "[2, 4, 6]",
+      "[2, 4, 6, 8]",
+      "[2, 3, 4, 5, 6, 7]",
+      "[0, 2, 4, 6]"
     ],
-    "correctAnswer": 2,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/basics.",
+    "correctAnswer": 0,
+    "explanation": "The stop value is excluded and the step is two.",
     "tags": [
-      "fundamentals",
-      "procedural"
+      "Python",
+      "Basics",
+      "Iteration"
     ]
   },
   {
     "id": 16,
-    "topic": "basics",
-    "difficulty": "Medium",
-    "question": "[Generated] How do you declare a __init__ in Python?",
+    "topic": "Basics",
+    "difficulty": "Easy",
+    "question": "What value does a function return when execution reaches its end without a return statement?",
     "options": [
-      "Incorrect option B",
-      "Incorrect option C",
-      "Incorrect option A",
-      "Correct generated option for basics"
+      "0",
+      "False",
+      "None",
+      "An empty string"
     ],
-    "correctAnswer": 3,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/basics.",
+    "correctAnswer": 2,
+    "explanation": "A Python function implicitly returns `None` when no return value is provided.",
     "tags": [
-      "core-concept",
-      "procedural"
+      "Python",
+      "Basics",
+      "Functions"
     ]
   },
   {
     "id": 17,
-    "topic": "basics",
-    "difficulty": "Hard",
-    "question": "[Generated] How do you declare a __init__ in Python?",
+    "topic": "Basics",
+    "difficulty": "Easy",
+    "question": "What does `enumerate(items)` provide during iteration?",
     "options": [
-      "Incorrect option C",
-      "Incorrect option B",
-      "Incorrect option A",
-      "Correct generated option for basics"
+      "Only the values in sorted order",
+      "Index-value pairs",
+      "Only the indices in reverse order",
+      "A copy of the list"
     ],
-    "correctAnswer": 3,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/basics.",
+    "correctAnswer": 1,
+    "explanation": "`enumerate` yields pairs containing a counter and each item.",
     "tags": [
-      "interview-frequent",
-      "procedural"
+      "Python",
+      "Basics",
+      "Iteration"
     ]
   },
   {
     "id": 18,
-    "topic": "basics",
-    "difficulty": "Medium",
-    "question": "[Generated] What is the output of `list comprehension` in Python?",
+    "topic": "Basics",
+    "difficulty": "Easy",
+    "question": "Which expression checks whether `x` is not None using the recommended identity comparison?",
     "options": [
-      "Incorrect option C",
-      "Correct generated option for basics",
-      "Incorrect option B",
-      "Incorrect option A"
+      "x != None",
+      "x is not None",
+      "not x == False",
+      "x !== None"
     ],
     "correctAnswer": 1,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/basics.",
+    "explanation": "`None` is a singleton, and `is not None` explicitly checks identity.",
     "tags": [
-      "advanced",
-      "procedural"
+      "Python",
+      "Basics",
+      "Identity"
     ]
   },
   {
     "id": 19,
-    "topic": "basics",
-    "difficulty": "Hard",
-    "question": "[Generated] How do you declare a __init__ in Python?",
+    "topic": "Basics",
+    "difficulty": "Easy",
+    "question": "What does `\"-\".join([\"a\", \"b\", \"c\"])` return?",
     "options": [
-      "Incorrect option C",
-      "Correct generated option for basics",
-      "Incorrect option B",
-      "Incorrect option A"
+      "abc-",
+      "a-b-c",
+      "-a-b-c-",
+      "[a-b-c]"
     ],
     "correctAnswer": 1,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/basics.",
+    "explanation": "`join` places the separator between the supplied strings.",
     "tags": [
-      "advanced",
-      "procedural"
+      "Python",
+      "Basics",
+      "Strings"
     ]
   },
   {
     "id": 20,
-    "topic": "basics",
-    "difficulty": "Hard",
-    "question": "[Generated] What does the `type()` function do?",
+    "topic": "Basics",
+    "difficulty": "Easy",
+    "question": "What is the result of `list(reversed([1, 2, 3]))`?",
     "options": [
-      "Correct generated option for basics",
-      "Incorrect option C",
-      "Incorrect option A",
-      "Incorrect option B"
+      "[3, 2, 1]",
+      "[1, 2, 3]",
+      "None",
+      "A TypeError"
     ],
     "correctAnswer": 0,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/basics.",
+    "explanation": "`reversed` returns a reverse iterator; `list` collects its values.",
     "tags": [
-      "core-concept",
-      "procedural"
+      "Python",
+      "Basics",
+      "Iteration"
     ]
   },
   {
     "id": 21,
-    "topic": "basics",
-    "difficulty": "Hard",
-    "question": "[Generated] What is the output of `inheritance` in Python?",
+    "topic": "Basics",
+    "difficulty": "Easy",
+    "question": "Which built-in function returns the largest item in a nonempty iterable?",
     "options": [
-      "Incorrect option A",
-      "Correct generated option for basics",
-      "Incorrect option B",
-      "Incorrect option C"
+      "largest()",
+      "maximum()",
+      "max()",
+      "top()"
     ],
-    "correctAnswer": 1,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/basics.",
+    "correctAnswer": 2,
+    "explanation": "`max` returns the largest item according to the relevant ordering.",
     "tags": [
-      "interview-frequent",
-      "procedural"
+      "Python",
+      "Basics",
+      "Builtins"
     ]
   },
   {
     "id": 22,
-    "topic": "basics",
-    "difficulty": "Hard",
-    "question": "[Generated] What does the `inheritance` function do?",
+    "topic": "Basics",
+    "difficulty": "Easy",
+    "question": "What is the value of `\"hello\".upper()`?",
     "options": [
-      "Incorrect option A",
-      "Incorrect option B",
-      "Incorrect option C",
-      "Correct generated option for basics"
+      "Hello",
+      "HELLO",
+      "hello",
+      "None"
     ],
-    "correctAnswer": 3,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/basics.",
+    "correctAnswer": 1,
+    "explanation": "`upper` returns an uppercase copy of the string.",
     "tags": [
-      "interview-frequent",
-      "procedural"
+      "Python",
+      "Basics",
+      "Strings"
     ]
   },
   {
     "id": 23,
-    "topic": "basics",
-    "difficulty": "Hard",
-    "question": "[Generated] How do you declare a ValueError in Python?",
+    "topic": "Basics",
+    "difficulty": "Easy",
+    "question": "What does `break` do inside a loop?",
     "options": [
-      "Incorrect option B",
-      "Incorrect option C",
-      "Correct generated option for basics",
-      "Incorrect option A"
+      "Skips only the current iteration",
+      "Exits the nearest enclosing loop",
+      "Exits the entire program",
+      "Restarts the loop"
     ],
-    "correctAnswer": 2,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/basics.",
+    "correctAnswer": 1,
+    "explanation": "`break` terminates the nearest enclosing loop.",
     "tags": [
-      "core-concept",
-      "procedural"
+      "Python",
+      "Basics",
+      "Control flow"
     ]
   },
   {
     "id": 24,
-    "topic": "basics",
-    "difficulty": "Hard",
-    "question": "[Generated] How do you declare a tuple in Python?",
+    "topic": "Basics",
+    "difficulty": "Easy",
+    "question": "What does `continue` do inside a loop?",
     "options": [
-      "Correct generated option for basics",
-      "Incorrect option C",
-      "Incorrect option B",
-      "Incorrect option A"
+      "Ends the nearest loop",
+      "Skips the rest of the current iteration",
+      "Exits the current function",
+      "Repeats the current statement"
     ],
-    "correctAnswer": 0,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/basics.",
+    "correctAnswer": 1,
+    "explanation": "`continue` starts the next iteration of the nearest loop.",
     "tags": [
-      "core-concept",
-      "procedural"
+      "Python",
+      "Basics",
+      "Control flow"
     ]
   },
   {
     "id": 25,
-    "topic": "basics",
-    "difficulty": "Medium",
-    "question": "[Generated] How do you declare a set in Python?",
+    "topic": "Basics",
+    "difficulty": "Easy",
+    "question": "How is a single-line comment introduced in Python?",
     "options": [
-      "Correct generated option for basics",
-      "Incorrect option A",
-      "Incorrect option C",
-      "Incorrect option B"
+      "//",
+      "--",
+      "#",
+      "/*"
     ],
-    "correctAnswer": 0,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/basics.",
+    "correctAnswer": 2,
+    "explanation": "A hash character begins a comment outside a string literal.",
     "tags": [
-      "fundamentals",
-      "procedural"
+      "Python",
+      "Basics",
+      "Syntax"
     ]
   },
   {
     "id": 26,
-    "topic": "basics",
-    "difficulty": "Hard",
-    "question": "[Generated] What is the output of `list comprehension` in Python?",
+    "topic": "Basics",
+    "difficulty": "Easy",
+    "question": "What is the result of `int(\"101\", 2)`?",
     "options": [
-      "Incorrect option A",
-      "Incorrect option B",
-      "Incorrect option C",
-      "Correct generated option for basics"
+      "101",
+      "5",
+      "2",
+      "A ValueError"
     ],
-    "correctAnswer": 3,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/basics.",
+    "correctAnswer": 1,
+    "explanation": "The second argument supplies base 2, so binary 101 equals decimal 5.",
     "tags": [
-      "fundamentals",
-      "procedural"
+      "Python",
+      "Basics",
+      "Conversions"
     ]
   },
   {
     "id": 27,
-    "topic": "basics",
+    "topic": "Basics",
     "difficulty": "Easy",
-    "question": "[Generated] How do you declare a tuple in Python?",
+    "question": "Which built-in returns both quotient and remainder for two integers?",
     "options": [
-      "Correct generated option for basics",
-      "Incorrect option B",
-      "Incorrect option C",
-      "Incorrect option A"
+      "quotrem()",
+      "divmod()",
+      "remainder()",
+      "divide()"
     ],
-    "correctAnswer": 0,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/basics.",
+    "correctAnswer": 1,
+    "explanation": "`divmod(a, b)` returns the quotient and remainder as a pair.",
     "tags": [
-      "interview-frequent",
-      "procedural"
+      "Python",
+      "Basics",
+      "Builtins"
     ]
   },
   {
     "id": 28,
-    "topic": "basics",
-    "difficulty": "Hard",
-    "question": "[Generated] What is the output of `inheritance` in Python?",
+    "topic": "Basics",
+    "difficulty": "Easy",
+    "question": "What is the result of `abs(-7)`?",
     "options": [
-      "Incorrect option B",
-      "Correct generated option for basics",
-      "Incorrect option C",
-      "Incorrect option A"
+      "-7",
+      "7",
+      "0",
+      "True"
     ],
     "correctAnswer": 1,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/basics.",
+    "explanation": "`abs` returns the absolute value of a number.",
     "tags": [
-      "tricky",
-      "procedural"
+      "Python",
+      "Basics",
+      "Builtins"
     ]
   },
   {
     "id": 29,
-    "topic": "basics",
-    "difficulty": "Hard",
-    "question": "[Generated] How do you declare a ValueError in Python?",
+    "topic": "Basics",
+    "difficulty": "Easy",
+    "question": "What does an f-string expression such as `f\"Hi {name}\"` do?",
     "options": [
-      "Incorrect option B",
-      "Incorrect option A",
-      "Correct generated option for basics",
-      "Incorrect option C"
+      "Creates a regular expression",
+      "Interpolates the value of name into the string",
+      "Changes the value of name",
+      "Reads a file named name"
     ],
-    "correctAnswer": 2,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/basics.",
+    "correctAnswer": 1,
+    "explanation": "An f-string evaluates expressions inside braces and formats their values.",
     "tags": [
-      "interview-frequent",
-      "procedural"
+      "Python",
+      "Basics",
+      "Strings"
     ]
   },
   {
     "id": 30,
-    "topic": "basics",
-    "difficulty": "Hard",
-    "question": "[Generated] How do you declare a dictionary in Python?",
+    "topic": "Basics",
+    "difficulty": "Easy",
+    "question": "Which expression produces a tuple containing only the integer 5?",
     "options": [
-      "Incorrect option C",
-      "Incorrect option B",
-      "Incorrect option A",
-      "Correct generated option for basics"
+      "(5)",
+      "(5,)",
+      "[5]",
+      "{5}"
     ],
-    "correctAnswer": 3,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/basics.",
+    "correctAnswer": 1,
+    "explanation": "The comma creates the one-element tuple; parentheses alone do not.",
     "tags": [
-      "core-concept",
-      "procedural"
+      "Python",
+      "Basics",
+      "Literals"
     ]
   },
   {
     "id": 31,
-    "topic": "basics",
-    "difficulty": "Medium",
-    "question": "[Generated] What does the `list comprehension` function do?",
+    "topic": "Basics",
+    "difficulty": "Easy",
+    "question": "What is the result of `\"banana\".count(\"an\")`?",
     "options": [
-      "Incorrect option B",
-      "Correct generated option for basics",
-      "Incorrect option A",
-      "Incorrect option C"
+      "1",
+      "2",
+      "3",
+      "4"
     ],
     "correctAnswer": 1,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/basics.",
+    "explanation": "`str.count` counts non-overlapping occurrences of the substring.",
     "tags": [
-      "tricky",
-      "procedural"
+      "Python",
+      "Basics",
+      "Strings"
     ]
   },
   {
     "id": 32,
-    "topic": "basics",
+    "topic": "Basics",
     "difficulty": "Easy",
-    "question": "[Generated] What is the output of `inheritance` in Python?",
+    "question": "What is the result of `3 in [1, 2, 3]`?",
     "options": [
-      "Correct generated option for basics",
-      "Incorrect option B",
-      "Incorrect option C",
-      "Incorrect option A"
+      "True",
+      "False",
+      "3",
+      "None"
     ],
     "correctAnswer": 0,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/basics.",
+    "explanation": "The membership operator returns whether the value is present.",
     "tags": [
-      "fundamentals",
-      "procedural"
+      "Python",
+      "Basics",
+      "Operators"
     ]
   },
   {
     "id": 33,
-    "topic": "basics",
+    "topic": "Basics",
     "difficulty": "Easy",
-    "question": "[Generated] What is the output of `inheritance` in Python?",
+    "question": "Which keyword begins an alternative branch after an `if` condition?",
     "options": [
-      "Incorrect option A",
-      "Correct generated option for basics",
-      "Incorrect option B",
-      "Incorrect option C"
+      "elseif",
+      "elsif",
+      "elif",
+      "otherwise"
     ],
-    "correctAnswer": 1,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/basics.",
+    "correctAnswer": 2,
+    "explanation": "`elif` introduces another conditional branch in Python.",
     "tags": [
-      "advanced",
-      "procedural"
+      "Python",
+      "Basics",
+      "Control flow"
     ]
   },
   {
     "id": 34,
-    "topic": "basics",
-    "difficulty": "Hard",
-    "question": "[Generated] How do you declare a dictionary in Python?",
+    "topic": "Basics",
+    "difficulty": "Easy",
+    "question": "What does `sorted([3, 1, 2])` return?",
     "options": [
-      "Correct generated option for basics",
-      "Incorrect option A",
-      "Incorrect option C",
-      "Incorrect option B"
+      "[1, 2, 3]",
+      "[3, 1, 2]",
+      "None",
+      "A set containing 1, 2 and 3"
     ],
     "correctAnswer": 0,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/basics.",
+    "explanation": "`sorted` returns a new list containing the items in sorted order.",
     "tags": [
-      "tricky",
-      "procedural"
+      "Python",
+      "Basics",
+      "Builtins"
     ]
   },
   {
     "id": 35,
-    "topic": "basics",
+    "topic": "Basics",
     "difficulty": "Easy",
-    "question": "[Generated] What does the `inheritance` function do?",
+    "question": "What is the result of `\"  hello  \".strip()`?",
     "options": [
-      "Incorrect option A",
-      "Incorrect option B",
-      "Correct generated option for basics",
-      "Incorrect option C"
+      "\"  hello\"",
+      "\"hello  \"",
+      "\"hello\"",
+      "\"h e l l o\""
     ],
     "correctAnswer": 2,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/basics.",
+    "explanation": "`strip` removes leading and trailing whitespace by default.",
     "tags": [
-      "core-concept",
-      "procedural"
+      "Python",
+      "Basics",
+      "Strings"
     ]
   },
   {
     "id": 36,
-    "topic": "basics",
-    "difficulty": "Medium",
-    "question": "[Generated] How do you declare a tuple in Python?",
+    "topic": "Basics",
+    "difficulty": "Easy",
+    "question": "What does `zip([1, 2], [\"a\", \"b\"])` yield when converted to a list?",
     "options": [
-      "Incorrect option B",
-      "Incorrect option A",
-      "Correct generated option for basics",
-      "Incorrect option C"
+      "[(1, \"a\"), (2, \"b\")]",
+      "[(1, 2), (\"a\", \"b\")]",
+      "[1, 2, \"a\", \"b\"]",
+      "A dictionary"
     ],
-    "correctAnswer": 2,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/basics.",
+    "correctAnswer": 0,
+    "explanation": "`zip` pairs items at corresponding positions from each iterable.",
     "tags": [
-      "interview-frequent",
-      "procedural"
+      "Python",
+      "Basics",
+      "Iteration"
     ]
   },
   {
     "id": 37,
-    "topic": "basics",
-    "difficulty": "Medium",
-    "question": "[Generated] How do you declare a __init__ in Python?",
+    "topic": "Basics",
+    "difficulty": "Easy",
+    "question": "Which expression tests whether an integer `n` is even?",
     "options": [
-      "Incorrect option C",
-      "Correct generated option for basics",
-      "Incorrect option B",
-      "Incorrect option A"
+      "n / 2 == 0",
+      "n % 2 == 0",
+      "n // 2 == 0",
+      "n ** 2 == 0"
     ],
     "correctAnswer": 1,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/basics.",
+    "explanation": "An integer is even when its remainder on division by two is zero.",
     "tags": [
-      "advanced",
-      "procedural"
+      "Python",
+      "Basics",
+      "Operators"
     ]
   },
   {
     "id": 38,
-    "topic": "basics",
-    "difficulty": "Medium",
-    "question": "[Generated] How do you declare a set in Python?",
+    "topic": "Basics",
+    "difficulty": "Easy",
+    "question": "What is the result of `list(range(3))`?",
     "options": [
-      "Incorrect option C",
-      "Incorrect option B",
-      "Correct generated option for basics",
-      "Incorrect option A"
+      "[1, 2, 3]",
+      "[0, 1, 2]",
+      "[0, 1, 2, 3]",
+      "[3]"
     ],
-    "correctAnswer": 2,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/basics.",
+    "correctAnswer": 1,
+    "explanation": "With one argument, `range` starts at zero and excludes the stop value.",
     "tags": [
-      "fundamentals",
-      "procedural"
+      "Python",
+      "Basics",
+      "Iteration"
     ]
   },
   {
     "id": 39,
-    "topic": "basics",
+    "topic": "Basics",
     "difficulty": "Easy",
-    "question": "[Generated] What is the output of `len()` in Python?",
+    "question": "What is the result of `\"a\" * 3`?",
     "options": [
-      "Incorrect option C",
-      "Correct generated option for basics",
-      "Incorrect option A",
-      "Incorrect option B"
+      "\"a3\"",
+      "\"aaa\"",
+      "3",
+      "A TypeError"
     ],
     "correctAnswer": 1,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/basics.",
+    "explanation": "Multiplying a string by an integer repeats the string.",
     "tags": [
-      "tricky",
-      "procedural"
+      "Python",
+      "Basics",
+      "Strings"
     ]
   },
   {
     "id": 40,
-    "topic": "basics",
-    "difficulty": "Medium",
-    "question": "[Generated] What does the `inheritance` function do?",
+    "topic": "Basics",
+    "difficulty": "Easy",
+    "question": "Which statement imports only `sqrt` from the `math` module?",
     "options": [
-      "Incorrect option B",
-      "Correct generated option for basics",
-      "Incorrect option A",
-      "Incorrect option C"
+      "import sqrt from math",
+      "from math import sqrt",
+      "include math.sqrt",
+      "using math.sqrt"
     ],
     "correctAnswer": 1,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/basics.",
+    "explanation": "`from math import sqrt` binds `sqrt` in the current namespace.",
     "tags": [
-      "tricky",
-      "procedural"
+      "Python",
+      "Basics",
+      "Modules"
     ]
   },
   {
     "id": 41,
-    "topic": "basics",
+    "topic": "Basics",
     "difficulty": "Medium",
-    "question": "[Generated] What is the output of `inheritance` in Python?",
+    "question": "What does `\"x\".isalpha()` return?",
     "options": [
-      "Incorrect option C",
-      "Incorrect option B",
-      "Correct generated option for basics",
-      "Incorrect option A"
+      "True",
+      "False",
+      "\"x\"",
+      "None"
     ],
-    "correctAnswer": 2,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/basics.",
+    "correctAnswer": 0,
+    "explanation": "`isalpha` returns true when a nonempty string consists entirely of alphabetic characters.",
     "tags": [
-      "interview-frequent",
-      "procedural"
+      "Python",
+      "Basics"
     ]
   },
   {
     "id": 42,
-    "topic": "basics",
-    "difficulty": "Hard",
-    "question": "[Generated] How do you declare a dictionary in Python?",
+    "topic": "Basics",
+    "difficulty": "Medium",
+    "question": "What is the output of `print(1, 2, sep=\"-\")`?",
     "options": [
-      "Incorrect option A",
-      "Correct generated option for basics",
-      "Incorrect option C",
-      "Incorrect option B"
+      "1-2",
+      "1 2",
+      "12-",
+      "[1, 2]"
     ],
-    "correctAnswer": 1,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/basics.",
+    "correctAnswer": 0,
+    "explanation": "The `sep` argument specifies the string placed between printed objects.",
     "tags": [
-      "tricky",
-      "procedural"
+      "Python",
+      "Basics"
     ]
   },
   {
     "id": 43,
-    "topic": "basics",
-    "difficulty": "Easy",
-    "question": "[Generated] What does the `list comprehension` function do?",
+    "topic": "Basics",
+    "difficulty": "Medium",
+    "question": "Which expression creates the integer represented by hexadecimal `ff`?",
     "options": [
-      "Incorrect option A",
-      "Incorrect option B",
-      "Incorrect option C",
-      "Correct generated option for basics"
+      "int(\"ff\", 16)",
+      "int(\"ff\", 10)",
+      "str(255, 16)",
+      "float(\"ff\")"
     ],
-    "correctAnswer": 3,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/basics.",
+    "correctAnswer": 0,
+    "explanation": "`int` accepts a base argument; hexadecimal ff equals decimal 255.",
     "tags": [
-      "tricky",
-      "procedural"
+      "Python",
+      "Basics"
     ]
   },
   {
     "id": 44,
-    "topic": "basics",
-    "difficulty": "Hard",
-    "question": "[Generated] What is the output of `len()` in Python?",
+    "topic": "Basics",
+    "difficulty": "Medium",
+    "question": "What is the result of `round(2.5)` in Python?",
     "options": [
-      "Correct generated option for basics",
-      "Incorrect option A",
-      "Incorrect option C",
-      "Incorrect option B"
+      "2",
+      "3",
+      "2.5",
+      "A TypeError"
     ],
     "correctAnswer": 0,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/basics.",
+    "explanation": "For ties, `round` uses the nearest even integer, so 2.5 rounds to 2.",
     "tags": [
-      "fundamentals",
-      "procedural"
+      "Python",
+      "Basics"
     ]
   },
   {
     "id": 45,
-    "topic": "basics",
-    "difficulty": "Hard",
-    "question": "[Generated] What is the output of `type()` in Python?",
+    "topic": "Basics",
+    "difficulty": "Medium",
+    "question": "What does `any([False, True, False])` return?",
     "options": [
-      "Incorrect option A",
-      "Incorrect option C",
-      "Correct generated option for basics",
-      "Incorrect option B"
+      "True",
+      "False",
+      "None",
+      "3"
     ],
-    "correctAnswer": 2,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/basics.",
+    "correctAnswer": 0,
+    "explanation": "`any` returns true if at least one item is truthy.",
     "tags": [
-      "interview-frequent",
-      "procedural"
+      "Python",
+      "Basics"
     ]
   },
   {
     "id": 46,
-    "topic": "basics",
-    "difficulty": "Easy",
-    "question": "[Generated] How do you declare a ValueError in Python?",
+    "topic": "Basics",
+    "difficulty": "Medium",
+    "question": "What does `all([True, True, False])` return?",
     "options": [
-      "Incorrect option C",
-      "Correct generated option for basics",
-      "Incorrect option A",
-      "Incorrect option B"
+      "False",
+      "True",
+      "None",
+      "2"
     ],
-    "correctAnswer": 1,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/basics.",
+    "correctAnswer": 0,
+    "explanation": "`all` returns true only if every item is truthy.",
     "tags": [
-      "tricky",
-      "procedural"
+      "Python",
+      "Basics"
     ]
   },
   {
     "id": 47,
-    "topic": "basics",
-    "difficulty": "Easy",
-    "question": "[Generated] What does the `list comprehension` function do?",
+    "topic": "Basics",
+    "difficulty": "Medium",
+    "question": "What is the result of `ord(\"A\")`?",
     "options": [
-      "Correct generated option for basics",
-      "Incorrect option A",
-      "Incorrect option C",
-      "Incorrect option B"
+      "65",
+      "\"65\"",
+      "\"A\"",
+      "1"
     ],
     "correctAnswer": 0,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/basics.",
+    "explanation": "`ord` returns the Unicode code point of a single character.",
     "tags": [
-      "advanced",
-      "procedural"
+      "Python",
+      "Basics"
     ]
   },
   {
     "id": 48,
-    "topic": "basics",
-    "difficulty": "Easy",
-    "question": "[Generated] How do you declare a ValueError in Python?",
+    "topic": "Basics",
+    "difficulty": "Medium",
+    "question": "What does `chr(65)` return?",
     "options": [
-      "Correct generated option for basics",
-      "Incorrect option A",
-      "Incorrect option B",
-      "Incorrect option C"
+      "\"A\"",
+      "65",
+      "\"65\"",
+      "\"a\""
     ],
     "correctAnswer": 0,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/basics.",
+    "explanation": "`chr` converts a Unicode code point into its character.",
     "tags": [
-      "fundamentals",
-      "procedural"
+      "Python",
+      "Basics"
     ]
   },
   {
     "id": 49,
-    "topic": "basics",
-    "difficulty": "Hard",
-    "question": "[Generated] How do you declare a tuple in Python?",
+    "topic": "Basics",
+    "difficulty": "Medium",
+    "question": "Which format specifier displays a number with two digits after the decimal point in an f-string?",
     "options": [
-      "Incorrect option C",
-      "Incorrect option A",
-      "Correct generated option for basics",
-      "Incorrect option B"
+      ":.2f",
+      ":.2d",
+      ":2s",
+      ":2b"
     ],
-    "correctAnswer": 2,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/basics.",
+    "correctAnswer": 0,
+    "explanation": "The `.2f` format uses fixed-point notation with two decimal places.",
     "tags": [
-      "core-concept",
-      "procedural"
+      "Python",
+      "Basics"
     ]
   },
   {
     "id": 50,
-    "topic": "basics",
-    "difficulty": "Easy",
-    "question": "[Generated] What does the `inheritance` function do?",
+    "topic": "Basics",
+    "difficulty": "Medium",
+    "question": "What is the result of `\"abc\"[::-1]`?",
     "options": [
-      "Incorrect option C",
-      "Incorrect option A",
-      "Incorrect option B",
-      "Correct generated option for basics"
+      "\"cba\"",
+      "\"abc\"",
+      "\"a\"",
+      "An IndexError"
     ],
-    "correctAnswer": 3,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/basics.",
+    "correctAnswer": 0,
+    "explanation": "A slice with step -1 traverses the string in reverse.",
     "tags": [
-      "fundamentals",
-      "procedural"
+      "Python",
+      "Basics"
     ]
   },
   {
     "id": 51,
-    "topic": "basics",
-    "difficulty": "Hard",
-    "question": "[Generated] What is the output of `inheritance` in Python?",
+    "topic": "Basics",
+    "difficulty": "Medium",
+    "question": "What value does `bool(0)` produce?",
     "options": [
-      "Correct generated option for basics",
-      "Incorrect option B",
-      "Incorrect option C",
-      "Incorrect option A"
+      "False",
+      "True",
+      "None",
+      "0.0"
     ],
     "correctAnswer": 0,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/basics.",
+    "explanation": "Numeric zero is false in a Boolean context.",
     "tags": [
-      "fundamentals",
-      "procedural"
+      "Python",
+      "Basics"
     ]
   },
   {
     "id": 52,
-    "topic": "basics",
-    "difficulty": "Hard",
-    "question": "[Generated] How do you declare a dictionary in Python?",
+    "topic": "Basics",
+    "difficulty": "Medium",
+    "question": "How can a long statement be grouped over multiple lines without a backslash?",
     "options": [
-      "Incorrect option C",
-      "Correct generated option for basics",
-      "Incorrect option B",
-      "Incorrect option A"
+      "Place the expression inside parentheses",
+      "Indent every line without any grouping",
+      "End each line with a semicolon",
+      "Prefix each line with a hash"
     ],
-    "correctAnswer": 1,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/basics.",
+    "correctAnswer": 0,
+    "explanation": "Expressions inside parentheses can span multiple physical lines.",
     "tags": [
-      "advanced",
-      "procedural"
+      "Python",
+      "Basics"
     ]
   },
   {
     "id": 53,
-    "topic": "basics",
-    "difficulty": "Easy",
-    "question": "[Generated] What is the output of `len()` in Python?",
-    "options": [
-      "Incorrect option A",
-      "Incorrect option B",
-      "Incorrect option C",
-      "Correct generated option for basics"
-    ],
-    "correctAnswer": 3,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/basics.",
-    "tags": [
-      "advanced",
-      "procedural"
-    ]
-  },
-  {
-    "id": 54,
-    "topic": "basics",
-    "difficulty": "Easy",
-    "question": "[Generated] How do you declare a dictionary in Python?",
-    "options": [
-      "Incorrect option C",
-      "Incorrect option B",
-      "Correct generated option for basics",
-      "Incorrect option A"
-    ],
-    "correctAnswer": 2,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/basics.",
-    "tags": [
-      "fundamentals",
-      "procedural"
-    ]
-  },
-  {
-    "id": 55,
-    "topic": "basics",
-    "difficulty": "Easy",
-    "question": "[Generated] How do you declare a ValueError in Python?",
-    "options": [
-      "Incorrect option C",
-      "Incorrect option B",
-      "Correct generated option for basics",
-      "Incorrect option A"
-    ],
-    "correctAnswer": 2,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/basics.",
-    "tags": [
-      "core-concept",
-      "procedural"
-    ]
-  },
-  {
-    "id": 56,
-    "topic": "basics",
-    "difficulty": "Hard",
-    "question": "[Generated] What does the `len()` function do?",
-    "options": [
-      "Incorrect option A",
-      "Incorrect option B",
-      "Correct generated option for basics",
-      "Incorrect option C"
-    ],
-    "correctAnswer": 2,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/basics.",
-    "tags": [
-      "fundamentals",
-      "procedural"
-    ]
-  },
-  {
-    "id": 57,
-    "topic": "basics",
-    "difficulty": "Easy",
-    "question": "[Generated] What does the `list comprehension` function do?",
-    "options": [
-      "Incorrect option C",
-      "Incorrect option B",
-      "Incorrect option A",
-      "Correct generated option for basics"
-    ],
-    "correctAnswer": 3,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/basics.",
-    "tags": [
-      "interview-frequent",
-      "procedural"
-    ]
-  },
-  {
-    "id": 58,
-    "topic": "basics",
-    "difficulty": "Easy",
-    "question": "[Generated] How do you declare a set in Python?",
-    "options": [
-      "Incorrect option B",
-      "Incorrect option A",
-      "Incorrect option C",
-      "Correct generated option for basics"
-    ],
-    "correctAnswer": 3,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/basics.",
-    "tags": [
-      "tricky",
-      "procedural"
-    ]
-  },
-  {
-    "id": 59,
-    "topic": "basics",
-    "difficulty": "Hard",
-    "question": "[Generated] What does the `inheritance` function do?",
-    "options": [
-      "Incorrect option B",
-      "Incorrect option C",
-      "Incorrect option A",
-      "Correct generated option for basics"
-    ],
-    "correctAnswer": 3,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/basics.",
-    "tags": [
-      "advanced",
-      "procedural"
-    ]
-  },
-  {
-    "id": 60,
-    "topic": "basics",
+    "topic": "Basics",
     "difficulty": "Medium",
-    "question": "[Generated] How do you declare a __init__ in Python?",
+    "question": "What is the result of `\"ab\" in \"cabin\"`?",
     "options": [
-      "Correct generated option for basics",
-      "Incorrect option B",
-      "Incorrect option A",
-      "Incorrect option C"
+      "True",
+      "False",
+      "2",
+      "None"
     ],
     "correctAnswer": 0,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/basics.",
+    "explanation": "For strings, `in` checks whether the left operand is a substring.",
     "tags": [
-      "advanced",
-      "procedural"
+      "Python",
+      "Basics"
     ]
   }
 ]

@@ -192,902 +192,398 @@
   },
   {
     "id": 11,
-    "topic": "oop",
+    "topic": "OOP",
     "difficulty": "Medium",
-    "question": "[Generated] Does Python support multiple len()?",
+    "question": "What is the purpose of the `@property` decorator?",
     "options": [
-      "Incorrect option A",
-      "Correct generated option for oop",
-      "Incorrect option C",
-      "Incorrect option B"
+      "It exposes a method through attribute access",
+      "It makes every instance immutable",
+      "It prevents subclassing",
+      "It creates a module-level function"
     ],
-    "correctAnswer": 1,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/oop.",
+    "correctAnswer": 0,
+    "explanation": "`property` lets a method be accessed like an attribute.",
     "tags": [
-      "core-concept",
-      "procedural"
+      "Python",
+      "OOP"
     ]
   },
   {
     "id": 12,
-    "topic": "oop",
-    "difficulty": "Hard",
-    "question": "[Generated] Does Python support multiple len()?",
+    "topic": "OOP",
+    "difficulty": "Medium",
+    "question": "How is a setter commonly defined for a property named `size`?",
     "options": [
-      "Incorrect option A",
-      "Incorrect option C",
-      "Correct generated option for oop",
-      "Incorrect option B"
+      "Decorate a method with `@size.setter`",
+      "Add `@staticmethod` to size",
+      "Assign to `__class__`",
+      "Use `@size.getter.setter()`"
     ],
-    "correctAnswer": 2,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/oop.",
+    "correctAnswer": 0,
+    "explanation": "The property’s `setter` decorator creates a property with a setter method.",
     "tags": [
-      "interview-frequent",
-      "procedural"
+      "Python",
+      "OOP"
     ]
   },
   {
     "id": 13,
-    "topic": "oop",
-    "difficulty": "Hard",
-    "question": "[Generated] What is the purpose of the `tuple` method?",
+    "topic": "OOP",
+    "difficulty": "Medium",
+    "question": "What does `isinstance(obj, Parent)` check?",
     "options": [
-      "Incorrect option C",
-      "Incorrect option A",
-      "Incorrect option B",
-      "Correct generated option for oop"
+      "Whether obj is an instance of Parent or its subclass",
+      "Whether obj is exactly the Parent class object",
+      "Whether Parent is a module",
+      "Whether obj has no methods"
     ],
-    "correctAnswer": 3,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/oop.",
+    "correctAnswer": 0,
+    "explanation": "`isinstance` accepts instances of the specified class and its subclasses.",
     "tags": [
-      "fundamentals",
-      "procedural"
+      "Python",
+      "OOP"
     ]
   },
   {
     "id": 14,
-    "topic": "oop",
-    "difficulty": "Hard",
-    "question": "[Generated] How do you implement list comprehension in Python?",
+    "topic": "OOP",
+    "difficulty": "Medium",
+    "question": "What does `issubclass(Child, Parent)` test?",
     "options": [
-      "Incorrect option C",
-      "Correct generated option for oop",
-      "Incorrect option B",
-      "Incorrect option A"
+      "Whether Child derives from Parent",
+      "Whether Child is an instance of Parent",
+      "Whether Parent is an instance of Child",
+      "Whether the two classes have equal names"
     ],
-    "correctAnswer": 1,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/oop.",
+    "correctAnswer": 0,
+    "explanation": "`issubclass` tests inheritance between class objects.",
     "tags": [
-      "advanced",
-      "procedural"
+      "Python",
+      "OOP"
     ]
   },
   {
     "id": 15,
-    "topic": "oop",
+    "topic": "OOP",
     "difficulty": "Medium",
-    "question": "[Generated] How do you implement inheritance in Python?",
+    "question": "Which special method controls the representation returned by `repr(obj)`?",
     "options": [
-      "Incorrect option A",
-      "Correct generated option for oop",
-      "Incorrect option B",
-      "Incorrect option C"
+      "__repr__",
+      "__init__",
+      "__call__",
+      "__hash__"
     ],
-    "correctAnswer": 1,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/oop.",
+    "correctAnswer": 0,
+    "explanation": "`repr` invokes the object’s `__repr__` method.",
     "tags": [
-      "core-concept",
-      "procedural"
+      "Python",
+      "OOP"
     ]
   },
   {
     "id": 16,
-    "topic": "oop",
+    "topic": "OOP",
     "difficulty": "Medium",
-    "question": "[Generated] How do you implement inheritance in Python?",
+    "question": "What does implementing `__len__` allow?",
     "options": [
-      "Incorrect option B",
-      "Incorrect option A",
-      "Correct generated option for oop",
-      "Incorrect option C"
+      "Using len(obj)",
+      "Calling obj as a function",
+      "Using obj as a context manager",
+      "Making obj automatically immutable"
     ],
-    "correctAnswer": 2,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/oop.",
+    "correctAnswer": 0,
+    "explanation": "`len` delegates to an appropriate `__len__` implementation.",
     "tags": [
-      "advanced",
-      "procedural"
+      "Python",
+      "OOP"
     ]
   },
   {
     "id": 17,
-    "topic": "oop",
-    "difficulty": "Hard",
-    "question": "[Generated] What is the purpose of the `set` method?",
+    "topic": "OOP",
+    "difficulty": "Medium",
+    "question": "What does implementing `__call__` allow an instance to do?",
     "options": [
-      "Incorrect option A",
-      "Incorrect option C",
-      "Correct generated option for oop",
-      "Incorrect option B"
+      "Be called like a function",
+      "Become a class decorator automatically",
+      "Inherit from multiple classes",
+      "Store only callable attributes"
     ],
-    "correctAnswer": 2,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/oop.",
+    "correctAnswer": 0,
+    "explanation": "An instance with `__call__` can be invoked using parentheses.",
     "tags": [
-      "core-concept",
-      "procedural"
+      "Python",
+      "OOP"
     ]
   },
   {
     "id": 18,
-    "topic": "oop",
+    "topic": "OOP",
     "difficulty": "Medium",
-    "question": "[Generated] Does Python support multiple inheritance?",
+    "question": "What happens when an instance assigns an attribute with the same name as a class attribute?",
     "options": [
-      "Correct generated option for oop",
-      "Incorrect option B",
-      "Incorrect option A",
-      "Incorrect option C"
+      "The instance attribute normally shadows the class attribute for that instance",
+      "The class attribute is always deleted",
+      "All instances receive the new value",
+      "Python raises a syntax error"
     ],
     "correctAnswer": 0,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/oop.",
+    "explanation": "An instance attribute normally takes precedence during lookup for that instance.",
     "tags": [
-      "core-concept",
-      "procedural"
+      "Python",
+      "OOP"
     ]
   },
   {
     "id": 19,
-    "topic": "oop",
-    "difficulty": "Easy",
-    "question": "[Generated] What is the purpose of the `tuple` method?",
+    "topic": "OOP",
+    "difficulty": "Medium",
+    "question": "What does `__new__` generally do?",
     "options": [
-      "Incorrect option C",
-      "Incorrect option A",
-      "Incorrect option B",
-      "Correct generated option for oop"
+      "Creates and returns an instance",
+      "Initializes an already-created instance only",
+      "Deletes the class",
+      "Finds the parent class"
     ],
-    "correctAnswer": 3,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/oop.",
+    "correctAnswer": 0,
+    "explanation": "`__new__` is responsible for creating and returning the new object.",
     "tags": [
-      "fundamentals",
-      "procedural"
+      "Python",
+      "OOP"
     ]
   },
   {
     "id": 20,
-    "topic": "oop",
-    "difficulty": "Easy",
-    "question": "[Generated] How do you implement list comprehension in Python?",
+    "topic": "OOP",
+    "difficulty": "Medium",
+    "question": "What does `__eq__` customize?",
     "options": [
-      "Incorrect option B",
-      "Incorrect option C",
-      "Correct generated option for oop",
-      "Incorrect option A"
+      "Equality comparison using ==",
+      "Identity comparison using is",
+      "Attribute deletion",
+      "Object construction"
     ],
-    "correctAnswer": 2,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/oop.",
+    "correctAnswer": 0,
+    "explanation": "`__eq__` implements equality comparison behavior.",
     "tags": [
-      "interview-frequent",
-      "procedural"
+      "Python",
+      "OOP"
     ]
   },
   {
     "id": 21,
-    "topic": "oop",
+    "topic": "OOP",
     "difficulty": "Medium",
-    "question": "[Generated] How do you implement len() in Python?",
+    "question": "What does `__enter__` support when paired with `__exit__`?",
     "options": [
-      "Incorrect option A",
-      "Incorrect option C",
-      "Correct generated option for oop",
-      "Incorrect option B"
+      "The context manager protocol",
+      "The iterator protocol",
+      "The descriptor lookup order only",
+      "The import protocol"
     ],
-    "correctAnswer": 2,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/oop.",
+    "correctAnswer": 0,
+    "explanation": "Context managers use `__enter__` and `__exit__` with the `with` statement.",
     "tags": [
-      "fundamentals",
-      "procedural"
+      "Python",
+      "OOP"
     ]
   },
   {
     "id": 22,
-    "topic": "oop",
-    "difficulty": "Easy",
-    "question": "[Generated] What is the purpose of the `__init__` method?",
+    "topic": "OOP",
+    "difficulty": "Medium",
+    "question": "Which decorator can automatically generate methods such as `__init__` for annotated fields?",
     "options": [
-      "Incorrect option A",
-      "Incorrect option B",
-      "Incorrect option C",
-      "Correct generated option for oop"
+      "dataclasses.dataclass",
+      "abc.abstractmethod",
+      "functools.cache",
+      "typing.overload"
     ],
-    "correctAnswer": 3,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/oop.",
+    "correctAnswer": 0,
+    "explanation": "`dataclass` can generate initialization and other methods from field annotations.",
     "tags": [
-      "core-concept",
-      "procedural"
+      "Python",
+      "OOP"
     ]
   },
   {
     "id": 23,
-    "topic": "oop",
+    "topic": "OOP",
     "difficulty": "Medium",
-    "question": "[Generated] How do you implement list comprehension in Python?",
+    "question": "What is an abstract method primarily intended to express?",
     "options": [
-      "Incorrect option A",
-      "Incorrect option B",
-      "Incorrect option C",
-      "Correct generated option for oop"
+      "A method a concrete subclass must implement before instantiation",
+      "A private method that can never be called",
+      "A static method with no arguments",
+      "A method automatically copied to every module"
     ],
-    "correctAnswer": 3,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/oop.",
+    "correctAnswer": 0,
+    "explanation": "An abstract method marks behavior that concrete subclasses must provide.",
     "tags": [
-      "core-concept",
-      "procedural"
+      "Python",
+      "OOP"
     ]
   },
   {
     "id": 24,
-    "topic": "oop",
-    "difficulty": "Hard",
-    "question": "[Generated] How do you implement list comprehension in Python?",
+    "topic": "OOP",
+    "difficulty": "Medium",
+    "question": "What does `__slots__` primarily declare for instances?",
     "options": [
-      "Correct generated option for oop",
-      "Incorrect option B",
-      "Incorrect option A",
-      "Incorrect option C"
+      "A fixed set of permitted instance attributes in common usage",
+      "A list of parent classes",
+      "All methods that must be asynchronous",
+      "The order in which modules are imported"
     ],
     "correctAnswer": 0,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/oop.",
+    "explanation": "`__slots__` can constrain instance attributes and avoid a per-instance dictionary unless one is provided.",
     "tags": [
-      "advanced",
-      "procedural"
+      "Python",
+      "OOP"
     ]
   },
   {
     "id": 25,
-    "topic": "oop",
+    "topic": "OOP",
     "difficulty": "Medium",
-    "question": "[Generated] What is the purpose of the `set` method?",
+    "question": "What does `object.__class__` typically refer to?",
     "options": [
-      "Correct generated option for oop",
-      "Incorrect option A",
-      "Incorrect option C",
-      "Incorrect option B"
+      "The object’s class",
+      "The object’s parent module",
+      "A copy of all attributes",
+      "The class constructor arguments"
     ],
     "correctAnswer": 0,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/oop.",
+    "explanation": "`__class__` refers to the class of an object.",
     "tags": [
-      "tricky",
-      "procedural"
+      "Python",
+      "OOP"
     ]
   },
   {
     "id": 26,
-    "topic": "oop",
+    "topic": "OOP",
     "difficulty": "Medium",
-    "question": "[Generated] What is the purpose of the `ValueError` method?",
+    "question": "When does Python call an instance method’s `self` parameter automatically?",
     "options": [
-      "Incorrect option B",
-      "Incorrect option C",
-      "Incorrect option A",
-      "Correct generated option for oop"
+      "When the method is accessed through an instance and called",
+      "Only when the method is declared static",
+      "Only when calling the method on the class without arguments",
+      "Only during garbage collection"
     ],
-    "correctAnswer": 3,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/oop.",
+    "correctAnswer": 0,
+    "explanation": "Attribute access through an instance binds a regular method to that instance.",
     "tags": [
-      "core-concept",
-      "procedural"
+      "Python",
+      "OOP"
     ]
   },
   {
     "id": 27,
-    "topic": "oop",
-    "difficulty": "Easy",
-    "question": "[Generated] Does Python support multiple list comprehension?",
+    "topic": "OOP",
+    "difficulty": "Medium",
+    "question": "What is composition in object-oriented design?",
     "options": [
-      "Incorrect option C",
-      "Incorrect option A",
-      "Incorrect option B",
-      "Correct generated option for oop"
+      "Building behavior using objects held by another object",
+      "Inheriting from every available class",
+      "Combining all source files into one",
+      "Forcing every method to be static"
     ],
-    "correctAnswer": 3,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/oop.",
+    "correctAnswer": 0,
+    "explanation": "Composition models a relationship by having an object hold and use other objects.",
     "tags": [
-      "tricky",
-      "procedural"
+      "Python",
+      "OOP"
     ]
   },
   {
     "id": 28,
-    "topic": "oop",
-    "difficulty": "Hard",
-    "question": "[Generated] How do you implement len() in Python?",
+    "topic": "OOP",
+    "difficulty": "Medium",
+    "question": "What does overriding a method mean?",
     "options": [
-      "Incorrect option B",
-      "Incorrect option C",
-      "Incorrect option A",
-      "Correct generated option for oop"
+      "A subclass supplies its own implementation of an inherited method",
+      "A method is deleted from every parent class",
+      "A class is converted to a module",
+      "A method is always called with keyword arguments"
     ],
-    "correctAnswer": 3,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/oop.",
+    "correctAnswer": 0,
+    "explanation": "A subclass can replace inherited behavior by defining the same method name.",
     "tags": [
-      "interview-frequent",
-      "procedural"
+      "Python",
+      "OOP"
     ]
   },
   {
     "id": 29,
-    "topic": "oop",
-    "difficulty": "Hard",
-    "question": "[Generated] Does Python support multiple len()?",
+    "topic": "OOP",
+    "difficulty": "Medium",
+    "question": "Which protocol uses `__iter__` and `__next__`?",
     "options": [
-      "Incorrect option B",
-      "Correct generated option for oop",
-      "Incorrect option A",
-      "Incorrect option C"
+      "The iterator protocol",
+      "The descriptor protocol",
+      "The context manager protocol",
+      "The numeric conversion protocol"
     ],
-    "correctAnswer": 1,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/oop.",
+    "correctAnswer": 0,
+    "explanation": "An iterator returns itself from `__iter__` and yields values from `__next__`.",
     "tags": [
-      "tricky",
-      "procedural"
+      "Python",
+      "OOP"
     ]
   },
   {
     "id": 30,
-    "topic": "oop",
-    "difficulty": "Easy",
-    "question": "[Generated] How do you implement list comprehension in Python?",
+    "topic": "OOP",
+    "difficulty": "Medium",
+    "question": "What does `__contains__` customize?",
     "options": [
-      "Incorrect option B",
-      "Incorrect option C",
-      "Correct generated option for oop",
-      "Incorrect option A"
+      "Membership tests using `in`",
+      "Equality using `==`",
+      "The output of `repr`",
+      "Class creation"
     ],
-    "correctAnswer": 2,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/oop.",
+    "correctAnswer": 0,
+    "explanation": "`__contains__` can implement membership tests for an object.",
     "tags": [
-      "interview-frequent",
-      "procedural"
+      "Python",
+      "OOP"
     ]
   },
   {
     "id": 31,
-    "topic": "oop",
-    "difficulty": "Hard",
-    "question": "[Generated] How do you implement list comprehension in Python?",
+    "topic": "OOP",
+    "difficulty": "Medium",
+    "question": "What does `vars(instance)` usually return when the instance has a `__dict__`?",
     "options": [
-      "Incorrect option B",
-      "Incorrect option A",
-      "Incorrect option C",
-      "Correct generated option for oop"
+      "The instance attribute dictionary",
+      "A list of parent classes",
+      "A copy of every inherited method",
+      "The object’s memory address"
     ],
-    "correctAnswer": 3,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/oop.",
+    "correctAnswer": 0,
+    "explanation": "`vars` returns the `__dict__` attribute for an object that has one.",
     "tags": [
-      "core-concept",
-      "procedural"
+      "Python",
+      "OOP"
     ]
   },
   {
     "id": 32,
-    "topic": "oop",
+    "topic": "OOP",
     "difficulty": "Medium",
-    "question": "[Generated] What is the purpose of the `set` method?",
+    "question": "Which method can customize the value returned by `obj[key]`?",
     "options": [
-      "Correct generated option for oop",
-      "Incorrect option B",
-      "Incorrect option C",
-      "Incorrect option A"
+      "__getitem__",
+      "__getattr__",
+      "__iter__",
+      "__repr__"
     ],
     "correctAnswer": 0,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/oop.",
+    "explanation": "Subscription delegates to the object’s `__getitem__` method.",
     "tags": [
-      "advanced",
-      "procedural"
-    ]
-  },
-  {
-    "id": 33,
-    "topic": "oop",
-    "difficulty": "Easy",
-    "question": "[Generated] How do you implement inheritance in Python?",
-    "options": [
-      "Incorrect option A",
-      "Incorrect option C",
-      "Correct generated option for oop",
-      "Incorrect option B"
-    ],
-    "correctAnswer": 2,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/oop.",
-    "tags": [
-      "core-concept",
-      "procedural"
-    ]
-  },
-  {
-    "id": 34,
-    "topic": "oop",
-    "difficulty": "Medium",
-    "question": "[Generated] What is the purpose of the `ValueError` method?",
-    "options": [
-      "Correct generated option for oop",
-      "Incorrect option A",
-      "Incorrect option C",
-      "Incorrect option B"
-    ],
-    "correctAnswer": 0,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/oop.",
-    "tags": [
-      "interview-frequent",
-      "procedural"
-    ]
-  },
-  {
-    "id": 35,
-    "topic": "oop",
-    "difficulty": "Easy",
-    "question": "[Generated] Does Python support multiple len()?",
-    "options": [
-      "Incorrect option A",
-      "Incorrect option C",
-      "Correct generated option for oop",
-      "Incorrect option B"
-    ],
-    "correctAnswer": 2,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/oop.",
-    "tags": [
-      "advanced",
-      "procedural"
-    ]
-  },
-  {
-    "id": 36,
-    "topic": "oop",
-    "difficulty": "Medium",
-    "question": "[Generated] Does Python support multiple type()?",
-    "options": [
-      "Correct generated option for oop",
-      "Incorrect option B",
-      "Incorrect option C",
-      "Incorrect option A"
-    ],
-    "correctAnswer": 0,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/oop.",
-    "tags": [
-      "interview-frequent",
-      "procedural"
-    ]
-  },
-  {
-    "id": 37,
-    "topic": "oop",
-    "difficulty": "Medium",
-    "question": "[Generated] What is the purpose of the `__init__` method?",
-    "options": [
-      "Correct generated option for oop",
-      "Incorrect option C",
-      "Incorrect option A",
-      "Incorrect option B"
-    ],
-    "correctAnswer": 0,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/oop.",
-    "tags": [
-      "fundamentals",
-      "procedural"
-    ]
-  },
-  {
-    "id": 38,
-    "topic": "oop",
-    "difficulty": "Easy",
-    "question": "[Generated] What is the purpose of the `ValueError` method?",
-    "options": [
-      "Incorrect option C",
-      "Incorrect option B",
-      "Incorrect option A",
-      "Correct generated option for oop"
-    ],
-    "correctAnswer": 3,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/oop.",
-    "tags": [
-      "interview-frequent",
-      "procedural"
-    ]
-  },
-  {
-    "id": 39,
-    "topic": "oop",
-    "difficulty": "Easy",
-    "question": "[Generated] Does Python support multiple len()?",
-    "options": [
-      "Correct generated option for oop",
-      "Incorrect option A",
-      "Incorrect option B",
-      "Incorrect option C"
-    ],
-    "correctAnswer": 0,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/oop.",
-    "tags": [
-      "fundamentals",
-      "procedural"
-    ]
-  },
-  {
-    "id": 40,
-    "topic": "oop",
-    "difficulty": "Medium",
-    "question": "[Generated] Does Python support multiple list comprehension?",
-    "options": [
-      "Correct generated option for oop",
-      "Incorrect option A",
-      "Incorrect option B",
-      "Incorrect option C"
-    ],
-    "correctAnswer": 0,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/oop.",
-    "tags": [
-      "fundamentals",
-      "procedural"
-    ]
-  },
-  {
-    "id": 41,
-    "topic": "oop",
-    "difficulty": "Hard",
-    "question": "[Generated] How do you implement inheritance in Python?",
-    "options": [
-      "Incorrect option C",
-      "Correct generated option for oop",
-      "Incorrect option B",
-      "Incorrect option A"
-    ],
-    "correctAnswer": 1,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/oop.",
-    "tags": [
-      "core-concept",
-      "procedural"
-    ]
-  },
-  {
-    "id": 42,
-    "topic": "oop",
-    "difficulty": "Hard",
-    "question": "[Generated] What is the purpose of the `tuple` method?",
-    "options": [
-      "Incorrect option B",
-      "Incorrect option C",
-      "Correct generated option for oop",
-      "Incorrect option A"
-    ],
-    "correctAnswer": 2,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/oop.",
-    "tags": [
-      "tricky",
-      "procedural"
-    ]
-  },
-  {
-    "id": 43,
-    "topic": "oop",
-    "difficulty": "Medium",
-    "question": "[Generated] What is the purpose of the `__init__` method?",
-    "options": [
-      "Incorrect option C",
-      "Incorrect option B",
-      "Incorrect option A",
-      "Correct generated option for oop"
-    ],
-    "correctAnswer": 3,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/oop.",
-    "tags": [
-      "core-concept",
-      "procedural"
-    ]
-  },
-  {
-    "id": 44,
-    "topic": "oop",
-    "difficulty": "Easy",
-    "question": "[Generated] How do you implement list comprehension in Python?",
-    "options": [
-      "Correct generated option for oop",
-      "Incorrect option B",
-      "Incorrect option A",
-      "Incorrect option C"
-    ],
-    "correctAnswer": 0,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/oop.",
-    "tags": [
-      "tricky",
-      "procedural"
-    ]
-  },
-  {
-    "id": 45,
-    "topic": "oop",
-    "difficulty": "Hard",
-    "question": "[Generated] Does Python support multiple type()?",
-    "options": [
-      "Incorrect option A",
-      "Incorrect option B",
-      "Incorrect option C",
-      "Correct generated option for oop"
-    ],
-    "correctAnswer": 3,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/oop.",
-    "tags": [
-      "tricky",
-      "procedural"
-    ]
-  },
-  {
-    "id": 46,
-    "topic": "oop",
-    "difficulty": "Medium",
-    "question": "[Generated] Does Python support multiple len()?",
-    "options": [
-      "Incorrect option A",
-      "Incorrect option C",
-      "Incorrect option B",
-      "Correct generated option for oop"
-    ],
-    "correctAnswer": 3,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/oop.",
-    "tags": [
-      "tricky",
-      "procedural"
-    ]
-  },
-  {
-    "id": 47,
-    "topic": "oop",
-    "difficulty": "Medium",
-    "question": "[Generated] Does Python support multiple inheritance?",
-    "options": [
-      "Incorrect option B",
-      "Incorrect option C",
-      "Correct generated option for oop",
-      "Incorrect option A"
-    ],
-    "correctAnswer": 2,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/oop.",
-    "tags": [
-      "fundamentals",
-      "procedural"
-    ]
-  },
-  {
-    "id": 48,
-    "topic": "oop",
-    "difficulty": "Medium",
-    "question": "[Generated] What is the purpose of the `ValueError` method?",
-    "options": [
-      "Correct generated option for oop",
-      "Incorrect option B",
-      "Incorrect option A",
-      "Incorrect option C"
-    ],
-    "correctAnswer": 0,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/oop.",
-    "tags": [
-      "tricky",
-      "procedural"
-    ]
-  },
-  {
-    "id": 49,
-    "topic": "oop",
-    "difficulty": "Easy",
-    "question": "[Generated] Does Python support multiple list comprehension?",
-    "options": [
-      "Incorrect option A",
-      "Incorrect option C",
-      "Correct generated option for oop",
-      "Incorrect option B"
-    ],
-    "correctAnswer": 2,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/oop.",
-    "tags": [
-      "advanced",
-      "procedural"
-    ]
-  },
-  {
-    "id": 50,
-    "topic": "oop",
-    "difficulty": "Hard",
-    "question": "[Generated] Does Python support multiple len()?",
-    "options": [
-      "Incorrect option B",
-      "Correct generated option for oop",
-      "Incorrect option C",
-      "Incorrect option A"
-    ],
-    "correctAnswer": 1,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/oop.",
-    "tags": [
-      "tricky",
-      "procedural"
-    ]
-  },
-  {
-    "id": 51,
-    "topic": "oop",
-    "difficulty": "Medium",
-    "question": "[Generated] Does Python support multiple inheritance?",
-    "options": [
-      "Correct generated option for oop",
-      "Incorrect option B",
-      "Incorrect option A",
-      "Incorrect option C"
-    ],
-    "correctAnswer": 0,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/oop.",
-    "tags": [
-      "fundamentals",
-      "procedural"
-    ]
-  },
-  {
-    "id": 52,
-    "topic": "oop",
-    "difficulty": "Hard",
-    "question": "[Generated] Does Python support multiple inheritance?",
-    "options": [
-      "Incorrect option B",
-      "Incorrect option C",
-      "Correct generated option for oop",
-      "Incorrect option A"
-    ],
-    "correctAnswer": 2,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/oop.",
-    "tags": [
-      "core-concept",
-      "procedural"
-    ]
-  },
-  {
-    "id": 53,
-    "topic": "oop",
-    "difficulty": "Medium",
-    "question": "[Generated] What is the purpose of the `ValueError` method?",
-    "options": [
-      "Incorrect option A",
-      "Correct generated option for oop",
-      "Incorrect option C",
-      "Incorrect option B"
-    ],
-    "correctAnswer": 1,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/oop.",
-    "tags": [
-      "advanced",
-      "procedural"
-    ]
-  },
-  {
-    "id": 54,
-    "topic": "oop",
-    "difficulty": "Hard",
-    "question": "[Generated] How do you implement len() in Python?",
-    "options": [
-      "Incorrect option C",
-      "Incorrect option B",
-      "Incorrect option A",
-      "Correct generated option for oop"
-    ],
-    "correctAnswer": 3,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/oop.",
-    "tags": [
-      "fundamentals",
-      "procedural"
-    ]
-  },
-  {
-    "id": 55,
-    "topic": "oop",
-    "difficulty": "Medium",
-    "question": "[Generated] What is the purpose of the `dictionary` method?",
-    "options": [
-      "Incorrect option A",
-      "Incorrect option B",
-      "Correct generated option for oop",
-      "Incorrect option C"
-    ],
-    "correctAnswer": 2,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/oop.",
-    "tags": [
-      "advanced",
-      "procedural"
-    ]
-  },
-  {
-    "id": 56,
-    "topic": "oop",
-    "difficulty": "Medium",
-    "question": "[Generated] How do you implement len() in Python?",
-    "options": [
-      "Incorrect option B",
-      "Incorrect option C",
-      "Correct generated option for oop",
-      "Incorrect option A"
-    ],
-    "correctAnswer": 2,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/oop.",
-    "tags": [
-      "interview-frequent",
-      "procedural"
-    ]
-  },
-  {
-    "id": 57,
-    "topic": "oop",
-    "difficulty": "Medium",
-    "question": "[Generated] What is the purpose of the `__init__` method?",
-    "options": [
-      "Incorrect option B",
-      "Incorrect option C",
-      "Incorrect option A",
-      "Correct generated option for oop"
-    ],
-    "correctAnswer": 3,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/oop.",
-    "tags": [
-      "fundamentals",
-      "procedural"
-    ]
-  },
-  {
-    "id": 58,
-    "topic": "oop",
-    "difficulty": "Easy",
-    "question": "[Generated] Does Python support multiple inheritance?",
-    "options": [
-      "Correct generated option for oop",
-      "Incorrect option C",
-      "Incorrect option B",
-      "Incorrect option A"
-    ],
-    "correctAnswer": 0,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/oop.",
-    "tags": [
-      "advanced",
-      "procedural"
-    ]
-  },
-  {
-    "id": 59,
-    "topic": "oop",
-    "difficulty": "Easy",
-    "question": "[Generated] Does Python support multiple len()?",
-    "options": [
-      "Incorrect option A",
-      "Incorrect option C",
-      "Correct generated option for oop",
-      "Incorrect option B"
-    ],
-    "correctAnswer": 2,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/oop.",
-    "tags": [
-      "fundamentals",
-      "procedural"
-    ]
-  },
-  {
-    "id": 60,
-    "topic": "oop",
-    "difficulty": "Easy",
-    "question": "[Generated] Does Python support multiple len()?",
-    "options": [
-      "Correct generated option for oop",
-      "Incorrect option B",
-      "Incorrect option C",
-      "Incorrect option A"
-    ],
-    "correctAnswer": 0,
-    "explanation": "This is an auto-generated explanation for the procedural question in python/oop.",
-    "tags": [
-      "advanced",
-      "procedural"
+      "Python",
+      "OOP"
     ]
   }
 ]
